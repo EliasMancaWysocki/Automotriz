@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A1916E6-8219-4789-89D9-66D5FD631CA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AutomotrizFront</RootNamespace>
+    <AssemblyName>AutomotrizFront</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\TUP\Cuatrimestre 2\Programacion\Carpinteria\Caso testigo con reportes\CarpinteriaApp\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmConsultaComprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmConsultaComprobantes.Designer.cs">
+      <DependentUpon>FrmConsultaComprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmReporteComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmReporteComprobante.Designer.cs">
+      <DependentUpon>FrmReporteComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmResultadoConsultaComprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmResultadoConsultaComprobantes.Designer.cs">
+      <DependentUpon>FrmResultadoConsultaComprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.cs">
+      <DependentUpon>DSComprobante.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSComprobante.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\FrmAutomotriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\FrmAutomotriz.Designer.cs">
+      <DependentUpon>FrmAutomotriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosEmisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosEmisor.Designer.cs">
+      <DependentUpon>FrmDatosEmisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosOperacion.Designer.cs">
+      <DependentUpon>FrmDatosOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosReceptor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosReceptor.Designer.cs">
+      <DependentUpon>FrmDatosReceptor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.Designer.cs">
+      <DependentUpon>FrmGeneracionComprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Soporte\FrmNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Soporte\FrmNuevoCliente.designer.cs">
+      <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Soporte\FrmNuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Soporte\FrmNuevoEmpleado.Designer.cs">
+      <DependentUpon>FrmNuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\Implementacion\ServicioDAO.cs" />
+    <Compile Include="Servicio\Interfaz\IServicioDAO.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Presentación\Comprobantes\Consulta Comprobantes\FrmConsultaComprobantes.resx">
+      <DependentUpon>FrmConsultaComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Comprobantes\Consulta Comprobantes\FrmReporteComprobante.resx">
+      <DependentUpon>FrmReporteComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Comprobantes\Consulta Comprobantes\FrmResultadoConsultaComprobantes.resx">
+      <DependentUpon>FrmResultadoConsultaComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\RptComprobante.rdlc" />
+    <EmbeddedResource Include="Presentación\FrmAutomotriz.resx">
+      <DependentUpon>FrmAutomotriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosEmisor.resx">
+      <DependentUpon>FrmDatosEmisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosOperacion.resx">
+      <DependentUpon>FrmDatosOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosReceptor.resx">
+      <DependentUpon>FrmDatosReceptor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.resx">
+      <DependentUpon>FrmGeneracionComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Soporte\FrmNuevoCliente.resx">
+      <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Soporte\FrmNuevoEmpleado.resx">
+      <DependentUpon>FrmNuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xsc">
+      <DependentUpon>DSComprobante.xsd</DependentUpon>
+    </None>
+    <None Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSComprobante.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xss">
+      <DependentUpon>DSComprobante.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Automotriz.Presentación.Consultas.Consultar_Comprobantes.FrmConsultaComprobantes.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.Consultas.Consultar_Comprobantes.FrmResultadoConsultaComprobantes.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.FrmAutomotriz.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.FrmDatosEmisor.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.FrmDatosOperacion.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.FrmDatosReceptor.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.FrmGeneracionComprobantes.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.Soporte.FrmNuevoCliente.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.Soporte.FrmNuevoEmpleado.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Program.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Servicio.Implementación.ServicioDAO.datasource" />
+    <None Include="Properties\DataSources\Automotriz.Servicio.IServicioDAO.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.ComprobantesDAO.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.DBHelper.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.IComprobantesDAO.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.Parametro.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Cliente.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Comprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Items.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.ResultadoComprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.FrmReporteComprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTEDataTable.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERow.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.SP_REPORTE_COMPROBANTETableAdapter.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutomotrizBack\AutomotrizBack.csproj">
+      <Project>{ff11553d-7d0e-49bc-9aa3-d30f1ab4a61f}</Project>
+      <Name>AutomotrizBack</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
