@@ -9,15 +9,23 @@ namespace AutomotrizBack.Datos
     {
         public List<Items> ObtenerComprobantes()
         {
-            List<Items> comprobantes = new List<Items>()
+            List<Items> comprobantes = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOS_FACTURAS");
+
+            foreach (DataRow dr in dt.Rows)
             {
-                new Items(1, "Factura A"),
-                new Items(2, "Factura B"),
-                new Items(3, "Nota de Débito A"),
-                new Items(4, "Nota de Débito B"),
-                new Items(5, "Nota de Crédito A"),
-                new Items(6, "Nota de Crédito B"),
-            };
+                int id = Convert.ToInt32(dr["id_tipo_factura"]);
+                string nom = dr["descripcion"].ToString();
+
+                Items item = new Items(id, nom);
+                comprobantes.Add(item);
+            }
+
+            comprobantes.Add(new Items(3, "Nota de Débito A"));
+            comprobantes.Add(new Items(4, "Nota de Débito B"));
+            comprobantes.Add(new Items(5, "Nota de Crédito A"));
+            comprobantes.Add(new Items(6, "Nota de Crédito B"));
 
             return comprobantes;
         }

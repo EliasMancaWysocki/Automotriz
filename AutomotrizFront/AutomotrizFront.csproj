@@ -54,7 +54,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -195,38 +197,6 @@
     <None Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xss">
       <DependentUpon>DSComprobante.xsd</DependentUpon>
     </None>
-    <None Include="Properties\DataSources\Automotriz.Presentación.Consultas.Consultar_Comprobantes.FrmConsultaComprobantes.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.Consultas.Consultar_Comprobantes.FrmResultadoConsultaComprobantes.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.FrmAutomotriz.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.FrmDatosEmisor.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.FrmDatosOperacion.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.FrmDatosReceptor.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.FrmGeneracionComprobantes.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.Soporte.FrmNuevoCliente.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Presentación.Soporte.FrmNuevoEmpleado.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Program.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Servicio.Implementación.ServicioDAO.datasource" />
-    <None Include="Properties\DataSources\Automotriz.Servicio.IServicioDAO.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Datos.ComprobantesDAO.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Datos.DBHelper.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Datos.IComprobantesDAO.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Datos.Parametro.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Cliente.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Comprobante.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Items.datasource" />
-    <None Include="Properties\DataSources\AutomotrizBack.Entidades.ResultadoComprobante.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.FrmReporteComprobante.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTEDataTable.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERow.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERowChangeEvent.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERowChangeEventHandler.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.SP_REPORTE_COMPROBANTETableAdapter.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.TableAdapterManager.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\AutomotrizFront.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -264,8 +234,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

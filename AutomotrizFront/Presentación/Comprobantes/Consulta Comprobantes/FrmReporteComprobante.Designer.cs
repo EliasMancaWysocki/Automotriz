@@ -29,60 +29,76 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dSComprobante = new AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante();
             this.sPREPORTECOMPROBANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSComprobante = new AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante();
+            this.rvComprobante = new Microsoft.Reporting.WinForms.ReportViewer();
             this.sP_REPORTE_COMPROBANTETableAdapter = new AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.SP_REPORTE_COMPROBANTETableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dSComprobante)).BeginInit();
+            this.sPDATOSFACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sP_DATOS_FACTURATableAdapter = new AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.SP_DATOS_FACTURATableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.sPREPORTECOMPROBANTEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSComprobante)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPDATOSFACTURABindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.sPREPORTECOMPROBANTEBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "AutomotrizFront.Presentación.Comprobantes.Consulta Comprobantes.Reporte.RptCompro" +
-    "bante.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(960, 424);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // dSComprobante
-            // 
-            this.dSComprobante.DataSetName = "DSComprobante";
-            this.dSComprobante.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sPREPORTECOMPROBANTEBindingSource
             // 
             this.sPREPORTECOMPROBANTEBindingSource.DataMember = "SP_REPORTE_COMPROBANTE";
             this.sPREPORTECOMPROBANTEBindingSource.DataSource = this.dSComprobante;
             // 
+            // dSComprobante
+            // 
+            this.dSComprobante.DataSetName = "DSComprobante";
+            this.dSComprobante.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rvComprobante
+            // 
+            this.rvComprobante.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rvComprobante.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rvComprobante.IsDocumentMapWidthFixed = true;
+            this.rvComprobante.LocalReport.ReportEmbeddedResource = "AutomotrizFront.Presentación.Comprobantes.Consulta Comprobantes.Reporte.RptCompro" +
+    "bante.rdlc";
+            this.rvComprobante.Location = new System.Drawing.Point(0, 0);
+            this.rvComprobante.Name = "rvComprobante";
+            this.rvComprobante.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
+            this.rvComprobante.ServerReport.BearerToken = null;
+            this.rvComprobante.Size = new System.Drawing.Size(781, 467);
+            this.rvComprobante.TabIndex = 0;
+            // 
             // sP_REPORTE_COMPROBANTETableAdapter
             // 
             this.sP_REPORTE_COMPROBANTETableAdapter.ClearBeforeFill = true;
             // 
+            // sPDATOSFACTURABindingSource
+            // 
+            this.sPDATOSFACTURABindingSource.DataMember = "SP_DATOS_FACTURA";
+            this.sPDATOSFACTURABindingSource.DataSource = this.dSComprobante;
+            // 
+            // sP_DATOS_FACTURATableAdapter
+            // 
+            this.sP_DATOS_FACTURATableAdapter.ClearBeforeFill = true;
+            // 
             // FrmReporteComprobante
             // 
-            this.ClientSize = new System.Drawing.Size(960, 424);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(781, 467);
+            this.Controls.Add(this.rvComprobante);
             this.Name = "FrmReporteComprobante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteComprobante_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dSComprobante)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPREPORTECOMPROBANTEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSComprobante)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPDATOSFACTURABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rvComprobante;
         private System.Windows.Forms.BindingSource sPREPORTECOMPROBANTEBindingSource;
         private Reporte.DSComprobante dSComprobante;
         private Reporte.DSComprobanteTableAdapters.SP_REPORTE_COMPROBANTETableAdapter sP_REPORTE_COMPROBANTETableAdapter;
+        private System.Windows.Forms.BindingSource sPDATOSFACTURABindingSource;
+        private Reporte.DSComprobanteTableAdapters.SP_DATOS_FACTURATableAdapter sP_DATOS_FACTURATableAdapter;
     }
 }

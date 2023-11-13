@@ -24,6 +24,8 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DSComprobante : global::System.Data.DataSet {
         
+        private SP_DATOS_FACTURADataTable tableSP_DATOS_FACTURA;
+        
         private SP_REPORTE_COMPROBANTEDataTable tableSP_REPORTE_COMPROBANTE;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -54,6 +56,9 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                if ((ds.Tables["SP_DATOS_FACTURA"] != null)) {
+                    base.Tables.Add(new SP_DATOS_FACTURADataTable(ds.Tables["SP_DATOS_FACTURA"]));
+                }
                 if ((ds.Tables["SP_REPORTE_COMPROBANTE"] != null)) {
                     base.Tables.Add(new SP_REPORTE_COMPROBANTEDataTable(ds.Tables["SP_REPORTE_COMPROBANTE"]));
                 }
@@ -73,6 +78,16 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SP_DATOS_FACTURADataTable SP_DATOS_FACTURA {
+            get {
+                return this.tableSP_DATOS_FACTURA;
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -152,6 +167,9 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
+                if ((ds.Tables["SP_DATOS_FACTURA"] != null)) {
+                    base.Tables.Add(new SP_DATOS_FACTURADataTable(ds.Tables["SP_DATOS_FACTURA"]));
+                }
                 if ((ds.Tables["SP_REPORTE_COMPROBANTE"] != null)) {
                     base.Tables.Add(new SP_REPORTE_COMPROBANTEDataTable(ds.Tables["SP_REPORTE_COMPROBANTE"]));
                 }
@@ -188,6 +206,12 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
+            this.tableSP_DATOS_FACTURA = ((SP_DATOS_FACTURADataTable)(base.Tables["SP_DATOS_FACTURA"]));
+            if ((initTable == true)) {
+                if ((this.tableSP_DATOS_FACTURA != null)) {
+                    this.tableSP_DATOS_FACTURA.InitVars();
+                }
+            }
             this.tableSP_REPORTE_COMPROBANTE = ((SP_REPORTE_COMPROBANTEDataTable)(base.Tables["SP_REPORTE_COMPROBANTE"]));
             if ((initTable == true)) {
                 if ((this.tableSP_REPORTE_COMPROBANTE != null)) {
@@ -204,8 +228,16 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             this.Namespace = "http://tempuri.org/DSComprobante.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tableSP_DATOS_FACTURA = new SP_DATOS_FACTURADataTable();
+            base.Tables.Add(this.tableSP_DATOS_FACTURA);
             this.tableSP_REPORTE_COMPROBANTE = new SP_REPORTE_COMPROBANTEDataTable();
             base.Tables.Add(this.tableSP_REPORTE_COMPROBANTE);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeSP_DATOS_FACTURA() {
+            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -270,7 +302,410 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void SP_DATOS_FACTURARowChangeEventHandler(object sender, SP_DATOS_FACTURARowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void SP_REPORTE_COMPROBANTERowChangeEventHandler(object sender, SP_REPORTE_COMPROBANTERowChangeEvent e);
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SP_DATOS_FACTURADataTable : global::System.Data.TypedTableBase<SP_DATOS_FACTURARow> {
+            
+            private global::System.Data.DataColumn columnnum_factura;
+            
+            private global::System.Data.DataColumn columnfecha;
+            
+            private global::System.Data.DataColumn columncliente;
+            
+            private global::System.Data.DataColumn columndocumento;
+            
+            private global::System.Data.DataColumn columntipoDoc;
+            
+            private global::System.Data.DataColumn columndomicilio;
+            
+            private global::System.Data.DataColumn columncondicionIVA;
+            
+            private global::System.Data.DataColumn columnforma_pago;
+            
+            private global::System.Data.DataColumn columntipo_factura;
+            
+            private global::System.Data.DataColumn columnrecargo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DATOS_FACTURADataTable() {
+                this.TableName = "SP_DATOS_FACTURA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_DATOS_FACTURADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected SP_DATOS_FACTURADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn num_facturaColumn {
+                get {
+                    return this.columnnum_factura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fechaColumn {
+                get {
+                    return this.columnfecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn clienteColumn {
+                get {
+                    return this.columncliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn documentoColumn {
+                get {
+                    return this.columndocumento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tipoDocColumn {
+                get {
+                    return this.columntipoDoc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn domicilioColumn {
+                get {
+                    return this.columndomicilio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn condicionIVAColumn {
+                get {
+                    return this.columncondicionIVA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn forma_pagoColumn {
+                get {
+                    return this.columnforma_pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tipo_facturaColumn {
+                get {
+                    return this.columntipo_factura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn recargoColumn {
+                get {
+                    return this.columnrecargo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DATOS_FACTURARow this[int index] {
+                get {
+                    return ((SP_DATOS_FACTURARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_DATOS_FACTURARowChangeEventHandler SP_DATOS_FACTURARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_DATOS_FACTURARowChangeEventHandler SP_DATOS_FACTURARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_DATOS_FACTURARowChangeEventHandler SP_DATOS_FACTURARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_DATOS_FACTURARowChangeEventHandler SP_DATOS_FACTURARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddSP_DATOS_FACTURARow(SP_DATOS_FACTURARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DATOS_FACTURARow AddSP_DATOS_FACTURARow(System.DateTime fecha, string cliente, string documento, string tipoDoc, string domicilio, string condicionIVA, string forma_pago, string tipo_factura, decimal recargo) {
+                SP_DATOS_FACTURARow rowSP_DATOS_FACTURARow = ((SP_DATOS_FACTURARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        fecha,
+                        cliente,
+                        documento,
+                        tipoDoc,
+                        domicilio,
+                        condicionIVA,
+                        forma_pago,
+                        tipo_factura,
+                        recargo};
+                rowSP_DATOS_FACTURARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_DATOS_FACTURARow);
+                return rowSP_DATOS_FACTURARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DATOS_FACTURARow FindBynum_factura(int num_factura) {
+                return ((SP_DATOS_FACTURARow)(this.Rows.Find(new object[] {
+                            num_factura})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SP_DATOS_FACTURADataTable cln = ((SP_DATOS_FACTURADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SP_DATOS_FACTURADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnnum_factura = base.Columns["num_factura"];
+                this.columnfecha = base.Columns["fecha"];
+                this.columncliente = base.Columns["cliente"];
+                this.columndocumento = base.Columns["documento"];
+                this.columntipoDoc = base.Columns["tipoDoc"];
+                this.columndomicilio = base.Columns["domicilio"];
+                this.columncondicionIVA = base.Columns["condicionIVA"];
+                this.columnforma_pago = base.Columns["forma_pago"];
+                this.columntipo_factura = base.Columns["tipo_factura"];
+                this.columnrecargo = base.Columns["recargo"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnnum_factura = new global::System.Data.DataColumn("num_factura", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_factura);
+                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha);
+                this.columncliente = new global::System.Data.DataColumn("cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncliente);
+                this.columndocumento = new global::System.Data.DataColumn("documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndocumento);
+                this.columntipoDoc = new global::System.Data.DataColumn("tipoDoc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipoDoc);
+                this.columndomicilio = new global::System.Data.DataColumn("domicilio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndomicilio);
+                this.columncondicionIVA = new global::System.Data.DataColumn("condicionIVA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncondicionIVA);
+                this.columnforma_pago = new global::System.Data.DataColumn("forma_pago", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnforma_pago);
+                this.columntipo_factura = new global::System.Data.DataColumn("tipo_factura", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_factura);
+                this.columnrecargo = new global::System.Data.DataColumn("recargo", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecargo);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnnum_factura}, true));
+                this.columnnum_factura.AutoIncrement = true;
+                this.columnnum_factura.AutoIncrementSeed = -1;
+                this.columnnum_factura.AutoIncrementStep = -1;
+                this.columnnum_factura.AllowDBNull = false;
+                this.columnnum_factura.ReadOnly = true;
+                this.columnnum_factura.Unique = true;
+                this.columnfecha.AllowDBNull = false;
+                this.columncliente.ReadOnly = true;
+                this.columncliente.MaxLength = 101;
+                this.columndocumento.AllowDBNull = false;
+                this.columndocumento.MaxLength = 50;
+                this.columntipoDoc.MaxLength = 100;
+                this.columndomicilio.ReadOnly = true;
+                this.columndomicilio.MaxLength = 121;
+                this.columncondicionIVA.AllowDBNull = false;
+                this.columncondicionIVA.MaxLength = 50;
+                this.columnforma_pago.MaxLength = 50;
+                this.columntipo_factura.MaxLength = 1;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DATOS_FACTURARow NewSP_DATOS_FACTURARow() {
+                return ((SP_DATOS_FACTURARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SP_DATOS_FACTURARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SP_DATOS_FACTURARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SP_DATOS_FACTURARowChanged != null)) {
+                    this.SP_DATOS_FACTURARowChanged(this, new SP_DATOS_FACTURARowChangeEvent(((SP_DATOS_FACTURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SP_DATOS_FACTURARowChanging != null)) {
+                    this.SP_DATOS_FACTURARowChanging(this, new SP_DATOS_FACTURARowChangeEvent(((SP_DATOS_FACTURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SP_DATOS_FACTURARowDeleted != null)) {
+                    this.SP_DATOS_FACTURARowDeleted(this, new SP_DATOS_FACTURARowChangeEvent(((SP_DATOS_FACTURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SP_DATOS_FACTURARowDeleting != null)) {
+                    this.SP_DATOS_FACTURARowDeleting(this, new SP_DATOS_FACTURARowChangeEvent(((SP_DATOS_FACTURARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveSP_DATOS_FACTURARow(SP_DATOS_FACTURARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DSComprobante ds = new DSComprobante();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SP_DATOS_FACTURADataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -281,7 +716,9 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             
             private global::System.Data.DataColumn columncod_producto;
             
-            private global::System.Data.DataColumn columnObservaciones;
+            private global::System.Data.DataColumn columnproducto;
+            
+            private global::System.Data.DataColumn columnmarca;
             
             private global::System.Data.DataColumn columncantidad;
             
@@ -294,6 +731,10 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             private global::System.Data.DataColumn columnimporteBonif;
             
             private global::System.Data.DataColumn columnsubtotal;
+            
+            private global::System.Data.DataColumn columnautoplan;
+            
+            private global::System.Data.DataColumn columninteresAutoplan;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -338,9 +779,17 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ObservacionesColumn {
+            public global::System.Data.DataColumn productoColumn {
                 get {
-                    return this.columnObservaciones;
+                    return this.columnproducto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn marcaColumn {
+                get {
+                    return this.columnmarca;
                 }
             }
             
@@ -394,6 +843,22 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn autoplanColumn {
+                get {
+                    return this.columnautoplan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interesAutoplanColumn {
+                get {
+                    return this.columninteresAutoplan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,17 +894,20 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_COMPROBANTERow AddSP_REPORTE_COMPROBANTERow(int cod_producto, string Observaciones, int cantidad, string un_medida, decimal precio, decimal bonificacion, decimal importeBonif, decimal subtotal) {
+            public SP_REPORTE_COMPROBANTERow AddSP_REPORTE_COMPROBANTERow(int cod_producto, string producto, string marca, int cantidad, string un_medida, decimal precio, decimal bonificacion, decimal importeBonif, decimal subtotal, string autoplan, int interesAutoplan) {
                 SP_REPORTE_COMPROBANTERow rowSP_REPORTE_COMPROBANTERow = ((SP_REPORTE_COMPROBANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cod_producto,
-                        Observaciones,
+                        producto,
+                        marca,
                         cantidad,
                         un_medida,
                         precio,
                         bonificacion,
                         importeBonif,
-                        subtotal};
+                        subtotal,
+                        autoplan,
+                        interesAutoplan};
                 rowSP_REPORTE_COMPROBANTERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSP_REPORTE_COMPROBANTERow);
                 return rowSP_REPORTE_COMPROBANTERow;
@@ -463,13 +931,16 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columncod_producto = base.Columns["cod_producto"];
-                this.columnObservaciones = base.Columns["Observaciones"];
+                this.columnproducto = base.Columns["producto"];
+                this.columnmarca = base.Columns["marca"];
                 this.columncantidad = base.Columns["cantidad"];
                 this.columnun_medida = base.Columns["un_medida"];
                 this.columnprecio = base.Columns["precio"];
                 this.columnbonificacion = base.Columns["bonificacion"];
                 this.columnimporteBonif = base.Columns["importeBonif"];
                 this.columnsubtotal = base.Columns["subtotal"];
+                this.columnautoplan = base.Columns["autoplan"];
+                this.columninteresAutoplan = base.Columns["interesAutoplan"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,8 +948,10 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             private void InitClass() {
                 this.columncod_producto = new global::System.Data.DataColumn("cod_producto", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncod_producto);
-                this.columnObservaciones = new global::System.Data.DataColumn("Observaciones", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnObservaciones);
+                this.columnproducto = new global::System.Data.DataColumn("producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproducto);
+                this.columnmarca = new global::System.Data.DataColumn("marca", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmarca);
                 this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad);
                 this.columnun_medida = new global::System.Data.DataColumn("un_medida", typeof(string), null, global::System.Data.MappingType.Element);
@@ -491,11 +964,18 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
                 base.Columns.Add(this.columnimporteBonif);
                 this.columnsubtotal = new global::System.Data.DataColumn("subtotal", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsubtotal);
-                this.columnObservaciones.MaxLength = 255;
+                this.columnautoplan = new global::System.Data.DataColumn("autoplan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnautoplan);
+                this.columninteresAutoplan = new global::System.Data.DataColumn("interesAutoplan", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninteresAutoplan);
+                this.columnproducto.AllowDBNull = false;
+                this.columnproducto.MaxLength = 50;
+                this.columnmarca.MaxLength = 50;
                 this.columnun_medida.MaxLength = 50;
-                this.columnprecio.AllowDBNull = false;
+                this.columnprecio.ReadOnly = true;
                 this.columnimporteBonif.ReadOnly = true;
                 this.columnsubtotal.ReadOnly = true;
+                this.columnautoplan.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -625,6 +1105,233 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class SP_DATOS_FACTURARow : global::System.Data.DataRow {
+            
+            private SP_DATOS_FACTURADataTable tableSP_DATOS_FACTURA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_DATOS_FACTURARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSP_DATOS_FACTURA = ((SP_DATOS_FACTURADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int num_factura {
+                get {
+                    return ((int)(this[this.tableSP_DATOS_FACTURA.num_facturaColumn]));
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.num_facturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime fecha {
+                get {
+                    return ((global::System.DateTime)(this[this.tableSP_DATOS_FACTURA.fechaColumn]));
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cliente {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_DATOS_FACTURA.clienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cliente\' de la tabla \'SP_DATOS_FACTURA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.clienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string documento {
+                get {
+                    return ((string)(this[this.tableSP_DATOS_FACTURA.documentoColumn]));
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.documentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string tipoDoc {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_DATOS_FACTURA.tipoDocColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipoDoc\' de la tabla \'SP_DATOS_FACTURA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.tipoDocColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string domicilio {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_DATOS_FACTURA.domicilioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'domicilio\' de la tabla \'SP_DATOS_FACTURA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.domicilioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string condicionIVA {
+                get {
+                    return ((string)(this[this.tableSP_DATOS_FACTURA.condicionIVAColumn]));
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.condicionIVAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string forma_pago {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_DATOS_FACTURA.forma_pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'forma_pago\' de la tabla \'SP_DATOS_FACTURA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.forma_pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string tipo_factura {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_DATOS_FACTURA.tipo_facturaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo_factura\' de la tabla \'SP_DATOS_FACTURA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.tipo_facturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal recargo {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSP_DATOS_FACTURA.recargoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'recargo\' de la tabla \'SP_DATOS_FACTURA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_DATOS_FACTURA.recargoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsclienteNull() {
+                return this.IsNull(this.tableSP_DATOS_FACTURA.clienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetclienteNull() {
+                this[this.tableSP_DATOS_FACTURA.clienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IstipoDocNull() {
+                return this.IsNull(this.tableSP_DATOS_FACTURA.tipoDocColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SettipoDocNull() {
+                this[this.tableSP_DATOS_FACTURA.tipoDocColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsdomicilioNull() {
+                return this.IsNull(this.tableSP_DATOS_FACTURA.domicilioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetdomicilioNull() {
+                this[this.tableSP_DATOS_FACTURA.domicilioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isforma_pagoNull() {
+                return this.IsNull(this.tableSP_DATOS_FACTURA.forma_pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setforma_pagoNull() {
+                this[this.tableSP_DATOS_FACTURA.forma_pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Istipo_facturaNull() {
+                return this.IsNull(this.tableSP_DATOS_FACTURA.tipo_facturaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Settipo_facturaNull() {
+                this[this.tableSP_DATOS_FACTURA.tipo_facturaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsrecargoNull() {
+                return this.IsNull(this.tableSP_DATOS_FACTURA.recargoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetrecargoNull() {
+                this[this.tableSP_DATOS_FACTURA.recargoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class SP_REPORTE_COMPROBANTERow : global::System.Data.DataRow {
             
             private SP_REPORTE_COMPROBANTEDataTable tableSP_REPORTE_COMPROBANTE;
@@ -655,18 +1362,28 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Observaciones {
+            public string producto {
+                get {
+                    return ((string)(this[this.tableSP_REPORTE_COMPROBANTE.productoColumn]));
+                }
+                set {
+                    this[this.tableSP_REPORTE_COMPROBANTE.productoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string marca {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_REPORTE_COMPROBANTE.ObservacionesColumn]));
+                        return ((string)(this[this.tableSP_REPORTE_COMPROBANTE.marcaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Observaciones\' de la tabla \'SP_REPORTE_COMPROBANTE\' es DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'marca\' de la tabla \'SP_REPORTE_COMPROBANTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_REPORTE_COMPROBANTE.ObservacionesColumn] = value;
+                    this[this.tableSP_REPORTE_COMPROBANTE.marcaColumn] = value;
                 }
             }
             
@@ -708,7 +1425,12 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public decimal precio {
                 get {
-                    return ((decimal)(this[this.tableSP_REPORTE_COMPROBANTE.precioColumn]));
+                    try {
+                        return ((decimal)(this[this.tableSP_REPORTE_COMPROBANTE.precioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'precio\' de la tabla \'SP_REPORTE_COMPROBANTE\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableSP_REPORTE_COMPROBANTE.precioColumn] = value;
@@ -768,6 +1490,40 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string autoplan {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_REPORTE_COMPROBANTE.autoplanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'autoplan\' de la tabla \'SP_REPORTE_COMPROBANTE\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_REPORTE_COMPROBANTE.autoplanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int interesAutoplan {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_REPORTE_COMPROBANTE.interesAutoplanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'interesAutoplan\' de la tabla \'SP_REPORTE_COMPROBANTE\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_REPORTE_COMPROBANTE.interesAutoplanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscod_productoNull() {
                 return this.IsNull(this.tableSP_REPORTE_COMPROBANTE.cod_productoColumn);
             }
@@ -780,14 +1536,14 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsObservacionesNull() {
-                return this.IsNull(this.tableSP_REPORTE_COMPROBANTE.ObservacionesColumn);
+            public bool IsmarcaNull() {
+                return this.IsNull(this.tableSP_REPORTE_COMPROBANTE.marcaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetObservacionesNull() {
-                this[this.tableSP_REPORTE_COMPROBANTE.ObservacionesColumn] = global::System.Convert.DBNull;
+            public void SetmarcaNull() {
+                this[this.tableSP_REPORTE_COMPROBANTE.marcaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -812,6 +1568,18 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setun_medidaNull() {
                 this[this.tableSP_REPORTE_COMPROBANTE.un_medidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsprecioNull() {
+                return this.IsNull(this.tableSP_REPORTE_COMPROBANTE.precioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetprecioNull() {
+                this[this.tableSP_REPORTE_COMPROBANTE.precioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -848,6 +1616,64 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetsubtotalNull() {
                 this[this.tableSP_REPORTE_COMPROBANTE.subtotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsautoplanNull() {
+                return this.IsNull(this.tableSP_REPORTE_COMPROBANTE.autoplanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetautoplanNull() {
+                this[this.tableSP_REPORTE_COMPROBANTE.autoplanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsinteresAutoplanNull() {
+                return this.IsNull(this.tableSP_REPORTE_COMPROBANTE.interesAutoplanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetinteresAutoplanNull() {
+                this[this.tableSP_REPORTE_COMPROBANTE.interesAutoplanColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class SP_DATOS_FACTURARowChangeEvent : global::System.EventArgs {
+            
+            private SP_DATOS_FACTURARow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DATOS_FACTURARowChangeEvent(SP_DATOS_FACTURARow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DATOS_FACTURARow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
             }
         }
         
@@ -888,6 +1714,196 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
 }
 namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters {
     
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SP_DATOS_FACTURATableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public SP_DATOS_FACTURATableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SP_DATOS_FACTURA";
+            tableMapping.ColumnMappings.Add("num_factura", "num_factura");
+            tableMapping.ColumnMappings.Add("fecha", "fecha");
+            tableMapping.ColumnMappings.Add("cliente", "cliente");
+            tableMapping.ColumnMappings.Add("documento", "documento");
+            tableMapping.ColumnMappings.Add("tipoDoc", "tipoDoc");
+            tableMapping.ColumnMappings.Add("domicilio", "domicilio");
+            tableMapping.ColumnMappings.Add("condicionIVA", "condicionIVA");
+            tableMapping.ColumnMappings.Add("forma_pago", "forma_pago");
+            tableMapping.ColumnMappings.Add("tipo_factura", "tipo_factura");
+            tableMapping.ColumnMappings.Add("recargo", "recargo");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::AutomotrizFront.Properties.Settings.Default.AutomotrizConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SP_DATOS_FACTURA";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nroComprobante", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DSComprobante.SP_DATOS_FACTURADataTable dataTable, global::System.Nullable<int> nroComprobante) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((nroComprobante.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(nroComprobante.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DSComprobante.SP_DATOS_FACTURADataTable GetData(global::System.Nullable<int> nroComprobante) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((nroComprobante.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(nroComprobante.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            DSComprobante.SP_DATOS_FACTURADataTable dataTable = new DSComprobante.SP_DATOS_FACTURADataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -1011,13 +2027,16 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Repor
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "SP_REPORTE_COMPROBANTE";
             tableMapping.ColumnMappings.Add("cod_producto", "cod_producto");
-            tableMapping.ColumnMappings.Add("Observaciones", "Observaciones");
+            tableMapping.ColumnMappings.Add("producto", "producto");
+            tableMapping.ColumnMappings.Add("marca", "marca");
             tableMapping.ColumnMappings.Add("cantidad", "cantidad");
             tableMapping.ColumnMappings.Add("un_medida", "un_medida");
             tableMapping.ColumnMappings.Add("precio", "precio");
             tableMapping.ColumnMappings.Add("bonificacion", "bonificacion");
             tableMapping.ColumnMappings.Add("importeBonif", "importeBonif");
             tableMapping.ColumnMappings.Add("subtotal", "subtotal");
+            tableMapping.ColumnMappings.Add("autoplan", "autoplan");
+            tableMapping.ColumnMappings.Add("interesAutoplan", "interesAutoplan");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
