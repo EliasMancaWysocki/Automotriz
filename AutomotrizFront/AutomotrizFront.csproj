@@ -34,6 +34,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -71,9 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutomotrizDataSet.Designer.cs" />
-    <Compile Include="AutomotrizDataSet1.Designer.cs" />
-    <Compile Include="AutomotrizDataSet2.Designer.cs" />
+    <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet.Designer.cs" />
+    <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.Designer.cs" />
+    <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.Designer.cs" />
     <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmConsultaComprobantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,25 +201,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="AutomotrizDataSet.xsc">
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet.xsc">
       <DependentUpon>AutomotrizDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AutomotrizDataSet.xsd" />
-    <None Include="AutomotrizDataSet.xss">
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet.xsd" />
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet.xss">
       <DependentUpon>AutomotrizDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AutomotrizDataSet1.xsc">
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.xsc">
       <DependentUpon>AutomotrizDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="AutomotrizDataSet1.xsd" />
-    <None Include="AutomotrizDataSet1.xss">
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.xsd" />
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.xss">
       <DependentUpon>AutomotrizDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="AutomotrizDataSet2.xsc">
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.xsc">
       <DependentUpon>AutomotrizDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="AutomotrizDataSet2.xsd" />
-    <None Include="AutomotrizDataSet2.xss">
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.xsd" />
+    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.xss">
       <DependentUpon>AutomotrizDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
