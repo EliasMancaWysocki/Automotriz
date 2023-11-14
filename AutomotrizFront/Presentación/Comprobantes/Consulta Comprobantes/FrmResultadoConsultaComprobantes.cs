@@ -79,7 +79,7 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
             {
                 int nroComprobante = Convert.ToInt32(dgvResultados.CurrentRow.Cells["colNumComprobante"].Value);
                 FrmReporteComprobante frmReporteComprobante = new FrmReporteComprobante(nroComprobante);
-                frmReporteComprobante.Show();
+                frmReporteComprobante.ShowDialog();
             }
         }
     }

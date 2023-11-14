@@ -18,43 +18,47 @@ namespace Automotriz.Presentación
         public FrmAutomotriz()
         {
             InitializeComponent();
+
         }
+
         private void FrmAutomotriz_Load(object sender, EventArgs e)
         {
-
+            CentrarTitulo();
         }
 
-
-        private void nuevoComprobanteToolStripMenuItem_Click(object sender, EventArgs e)
+        //Funciones
+        private void CentrarTitulo()
         {
-            FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
-            frmGeneracionComprobantes.ShowDialog();
-        }
-        private void comprobantesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            int x = (Width - 35 - lblAutomotrix.Width) / 2;
 
+            lblAutomotrix.Location = new Point(x, 45);
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        //Botones
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
             nuevoCliente.ShowDialog();
         }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                this.Close();
+                Close();
             }
         }
-
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
+            frmConsultaComprobantes.ShowDialog();
+        }
+        private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
+            frmGeneracionComprobantes.ShowDialog();
+        }
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
             frmConsultaComprobantes.ShowDialog();
