@@ -239,7 +239,7 @@ namespace Automotriz.Presentación.Soporte
             this.cboCIva.FormattingEnabled = true;
             this.cboCIva.Location = new System.Drawing.Point(162, 218);
             this.cboCIva.Name = "cboCIva";
-            this.cboCIva.Size = new System.Drawing.Size(132, 21);
+            this.cboCIva.Size = new System.Drawing.Size(212, 21);
             this.cboCIva.TabIndex = 23;
             // 
             // lblnom
