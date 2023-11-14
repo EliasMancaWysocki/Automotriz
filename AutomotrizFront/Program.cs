@@ -1,5 +1,6 @@
 ﻿using Automotriz.Presentación;
 using Automotriz.Presentación.Soporte;
+using AutomotrizFront.Presentación.Soporte;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Automotriz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAutomotriz());
+            Application.Run(new FrmActualizarCliente());
         }
     }
 }
