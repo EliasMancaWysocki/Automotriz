@@ -26,8 +26,6 @@ namespace AutomotrizFront.Presentación.Soporte
             InitializeComponent();
             Servicio = new ServicioDAO();
             lClientes = new List<Cliente>();
-
-
         }
 
         private void FrmActualizarCliente_Load(object sender, EventArgs e)
@@ -49,14 +47,12 @@ namespace AutomotrizFront.Presentación.Soporte
             lClientes.Clear();
             lClientes = Servicio.ListaCliente();
 
-
             foreach (Cliente item in lClientes)
             {
                 nrocl = 3;
-
-              if(item.Id == nrocl)
+                
+                if(item.Id == nrocl)
                 {   
-                    
                     txtNombre.Text = item.Nombre;
                     txtApellido.Text = item.Apellido;
                     txtCalle.Text = item.Calle;
@@ -66,7 +62,6 @@ namespace AutomotrizFront.Presentación.Soporte
                     cboTipoDoc.SelectedIndex = item.TipoDoc;
                     cboCIva.SelectedIndex = item.CondicionIVA;
                     cboTCliente.SelectedIndex = item.TipoCliente;
-
                 }
 
             }
