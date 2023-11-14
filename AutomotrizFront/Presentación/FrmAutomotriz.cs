@@ -37,18 +37,18 @@ namespace Automotriz.Presentación
         }
 
 
-        //Botones
-        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
-            nuevoCliente.ShowDialog();
-        }
+        //Botones Menu Strip
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Close();
             }
+        }
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
+            nuevoCliente.ShowDialog();
         }
         private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -59,6 +59,13 @@ namespace Automotriz.Presentación
         {
             FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
             frmConsultaComprobantes.ShowDialog();
+        }
+
+        //Botones
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
+        {
+            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
+            nuevoCliente.ShowDialog();
         }
     }
 }

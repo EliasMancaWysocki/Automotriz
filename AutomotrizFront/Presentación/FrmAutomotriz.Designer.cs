@@ -461,6 +461,7 @@
             this.btnNuevoCliente.Size = new System.Drawing.Size(274, 146);
             this.btnNuevoCliente.TabIndex = 0;
             this.btnNuevoCliente.UseVisualStyleBackColor = false;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // panelConsultarClientesTitle
             // 
