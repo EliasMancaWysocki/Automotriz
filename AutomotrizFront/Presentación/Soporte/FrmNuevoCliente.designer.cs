@@ -29,6 +29,7 @@ namespace Automotriz.Presentación.Soporte
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNuevoCliente));
             this.lblidcliente = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -42,7 +43,7 @@ namespace Automotriz.Presentación.Soporte
             this.cboBarrios = new System.Windows.Forms.ComboBox();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTipoDoc = new System.Windows.Forms.Label();
             this.cboTipoDoc = new System.Windows.Forms.ComboBox();
             this.lbltipoCliente = new System.Windows.Forms.Label();
             this.cboTCliente = new System.Windows.Forms.ComboBox();
@@ -51,16 +52,18 @@ namespace Automotriz.Presentación.Soporte
             this.label4 = new System.Windows.Forms.Label();
             this.cboCIva = new System.Windows.Forms.ComboBox();
             this.lblnom = new System.Windows.Forms.Label();
-            this.lblCondicion = new System.Windows.Forms.Label();
+            this.lblCondicionIVA = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblidcliente
             // 
             this.lblidcliente.AutoSize = true;
-            this.lblidcliente.Location = new System.Drawing.Point(24, 35);
+            this.lblidcliente.BackColor = System.Drawing.Color.Transparent;
+            this.lblidcliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidcliente.Location = new System.Drawing.Point(24, 30);
             this.lblidcliente.Name = "lblidcliente";
-            this.lblidcliente.Size = new System.Drawing.Size(59, 13);
+            this.lblidcliente.Size = new System.Drawing.Size(87, 19);
             this.lblidcliente.TabIndex = 0;
             this.lblidcliente.Text = "Nro Cliente";
             // 
@@ -73,7 +76,7 @@ namespace Automotriz.Presentación.Soporte
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(90, 66);
+            this.txtNombre.Location = new System.Drawing.Point(162, 68);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 20);
             this.txtNombre.TabIndex = 3;
@@ -87,7 +90,7 @@ namespace Automotriz.Presentación.Soporte
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(293, 66);
+            this.txtApellido.Location = new System.Drawing.Point(380, 68);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(132, 20);
             this.txtApellido.TabIndex = 5;
@@ -95,15 +98,17 @@ namespace Automotriz.Presentación.Soporte
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(24, 108);
+            this.lblCalle.BackColor = System.Drawing.Color.Transparent;
+            this.lblCalle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalle.Location = new System.Drawing.Point(112, 97);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(30, 13);
+            this.lblCalle.Size = new System.Drawing.Size(44, 19);
             this.lblCalle.TabIndex = 6;
             this.lblCalle.Text = "Calle";
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(90, 101);
+            this.txtCalle.Location = new System.Drawing.Point(162, 98);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(132, 20);
             this.txtCalle.TabIndex = 7;
@@ -111,15 +116,17 @@ namespace Automotriz.Presentación.Soporte
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(243, 108);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(323, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(51, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Altura";
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(293, 101);
+            this.txtAltura.Location = new System.Drawing.Point(380, 98);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(43, 20);
             this.txtAltura.TabIndex = 9;
@@ -127,16 +134,18 @@ namespace Automotriz.Presentación.Soporte
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(24, 145);
+            this.lblBarrio.BackColor = System.Drawing.Color.Transparent;
+            this.lblBarrio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarrio.Location = new System.Drawing.Point(103, 127);
             this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(34, 13);
+            this.lblBarrio.Size = new System.Drawing.Size(52, 19);
             this.lblBarrio.TabIndex = 10;
             this.lblBarrio.Text = "Barrio";
             // 
             // cboBarrios
             // 
             this.cboBarrios.FormattingEnabled = true;
-            this.cboBarrios.Location = new System.Drawing.Point(90, 137);
+            this.cboBarrios.Location = new System.Drawing.Point(162, 128);
             this.cboBarrios.Name = "cboBarrios";
             this.cboBarrios.Size = new System.Drawing.Size(132, 21);
             this.cboBarrios.TabIndex = 11;
@@ -144,32 +153,36 @@ namespace Automotriz.Presentación.Soporte
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(24, 177);
+            this.lblDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.lblDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumento.Location = new System.Drawing.Point(71, 157);
             this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(62, 13);
+            this.lblDocumento.Size = new System.Drawing.Size(85, 19);
             this.lblDocumento.TabIndex = 12;
             this.lblDocumento.Text = "Documento";
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(90, 170);
+            this.txtDocumento.Location = new System.Drawing.Point(162, 158);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(132, 20);
             this.txtDocumento.TabIndex = 13;
             // 
-            // label3
+            // lblTipoDoc
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 214);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Tipo de Documento";
+            this.lblTipoDoc.AutoSize = true;
+            this.lblTipoDoc.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipoDoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoDoc.Location = new System.Drawing.Point(12, 187);
+            this.lblTipoDoc.Name = "lblTipoDoc";
+            this.lblTipoDoc.Size = new System.Drawing.Size(139, 19);
+            this.lblTipoDoc.TabIndex = 14;
+            this.lblTipoDoc.Text = "Tipo de Documento";
             // 
             // cboTipoDoc
             // 
             this.cboTipoDoc.FormattingEnabled = true;
-            this.cboTipoDoc.Location = new System.Drawing.Point(145, 206);
+            this.cboTipoDoc.Location = new System.Drawing.Point(162, 188);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(132, 21);
             this.cboTipoDoc.TabIndex = 15;
@@ -177,33 +190,36 @@ namespace Automotriz.Presentación.Soporte
             // lbltipoCliente
             // 
             this.lbltipoCliente.AutoSize = true;
-            this.lbltipoCliente.Location = new System.Drawing.Point(203, 30);
+            this.lbltipoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbltipoCliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltipoCliente.Location = new System.Drawing.Point(263, 28);
             this.lbltipoCliente.Name = "lbltipoCliente";
-            this.lbltipoCliente.Size = new System.Drawing.Size(78, 13);
+            this.lbltipoCliente.Size = new System.Drawing.Size(111, 19);
             this.lbltipoCliente.TabIndex = 16;
             this.lbltipoCliente.Text = "Tipo de Cliente";
             // 
             // cboTCliente
             // 
             this.cboTCliente.FormattingEnabled = true;
-            this.cboTCliente.Location = new System.Drawing.Point(293, 27);
+            this.cboTCliente.Location = new System.Drawing.Point(380, 28);
             this.cboTCliente.Name = "cboTCliente";
             this.cboTCliente.Size = new System.Drawing.Size(132, 21);
             this.cboTCliente.TabIndex = 17;
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(317, 321);
+            this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCargar.Location = new System.Drawing.Point(260, 280);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(75, 23);
             this.btnCargar.TabIndex = 18;
             this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(206, 321);
+            this.btnCancelar.Location = new System.Drawing.Point(155, 281);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 19;
@@ -221,7 +237,7 @@ namespace Automotriz.Presentación.Soporte
             // cboCIva
             // 
             this.cboCIva.FormattingEnabled = true;
-            this.cboCIva.Location = new System.Drawing.Point(145, 235);
+            this.cboCIva.Location = new System.Drawing.Point(162, 218);
             this.cboCIva.Name = "cboCIva";
             this.cboCIva.Size = new System.Drawing.Size(132, 21);
             this.cboCIva.TabIndex = 23;
@@ -229,28 +245,33 @@ namespace Automotriz.Presentación.Soporte
             // lblnom
             // 
             this.lblnom.AutoSize = true;
-            this.lblnom.Location = new System.Drawing.Point(24, 73);
+            this.lblnom.BackColor = System.Drawing.Color.Transparent;
+            this.lblnom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnom.Location = new System.Drawing.Point(93, 67);
             this.lblnom.Name = "lblnom";
-            this.lblnom.Size = new System.Drawing.Size(44, 13);
+            this.lblnom.Size = new System.Drawing.Size(63, 19);
             this.lblnom.TabIndex = 25;
             this.lblnom.Text = "Nombre";
-            this.lblnom.Click += new System.EventHandler(this.label5_Click);
             // 
-            // lblCondicion
+            // lblCondicionIVA
             // 
-            this.lblCondicion.AutoSize = true;
-            this.lblCondicion.Location = new System.Drawing.Point(24, 243);
-            this.lblCondicion.Name = "lblCondicion";
-            this.lblCondicion.Size = new System.Drawing.Size(74, 13);
-            this.lblCondicion.TabIndex = 26;
-            this.lblCondicion.Text = "Condicion IVA";
+            this.lblCondicionIVA.AutoSize = true;
+            this.lblCondicionIVA.BackColor = System.Drawing.Color.Transparent;
+            this.lblCondicionIVA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCondicionIVA.Location = new System.Drawing.Point(46, 217);
+            this.lblCondicionIVA.Name = "lblCondicionIVA";
+            this.lblCondicionIVA.Size = new System.Drawing.Size(105, 19);
+            this.lblCondicionIVA.TabIndex = 26;
+            this.lblCondicionIVA.Text = "Condicion IVA";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(243, 73);
+            this.lblApellido.BackColor = System.Drawing.Color.Transparent;
+            this.lblApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(310, 67);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.Size = new System.Drawing.Size(64, 19);
             this.lblApellido.TabIndex = 27;
             this.lblApellido.Text = "Apellido";
             // 
@@ -258,9 +279,12 @@ namespace Automotriz.Presentación.Soporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 354);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(534, 331);
             this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.lblCondicion);
+            this.Controls.Add(this.lblCondicionIVA);
             this.Controls.Add(this.lblnom);
             this.Controls.Add(this.cboCIva);
             this.Controls.Add(this.label4);
@@ -269,7 +293,7 @@ namespace Automotriz.Presentación.Soporte
             this.Controls.Add(this.cboTCliente);
             this.Controls.Add(this.lbltipoCliente);
             this.Controls.Add(this.cboTipoDoc);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTipoDoc);
             this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.cboBarrios);
@@ -283,8 +307,13 @@ namespace Automotriz.Presentación.Soporte
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblidcliente);
+            this.DoubleBuffered = true;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(550, 370);
+            this.MinimumSize = new System.Drawing.Size(550, 370);
             this.Name = "FrmNuevoCliente";
-            this.Text = "                                                              NUEVO CLIENTE ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Nuevo Cliente";
             this.Load += new System.EventHandler(this.FrmNuevoCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,7 +335,7 @@ namespace Automotriz.Presentación.Soporte
         private System.Windows.Forms.ComboBox cboBarrios;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.TextBox txtDocumento;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.ComboBox cboTipoDoc;
         private System.Windows.Forms.Label lbltipoCliente;
         private System.Windows.Forms.ComboBox cboTCliente;
@@ -315,7 +344,7 @@ namespace Automotriz.Presentación.Soporte
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboCIva;
         private System.Windows.Forms.Label lblnom;
-        private System.Windows.Forms.Label lblCondicion;
+        private System.Windows.Forms.Label lblCondicionIVA;
         private System.Windows.Forms.Label lblApellido;
     }
 }
