@@ -54,7 +54,7 @@ namespace AutomotrizFront.Presentación.Soporte
 
             foreach (Cliente item in lClientes)
             {
-                nrocl = 3;
+                
 
               if(item.Id == nrocl)
                 {   
@@ -63,11 +63,11 @@ namespace AutomotrizFront.Presentación.Soporte
                     txtApellido.Text = item.Apellido;
                     txtCalle.Text = item.Calle;
                     txtAltura.Text = item.Altura;
-                    cboBarrios.SelectedIndex = item.Barrio;
+                    //cboBarrios.SelectedIndex = item.Barrio;
                     txtDocumento.Text = item.Documento;
-                    cboTipoDoc.SelectedIndex = item.TipoDoc;
-                    cboCIva.SelectedIndex = item.CondicionIVA;
-                    cboTCliente.SelectedIndex = item.TipoCliente;
+                    //cboTipoDoc.SelectedIndex = item.TipoDoc;
+                   // cboCIva.SelectedIndex = item.CondicionIVA;
+                    //cboTCliente.SelectedIndex = item.TipoCliente;
 
                 }
 
@@ -205,15 +205,16 @@ namespace AutomotrizFront.Presentación.Soporte
         private void dgvListacl_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvListacl.MultiSelect = false;//solo permite seleccionar una selda
-
+            
 
             
 
             if (dgvListacl.CurrentCell.ColumnIndex == 10)
             {
                 nrocl = Convert.ToInt32(dgvListacl.CurrentRow.Cells["Nro_Cliente"].Value);
-                lblidcliente.Text = " :  " + nrocl;
                 CargarCamposClientes();
+                lblidcliente.Text = " :  " + nrocl;
+                
             }
 
         }
