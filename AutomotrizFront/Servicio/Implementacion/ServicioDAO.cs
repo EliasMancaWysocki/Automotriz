@@ -12,7 +12,7 @@ namespace Automotriz.Servicio.Implementación
     {
         private IComprobantesDAO DAO;
 
-        public ServicioDAO ()
+        public ServicioDAO()
         {
             DAO = new ComprobantesDAO();
         }
@@ -64,6 +64,15 @@ namespace Automotriz.Servicio.Implementación
         public List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros)
         {
             return DAO.FiltrarComprobantes(parametros);
+        }
+
+        public List<Cliente> ListaCliente()
+        {
+            return DAO.ListaCliente();
+        }
+        public int ModificarCliente(Cliente cliente)
+        {
+            return DAO.ModificarCliente(cliente);
         }
     }
 }

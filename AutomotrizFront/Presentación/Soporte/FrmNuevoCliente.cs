@@ -34,7 +34,6 @@ namespace Automotriz.Presentación.Soporte
 
             lblidcliente.Text = lblidcliente.Text + " :  " + Servicio.ProximoIdCliente();
 
-
         }
 
 

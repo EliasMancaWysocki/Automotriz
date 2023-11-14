@@ -9,23 +9,15 @@ namespace AutomotrizBack.Datos
     {
         public List<Items> ObtenerComprobantes()
         {
-            List<Items> comprobantes = new List<Items>();
-
-            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOS_FACTURAS");
-
-            foreach (DataRow dr in dt.Rows)
+            List<Items> comprobantes = new List<Items>()
             {
-                int id = Convert.ToInt32(dr["id_tipo_factura"]);
-                string nom = dr["descripcion"].ToString();
-
-                Items item = new Items(id, nom);
-                comprobantes.Add(item);
-            }
-
-            comprobantes.Add(new Items(3, "Nota de Débito A"));
-            comprobantes.Add(new Items(4, "Nota de Débito B"));
-            comprobantes.Add(new Items(5, "Nota de Crédito A"));
-            comprobantes.Add(new Items(6, "Nota de Crédito B"));
+                new Items(1, "Factura A"),
+                new Items(2, "Factura B"),
+                new Items(3, "Nota de Débito A"),
+                new Items(4, "Nota de Débito B"),
+                new Items(5, "Nota de Crédito A"),
+                new Items(6, "Nota de Crédito B"),
+            };
 
             return comprobantes;
         }
@@ -155,15 +147,43 @@ namespace AutomotrizBack.Datos
 
             return aux;
         }
-        public List<Items> ObtenerTipoCliente()
-        {
-            List < Items > lst = new List<Items> ();
-            return lst;
-        }
         public List<Items> ObtenerBarrios()
         {
             List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_BARRIOS");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_barrio"]);
+                string nom = dr["nombre_barrio"].ToString();
+                int loc = Convert.ToInt32(dr["id_localidad"].ToString());
+
+                Items item = new Items(id, nom, loc);
+                lst.Add(item);
+            }
             return lst;
+
+         
+        }
+        public List<Items> ObtenerTipoCliente()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOSCLIENTES");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_tipo_cliente"]);
+                string nom = dr["descripcion"].ToString();
+                
+
+                Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+
+
         }
         public List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros)
         {
@@ -185,6 +205,57 @@ namespace AutomotrizBack.Datos
             }
             return lst;
         }
+
+        public List<Cliente> ListaCliente()
+        {
+           
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_CLIENTES");
+
+            List<Cliente> lst = new List<Cliente>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Cliente c = new Cliente();
+                c.Id = Convert.ToInt32(dr["id_cliente"]);
+                c.Nombre = dr["nombre"].ToString();
+                c.Apellido = dr["apellido"].ToString();
+                c.Calle = dr["calle"].ToString();
+                c.Altura = dr["altura"].ToString();
+                c.Barrio = Convert.ToInt32(dr["id_Barrio"].ToString());
+                c.Documento = dr["documento"].ToString();
+                c.TipoDoc = int.Parse(dr["id_tipo_documento"].ToString());
+                c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"].ToString());
+                c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"].ToString());
+
+                lst.Add(c);
+
+            }
+
+            return lst;
+        }
+
+        public int ModificarCliente(Cliente nuevo)
+        {
+            int aux = 0;
+
+            List<Parametro> lstParametros = new List<Parametro>(){
+                new Parametro("@id_cliente", nuevo.Id),
+                new Parametro("@nombre", nuevo.Nombre),
+                new Parametro("@apellido", nuevo.Apellido),
+                new Parametro("@altura", nuevo.Altura),
+                new Parametro("@id_Barrio", nuevo.Barrio),
+                new Parametro("@calle", nuevo.Calle),
+                new Parametro("@documento", nuevo.Documento),
+                new Parametro("@id_tipo_documento", nuevo.TipoDoc),
+                new Parametro("@id_tipo_de_cliente", nuevo.TipoCliente),
+                new Parametro("@id_condicionIVA", nuevo.CondicionIVA)
+            };
+
+            aux = DBHelper.ObtenerInstancia().ActualizarBD("SP_MODIFICAR_CLIENTE", lstParametros);
+
+            return aux;
+        }
+
     }
 }
 

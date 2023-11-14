@@ -95,3 +95,17 @@ C:\Users\Elias\source\repos\Automotriz\AutomotrizBack\obj\Debug\AutomotrizBack.c
 C:\Users\Elias\source\repos\Automotriz\AutomotrizBack\obj\Debug\AutomotrizBack.csproj.CopyComplete
 C:\Users\Elias\source\repos\Automotriz\AutomotrizBack\obj\Debug\AutomotrizBack.dll
 C:\Users\Elias\source\repos\Automotriz\AutomotrizBack\obj\Debug\AutomotrizBack.pdb
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\bin\Debug\AutomotrizBack.dll
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\bin\Debug\AutomotrizBack.pdb
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\obj\Debug\AutomotrizBack.csproj.AssemblyReference.cache
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\obj\Debug\AutomotrizBack.Properties.Resources.resources
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\obj\Debug\AutomotrizBack.csproj.GenerateResource.cache
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\obj\Debug\AutomotrizBack.csproj.CoreCompileInputs.cache
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\obj\Debug\AutomotrizBack.csproj.CopyComplete
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\obj\Debug\AutomotrizBack.dll
+C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizBack\obj\Debug\AutomotrizBack.pdb

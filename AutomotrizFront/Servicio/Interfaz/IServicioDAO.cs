@@ -22,5 +22,10 @@ namespace Automotriz.Servicio
         int ProximoIdCliente();
         int ConfirmarCliente(Cliente cliente);
         List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros);
+        List<Cliente> ListaCliente();
+        int ModificarCliente(Cliente cliente);
+
+
+
     }
 }

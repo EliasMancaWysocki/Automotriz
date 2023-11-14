@@ -284,7 +284,7 @@ namespace Automotriz.Presentación.Soporte
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblidcliente);
             this.Name = "FrmNuevoCliente";
-            this.Text = "FrmCliente";
+            this.Text = "                                                              NUEVO CLIENTE ";
             this.Load += new System.EventHandler(this.FrmNuevoCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
