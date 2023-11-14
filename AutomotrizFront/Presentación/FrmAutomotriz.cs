@@ -23,15 +23,17 @@ namespace Automotriz.Presentación
 
         private void FrmAutomotriz_Load(object sender, EventArgs e)
         {
-            CentrarTitulo();
+            CentrarTitulo(panelTitulo, lblAutomotrix);
+            CentrarTitulo(panelNuevoClienteTitle, lblNuevoCliente);
+            CentrarTitulo(panelConsultarClientesTitle, lblConsultarClientes);
         }
 
         //Funciones
-        private void CentrarTitulo()
+        private void CentrarTitulo(Panel panel, Label lbl)
         {
-            int x = (Width - 35 - lblAutomotrix.Width) / 2;
+            int x = (panel.Width - lbl.Width) / 2;
 
-            lblAutomotrix.Location = new Point(x, 45);
+            lbl.Location = new Point(x, 15);
         }
 
 
@@ -47,11 +49,6 @@ namespace Automotriz.Presentación
             {
                 Close();
             }
-        }
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
-            frmConsultaComprobantes.ShowDialog();
         }
         private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
