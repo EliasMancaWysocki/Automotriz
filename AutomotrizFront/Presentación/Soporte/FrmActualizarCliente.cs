@@ -20,7 +20,7 @@ namespace AutomotrizFront.Presentación.Soporte
     {
         IServicioDAO Servicio;
         List<Cliente> lClientes;
-        int nrocl;
+
         public FrmActualizarCliente()
         {
             InitializeComponent();
@@ -30,105 +30,43 @@ namespace AutomotrizFront.Presentación.Soporte
 
         private void FrmActualizarCliente_Load(object sender, EventArgs e)
         {
+            CargarCombo(cboTCliente, Servicio.ObtenerTipoCliente());
+            CargarCombo(cboTipoDoc, Servicio.ObtenerTipoDoc());
+            CargarCombo(cboCIva, Servicio.ObtenerCondicionIVA());
+            CargarCombo(cboBarrios, Servicio.ObtenerBarrios());
+
             // TODO: esta línea de código carga datos en la tabla 'automotrizDataSet2.Mostrar_Cliente' Puede moverla o quitarla según sea necesario.
             this.mostrar_ClienteTableAdapter.Fill(this.automotrizDataSet2.Mostrar_Cliente);
-           
-
-            lblidcliente.Text = lblidcliente.Text + " :  " + nrocl;
 
             gbboxCampos.Enabled = false;
             LimpiarCampos();
 
         }
 
-        private void CargarCamposClientes()
+        //Funciones
+        private void CargarCamposClientes(int nroCliente)
         {
-
             lClientes.Clear();
             lClientes = Servicio.ListaCliente();
 
             foreach (Cliente item in lClientes)
             {
-                nrocl = 3;
-                
-                if(item.Id == nrocl)
+                if(item.Id == nroCliente)
                 {   
+                    lblIdCliente.Text = nroCliente.ToString();
                     txtNombre.Text = item.Nombre;
                     txtApellido.Text = item.Apellido;
                     txtCalle.Text = item.Calle;
                     txtAltura.Text = item.Altura;
-                    cboBarrios.SelectedIndex = item.Barrio;
+                    cboBarrios.SelectedIndex = item.Barrio - 1;
                     txtDocumento.Text = item.Documento;
-                    cboTipoDoc.SelectedIndex = item.TipoDoc;
-                    cboCIva.SelectedIndex = item.CondicionIVA;
-                    cboTCliente.SelectedIndex = item.TipoCliente;
+                    cboTipoDoc.SelectedIndex = item.TipoDoc - 1;
+                    cboCIva.SelectedIndex = item.CondicionIVA - 1;
+                    cboTCliente.SelectedIndex = item.TipoCliente - 1;
                 }
 
             }
         }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
-            nuevoCliente.ShowDialog();
-        }
-
-        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            Cliente nuevo = new Cliente();
-
-            ValidarCampos();
-
-            if (MessageBox.Show("Esta seguro que desea actualizar los campos del cliente") == DialogResult.Yes)
-
-            nuevo.Id = nrocl;
-            nuevo.Nombre = txtNombre.Text;
-            nuevo.Apellido = txtApellido.Text;
-            nuevo.Calle = txtCalle.Text;
-            nuevo.Altura = txtAltura.Text;
-            nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
-            nuevo.Documento = txtDocumento.Text;
-            nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
-            nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
-            nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
-
-            if (Servicio.ModificarCliente(nuevo) == 1)// cambiar por 
-            {
-                MessageBox.Show("Se registró modificacion con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                LimpiarCampos();
-                this.Dispose();
-
-            }
-            else
-            {
-                MessageBox.Show("NO se pudo actualizar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
-
-        }
-
-        
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbClientes_Enter(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void LimpiarCampos()
         {
             cboTCliente.SelectedIndex = -1;
@@ -194,26 +132,69 @@ namespace AutomotrizFront.Presentación.Soporte
             }
 
         }
+        private void CargarCombo(ComboBox Cbo, List<Items> lst)
+        {
+            Cbo.DataSource = lst;
+            Cbo.ValueMember = "Id";
+            Cbo.DisplayMember = "Nombre";
+            Cbo.DropDownStyle = ComboBoxStyle.DropDownList;
 
+        }
+
+
+        //Botones
         private void dgvListacl_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvListacl.MultiSelect = false;//solo permite seleccionar una selda
-
-
-            
-
             if (dgvListacl.CurrentCell.ColumnIndex == 10)
             {
-                nrocl = Convert.ToInt32(dgvListacl.CurrentRow.Cells["Nro_Cliente"].Value);
-                lblidcliente.Text = " :  " + nrocl;
-                CargarCamposClientes();
+                int nroCliente = Convert.ToInt32(dgvListacl.CurrentRow.Cells["NroCliente"].Value);
+
+                CargarCamposClientes(nroCliente);
+            }
+
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
+            nuevoCliente.ShowDialog();
+        }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Cliente nuevo = new Cliente();
+
+            ValidarCampos();
+
+            if (MessageBox.Show("Esta seguro que desea actualizar los campos del cliente") == DialogResult.Yes)
+
+            //nuevo.Id = nrocl;
+            nuevo.Nombre = txtNombre.Text;
+            nuevo.Apellido = txtApellido.Text;
+            nuevo.Calle = txtCalle.Text;
+            nuevo.Altura = txtAltura.Text;
+            nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
+            nuevo.Documento = txtDocumento.Text;
+            nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
+            nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
+            nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
+
+            if (Servicio.ModificarCliente(nuevo) == 1)// cambiar por 
+            {
+                MessageBox.Show("Se registró modificacion con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                LimpiarCampos();
+                this.Dispose();
+
+            }
+            else
+            {
+                MessageBox.Show("NO se pudo actualizar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
