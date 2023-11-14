@@ -205,7 +205,6 @@ namespace AutomotrizBack.Datos
             }
             return lst;
         }
-
         public List<Cliente> ListaCliente()
         {
            
@@ -233,7 +232,6 @@ namespace AutomotrizBack.Datos
 
             return lst;
         }
-
         public int ModificarCliente(Cliente nuevo)
         {
             int aux = 0;
