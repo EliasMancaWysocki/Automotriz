@@ -18,8 +18,6 @@ namespace AutomotrizFront.Presentación.Soporte
 {
     public partial class FrmActualizarCliente : Form
     {
-
-
         IServicioDAO Servicio;
         List<Cliente> lClientes;
         int nrocl;

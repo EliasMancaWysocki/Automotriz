@@ -164,3 +164,4 @@ C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizFront\obj\Debug\RdlCompile.compil
 C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizFront\obj\Debug\AutomotrizFront.csproj.CoreCompileInputs.cache
 C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizFront\obj\Debug\AutomotrizFront.exe
 C:\Users\CATA\Desktop\tp elias\13-11\AutomotrizFront\obj\Debug\AutomotrizFront.pdb
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmActualizarCliente.resources
