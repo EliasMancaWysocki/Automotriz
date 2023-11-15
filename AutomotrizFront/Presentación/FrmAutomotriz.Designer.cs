@@ -59,6 +59,10 @@
             this.panelConsultarClientesTitle = new System.Windows.Forms.Panel();
             this.lblConsultarClientes = new System.Windows.Forms.Label();
             this.panelConsultarComprobantes = new System.Windows.Forms.Panel();
+            this.panelConsultarComprobantesBody = new System.Windows.Forms.Panel();
+            this.btnConsultarComprobantes = new System.Windows.Forms.Button();
+            this.panelConsultarComprobanteTitle = new System.Windows.Forms.Panel();
+            this.lblConsultarComprobantes = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
             this.panelNuevoCliente = new System.Windows.Forms.Panel();
@@ -67,6 +71,10 @@
             this.panelNuevoClienteTitle = new System.Windows.Forms.Panel();
             this.lblNuevoCliente = new System.Windows.Forms.Label();
             this.panelNuevoComprobante = new System.Windows.Forms.Panel();
+            this.panelNuevoComprobanteBody = new System.Windows.Forms.Panel();
+            this.btnNuevoComprobante = new System.Windows.Forms.Button();
+            this.panelNuevoComprobanteTitle = new System.Windows.Forms.Panel();
+            this.lblNuevoComprobante = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelEliminarClientes = new System.Windows.Forms.Panel();
@@ -77,9 +85,15 @@
             this.panelConsultarClientes.SuspendLayout();
             this.panelConsultarClientesBody.SuspendLayout();
             this.panelConsultarClientesTitle.SuspendLayout();
+            this.panelConsultarComprobantes.SuspendLayout();
+            this.panelConsultarComprobantesBody.SuspendLayout();
+            this.panelConsultarComprobanteTitle.SuspendLayout();
             this.panelNuevoCliente.SuspendLayout();
             this.panelNuevoClienteBody.SuspendLayout();
             this.panelNuevoClienteTitle.SuspendLayout();
+            this.panelNuevoComprobante.SuspendLayout();
+            this.panelNuevoComprobanteBody.SuspendLayout();
+            this.panelNuevoComprobanteTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -399,11 +413,59 @@
             // 
             // panelConsultarComprobantes
             // 
+            this.panelConsultarComprobantes.Controls.Add(this.panelConsultarComprobantesBody);
+            this.panelConsultarComprobantes.Controls.Add(this.panelConsultarComprobanteTitle);
             this.panelConsultarComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelConsultarComprobantes.Location = new System.Drawing.Point(382, 311);
             this.panelConsultarComprobantes.Name = "panelConsultarComprobantes";
             this.panelConsultarComprobantes.Size = new System.Drawing.Size(367, 296);
             this.panelConsultarComprobantes.TabIndex = 4;
+            // 
+            // panelConsultarComprobantesBody
+            // 
+            this.panelConsultarComprobantesBody.Controls.Add(this.btnConsultarComprobantes);
+            this.panelConsultarComprobantesBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelConsultarComprobantesBody.Location = new System.Drawing.Point(0, 60);
+            this.panelConsultarComprobantesBody.Name = "panelConsultarComprobantesBody";
+            this.panelConsultarComprobantesBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelConsultarComprobantesBody.Size = new System.Drawing.Size(367, 236);
+            this.panelConsultarComprobantesBody.TabIndex = 1;
+            // 
+            // btnConsultarComprobantes
+            // 
+            this.btnConsultarComprobantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(200)))), ((int)(((byte)(99)))));
+            this.btnConsultarComprobantes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarComprobantes.BackgroundImage")));
+            this.btnConsultarComprobantes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnConsultarComprobantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarComprobantes.Location = new System.Drawing.Point(25, 25);
+            this.btnConsultarComprobantes.Name = "btnConsultarComprobantes";
+            this.btnConsultarComprobantes.Size = new System.Drawing.Size(317, 186);
+            this.btnConsultarComprobantes.TabIndex = 0;
+            this.btnConsultarComprobantes.UseVisualStyleBackColor = false;
+            this.btnConsultarComprobantes.Click += new System.EventHandler(this.btnConsultarComprobantes_Click);
+            // 
+            // panelConsultarComprobanteTitle
+            // 
+            this.panelConsultarComprobanteTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(200)))), ((int)(((byte)(99)))));
+            this.panelConsultarComprobanteTitle.Controls.Add(this.lblConsultarComprobantes);
+            this.panelConsultarComprobanteTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConsultarComprobanteTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelConsultarComprobanteTitle.Name = "panelConsultarComprobanteTitle";
+            this.panelConsultarComprobanteTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelConsultarComprobanteTitle.TabIndex = 0;
+            // 
+            // lblConsultarComprobantes
+            // 
+            this.lblConsultarComprobantes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblConsultarComprobantes.AutoSize = true;
+            this.lblConsultarComprobantes.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarComprobantes.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblConsultarComprobantes.Location = new System.Drawing.Point(52, 18);
+            this.lblConsultarComprobantes.Name = "lblConsultarComprobantes";
+            this.lblConsultarComprobantes.Size = new System.Drawing.Size(248, 24);
+            this.lblConsultarComprobantes.TabIndex = 1;
+            this.lblConsultarComprobantes.Text = "Consultar Comprobantes";
             // 
             // panel4
             // 
@@ -481,11 +543,61 @@
             // 
             // panelNuevoComprobante
             // 
+            this.panelNuevoComprobante.Controls.Add(this.panelNuevoComprobanteBody);
+            this.panelNuevoComprobante.Controls.Add(this.panelNuevoComprobanteTitle);
             this.panelNuevoComprobante.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNuevoComprobante.Location = new System.Drawing.Point(382, 6);
             this.panelNuevoComprobante.Name = "panelNuevoComprobante";
             this.panelNuevoComprobante.Size = new System.Drawing.Size(367, 296);
             this.panelNuevoComprobante.TabIndex = 1;
+            // 
+            // panelNuevoComprobanteBody
+            // 
+            this.panelNuevoComprobanteBody.Controls.Add(this.btnNuevoComprobante);
+            this.panelNuevoComprobanteBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNuevoComprobanteBody.Location = new System.Drawing.Point(0, 60);
+            this.panelNuevoComprobanteBody.Name = "panelNuevoComprobanteBody";
+            this.panelNuevoComprobanteBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelNuevoComprobanteBody.Size = new System.Drawing.Size(367, 236);
+            this.panelNuevoComprobanteBody.TabIndex = 1;
+            // 
+            // btnNuevoComprobante
+            // 
+            this.btnNuevoComprobante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(97)))));
+            this.btnNuevoComprobante.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoComprobante.BackgroundImage")));
+            this.btnNuevoComprobante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevoComprobante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevoComprobante.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNuevoComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoComprobante.ForeColor = System.Drawing.Color.Transparent;
+            this.btnNuevoComprobante.Location = new System.Drawing.Point(25, 25);
+            this.btnNuevoComprobante.Name = "btnNuevoComprobante";
+            this.btnNuevoComprobante.Size = new System.Drawing.Size(317, 186);
+            this.btnNuevoComprobante.TabIndex = 0;
+            this.btnNuevoComprobante.UseVisualStyleBackColor = false;
+            this.btnNuevoComprobante.Click += new System.EventHandler(this.btnNuevoComprobante_Click);
+            // 
+            // panelNuevoComprobanteTitle
+            // 
+            this.panelNuevoComprobanteTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(97)))));
+            this.panelNuevoComprobanteTitle.Controls.Add(this.lblNuevoComprobante);
+            this.panelNuevoComprobanteTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelNuevoComprobanteTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelNuevoComprobanteTitle.Name = "panelNuevoComprobanteTitle";
+            this.panelNuevoComprobanteTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelNuevoComprobanteTitle.TabIndex = 0;
+            // 
+            // lblNuevoComprobante
+            // 
+            this.lblNuevoComprobante.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNuevoComprobante.AutoSize = true;
+            this.lblNuevoComprobante.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoComprobante.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNuevoComprobante.Location = new System.Drawing.Point(50, 16);
+            this.lblNuevoComprobante.Name = "lblNuevoComprobante";
+            this.lblNuevoComprobante.Size = new System.Drawing.Size(267, 31);
+            this.lblNuevoComprobante.TabIndex = 1;
+            this.lblNuevoComprobante.Text = "Nuevo Comprobante";
             // 
             // panel7
             // 
@@ -543,10 +655,18 @@
             this.panelConsultarClientesBody.ResumeLayout(false);
             this.panelConsultarClientesTitle.ResumeLayout(false);
             this.panelConsultarClientesTitle.PerformLayout();
+            this.panelConsultarComprobantes.ResumeLayout(false);
+            this.panelConsultarComprobantesBody.ResumeLayout(false);
+            this.panelConsultarComprobanteTitle.ResumeLayout(false);
+            this.panelConsultarComprobanteTitle.PerformLayout();
             this.panelNuevoCliente.ResumeLayout(false);
             this.panelNuevoClienteBody.ResumeLayout(false);
             this.panelNuevoClienteTitle.ResumeLayout(false);
             this.panelNuevoClienteTitle.PerformLayout();
+            this.panelNuevoComprobante.ResumeLayout(false);
+            this.panelNuevoComprobanteBody.ResumeLayout(false);
+            this.panelNuevoComprobanteTitle.ResumeLayout(false);
+            this.panelNuevoComprobanteTitle.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,5 +715,13 @@
         private System.Windows.Forms.Panel panelConsultarClientesTitle;
         private System.Windows.Forms.Label lblConsultarClientes;
         private System.Windows.Forms.Button btnConsultarClientes;
+        private System.Windows.Forms.Panel panelNuevoComprobanteBody;
+        private System.Windows.Forms.Panel panelNuevoComprobanteTitle;
+        private System.Windows.Forms.Panel panelConsultarComprobanteTitle;
+        private System.Windows.Forms.Button btnNuevoComprobante;
+        private System.Windows.Forms.Label lblNuevoComprobante;
+        private System.Windows.Forms.Panel panelConsultarComprobantesBody;
+        private System.Windows.Forms.Button btnConsultarComprobantes;
+        private System.Windows.Forms.Label lblConsultarComprobantes;
     }
 }

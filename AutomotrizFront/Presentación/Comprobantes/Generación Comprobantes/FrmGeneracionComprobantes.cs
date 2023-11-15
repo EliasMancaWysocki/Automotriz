@@ -50,9 +50,9 @@ namespace Automotriz.Presentación
         }
         private void CentrarBotones()
         {
-            int x = (Width - 15 - 155) / 2;
+            int x = (Width - 15 - 195) / 2;
             btnVolver.Location = new Point(x, 115);
-            btnSiguiente.Location = new Point(x + 80, 115);
+            btnSiguiente.Location = new Point(x + 120, 115);
         }
 
 

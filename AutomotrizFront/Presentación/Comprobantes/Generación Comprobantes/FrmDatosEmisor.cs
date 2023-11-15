@@ -60,9 +60,9 @@ namespace Automotriz.Presentación
         }
         private void CentrarBotones()
         {
-            int x = (Width - 15 - 155) / 2;
+            int x = (Width - 15 - 195) / 2;
             btnVolver.Location = new Point(x, 360);
-            btnSiguiente.Location = new Point(x + 80, 360);
+            btnSiguiente.Location = new Point(x + 120, 360);
         }
 
         //Botones
@@ -216,6 +216,16 @@ namespace Automotriz.Presentación
                 lblHasta.Visible = false;
                 dtpHasta.Visible = false;
             }
+        }
+
+        private void lblComprobante_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

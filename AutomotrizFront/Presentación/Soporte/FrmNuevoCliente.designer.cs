@@ -209,9 +209,10 @@ namespace Automotriz.Presentación.Soporte
             // btnCargar
             // 
             this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.Location = new System.Drawing.Point(260, 280);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.Size = new System.Drawing.Size(90, 30);
             this.btnCargar.TabIndex = 18;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = false;
@@ -219,9 +220,10 @@ namespace Automotriz.Presentación.Soporte
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(155, 281);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(90, 30);
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -313,7 +315,7 @@ namespace Automotriz.Presentación.Soporte
             this.MaximumSize = new System.Drawing.Size(550, 370);
             this.MinimumSize = new System.Drawing.Size(550, 370);
             this.Name = "FrmNuevoCliente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Cliente";
             this.Load += new System.EventHandler(this.FrmNuevoCliente_Load);
             this.ResumeLayout(false);

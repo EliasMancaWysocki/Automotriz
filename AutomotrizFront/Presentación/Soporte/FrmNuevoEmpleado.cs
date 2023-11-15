@@ -42,5 +42,10 @@ namespace Automotriz.Presentación.Soporte
         {
 
         }
+
+        private void FrmNuevoEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

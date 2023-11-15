@@ -31,7 +31,6 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
         {
             CargarCombo(cboTipoDoc, Servicio.ObtenerTipoDoc());
             CentrarBotones();
-            CentrarTitulo();
         }
 
         //Funciones
@@ -42,18 +41,11 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
             cbo.DisplayMember = "Nombre";
             cbo.SelectedIndex = -1;
         }
-        private void CentrarTitulo()
-        {
-            int x = 0;
-            x = (Width - 15 - lblTitulo.Width) / 2;
-
-            lblTitulo.Location = new Point(x, 25);
-        }
         private void CentrarBotones()
         {
-            int x = (Width - 15 - 155) / 2;
-            btnVolver.Location = new Point(x, 460);
-            btnBuscar.Location = new Point(x + 80, 460);
+            int x = (Width - 15 - 195) / 2;
+            btnVolver.Location = new Point(x, 570);
+            btnBuscar.Location = new Point(x + 120, 570);
         }
 
         //Botones

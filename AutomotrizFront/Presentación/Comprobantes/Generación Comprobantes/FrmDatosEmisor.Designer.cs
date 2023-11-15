@@ -61,26 +61,31 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(12, 77);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(119, 13);
+            this.lblFecha.Size = new System.Drawing.Size(163, 19);
             this.lblFecha.TabIndex = 0;
             this.lblFecha.Text = "Fecha del comprobante";
+            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // lblComprobante
             // 
             this.lblComprobante.AutoSize = true;
-            this.lblComprobante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComprobante.Location = new System.Drawing.Point(232, 30);
+            this.lblComprobante.BackColor = System.Drawing.Color.Transparent;
+            this.lblComprobante.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComprobante.Location = new System.Drawing.Point(204, 9);
             this.lblComprobante.Name = "lblComprobante";
-            this.lblComprobante.Size = new System.Drawing.Size(49, 19);
+            this.lblComprobante.Size = new System.Drawing.Size(63, 24);
             this.lblComprobante.TabIndex = 1;
             this.lblComprobante.Text = "label1";
+            this.lblComprobante.Click += new System.EventHandler(this.lblComprobante_Click);
             // 
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(137, 71);
+            this.dtpFecha.Location = new System.Drawing.Point(185, 76);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(101, 20);
             this.dtpFecha.TabIndex = 1;
@@ -89,9 +94,11 @@
             // lblConceptos
             // 
             this.lblConceptos.AutoSize = true;
-            this.lblConceptos.Location = new System.Drawing.Point(32, 115);
+            this.lblConceptos.BackColor = System.Drawing.Color.Transparent;
+            this.lblConceptos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConceptos.Location = new System.Drawing.Point(39, 115);
             this.lblConceptos.Name = "lblConceptos";
-            this.lblConceptos.Size = new System.Drawing.Size(99, 13);
+            this.lblConceptos.Size = new System.Drawing.Size(136, 19);
             this.lblConceptos.TabIndex = 3;
             this.lblConceptos.Text = "Conceptos a incluír";
             // 
@@ -99,7 +106,7 @@
             // 
             this.cboConceptos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboConceptos.FormattingEnabled = true;
-            this.cboConceptos.Location = new System.Drawing.Point(137, 112);
+            this.cboConceptos.Location = new System.Drawing.Point(185, 116);
             this.cboConceptos.Name = "cboConceptos";
             this.cboConceptos.Size = new System.Drawing.Size(121, 21);
             this.cboConceptos.TabIndex = 2;
@@ -107,6 +114,7 @@
             // 
             // groupBoxActividades
             // 
+            this.groupBoxActividades.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxActividades.Controls.Add(this.btnActMenos);
             this.groupBoxActividades.Controls.Add(this.btnActMas);
             this.groupBoxActividades.Controls.Add(this.cboAct5);
@@ -123,7 +131,7 @@
             this.groupBoxActividades.Controls.Add(this.lblNro);
             this.groupBoxActividades.Location = new System.Drawing.Point(15, 149);
             this.groupBoxActividades.Name = "groupBoxActividades";
-            this.groupBoxActividades.Size = new System.Drawing.Size(465, 190);
+            this.groupBoxActividades.Size = new System.Drawing.Size(508, 190);
             this.groupBoxActividades.TabIndex = 5;
             this.groupBoxActividades.TabStop = false;
             this.groupBoxActividades.Text = "Actividades Asociadas (opcional)";
@@ -168,10 +176,10 @@
             // lblAct5
             // 
             this.lblAct5.AutoSize = true;
-            this.lblAct5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct5.Location = new System.Drawing.Point(12, 156);
             this.lblAct5.Name = "lblAct5";
-            this.lblAct5.Size = new System.Drawing.Size(14, 13);
+            this.lblAct5.Size = new System.Drawing.Size(17, 19);
             this.lblAct5.TabIndex = 16;
             this.lblAct5.Text = "5";
             this.lblAct5.Visible = false;
@@ -189,10 +197,10 @@
             // lblAct4
             // 
             this.lblAct4.AutoSize = true;
-            this.lblAct4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct4.Location = new System.Drawing.Point(12, 129);
             this.lblAct4.Name = "lblAct4";
-            this.lblAct4.Size = new System.Drawing.Size(14, 13);
+            this.lblAct4.Size = new System.Drawing.Size(17, 19);
             this.lblAct4.TabIndex = 14;
             this.lblAct4.Text = "4";
             this.lblAct4.Visible = false;
@@ -210,10 +218,10 @@
             // lblAct3
             // 
             this.lblAct3.AutoSize = true;
-            this.lblAct3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct3.Location = new System.Drawing.Point(12, 102);
             this.lblAct3.Name = "lblAct3";
-            this.lblAct3.Size = new System.Drawing.Size(14, 13);
+            this.lblAct3.Size = new System.Drawing.Size(17, 19);
             this.lblAct3.TabIndex = 12;
             this.lblAct3.Text = "3";
             this.lblAct3.Visible = false;
@@ -231,10 +239,10 @@
             // lblAct2
             // 
             this.lblAct2.AutoSize = true;
-            this.lblAct2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct2.Location = new System.Drawing.Point(12, 75);
             this.lblAct2.Name = "lblAct2";
-            this.lblAct2.Size = new System.Drawing.Size(14, 13);
+            this.lblAct2.Size = new System.Drawing.Size(17, 19);
             this.lblAct2.TabIndex = 10;
             this.lblAct2.Text = "2";
             this.lblAct2.Visible = false;
@@ -251,36 +259,39 @@
             // lblAct1
             // 
             this.lblAct1.AutoSize = true;
-            this.lblAct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct1.Location = new System.Drawing.Point(12, 48);
             this.lblAct1.Name = "lblAct1";
-            this.lblAct1.Size = new System.Drawing.Size(14, 13);
+            this.lblAct1.Size = new System.Drawing.Size(17, 19);
             this.lblAct1.TabIndex = 8;
             this.lblAct1.Text = "1";
             // 
             // lblActividad
             // 
             this.lblActividad.AutoSize = true;
+            this.lblActividad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActividad.Location = new System.Drawing.Point(42, 26);
             this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(51, 13);
+            this.lblActividad.Size = new System.Drawing.Size(72, 19);
             this.lblActividad.TabIndex = 7;
             this.lblActividad.Text = "Actividad";
             // 
             // lblNro
             // 
             this.lblNro.AutoSize = true;
+            this.lblNro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNro.Location = new System.Drawing.Point(12, 26);
             this.lblNro.Name = "lblNro";
-            this.lblNro.Size = new System.Drawing.Size(24, 13);
+            this.lblNro.Size = new System.Drawing.Size(35, 19);
             this.lblNro.TabIndex = 6;
             this.lblNro.Text = "Nro";
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(163, 360);
+            this.btnVolver.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(152, 358);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.Size = new System.Drawing.Size(100, 34);
             this.btnVolver.TabIndex = 10;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -288,9 +299,10 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(244, 360);
+            this.btnSiguiente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Location = new System.Drawing.Point(258, 360);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnSiguiente.Size = new System.Drawing.Size(100, 34);
             this.btnSiguiente.TabIndex = 11;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
@@ -298,37 +310,43 @@
             // 
             // dtpDesde
             // 
+            this.dtpDesde.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(264, 113);
+            this.dtpDesde.Location = new System.Drawing.Point(315, 117);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(101, 20);
+            this.dtpDesde.Size = new System.Drawing.Size(101, 26);
             this.dtpDesde.TabIndex = 12;
             this.dtpDesde.Value = new System.DateTime(2023, 10, 18, 16, 49, 10, 0);
             // 
             // dtpHasta
             // 
+            this.dtpHasta.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(371, 113);
+            this.dtpHasta.Location = new System.Drawing.Point(422, 117);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(101, 20);
+            this.dtpHasta.Size = new System.Drawing.Size(101, 26);
             this.dtpHasta.TabIndex = 13;
             this.dtpHasta.Value = new System.DateTime(2023, 10, 18, 16, 49, 10, 0);
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Location = new System.Drawing.Point(292, 93);
+            this.lblDesde.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesde.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(340, 95);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(38, 13);
+            this.lblDesde.Size = new System.Drawing.Size(52, 19);
             this.lblDesde.TabIndex = 14;
             this.lblDesde.Text = "Desde";
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(401, 93);
+            this.lblHasta.BackColor = System.Drawing.Color.Transparent;
+            this.lblHasta.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(446, 95);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(35, 13);
+            this.lblHasta.Size = new System.Drawing.Size(49, 19);
             this.lblHasta.TabIndex = 15;
             this.lblHasta.Text = "Hasta";
             // 
@@ -336,7 +354,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 396);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(539, 411);
             this.Controls.Add(this.lblHasta);
             this.Controls.Add(this.lblDesde);
             this.Controls.Add(this.dtpHasta);
@@ -349,7 +369,10 @@
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblComprobante);
             this.Controls.Add(this.lblFecha);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(555, 450);
+            this.MinimumSize = new System.Drawing.Size(555, 450);
             this.Name = "FrmDatosEmisor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Emisión";

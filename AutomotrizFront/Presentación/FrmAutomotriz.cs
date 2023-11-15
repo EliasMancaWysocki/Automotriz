@@ -52,16 +52,22 @@ namespace Automotriz.Presentación
             {
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 25, LargeFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 25, LargeFont);
+                ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 25, LargeFont);
+                ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 25, LargeFont);
             }
             else if(Width <= 1200)
             {
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 15, MediumFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 15, MediumFont);
+                ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 15, MediumFont);
+                ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 15, MediumFont);
             }
             else if(Width <= 992)
             {
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 5, SmallFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 5, SmallFont);
+                ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 5, SmallFont);
+                ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 5, SmallFont);
             }
         }
 
@@ -95,6 +101,16 @@ namespace Automotriz.Presentación
         {
             FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
             nuevoCliente.ShowDialog();
+        }
+        private void btnNuevoComprobante_Click(object sender, EventArgs e)
+        {
+            FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
+            frmGeneracionComprobantes.ShowDialog();
+        }
+        private void btnConsultarComprobantes_Click(object sender, EventArgs e)
+        {
+            FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
+            frmConsultaComprobantes.ShowDialog();
         }
 
         //Eventos

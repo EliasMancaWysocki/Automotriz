@@ -41,7 +41,7 @@ namespace AutomotrizFront.Presentación.Soporte
 
             gbboxCampos.Enabled = false;
             btnModificar.Enabled = false;
-            btnBorrar.Visible = false;// hasta que sea programado
+            //btnBorrar.Visible = false;// hasta que sea programado
 
             LimpiarCampos();
 
