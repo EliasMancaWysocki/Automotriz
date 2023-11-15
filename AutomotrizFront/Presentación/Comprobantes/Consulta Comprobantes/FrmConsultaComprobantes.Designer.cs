@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaComprobantes));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
@@ -285,6 +286,7 @@
             this.Controls.Add(this.groupBoxComprobante);
             this.Controls.Add(this.groupBoxFechaEmision);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(375, 540);
             this.MinimumSize = new System.Drawing.Size(375, 540);

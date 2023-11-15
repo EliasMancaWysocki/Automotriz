@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGeneracionComprobantes));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblTipoComprobate = new System.Windows.Forms.Label();
             this.cboComprobantes = new System.Windows.Forms.ComboBox();
@@ -93,6 +94,7 @@
             this.Controls.Add(this.cboComprobantes);
             this.Controls.Add(this.lblTipoComprobate);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(310, 190);
             this.MinimumSize = new System.Drawing.Size(310, 190);

@@ -35,6 +35,34 @@ namespace Automotriz.Presentación
 
             lbl.Location = new Point(x, 15);
         }
+        private void ResponsiveButton(Panel panel, Label lbl, int padding, Font font)
+        {
+            panel.Padding = new Padding(padding);
+            lbl.Font = font;
+            CentrarTitulo(panel, lbl);
+        }
+        private void EndResponsive()
+        {
+            Font SmallFont = new Font("Calisto MT", 12, FontStyle.Bold);
+            Font MediumFont = new Font("Calisto MT", 16, FontStyle.Bold);
+            Font LargeFont = new Font("Calisto MT", 20, FontStyle.Bold);
+
+            if (Width > 1200)
+            {
+                ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 25, LargeFont);
+                ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 25, LargeFont);
+            }
+            else if(Width <= 1200)
+            {
+                ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 15, MediumFont);
+                ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 15, MediumFont);
+            }
+            else if(Width <= 992)
+            {
+                ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 5, SmallFont);
+                ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 5, SmallFont);
+            }
+        }
 
 
         //Botones Menu Strip
@@ -66,6 +94,12 @@ namespace Automotriz.Presentación
         {
             FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
             nuevoCliente.ShowDialog();
+        }
+
+        //Eventos
+        private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
+        {
+            EndResponsive();
         }
     }
 }

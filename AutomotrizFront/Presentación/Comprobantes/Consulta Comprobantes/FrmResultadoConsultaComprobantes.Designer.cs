@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResultadoConsultaComprobantes));
             this.dgvResultados = new System.Windows.Forms.DataGridView();
             this.colFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -211,6 +212,7 @@
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.groupBoxResultados);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmResultadoConsultaComprobantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResultadoConsultaComprobantes";
