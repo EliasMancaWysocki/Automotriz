@@ -65,9 +65,9 @@ namespace Automotriz.Presentación
         }
         private void CentrarBotones()
         {
-            int x = (Width - 15 - 155) / 2;
-            btnVolver.Location = new Point(x, 480);
-            btnSiguiente.Location = new Point(x + 80, 480);
+            int x = (Width - 15 - 195) / 2;
+            btnVolver.Location = new Point(x, 490);
+            btnSiguiente.Location = new Point(x + 120, 490);
         }
         private void CargarCheckBox()
         {

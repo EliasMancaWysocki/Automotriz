@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace AutomotrizFront.Presentación.Soporte
 {
     partial class FrmActualizarCliente
@@ -41,11 +43,16 @@ namespace AutomotrizFront.Presentación.Soporte
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+<<<<<<< HEAD
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActualizarCliente));
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
             this.gbClientes = new System.Windows.Forms.GroupBox();
             this.dgvListacl = new System.Windows.Forms.DataGridView();
             this.NroCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -88,7 +95,10 @@ namespace AutomotrizFront.Presentación.Soporte
             this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter1 = new AutomotrizFront.AutomotrizDataSet1TableAdapters.ClientesTableAdapter();
             this.mostrar_ClienteTableAdapter = new AutomotrizFront.AutomotrizDataSet2TableAdapters.Mostrar_ClienteTableAdapter();
+<<<<<<< HEAD
             this.btnCancelar = new System.Windows.Forms.Button();
+=======
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
             this.gbClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListacl)).BeginInit();
             this.gbBotones.SuspendLayout();
@@ -159,6 +169,99 @@ namespace AutomotrizFront.Presentación.Soporte
             this.NroCliente.Name = "NroCliente";
             this.NroCliente.Visible = false;
             // 
+<<<<<<< HEAD
+=======
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.nombreDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.apellidoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // calleDataGridViewTextBoxColumn
+            // 
+            this.calleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.calleDataGridViewTextBoxColumn.DataPropertyName = "Calle";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.calleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.calleDataGridViewTextBoxColumn.HeaderText = "Calle";
+            this.calleDataGridViewTextBoxColumn.Name = "calleDataGridViewTextBoxColumn";
+            this.calleDataGridViewTextBoxColumn.Width = 55;
+            // 
+            // alturaDataGridViewTextBoxColumn
+            // 
+            this.alturaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.alturaDataGridViewTextBoxColumn.DataPropertyName = "Altura";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.alturaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.alturaDataGridViewTextBoxColumn.HeaderText = "Altura";
+            this.alturaDataGridViewTextBoxColumn.Name = "alturaDataGridViewTextBoxColumn";
+            this.alturaDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // barrioDataGridViewTextBoxColumn
+            // 
+            this.barrioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.barrioDataGridViewTextBoxColumn.DataPropertyName = "Barrio";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.barrioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.barrioDataGridViewTextBoxColumn.HeaderText = "Barrio";
+            this.barrioDataGridViewTextBoxColumn.Name = "barrioDataGridViewTextBoxColumn";
+            this.barrioDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // documentoDataGridViewTextBoxColumn
+            // 
+            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "Documento";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.documentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
+            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
+            this.documentoDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // tipoDocumentoDataGridViewTextBoxColumn
+            // 
+            this.tipoDocumentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tipoDocumentoDataGridViewTextBoxColumn.DataPropertyName = "Tipo Documento";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tipoDocumentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.tipoDocumentoDataGridViewTextBoxColumn.HeaderText = "Tipo Documento";
+            this.tipoDocumentoDataGridViewTextBoxColumn.Name = "tipoDocumentoDataGridViewTextBoxColumn";
+            this.tipoDocumentoDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // tipoClienteDataGridViewTextBoxColumn
+            // 
+            this.tipoClienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tipoClienteDataGridViewTextBoxColumn.DataPropertyName = "Tipo Cliente";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tipoClienteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.tipoClienteDataGridViewTextBoxColumn.HeaderText = "Tipo Cliente";
+            this.tipoClienteDataGridViewTextBoxColumn.Name = "tipoClienteDataGridViewTextBoxColumn";
+            this.tipoClienteDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // condicionIVADataGridViewTextBoxColumn
+            // 
+            this.condicionIVADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.condicionIVADataGridViewTextBoxColumn.DataPropertyName = "Condicion IVA";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.condicionIVADataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.condicionIVADataGridViewTextBoxColumn.HeaderText = "Condicion IVA";
+            this.condicionIVADataGridViewTextBoxColumn.Name = "condicionIVADataGridViewTextBoxColumn";
+            this.condicionIVADataGridViewTextBoxColumn.Width = 91;
+            // 
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
             // Seleccionar
             // 
             this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -167,7 +270,11 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // gbBotones
             // 
+<<<<<<< HEAD
             this.gbBotones.Controls.Add(this.btnCancelar);
+=======
+            this.gbBotones.BackColor = System.Drawing.Color.Transparent;
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
             this.gbBotones.Controls.Add(this.btnBorrar);
             this.gbBotones.Controls.Add(this.btnModificar);
             this.gbBotones.Controls.Add(this.btnSalir);
@@ -178,11 +285,26 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbBotones.TabIndex = 1;
             this.gbBotones.TabStop = false;
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(262, 19);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(90, 30);
+            this.btnBorrar.TabIndex = 3;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
             // btnModificar
             // 
+<<<<<<< HEAD
             this.btnModificar.Location = new System.Drawing.Point(576, 19);
+=======
+            this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(506, 19);
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(90, 30);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -190,9 +312,10 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // btnSalir
             // 
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(791, 19);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(90, 30);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -200,9 +323,10 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(7, 20);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(90, 30);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -210,6 +334,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // gbboxCampos
             // 
+            this.gbboxCampos.BackColor = System.Drawing.Color.Transparent;
             this.gbboxCampos.Controls.Add(this.lblCondicion);
             this.gbboxCampos.Controls.Add(this.cboCIva);
             this.gbboxCampos.Controls.Add(this.cboTipoDoc);
@@ -229,9 +354,10 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbboxCampos.Controls.Add(this.txtApellido);
             this.gbboxCampos.Controls.Add(this.txtNombre);
             this.gbboxCampos.Controls.Add(this.lblIdCliente);
-            this.gbboxCampos.Location = new System.Drawing.Point(15, 269);
+            this.gbboxCampos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbboxCampos.Location = new System.Drawing.Point(15, 258);
             this.gbboxCampos.Name = "gbboxCampos";
-            this.gbboxCampos.Size = new System.Drawing.Size(882, 142);
+            this.gbboxCampos.Size = new System.Drawing.Size(882, 160);
             this.gbboxCampos.TabIndex = 2;
             this.gbboxCampos.TabStop = false;
             this.gbboxCampos.Text = "Datos del Cliente";
@@ -239,9 +365,9 @@ namespace AutomotrizFront.Presentación.Soporte
             // lblCondicion
             // 
             this.lblCondicion.AutoSize = true;
-            this.lblCondicion.Location = new System.Drawing.Point(550, 120);
+            this.lblCondicion.Location = new System.Drawing.Point(560, 115);
             this.lblCondicion.Name = "lblCondicion";
-            this.lblCondicion.Size = new System.Drawing.Size(74, 13);
+            this.lblCondicion.Size = new System.Drawing.Size(105, 19);
             this.lblCondicion.TabIndex = 46;
             this.lblCondicion.Text = "Condicion IVA";
             // 
@@ -250,146 +376,146 @@ namespace AutomotrizFront.Presentación.Soporte
             this.cboCIva.FormattingEnabled = true;
             this.cboCIva.Location = new System.Drawing.Point(671, 112);
             this.cboCIva.Name = "cboCIva";
-            this.cboCIva.Size = new System.Drawing.Size(193, 21);
+            this.cboCIva.Size = new System.Drawing.Size(193, 27);
             this.cboCIva.TabIndex = 45;
             // 
             // cboTipoDoc
             // 
             this.cboTipoDoc.FormattingEnabled = true;
-            this.cboTipoDoc.Location = new System.Drawing.Point(671, 83);
+            this.cboTipoDoc.Location = new System.Drawing.Point(671, 82);
             this.cboTipoDoc.Name = "cboTipoDoc";
-            this.cboTipoDoc.Size = new System.Drawing.Size(193, 21);
+            this.cboTipoDoc.Size = new System.Drawing.Size(193, 27);
             this.cboTipoDoc.TabIndex = 44;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(550, 91);
+            this.label3.Location = new System.Drawing.Point(526, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.Size = new System.Drawing.Size(139, 19);
             this.label3.TabIndex = 43;
             this.label3.Text = "Tipo de Documento";
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(671, 51);
+            this.txtDocumento.Location = new System.Drawing.Point(671, 52);
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(193, 20);
+            this.txtDocumento.Size = new System.Drawing.Size(193, 26);
             this.txtDocumento.TabIndex = 42;
             // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(605, 58);
+            this.lblDocumento.Location = new System.Drawing.Point(580, 55);
             this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(62, 13);
+            this.lblDocumento.Size = new System.Drawing.Size(85, 19);
             this.lblDocumento.TabIndex = 41;
             this.lblDocumento.Text = "Documento";
             // 
             // cboBarrios
             // 
             this.cboBarrios.FormattingEnabled = true;
-            this.cboBarrios.Location = new System.Drawing.Point(671, 18);
+            this.cboBarrios.Location = new System.Drawing.Point(671, 23);
             this.cboBarrios.Name = "cboBarrios";
-            this.cboBarrios.Size = new System.Drawing.Size(193, 21);
+            this.cboBarrios.Size = new System.Drawing.Size(193, 27);
             this.cboBarrios.TabIndex = 40;
             // 
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(605, 26);
+            this.lblBarrio.Location = new System.Drawing.Point(613, 25);
             this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(34, 13);
+            this.lblBarrio.Size = new System.Drawing.Size(52, 19);
             this.lblBarrio.TabIndex = 39;
             this.lblBarrio.Text = "Barrio";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(259, 26);
+            this.lblApellido.Location = new System.Drawing.Point(274, 25);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.Size = new System.Drawing.Size(64, 19);
             this.lblApellido.TabIndex = 38;
             this.lblApellido.Text = "Apellido";
             // 
             // lblnom
             // 
             this.lblnom.AutoSize = true;
-            this.lblnom.Location = new System.Drawing.Point(40, 26);
+            this.lblnom.Location = new System.Drawing.Point(54, 25);
             this.lblnom.Name = "lblnom";
-            this.lblnom.Size = new System.Drawing.Size(44, 13);
+            this.lblnom.Size = new System.Drawing.Size(63, 19);
             this.lblnom.TabIndex = 37;
             this.lblnom.Text = "Nombre";
             // 
             // cboTCliente
             // 
             this.cboTCliente.FormattingEnabled = true;
-            this.cboTCliente.Location = new System.Drawing.Point(106, 91);
+            this.cboTCliente.Location = new System.Drawing.Point(136, 82);
             this.cboTCliente.Name = "cboTCliente";
-            this.cboTCliente.Size = new System.Drawing.Size(132, 21);
+            this.cboTCliente.Size = new System.Drawing.Size(132, 27);
             this.cboTCliente.TabIndex = 36;
             // 
             // lbltipoCliente
             // 
             this.lbltipoCliente.AutoSize = true;
-            this.lbltipoCliente.Location = new System.Drawing.Point(16, 94);
+            this.lbltipoCliente.Location = new System.Drawing.Point(6, 85);
             this.lbltipoCliente.Name = "lbltipoCliente";
-            this.lbltipoCliente.Size = new System.Drawing.Size(78, 13);
+            this.lbltipoCliente.Size = new System.Drawing.Size(111, 19);
             this.lbltipoCliente.TabIndex = 35;
             this.lbltipoCliente.Text = "Tipo de Cliente";
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(309, 54);
+            this.txtAltura.Location = new System.Drawing.Point(344, 52);
             this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(43, 20);
+            this.txtAltura.Size = new System.Drawing.Size(43, 26);
             this.txtAltura.TabIndex = 34;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(259, 61);
+            this.label2.Location = new System.Drawing.Point(287, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(51, 19);
             this.label2.TabIndex = 33;
             this.label2.Text = "Altura";
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(106, 54);
+            this.txtCalle.Location = new System.Drawing.Point(136, 52);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(132, 20);
+            this.txtCalle.Size = new System.Drawing.Size(132, 26);
             this.txtCalle.TabIndex = 32;
             // 
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(40, 61);
+            this.lblCalle.Location = new System.Drawing.Point(73, 55);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(30, 13);
+            this.lblCalle.Size = new System.Drawing.Size(44, 19);
             this.lblCalle.TabIndex = 31;
             this.lblCalle.Text = "Calle";
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(309, 19);
+            this.txtApellido.Location = new System.Drawing.Point(136, 22);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(132, 20);
+            this.txtApellido.Size = new System.Drawing.Size(132, 26);
             this.txtApellido.TabIndex = 30;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(106, 19);
+            this.txtNombre.Location = new System.Drawing.Point(344, 23);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(132, 20);
+            this.txtNombre.Size = new System.Drawing.Size(132, 26);
             this.txtNombre.TabIndex = 29;
             // 
             // lblIdCliente
             // 
             this.lblIdCliente.AutoSize = true;
-            this.lblIdCliente.Location = new System.Drawing.Point(103, 0);
+            this.lblIdCliente.Location = new System.Drawing.Point(151, 0);
             this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(59, 13);
+            this.lblIdCliente.Size = new System.Drawing.Size(87, 19);
             this.lblIdCliente.TabIndex = 28;
             this.lblIdCliente.Text = "Nro Cliente";
             // 
@@ -534,6 +660,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             this.mostrar_ClienteTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(193, 20);
@@ -544,16 +671,23 @@ namespace AutomotrizFront.Presentación.Soporte
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+=======
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
             // FrmActualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(919, 537);
             this.Controls.Add(this.gbboxCampos);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.gbClientes);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmActualizarCliente";
-            this.Text = "FrmActualizarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Actualizar Cliente";
             this.Load += new System.EventHandler(this.FrmActualizarCliente_Load);
             this.gbClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListacl)).EndInit();

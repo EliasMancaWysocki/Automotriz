@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResultadoConsultaComprobantes));
             this.dgvResultados = new System.Windows.Forms.DataGridView();
             this.colFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@
             this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBoxResultados = new System.Windows.Forms.GroupBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnNuevaBusqueda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
@@ -91,7 +91,7 @@
             this.dgvResultados.ShowCellToolTips = false;
             this.dgvResultados.ShowEditingIcon = false;
             this.dgvResultados.ShowRowErrors = false;
-            this.dgvResultados.Size = new System.Drawing.Size(524, 431);
+            this.dgvResultados.Size = new System.Drawing.Size(524, 479);
             this.dgvResultados.TabIndex = 0;
             this.dgvResultados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultados_CellContentClick);
             // 
@@ -166,27 +166,19 @@
             // groupBoxResultados
             // 
             this.groupBoxResultados.Controls.Add(this.dgvResultados);
-            this.groupBoxResultados.Location = new System.Drawing.Point(12, 60);
+            this.groupBoxResultados.Location = new System.Drawing.Point(12, 12);
             this.groupBoxResultados.Name = "groupBoxResultados";
-            this.groupBoxResultados.Size = new System.Drawing.Size(530, 450);
+            this.groupBoxResultados.Size = new System.Drawing.Size(530, 498);
             this.groupBoxResultados.TabIndex = 1;
             this.groupBoxResultados.TabStop = false;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(130, 27);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(257, 19);
-            this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "CONSULTA DE COMPROBANTES";
-            // 
             // btnMenu
             // 
+            this.btnMenu.AutoSize = true;
+            this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.Location = new System.Drawing.Point(130, 530);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(120, 23);
+            this.btnMenu.Size = new System.Drawing.Size(121, 30);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "Menú Principal";
             this.btnMenu.UseVisualStyleBackColor = true;
@@ -194,9 +186,11 @@
             // 
             // btnNuevaBusqueda
             // 
+            this.btnNuevaBusqueda.AutoSize = true;
+            this.btnNuevaBusqueda.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaBusqueda.Location = new System.Drawing.Point(270, 530);
             this.btnNuevaBusqueda.Name = "btnNuevaBusqueda";
-            this.btnNuevaBusqueda.Size = new System.Drawing.Size(120, 23);
+            this.btnNuevaBusqueda.Size = new System.Drawing.Size(133, 30);
             this.btnNuevaBusqueda.TabIndex = 4;
             this.btnNuevaBusqueda.Text = "Nueva Búsqueda";
             this.btnNuevaBusqueda.UseVisualStyleBackColor = true;
@@ -206,14 +200,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 571);
+            this.ClientSize = new System.Drawing.Size(554, 591);
             this.Controls.Add(this.btnNuevaBusqueda);
             this.Controls.Add(this.btnMenu);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.groupBoxResultados);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(570, 630);
+            this.MinimumSize = new System.Drawing.Size(570, 630);
             this.Name = "FrmResultadoConsultaComprobantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ResultadoConsultaComprobantes";
+            this.Text = "Resultado Consulta Comprobantes";
             this.Load += new System.EventHandler(this.ResultadoConsultaComprobantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
             this.groupBoxResultados.ResumeLayout(false);
@@ -226,7 +222,6 @@
 
         private System.Windows.Forms.DataGridView dgvResultados;
         private System.Windows.Forms.GroupBox groupBoxResultados;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaEmision;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumComprobante;

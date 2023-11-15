@@ -152,5 +152,9 @@ C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\Automo
 C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.csproj.CopyComplete
 C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.exe
 C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.pdb
+<<<<<<< HEAD
 C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmConsulta.resources
 C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmResultadoConsulta.resources
+=======
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FormConsulta.resources
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480

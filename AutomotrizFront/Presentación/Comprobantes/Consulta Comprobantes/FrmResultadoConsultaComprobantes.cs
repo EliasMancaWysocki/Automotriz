@@ -42,15 +42,9 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
             }
 
             CentrarBotones();
-            CentrarTitulo();
         }
 
         //Funciones
-        private void CentrarTitulo()
-        {
-            int x = (Width - 15 - lblTitulo.Width) / 2;
-            lblTitulo.Location = new Point(x, 25);
-        }
         private void CentrarBotones()
         {
             int x = (Width - 15 - btnMenu.Width * 2) / 2;
