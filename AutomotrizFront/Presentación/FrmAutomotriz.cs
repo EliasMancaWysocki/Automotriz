@@ -23,24 +23,21 @@ namespace Automotriz.Presentación
 
         private void FrmAutomotriz_Load(object sender, EventArgs e)
         {
-            CentrarTitulo();
+            CentrarTitulo(panelTitulo, lblAutomotrix);
+            CentrarTitulo(panelNuevoClienteTitle, lblNuevoCliente);
+            CentrarTitulo(panelConsultarClientesTitle, lblConsultarClientes);
         }
 
         //Funciones
-        private void CentrarTitulo()
+        private void CentrarTitulo(Panel panel, Label lbl)
         {
-            int x = (Width - 35 - lblAutomotrix.Width) / 2;
+            int x = (panel.Width - lbl.Width) / 2;
 
-            lblAutomotrix.Location = new Point(x, 45);
+            lbl.Location = new Point(x, 15);
         }
 
 
-        //Botones
-        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
-            nuevoCliente.ShowDialog();
-        }
+        //Botones Menu Strip
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -48,10 +45,10 @@ namespace Automotriz.Presentación
                 Close();
             }
         }
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
-            frmConsultaComprobantes.ShowDialog();
+            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
+            nuevoCliente.ShowDialog();
         }
         private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -62,6 +59,13 @@ namespace Automotriz.Presentación
         {
             FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
             frmConsultaComprobantes.ShowDialog();
+        }
+
+        //Botones
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
+        {
+            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
+            nuevoCliente.ShowDialog();
         }
     }
 }

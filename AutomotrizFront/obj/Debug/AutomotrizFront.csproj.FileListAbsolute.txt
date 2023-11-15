@@ -73,3 +73,9 @@ C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.csproj.CopyComplete
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.exe
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.pdb
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\bin\Debug\Microsoft.MSXML.dll
