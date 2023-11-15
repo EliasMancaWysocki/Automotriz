@@ -134,6 +134,12 @@
     <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.Designer.cs">
       <DependentUpon>FrmGeneracionComprobantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentación\Soporte\FormConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Soporte\FormConsulta.Designer.cs">
+      <DependentUpon>FormConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\Soporte\FrmActualizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.resx">
       <DependentUpon>FrmGeneracionComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Soporte\FormConsulta.resx">
+      <DependentUpon>FormConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Soporte\FrmActualizarCliente.resx">
       <DependentUpon>FrmActualizarCliente.cs</DependentUpon>

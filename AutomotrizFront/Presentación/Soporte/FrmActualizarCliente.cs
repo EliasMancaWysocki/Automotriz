@@ -20,12 +20,14 @@ namespace AutomotrizFront.Presentación.Soporte
     {
         IServicioDAO Servicio;
         List<Cliente> lClientes;
+        int IdAModificar;
 
         public FrmActualizarCliente()
         {
             InitializeComponent();
             Servicio = new ServicioDAO();
             lClientes = new List<Cliente>();
+            
         }
 
         private void FrmActualizarCliente_Load(object sender, EventArgs e)
@@ -35,12 +37,20 @@ namespace AutomotrizFront.Presentación.Soporte
             CargarCombo(cboCIva, Servicio.ObtenerCondicionIVA());
             CargarCombo(cboBarrios, Servicio.ObtenerBarrios());
 
-            // TODO: esta línea de código carga datos en la tabla 'automotrizDataSet2.Mostrar_Cliente' Puede moverla o quitarla según sea necesario.
-            this.mostrar_ClienteTableAdapter.Fill(this.automotrizDataSet2.Mostrar_Cliente);
+            CargarListado();//datagridview
 
             gbboxCampos.Enabled = false;
+            btnModificar.Enabled = false;
+            btnBorrar.Visible = false;// hasta que sea programado
+
             LimpiarCampos();
 
+        }
+
+        private void CargarListado()
+        {
+            // TODO: esta línea de código carga datos en la tabla 'automotrizDataSet2.Mostrar_Cliente' Puede moverla o quitarla según sea necesario.
+            this.mostrar_ClienteTableAdapter.Fill(this.automotrizDataSet2.Mostrar_Cliente);
         }
 
         //Funciones
@@ -53,7 +63,7 @@ namespace AutomotrizFront.Presentación.Soporte
             {
                 if(item.Id == nroCliente)
                 {   
-                    lblIdCliente.Text = nroCliente.ToString();
+                    lblIdCliente.Text = "Nro : "+nroCliente.ToString();
                     txtNombre.Text = item.Nombre;
                     txtApellido.Text = item.Apellido;
                     txtCalle.Text = item.Calle;
@@ -63,12 +73,16 @@ namespace AutomotrizFront.Presentación.Soporte
                     cboTipoDoc.SelectedIndex = item.TipoDoc - 1;
                     cboCIva.SelectedIndex = item.CondicionIVA - 1;
                     cboTCliente.SelectedIndex = item.TipoCliente - 1;
+
+                    IdAModificar = nroCliente;
+
                 }
 
             }
         }
         private void LimpiarCampos()
         {
+            lblIdCliente.Text = string.Empty;
             cboTCliente.SelectedIndex = -1;
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
@@ -150,6 +164,10 @@ namespace AutomotrizFront.Presentación.Soporte
                 int nroCliente = Convert.ToInt32(dgvListacl.CurrentRow.Cells["NroCliente"].Value);
 
                 CargarCamposClientes(nroCliente);
+                gbboxCampos.Enabled = true;
+                btnModificar.Enabled = true;
+                btnNuevo.Enabled = false;
+
             }
 
         }
@@ -166,32 +184,40 @@ namespace AutomotrizFront.Presentación.Soporte
         {
             Cliente nuevo = new Cliente();
 
+
             ValidarCampos();
 
-            if (MessageBox.Show("Esta seguro que desea actualizar los campos del cliente") == DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro que desea actualizar los campos del cliente","CONFIRMACION",MessageBoxButtons.YesNo, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            { 
 
-            //nuevo.Id = nrocl;
-            nuevo.Nombre = txtNombre.Text;
-            nuevo.Apellido = txtApellido.Text;
-            nuevo.Calle = txtCalle.Text;
-            nuevo.Altura = txtAltura.Text;
-            nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
-            nuevo.Documento = txtDocumento.Text;
-            nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
-            nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
-            nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
+                nuevo.Id = IdAModificar;
+                nuevo.Nombre = txtNombre.Text;
+                nuevo.Apellido = txtApellido.Text;
+                nuevo.Calle = txtCalle.Text;
+                nuevo.Altura = txtAltura.Text;
+                nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
+                nuevo.Documento = txtDocumento.Text;
+                nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
+                nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
+                nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
 
-            if (Servicio.ModificarCliente(nuevo) == 1)// cambiar por 
-            {
-                MessageBox.Show("Se registró modificacion con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                LimpiarCampos();
-                this.Dispose();
+                int control = Servicio.ModificarCliente(nuevo);
+                if (control == 1)
+                {
+                    MessageBox.Show("Se registró modificacion con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    LimpiarCampos();
 
-            }
-            else
-            {
-                MessageBox.Show("NO se pudo actualizar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    gbboxCampos.Enabled = false;
+                    CargarListado();
+                    btnNuevo.Enabled = true;
+                    btnModificar.Enabled = false;
 
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo actualizar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
             }
 
         }
