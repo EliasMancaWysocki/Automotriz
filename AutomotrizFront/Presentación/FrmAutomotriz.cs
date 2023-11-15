@@ -68,5 +68,11 @@ namespace Automotriz.Presentación
             FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
             nuevoCliente.ShowDialog();
         }
+
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta nuevaConsulta = new FrmConsulta();
+            nuevaConsulta.ShowDialog();
+        }
     }
 }

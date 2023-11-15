@@ -227,6 +227,7 @@
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.Size = new System.Drawing.Size(211, 20);
             this.txtEmpleado.TabIndex = 10;
+          
             // 
             // lblNomEmpleado
             // 
