@@ -438,6 +438,7 @@
             this.btnConsultarComprobantes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnConsultarComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnConsultarComprobantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarComprobantes.ForeColor = System.Drawing.Color.Transparent;
             this.btnConsultarComprobantes.Location = new System.Drawing.Point(25, 25);
             this.btnConsultarComprobantes.Name = "btnConsultarComprobantes";
             this.btnConsultarComprobantes.Size = new System.Drawing.Size(317, 186);
