@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosEmisor));
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblComprobante = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -368,13 +369,10 @@
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblComprobante);
             this.Controls.Add(this.lblFecha);
-<<<<<<< HEAD
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(555, 450);
             this.MinimumSize = new System.Drawing.Size(555, 450);
-=======
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
             this.Name = "FrmDatosEmisor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Emisión";

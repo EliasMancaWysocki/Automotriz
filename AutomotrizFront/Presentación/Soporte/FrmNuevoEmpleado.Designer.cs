@@ -29,6 +29,7 @@ namespace Automotriz.Presentación.Soporte
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNuevoEmpleado));
             this.lblLegajo = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -303,15 +304,12 @@ namespace Automotriz.Presentación.Soporte
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblLegajo);
-<<<<<<< HEAD
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximumSize = new System.Drawing.Size(630, 390);
             this.MinimumSize = new System.Drawing.Size(630, 390);
-=======
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
             this.Name = "FrmNuevoEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Empleado";

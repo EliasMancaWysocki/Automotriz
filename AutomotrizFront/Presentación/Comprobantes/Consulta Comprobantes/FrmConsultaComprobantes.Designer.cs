@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaComprobantes));
-=======
-            this.lblTitulo = new System.Windows.Forms.Label();
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
             this.lblDesde = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.groupBoxFechaEmision = new System.Windows.Forms.GroupBox();
@@ -252,7 +248,6 @@
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.Size = new System.Drawing.Size(314, 26);
             this.txtEmpleado.TabIndex = 10;
-          
             // 
             // lblNomEmpleado
             // 
@@ -319,14 +314,10 @@
             this.Controls.Add(this.groupBoxReceptor);
             this.Controls.Add(this.groupBoxComprobante);
             this.Controls.Add(this.groupBoxFechaEmision);
-<<<<<<< HEAD
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-=======
-            this.Controls.Add(this.lblTitulo);
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(550, 660);
             this.MinimumSize = new System.Drawing.Size(550, 660);

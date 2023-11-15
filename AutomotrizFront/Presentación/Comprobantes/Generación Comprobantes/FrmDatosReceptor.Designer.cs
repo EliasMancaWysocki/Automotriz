@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosReceptor));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblCondicionIVA = new System.Windows.Forms.Label();
             this.lblDocumento = new System.Windows.Forms.Label();
@@ -230,11 +231,8 @@
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.lblCondicionIVA);
             this.Controls.Add(this.lblTitulo);
-<<<<<<< HEAD
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-=======
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(540, 580);
             this.MinimumSize = new System.Drawing.Size(540, 580);

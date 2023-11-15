@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGeneracionComprobantes));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblTipoComprobate = new System.Windows.Forms.Label();
             this.cboComprobantes = new System.Windows.Forms.ComboBox();
@@ -100,11 +101,8 @@
             this.Controls.Add(this.cboComprobantes);
             this.Controls.Add(this.lblTipoComprobate);
             this.Controls.Add(this.lblTitulo);
-<<<<<<< HEAD
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-=======
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(460, 210);
             this.MinimumSize = new System.Drawing.Size(460, 210);

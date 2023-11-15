@@ -36,7 +36,6 @@ namespace Automotriz.Presentación
 
             lbl.Location = new Point(x, 15);
         }
-<<<<<<< HEAD
         private void ResponsiveButton(Panel panel, Label lbl, int padding, Font font)
         {
             panel.Padding = new Padding(padding);
@@ -56,14 +55,14 @@ namespace Automotriz.Presentación
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 25, LargeFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 25, LargeFont);
             }
-            else if (Width <= 1200)
+            else if(Width <= 1200)
             {
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 15, MediumFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 15, MediumFont);
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 15, MediumFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 15, MediumFont);
             }
-            else if (Width <= 992)
+            else if(Width <= 992)
             {
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 5, SmallFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 5, SmallFont);
@@ -71,8 +70,6 @@ namespace Automotriz.Presentación
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 5, SmallFont);
             }
         }
-=======
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
 
 
         //Botones Menu Strip
@@ -105,31 +102,21 @@ namespace Automotriz.Presentación
             FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
             nuevoCliente.ShowDialog();
         }
-<<<<<<< HEAD
-
-        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmConsulta nuevaConsulta = new FrmConsulta();
-            nuevaConsulta.ShowDialog();
-        }
         private void btnNuevoComprobante_Click(object sender, EventArgs e)
         {
-                FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
-                frmGeneracionComprobantes.ShowDialog();
-            }
-            private void btnConsultarComprobantes_Click(object sender, EventArgs e)
-            {
-                FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
-                frmConsultaComprobantes.ShowDialog();
-            }
+            FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
+            frmGeneracionComprobantes.ShowDialog();
+        }
+        private void btnConsultarComprobantes_Click(object sender, EventArgs e)
+        {
+            FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
+            frmConsultaComprobantes.ShowDialog();
+        }
 
-            //Eventos
-            private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
-            {
-                EndResponsive();
-            }
-        
-=======
->>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
+        //Eventos
+        private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
+        {
+            EndResponsive();
+        }
     }
 }
