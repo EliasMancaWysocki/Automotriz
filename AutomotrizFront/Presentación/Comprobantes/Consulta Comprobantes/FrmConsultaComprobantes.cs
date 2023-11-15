@@ -123,5 +123,7 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
             FrmResultadoConsultaComprobantes frmResultadoConsultaComprobantes = new FrmResultadoConsultaComprobantes(p);
             frmResultadoConsultaComprobantes.ShowDialog();
         }
+
+      
     }
 }

@@ -20,7 +20,11 @@ namespace Automotriz
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmAutomotriz());
+<<<<<<< HEAD
+            //Application.Run(new FrmConsulta());
+=======
             //Application.Run(new FrmActualizarCliente());
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
 
         }
     }

@@ -102,6 +102,13 @@ namespace Automotriz.Presentación
             FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
             nuevoCliente.ShowDialog();
         }
+<<<<<<< HEAD
+
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta nuevaConsulta = new FrmConsulta();
+            nuevaConsulta.ShowDialog();
+=======
         private void btnNuevoComprobante_Click(object sender, EventArgs e)
         {
             FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
@@ -117,6 +124,7 @@ namespace Automotriz.Presentación
         private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
         {
             EndResponsive();
+>>>>>>> 8f6338f1c668922043c12f544c0171afdc47c480
         }
     }
 }
