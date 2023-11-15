@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Automotriz.Presentación.Soporte;
+using AutomotrizFront.Presentación.Soporte;
 using Automotriz.Presentación.Consultas.Consultar_Comprobantes;
 
 
@@ -47,8 +48,8 @@ namespace Automotriz.Presentación
         }
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
-            nuevoCliente.ShowDialog();
+            FrmActualizarCliente cliente = new FrmActualizarCliente();
+            cliente.ShowDialog();
         }
         private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
