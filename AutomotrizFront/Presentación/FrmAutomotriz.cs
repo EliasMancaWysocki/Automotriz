@@ -36,6 +36,7 @@ namespace Automotriz.Presentación
 
             lbl.Location = new Point(x, 15);
         }
+<<<<<<< HEAD
         private void ResponsiveButton(Panel panel, Label lbl, int padding, Font font)
         {
             panel.Padding = new Padding(padding);
@@ -70,6 +71,8 @@ namespace Automotriz.Presentación
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 5, SmallFont);
             }
         }
+=======
+>>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
 
 
         //Botones Menu Strip
@@ -102,6 +105,7 @@ namespace Automotriz.Presentación
             FrmNuevoCliente nuevoCliente = new FrmNuevoCliente();
             nuevoCliente.ShowDialog();
         }
+<<<<<<< HEAD
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -125,5 +129,7 @@ namespace Automotriz.Presentación
                 EndResponsive();
             }
         
+=======
+>>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
     }
 }

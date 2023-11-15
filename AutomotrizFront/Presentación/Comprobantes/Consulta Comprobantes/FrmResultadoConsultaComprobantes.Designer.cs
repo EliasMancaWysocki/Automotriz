@@ -35,7 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResultadoConsultaComprobantes));
             this.dgvResultados = new System.Windows.Forms.DataGridView();
             this.colFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -204,9 +203,12 @@
             this.Controls.Add(this.btnNuevaBusqueda);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.groupBoxResultados);
+<<<<<<< HEAD
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(570, 630);
             this.MinimumSize = new System.Drawing.Size(570, 630);
+=======
+>>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
             this.Name = "FrmResultadoConsultaComprobantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultado Consulta Comprobantes";

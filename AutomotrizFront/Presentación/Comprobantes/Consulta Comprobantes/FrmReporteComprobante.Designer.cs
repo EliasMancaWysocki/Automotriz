@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteComprobante));
             this.sPREPORTECOMPROBANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSComprobante = new AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante();
             this.rvComprobante = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -61,7 +60,7 @@
             this.rvComprobante.Location = new System.Drawing.Point(0, 0);
             this.rvComprobante.Name = "rvComprobante";
             this.rvComprobante.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
-            this.rvComprobante.ServerReport.BearerToken = null;
+            //this.rvComprobante.ServerReport.BearerToken = null;
             this.rvComprobante.Size = new System.Drawing.Size(781, 467);
             this.rvComprobante.TabIndex = 0;
             // 
@@ -82,7 +81,6 @@
             // 
             this.ClientSize = new System.Drawing.Size(781, 467);
             this.Controls.Add(this.rvComprobante);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReporteComprobante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

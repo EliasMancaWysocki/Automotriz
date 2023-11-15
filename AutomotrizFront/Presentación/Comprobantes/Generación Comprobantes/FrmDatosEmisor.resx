@@ -117,6 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<<<<<<< HEAD
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -5343,4 +5344,6 @@
         AAAAAAAAAH//////////////////////////////AAAAAAAAAAD///////////////8=
 </value>
   </data>
+=======
+>>>>>>> parent of 014f9ef (Añadida responsividad a los botones del menú principal)
 </root>
