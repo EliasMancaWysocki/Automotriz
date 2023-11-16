@@ -53,6 +53,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panelConsultarEmpleados = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelConsultarClientes = new System.Windows.Forms.Panel();
             this.panelConsultarClientesBody = new System.Windows.Forms.Panel();
             this.btnConsultarClientes = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.panelConsultarComprobanteTitle = new System.Windows.Forms.Panel();
             this.lblConsultarComprobantes = new System.Windows.Forms.Label();
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelNuevoCliente = new System.Windows.Forms.Panel();
             this.panelNuevoClienteBody = new System.Windows.Forms.Panel();
             this.btnNuevoCliente = new System.Windows.Forms.Button();
@@ -75,13 +77,10 @@
             this.panelNuevoComprobanteTitle = new System.Windows.Forms.Panel();
             this.lblNuevoComprobante = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelEliminarClientes = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panelCentral.SuspendLayout();
@@ -135,7 +134,7 @@
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(132, 32);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -355,13 +354,20 @@
             // 
             // panelConsultarEmpleados
             // 
-            this.panelConsultarEmpleados.Controls.Add(this.button1);
             this.panelConsultarEmpleados.Controls.Add(this.panel2);
             this.panelConsultarEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelConsultarEmpleados.Location = new System.Drawing.Point(758, 311);
             this.panelConsultarEmpleados.Name = "panelConsultarEmpleados";
             this.panelConsultarEmpleados.Size = new System.Drawing.Size(367, 296);
             this.panelConsultarEmpleados.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(367, 60);
+            this.panel2.TabIndex = 0;
             // 
             // panelConsultarClientes
             // 
@@ -413,11 +419,11 @@
             // 
             this.lblConsultarClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarClientes.AutoSize = true;
-            this.lblConsultarClientes.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultarClientes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblConsultarClientes.Location = new System.Drawing.Point(81, 18);
             this.lblConsultarClientes.Name = "lblConsultarClientes";
-            this.lblConsultarClientes.Size = new System.Drawing.Size(188, 24);
+            this.lblConsultarClientes.Size = new System.Drawing.Size(206, 25);
             this.lblConsultarClientes.TabIndex = 0;
             this.lblConsultarClientes.Text = "Consultar Clientes";
             // 
@@ -470,11 +476,11 @@
             // 
             this.lblConsultarComprobantes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarComprobantes.AutoSize = true;
-            this.lblConsultarComprobantes.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarComprobantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultarComprobantes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblConsultarComprobantes.Location = new System.Drawing.Point(52, 18);
             this.lblConsultarComprobantes.Name = "lblConsultarComprobantes";
-            this.lblConsultarComprobantes.Size = new System.Drawing.Size(248, 24);
+            this.lblConsultarComprobantes.Size = new System.Drawing.Size(272, 25);
             this.lblConsultarComprobantes.TabIndex = 1;
             this.lblConsultarComprobantes.Text = "Consultar Comprobantes";
             // 
@@ -486,6 +492,14 @@
             this.panelNuevoEmpleado.Name = "panelNuevoEmpleado";
             this.panelNuevoEmpleado.Size = new System.Drawing.Size(367, 296);
             this.panelNuevoEmpleado.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(367, 60);
+            this.panel3.TabIndex = 0;
             // 
             // panelNuevoCliente
             // 
@@ -537,11 +551,11 @@
             // 
             this.lblNuevoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNuevoCliente.AutoSize = true;
-            this.lblNuevoCliente.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevoCliente.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevoCliente.Location = new System.Drawing.Point(79, 16);
             this.lblNuevoCliente.Name = "lblNuevoCliente";
-            this.lblNuevoCliente.Size = new System.Drawing.Size(161, 31);
+            this.lblNuevoCliente.Size = new System.Drawing.Size(198, 31);
             this.lblNuevoCliente.TabIndex = 0;
             this.lblNuevoCliente.Text = "Nuevo Cliente";
             // 
@@ -595,11 +609,11 @@
             // 
             this.lblNuevoComprobante.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNuevoComprobante.AutoSize = true;
-            this.lblNuevoComprobante.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevoComprobante.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevoComprobante.Location = new System.Drawing.Point(50, 16);
             this.lblNuevoComprobante.Name = "lblNuevoComprobante";
-            this.lblNuevoComprobante.Size = new System.Drawing.Size(267, 31);
+            this.lblNuevoComprobante.Size = new System.Drawing.Size(281, 31);
             this.lblNuevoComprobante.TabIndex = 1;
             this.lblNuevoComprobante.Text = "Nuevo Comprobante";
             // 
@@ -611,6 +625,14 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(367, 296);
             this.panel7.TabIndex = 6;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(367, 60);
+            this.panel6.TabIndex = 3;
             // 
             // panel1
             // 
@@ -628,22 +650,6 @@
             this.panelEliminarClientes.Size = new System.Drawing.Size(367, 297);
             this.panelEliminarClientes.TabIndex = 10;
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(367, 60);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(367, 60);
-            this.panel6.TabIndex = 3;
-            // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -651,25 +657,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(367, 60);
             this.panel5.TabIndex = 15;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(367, 60);
-            this.panel3.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Turquoise;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(0, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(367, 236);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmAutomotriz
             // 
@@ -775,7 +762,6 @@
         private System.Windows.Forms.Label lblConsultarComprobantes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
     }

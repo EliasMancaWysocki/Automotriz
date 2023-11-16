@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using Automotriz.Presentación.Soporte;
 using AutomotrizFront.Presentación.Soporte;
 using Automotriz.Presentación.Consultas.Consultar_Comprobantes;
-
+using AutomotrizFront.Presentación.Soporte.Vendedores;
+using Automotriz.Presentación.Soporte.Vendedores;
 
 namespace Automotriz.Presentación
 {
@@ -114,7 +115,8 @@ namespace Automotriz.Presentación
         }
         private void btnConsultarClientes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Deja de joder con el botoncito test", "DEJA DE JODEasdasdR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            VendedoresConsulta1 frmConsultaCliente = new VendedoresConsulta1();
+            frmConsultaCliente.ShowDialog();
         }
 
         //Eventos

@@ -146,6 +146,12 @@
     <Compile Include="Presentación\Soporte\FrmActualizarCliente.Designer.cs">
       <DependentUpon>FrmActualizarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentación\Soporte\FrmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Soporte\FrmConsultaCliente.designer.cs">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\Soporte\FrmNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,18 @@
     </Compile>
     <Compile Include="Presentación\Soporte\FrmNuevoEmpleado.Designer.cs">
       <DependentUpon>FrmNuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta1.designer.cs">
+      <DependentUpon>VendedoresConsulta1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta2.designer.cs">
+      <DependentUpon>VendedoresConsulta2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,11 +213,20 @@
     <EmbeddedResource Include="Presentación\Soporte\FrmActualizarCliente.resx">
       <DependentUpon>FrmActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Soporte\FrmConsultaCliente.resx">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Soporte\FrmNuevoCliente.resx">
       <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Soporte\FrmNuevoEmpleado.resx">
       <DependentUpon>FrmNuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta1.resx">
+      <DependentUpon>VendedoresConsulta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta2.resx">
+      <DependentUpon>VendedoresConsulta2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -281,6 +308,9 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Presentación\Soporte\SPClientes\" />
+    <Folder Include="Presentación\Soporte\SPProductos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
