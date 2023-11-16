@@ -142,15 +142,15 @@ namespace Automotriz.Presentación.Soporte
             // nudValor
             // 
             this.nudValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudValor.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.nudValor.Location = new System.Drawing.Point(367, 59);
             this.nudValor.Margin = new System.Windows.Forms.Padding(4);
             this.nudValor.Maximum = new decimal(new int[] {
-            9999,
+            2030,
+            0,
+            0,
+            0});
+            this.nudValor.Minimum = new decimal(new int[] {
+            2019,
             0,
             0,
             0});
@@ -158,7 +158,7 @@ namespace Automotriz.Presentación.Soporte
             this.nudValor.Size = new System.Drawing.Size(160, 45);
             this.nudValor.TabIndex = 26;
             this.nudValor.Value = new decimal(new int[] {
-            2021,
+            2023,
             0,
             0,
             0});
