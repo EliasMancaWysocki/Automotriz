@@ -49,9 +49,9 @@ namespace Automotriz.Presentación.Soporte
         }
         private void CentrarBotones()
         {
-            int x = (Width - 15 - 155) / 2;
+            int x = (Width - 15 - 195) / 2;
             btnCancelar.Location = new Point(x, 280);
-            btnCargar.Location = new Point(x + 80, 280);
+            btnCargar.Location = new Point(x + 120, 280);
         }
         private void LimpiarCampos()
         {
