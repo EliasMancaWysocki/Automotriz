@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Automotriz.Servicio.Implementación;
+using System.Data.SqlClient;
 
 namespace Automotriz.Presentación.Soporte
 {
@@ -45,14 +46,6 @@ namespace Automotriz.Presentación.Soporte
             btnCancelar.Location = new Point(x, 280);
             btnConsultar.Location = new Point(x + 120, 280);
         }
-        private void LimpiarCampos()
-        {
-
-        }
-        private void ValidarCampos()
-        {
-
-        }
 
         //Botones
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -62,10 +55,79 @@ namespace Automotriz.Presentación.Soporte
                 this.Dispose();
             }
         }
-        private void btnCargar_Click(object sender, EventArgs e)
-        {
 
+        public void fillTable1()
+        {
+            var desde = dtpFechaDesde.Value.ToString("yyyy-MM-dd");
+            var hasta = dtpFechaHasta.Value.ToString("yyyy-MM-dd");
+
+            dgvClientes.DataSource = null;
+            dgvClientes.Rows.Clear();
+
+            DataTable dataTable = new DataTable();
+            SqlConnection myConn = new SqlConnection("Data Source=34.176.166.122;Initial Catalog=Automotriz;User ID=sqlserver;Password=sqlserver");
+            myConn.Open();
+            SqlCommand myCmd = new SqlCommand("SP_CLIENTES_1", myConn);
+            myCmd.CommandType = CommandType.StoredProcedure;
+            myCmd.Parameters.AddWithValue("@fechaDesde", desde);
+            myCmd.Parameters.AddWithValue("@fechaHasta", hasta);
+            SqlDataAdapter da = new SqlDataAdapter(myCmd);
+            da.Fill(dataTable);
+            dgvClientes.DataSource = dataTable;
         }
 
+        public void fillTable2()
+        {
+            var desde = dtpFechaDesde.Value.ToString("yyyy-MM-dd");
+            var hasta = dtpFechaHasta.Value.ToString("yyyy-MM-dd");
+
+            dgvClientes.DataSource = null;
+            dgvClientes.Rows.Clear();
+
+            DataTable dataTable = new DataTable();
+            SqlConnection myConn = new SqlConnection("Data Source=34.176.166.122;Initial Catalog=Automotriz;User ID=sqlserver;Password=sqlserver");
+            myConn.Open();
+            SqlCommand myCmd = new SqlCommand("SP_CLIENTES_2", myConn);
+            myCmd.CommandType = CommandType.StoredProcedure;
+            myCmd.Parameters.AddWithValue("@fechaDesde", desde);
+            myCmd.Parameters.AddWithValue("@fechaHasta", hasta);
+            SqlDataAdapter da = new SqlDataAdapter(myCmd);
+            da.Fill(dataTable);
+            dgvClientes.DataSource = dataTable;
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (chkCompro.Checked)
+                this.fillTable1();
+            else
+                this.fillTable2();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var desde = nudDesde.Value;
+            var hasta = nudHasta.Value;
+
+            dgvClientes.DataSource = null;
+            dgvClientes.Rows.Clear();
+
+            DataTable dataTable = new DataTable();
+            SqlConnection myConn = new SqlConnection("Data Source=34.176.166.122;Initial Catalog=Automotriz;User ID=sqlserver;Password=sqlserver");
+            myConn.Open();
+            SqlCommand myCmd = new SqlCommand("SP_CLIENTES_3", myConn);
+            myCmd.CommandType = CommandType.StoredProcedure;
+            myCmd.Parameters.AddWithValue("@valorDesde", desde);
+            myCmd.Parameters.AddWithValue("@valorHasta", hasta);
+            SqlDataAdapter da = new SqlDataAdapter(myCmd);
+            da.Fill(dataTable);
+            dgvClientes.DataSource = dataTable;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            dgvClientes.DataSource = null;
+            dgvClientes.Rows.Clear();
+        }
     }
 }

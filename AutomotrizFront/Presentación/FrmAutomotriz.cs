@@ -115,7 +115,7 @@ namespace Automotriz.Presentación
         }
         private void btnConsultarClientes_Click(object sender, EventArgs e)
         {
-            VendedoresConsulta1 frmConsultaCliente = new VendedoresConsulta1();
+            FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
             frmConsultaCliente.ShowDialog();
         }
 
@@ -123,6 +123,12 @@ namespace Automotriz.Presentación
         private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
         {
             EndResponsive();
+        }
+
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
+            frmConsultaCliente.ShowDialog();
         }
     }
 }

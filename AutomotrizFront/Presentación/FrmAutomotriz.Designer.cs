@@ -180,6 +180,7 @@
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
             this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
             this.consultarClienteToolStripMenuItem.Text = "Consultar";
+            this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
             // comprobantesToolStripMenuItem
             // 

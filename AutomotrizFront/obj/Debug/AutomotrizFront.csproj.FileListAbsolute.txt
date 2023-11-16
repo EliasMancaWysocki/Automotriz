@@ -237,3 +237,9 @@ C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFr
 C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.Soporte.FrmConsultaCliente.resources
 C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.Vendedores.VendedoresConsulta2.resources
 C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.Soporte.Vendedores.VendedoresConsulta1.resources
+C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.Clientes.ClientesConsulta1.resources
+C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.Clientes.ClientesConsulta2.resources
+C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta1.resources
+C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta2.resources
+C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.Soporte.FrmConsultaProducto.resources
+C:\Users\Nico\Documents\GitHub\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.Soporte.FrmConsultaVendedor.resources
