@@ -51,6 +51,8 @@
             this.lblLegajo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnReiniciarTipoDoc = new System.Windows.Forms.Button();
+            this.lblReiniciarTipoDoc = new System.Windows.Forms.Label();
             this.groupBoxFechaEmision.SuspendLayout();
             this.groupBoxComprobante.SuspendLayout();
             this.groupBoxReceptor.SuspendLayout();
@@ -151,6 +153,8 @@
             // groupBoxReceptor
             // 
             this.groupBoxReceptor.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxReceptor.Controls.Add(this.lblReiniciarTipoDoc);
+            this.groupBoxReceptor.Controls.Add(this.btnReiniciarTipoDoc);
             this.groupBoxReceptor.Controls.Add(this.txtRazonSocial);
             this.groupBoxReceptor.Controls.Add(this.lblRazonSocial);
             this.groupBoxReceptor.Controls.Add(this.txtNumDoc);
@@ -161,7 +165,7 @@
             this.groupBoxReceptor.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBoxReceptor.Name = "groupBoxReceptor";
             this.groupBoxReceptor.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBoxReceptor.Size = new System.Drawing.Size(495, 194);
+            this.groupBoxReceptor.Size = new System.Drawing.Size(495, 218);
             this.groupBoxReceptor.TabIndex = 9;
             this.groupBoxReceptor.TabStop = false;
             this.groupBoxReceptor.Text = "Datos del Receptor";
@@ -187,7 +191,7 @@
             // 
             // txtNumDoc
             // 
-            this.txtNumDoc.Location = new System.Drawing.Point(165, 148);
+            this.txtNumDoc.Location = new System.Drawing.Point(165, 168);
             this.txtNumDoc.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(178, 26);
@@ -207,7 +211,7 @@
             // 
             this.lblNumDoc.AutoSize = true;
             this.lblNumDoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumDoc.Location = new System.Drawing.Point(92, 151);
+            this.lblNumDoc.Location = new System.Drawing.Point(92, 171);
             this.lblNumDoc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNumDoc.Name = "lblNumDoc";
             this.lblNumDoc.Size = new System.Drawing.Size(63, 19);
@@ -232,7 +236,7 @@
             this.groupBoxDatosEmpleado.Controls.Add(this.lblNomEmpleado);
             this.groupBoxDatosEmpleado.Controls.Add(this.txtLegajoEmpleado);
             this.groupBoxDatosEmpleado.Controls.Add(this.lblLegajo);
-            this.groupBoxDatosEmpleado.Location = new System.Drawing.Point(14, 408);
+            this.groupBoxDatosEmpleado.Location = new System.Drawing.Point(14, 430);
             this.groupBoxDatosEmpleado.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBoxDatosEmpleado.Name = "groupBoxDatosEmpleado";
             this.groupBoxDatosEmpleado.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -301,6 +305,32 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnReiniciarTipoDoc
+            // 
+            this.btnReiniciarTipoDoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReiniciarTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReiniciarTipoDoc.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReiniciarTipoDoc.ForeColor = System.Drawing.Color.Black;
+            this.btnReiniciarTipoDoc.Location = new System.Drawing.Point(165, 136);
+            this.btnReiniciarTipoDoc.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnReiniciarTipoDoc.Name = "btnReiniciarTipoDoc";
+            this.btnReiniciarTipoDoc.Size = new System.Drawing.Size(25, 25);
+            this.btnReiniciarTipoDoc.TabIndex = 14;
+            this.btnReiniciarTipoDoc.Text = "X";
+            this.btnReiniciarTipoDoc.UseVisualStyleBackColor = true;
+            this.btnReiniciarTipoDoc.Click += new System.EventHandler(this.btnReiniciarTipoDoc_Click);
+            // 
+            // lblReiniciarTipoDoc
+            // 
+            this.lblReiniciarTipoDoc.AutoSize = true;
+            this.lblReiniciarTipoDoc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReiniciarTipoDoc.Location = new System.Drawing.Point(200, 141);
+            this.lblReiniciarTipoDoc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblReiniciarTipoDoc.Name = "lblReiniciarTipoDoc";
+            this.lblReiniciarTipoDoc.Size = new System.Drawing.Size(124, 15);
+            this.lblReiniciarTipoDoc.TabIndex = 15;
+            this.lblReiniciarTipoDoc.Text = "Borrar Tipo Documento";
+            // 
             // FrmConsultaComprobantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -360,5 +390,7 @@
         private System.Windows.Forms.Label lblLegajo;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label lblReiniciarTipoDoc;
+        private System.Windows.Forms.Button btnReiniciarTipoDoc;
     }
 }

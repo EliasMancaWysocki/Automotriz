@@ -551,6 +551,7 @@
             this.btnConsultarComprobantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(200)))), ((int)(((byte)(99)))));
             this.btnConsultarComprobantes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarComprobantes.BackgroundImage")));
             this.btnConsultarComprobantes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarComprobantes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultarComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnConsultarComprobantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarComprobantes.ForeColor = System.Drawing.Color.Transparent;
@@ -926,6 +927,7 @@
             this.btnEliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
             this.btnEliminarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarCliente.BackgroundImage")));
             this.btnEliminarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCliente.ForeColor = System.Drawing.Color.Transparent;
@@ -1009,6 +1011,7 @@
             this.btnEliminarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
             this.btnEliminarEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarEmpleado.BackgroundImage")));
             this.btnEliminarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarEmpleado.ForeColor = System.Drawing.Color.Transparent;

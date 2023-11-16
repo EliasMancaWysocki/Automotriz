@@ -31,6 +31,10 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
         {
             CargarCombo(cboTipoDoc, Servicio.ObtenerTipoDoc());
             CentrarBotones();
+            dtpDesde.Value = DateTime.Now.AddMonths(-1);
+            dtpDesde.MaxDate = DateTime.Now;
+            dtpHasta.Value = DateTime.Now;
+            dtpHasta.MinDate = DateTime.Now;
         }
 
         //Funciones
@@ -122,6 +126,10 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
             Dispose();
             FrmResultadoConsultaComprobantes frmResultadoConsultaComprobantes = new FrmResultadoConsultaComprobantes(p);
             frmResultadoConsultaComprobantes.ShowDialog();
+        }
+        private void btnReiniciarTipoDoc_Click(object sender, EventArgs e)
+        {
+            cboTipoDoc.SelectedIndex = -1;
         }
     }
 }
