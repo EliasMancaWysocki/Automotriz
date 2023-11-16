@@ -37,15 +37,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResultadoConsultaComprobantes));
             this.dgvResultados = new System.Windows.Forms.DataGridView();
+            this.groupBoxResultados = new System.Windows.Forms.GroupBox();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnNuevaBusqueda = new System.Windows.Forms.Button();
             this.colFechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVer = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.groupBoxResultados = new System.Windows.Forms.GroupBox();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.btnNuevaBusqueda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
             this.groupBoxResultados.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,39 @@
             this.dgvResultados.TabIndex = 0;
             this.dgvResultados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultados_CellContentClick);
             // 
+            // groupBoxResultados
+            // 
+            this.groupBoxResultados.Controls.Add(this.dgvResultados);
+            this.groupBoxResultados.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxResultados.Name = "groupBoxResultados";
+            this.groupBoxResultados.Size = new System.Drawing.Size(530, 498);
+            this.groupBoxResultados.TabIndex = 1;
+            this.groupBoxResultados.TabStop = false;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.AutoSize = true;
+            this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Location = new System.Drawing.Point(130, 530);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(121, 30);
+            this.btnMenu.TabIndex = 3;
+            this.btnMenu.Text = "Menú Principal";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // btnNuevaBusqueda
+            // 
+            this.btnNuevaBusqueda.AutoSize = true;
+            this.btnNuevaBusqueda.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaBusqueda.Location = new System.Drawing.Point(270, 530);
+            this.btnNuevaBusqueda.Name = "btnNuevaBusqueda";
+            this.btnNuevaBusqueda.Size = new System.Drawing.Size(133, 30);
+            this.btnNuevaBusqueda.TabIndex = 4;
+            this.btnNuevaBusqueda.Text = "Nueva Búsqueda";
+            this.btnNuevaBusqueda.UseVisualStyleBackColor = true;
+            this.btnNuevaBusqueda.Click += new System.EventHandler(this.btnNuevaBusqueda_Click);
+            // 
             // colFechaEmision
             // 
             this.colFechaEmision.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -105,7 +138,7 @@
             this.colFechaEmision.ReadOnly = true;
             this.colFechaEmision.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colFechaEmision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFechaEmision.Width = 74;
+            this.colFechaEmision.Width = 82;
             // 
             // colNumComprobante
             // 
@@ -162,39 +195,7 @@
             this.colVer.ReadOnly = true;
             this.colVer.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colVer.Text = "Ver";
-            // 
-            // groupBoxResultados
-            // 
-            this.groupBoxResultados.Controls.Add(this.dgvResultados);
-            this.groupBoxResultados.Location = new System.Drawing.Point(12, 12);
-            this.groupBoxResultados.Name = "groupBoxResultados";
-            this.groupBoxResultados.Size = new System.Drawing.Size(530, 498);
-            this.groupBoxResultados.TabIndex = 1;
-            this.groupBoxResultados.TabStop = false;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.AutoSize = true;
-            this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(130, 530);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(121, 30);
-            this.btnMenu.TabIndex = 3;
-            this.btnMenu.Text = "Menú Principal";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // btnNuevaBusqueda
-            // 
-            this.btnNuevaBusqueda.AutoSize = true;
-            this.btnNuevaBusqueda.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaBusqueda.Location = new System.Drawing.Point(270, 530);
-            this.btnNuevaBusqueda.Name = "btnNuevaBusqueda";
-            this.btnNuevaBusqueda.Size = new System.Drawing.Size(133, 30);
-            this.btnNuevaBusqueda.TabIndex = 4;
-            this.btnNuevaBusqueda.Text = "Nueva Búsqueda";
-            this.btnNuevaBusqueda.UseVisualStyleBackColor = true;
-            this.btnNuevaBusqueda.Click += new System.EventHandler(this.btnNuevaBusqueda_Click);
+            this.colVer.UseColumnTextForButtonValue = true;
             // 
             // FrmResultadoConsultaComprobantes
             // 
@@ -223,12 +224,12 @@
         private System.Windows.Forms.DataGridView dgvResultados;
         private System.Windows.Forms.GroupBox groupBoxResultados;
         private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnNuevaBusqueda;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaEmision;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumComprobante;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoDoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumDoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
         private System.Windows.Forms.DataGridViewButtonColumn colVer;
-        private System.Windows.Forms.Button btnNuevaBusqueda;
     }
 }

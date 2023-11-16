@@ -46,10 +46,11 @@ namespace AutomotrizFront.Presentación.Soporte
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActualizarCliente));
             this.gbClientes = new System.Windows.Forms.GroupBox();
             this.dgvListacl = new System.Windows.Forms.DataGridView();
+            this.mostrarClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.automotrizDataSet2 = new AutomotrizFront.AutomotrizDataSet2();
             this.NroCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbBotones = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -91,6 +92,17 @@ namespace AutomotrizFront.Presentación.Soporte
             this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter1 = new AutomotrizFront.AutomotrizDataSet1TableAdapters.ClientesTableAdapter();
             this.mostrar_ClienteTableAdapter = new AutomotrizFront.AutomotrizDataSet2TableAdapters.Mostrar_ClienteTableAdapter();
+            this.NroCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barrioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condicionIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListacl)).BeginInit();
             this.gbBotones.SuspendLayout();
@@ -117,7 +129,6 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             this.dgvListacl.AllowUserToAddRows = false;
             this.dgvListacl.AllowUserToDeleteRows = false;
-            this.dgvListacl.AllowUserToOrderColumns = true;
             this.dgvListacl.AllowUserToResizeColumns = false;
             this.dgvListacl.AllowUserToResizeRows = false;
             this.dgvListacl.AutoGenerateColumns = false;
@@ -146,7 +157,9 @@ namespace AutomotrizFront.Presentación.Soporte
             this.dgvListacl.Location = new System.Drawing.Point(6, 19);
             this.dgvListacl.MultiSelect = false;
             this.dgvListacl.Name = "dgvListacl";
+            this.dgvListacl.ReadOnly = true;
             this.dgvListacl.RowHeadersVisible = false;
+            this.dgvListacl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvListacl.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvListacl.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -154,6 +167,15 @@ namespace AutomotrizFront.Presentación.Soporte
             this.dgvListacl.TabIndex = 0;
             this.dgvListacl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListacl_CellContentClick);
             // 
+            // mostrarClienteBindingSource
+            // 
+            this.mostrarClienteBindingSource.DataMember = "Mostrar_Cliente";
+            this.mostrarClienteBindingSource.DataSource = this.automotrizDataSet2;
+            // 
+            // automotrizDataSet2
+            // 
+            this.automotrizDataSet2.DataSetName = "AutomotrizDataSet2";
+            this.automotrizDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // NroCliente
             // 
             this.NroCliente.DataPropertyName = "Nro Cliente";
@@ -170,7 +192,6 @@ namespace AutomotrizFront.Presentación.Soporte
             // gbBotones
             // 
             this.gbBotones.BackColor = System.Drawing.Color.Transparent;
-            this.gbBotones.Controls.Add(this.btnCancelar);
             this.gbBotones.Controls.Add(this.btnModificar);
             this.gbBotones.Controls.Add(this.btnSalir);
             this.gbBotones.Controls.Add(this.btnNuevo);
@@ -179,17 +200,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbBotones.Size = new System.Drawing.Size(882, 68);
             this.gbBotones.TabIndex = 1;
             this.gbBotones.TabStop = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(262, 19);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 30);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -265,6 +275,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // cboCIva
             // 
+            this.cboCIva.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCIva.FormattingEnabled = true;
             this.cboCIva.Location = new System.Drawing.Point(671, 112);
             this.cboCIva.Name = "cboCIva";
@@ -273,6 +284,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // cboTipoDoc
             // 
+            this.cboTipoDoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoDoc.FormattingEnabled = true;
             this.cboTipoDoc.Location = new System.Drawing.Point(671, 82);
             this.cboTipoDoc.Name = "cboTipoDoc";
@@ -290,6 +302,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // txtDocumento
             // 
+            this.txtDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumento.Location = new System.Drawing.Point(671, 52);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(193, 26);
@@ -306,6 +319,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // cboBarrios
             // 
+            this.cboBarrios.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBarrios.FormattingEnabled = true;
             this.cboBarrios.Location = new System.Drawing.Point(671, 23);
             this.cboBarrios.Name = "cboBarrios";
@@ -341,6 +355,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // cboTCliente
             // 
+            this.cboTCliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTCliente.FormattingEnabled = true;
             this.cboTCliente.Location = new System.Drawing.Point(136, 82);
             this.cboTCliente.Name = "cboTCliente";
@@ -358,6 +373,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // txtAltura
             // 
+            this.txtAltura.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAltura.Location = new System.Drawing.Point(344, 52);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(43, 26);
@@ -374,6 +390,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // txtCalle
             // 
+            this.txtCalle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalle.Location = new System.Drawing.Point(136, 52);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(132, 26);
@@ -390,6 +407,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // txtApellido
             // 
+            this.txtApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(136, 22);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(132, 26);
@@ -397,6 +415,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(344, 23);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 26);
@@ -543,6 +562,122 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             this.mostrar_ClienteTableAdapter.ClearBeforeFill = true;
             // 
+            // NroCliente
+            // 
+            this.NroCliente.DataPropertyName = "Nro Cliente";
+            this.NroCliente.HeaderText = "NroCliente";
+            this.NroCliente.Name = "NroCliente";
+            this.NroCliente.ReadOnly = true;
+            this.NroCliente.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.nombreDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.apellidoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.apellidoDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // calleDataGridViewTextBoxColumn
+            // 
+            this.calleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.calleDataGridViewTextBoxColumn.DataPropertyName = "Calle";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.calleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.calleDataGridViewTextBoxColumn.HeaderText = "Calle";
+            this.calleDataGridViewTextBoxColumn.Name = "calleDataGridViewTextBoxColumn";
+            this.calleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.calleDataGridViewTextBoxColumn.Width = 55;
+            // 
+            // alturaDataGridViewTextBoxColumn
+            // 
+            this.alturaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.alturaDataGridViewTextBoxColumn.DataPropertyName = "Altura";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.alturaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.alturaDataGridViewTextBoxColumn.HeaderText = "Altura";
+            this.alturaDataGridViewTextBoxColumn.Name = "alturaDataGridViewTextBoxColumn";
+            this.alturaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alturaDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // barrioDataGridViewTextBoxColumn
+            // 
+            this.barrioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.barrioDataGridViewTextBoxColumn.DataPropertyName = "Barrio";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.barrioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.barrioDataGridViewTextBoxColumn.HeaderText = "Barrio";
+            this.barrioDataGridViewTextBoxColumn.Name = "barrioDataGridViewTextBoxColumn";
+            this.barrioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.barrioDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // documentoDataGridViewTextBoxColumn
+            // 
+            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "Documento";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.documentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
+            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
+            this.documentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.documentoDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // tipoDocumentoDataGridViewTextBoxColumn
+            // 
+            this.tipoDocumentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tipoDocumentoDataGridViewTextBoxColumn.DataPropertyName = "Tipo Documento";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tipoDocumentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.tipoDocumentoDataGridViewTextBoxColumn.HeaderText = "Tipo Documento";
+            this.tipoDocumentoDataGridViewTextBoxColumn.Name = "tipoDocumentoDataGridViewTextBoxColumn";
+            this.tipoDocumentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoDocumentoDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // tipoClienteDataGridViewTextBoxColumn
+            // 
+            this.tipoClienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tipoClienteDataGridViewTextBoxColumn.DataPropertyName = "Tipo Cliente";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tipoClienteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.tipoClienteDataGridViewTextBoxColumn.HeaderText = "Tipo Cliente";
+            this.tipoClienteDataGridViewTextBoxColumn.Name = "tipoClienteDataGridViewTextBoxColumn";
+            this.tipoClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoClienteDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // condicionIVADataGridViewTextBoxColumn
+            // 
+            this.condicionIVADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.condicionIVADataGridViewTextBoxColumn.DataPropertyName = "Condicion IVA";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.condicionIVADataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.condicionIVADataGridViewTextBoxColumn.HeaderText = "Condicion IVA";
+            this.condicionIVADataGridViewTextBoxColumn.Name = "condicionIVADataGridViewTextBoxColumn";
+            this.condicionIVADataGridViewTextBoxColumn.ReadOnly = true;
+            this.condicionIVADataGridViewTextBoxColumn.Width = 91;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Seleccionar.HeaderText = "Ver";
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Text = "Ver";
+            this.Seleccionar.UseColumnTextForButtonValue = true;
+            // 
             // FrmActualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -611,17 +746,17 @@ namespace AutomotrizFront.Presentación.Soporte
         private AutomotrizDataSet2 automotrizDataSet2;
         private System.Windows.Forms.BindingSource mostrarClienteBindingSource;
         private AutomotrizDataSet2TableAdapters.Mostrar_ClienteTableAdapter mostrar_ClienteTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn barrioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDocumentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn condicionIVADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnBorrar;
+        private DataGridViewTextBoxColumn NroCliente;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn calleDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn alturaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn barrioDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tipoDocumentoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn tipoClienteDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn condicionIVADataGridViewTextBoxColumn;
+        private DataGridViewButtonColumn Seleccionar;
     }
 }
