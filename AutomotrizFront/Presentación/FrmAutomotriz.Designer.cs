@@ -636,6 +636,7 @@ namespace Automotriz.Presentación
             this.btnConsultarComprobantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(200)))), ((int)(((byte)(99)))));
             this.btnConsultarComprobantes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarComprobantes.BackgroundImage")));
             this.btnConsultarComprobantes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarComprobantes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultarComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnConsultarComprobantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarComprobantes.ForeColor = System.Drawing.Color.Transparent;
@@ -1020,6 +1021,137 @@ namespace Automotriz.Presentación
             this.lblNuevoEmpleado.Size = new System.Drawing.Size(235, 31);
             this.lblNuevoEmpleado.TabIndex = 3;
             this.lblNuevoEmpleado.Text = "Nuevo Empleado";
+            // 
+            // lblEliminarProducto
+            // 
+            this.lblEliminarProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEliminarProducto.AutoSize = true;
+            this.lblEliminarProducto.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarProducto.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEliminarProducto.Location = new System.Drawing.Point(44, 13);
+            this.lblEliminarProducto.Name = "lblEliminarProducto";
+            this.lblEliminarProducto.Size = new System.Drawing.Size(236, 31);
+            this.lblEliminarProducto.TabIndex = 5;
+            this.lblEliminarProducto.Text = "Eliminar Producto";
+            // 
+            // panelEliminarClienteTitle
+            // 
+            this.panelEliminarClienteTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.panelEliminarClienteTitle.Controls.Add(this.lblEliminarCliente);
+            this.panelEliminarClienteTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEliminarClienteTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelEliminarClienteTitle.Name = "panelEliminarClienteTitle";
+            this.panelEliminarClienteTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelEliminarClienteTitle.TabIndex = 0;
+            // 
+            // panelEliminarClienteBody
+            // 
+            this.panelEliminarClienteBody.Controls.Add(this.btnEliminarCliente);
+            this.panelEliminarClienteBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarClienteBody.Location = new System.Drawing.Point(0, 60);
+            this.panelEliminarClienteBody.Name = "panelEliminarClienteBody";
+            this.panelEliminarClienteBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelEliminarClienteBody.Size = new System.Drawing.Size(367, 237);
+            this.panelEliminarClienteBody.TabIndex = 1;
+            // 
+            // btnEliminarCliente
+            // 
+            this.btnEliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.btnEliminarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarCliente.BackgroundImage")));
+            this.btnEliminarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCliente.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEliminarCliente.Location = new System.Drawing.Point(25, 25);
+            this.btnEliminarCliente.Name = "btnEliminarCliente";
+            this.btnEliminarCliente.Size = new System.Drawing.Size(317, 187);
+            this.btnEliminarCliente.TabIndex = 0;
+            this.btnEliminarCliente.UseVisualStyleBackColor = false;
+            // 
+            // panelEliminarProductoBody
+            // 
+            this.panelEliminarProductoBody.Controls.Add(this.btnEliminarProducto);
+            this.panelEliminarProductoBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarProductoBody.Location = new System.Drawing.Point(0, 60);
+            this.panelEliminarProductoBody.Name = "panelEliminarProductoBody";
+            this.panelEliminarProductoBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelEliminarProductoBody.Size = new System.Drawing.Size(367, 237);
+            this.panelEliminarProductoBody.TabIndex = 1;
+            // 
+            // btnEliminarProducto
+            // 
+            this.btnEliminarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.btnEliminarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarProducto.BackgroundImage")));
+            this.btnEliminarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProducto.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEliminarProducto.Location = new System.Drawing.Point(25, 25);
+            this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.Size = new System.Drawing.Size(317, 187);
+            this.btnEliminarProducto.TabIndex = 1;
+            this.btnEliminarProducto.UseVisualStyleBackColor = false;
+            // 
+            // panelEliminarEmpleadoTitle
+            // 
+            this.panelEliminarEmpleadoTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.panelEliminarEmpleadoTitle.Controls.Add(this.lblEliminarEmpleado);
+            this.panelEliminarEmpleadoTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEliminarEmpleadoTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelEliminarEmpleadoTitle.Name = "panelEliminarEmpleadoTitle";
+            this.panelEliminarEmpleadoTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelEliminarEmpleadoTitle.TabIndex = 0;
+            // 
+            // panelEliminarEmpleadoBody
+            // 
+            this.panelEliminarEmpleadoBody.Controls.Add(this.btnEliminarEmpleado);
+            this.panelEliminarEmpleadoBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarEmpleadoBody.Location = new System.Drawing.Point(0, 60);
+            this.panelEliminarEmpleadoBody.Name = "panelEliminarEmpleadoBody";
+            this.panelEliminarEmpleadoBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelEliminarEmpleadoBody.Size = new System.Drawing.Size(367, 237);
+            this.panelEliminarEmpleadoBody.TabIndex = 1;
+            // 
+            // lblEliminarCliente
+            // 
+            this.lblEliminarCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEliminarCliente.AutoSize = true;
+            this.lblEliminarCliente.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarCliente.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEliminarCliente.Location = new System.Drawing.Point(33, 13);
+            this.lblEliminarCliente.Name = "lblEliminarCliente";
+            this.lblEliminarCliente.Size = new System.Drawing.Size(215, 31);
+            this.lblEliminarCliente.TabIndex = 6;
+            this.lblEliminarCliente.Text = "Eliminar Cliente";
+            // 
+            // lblEliminarEmpleado
+            // 
+            this.lblEliminarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEliminarEmpleado.AutoSize = true;
+            this.lblEliminarEmpleado.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEmpleado.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEliminarEmpleado.Location = new System.Drawing.Point(49, 13);
+            this.lblEliminarEmpleado.Name = "lblEliminarEmpleado";
+            this.lblEliminarEmpleado.Size = new System.Drawing.Size(246, 31);
+            this.lblEliminarEmpleado.TabIndex = 6;
+            this.lblEliminarEmpleado.Text = "Eliminar Empleado";
+            // 
+            // btnEliminarEmpleado
+            // 
+            this.btnEliminarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.btnEliminarEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarEmpleado.BackgroundImage")));
+            this.btnEliminarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarEmpleado.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEliminarEmpleado.Location = new System.Drawing.Point(25, 25);
+            this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
+            this.btnEliminarEmpleado.Size = new System.Drawing.Size(317, 187);
+            this.btnEliminarEmpleado.TabIndex = 0;
+            this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
             // 
             // FrmAutomotriz
             // 

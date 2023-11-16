@@ -45,9 +45,9 @@ namespace Automotriz.Presentación
         }
         private void EndResponsive()
         {
-            Font SmallFont = new Font("Times New Roman", 12, FontStyle.Bold);
-            Font MediumFont = new Font("Times New Roman", 16, FontStyle.Bold);
-            Font LargeFont = new Font("Times New Roman", 20, FontStyle.Bold);
+            Font SmallFont = new Font("Times New Roman", 9, FontStyle.Bold);
+            Font MediumFont = new Font("Times New Roman", 12, FontStyle.Bold);
+            Font LargeFont = new Font("Times New Roman", 18, FontStyle.Bold);
 
             if (Width > 1200)
             {
@@ -73,7 +73,7 @@ namespace Automotriz.Presentación
                 //Botones Clientes
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 15, MediumFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 15, MediumFont);
-                ResponsiveButton(panelEliminarClienteBody, lblConsultarClientes, 15, MediumFont);
+                ResponsiveButton(panelEliminarClienteBody, lblEliminarCliente, 15, MediumFont);
                 //Botones Comprobantes
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 15, MediumFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 15, MediumFont);
@@ -96,13 +96,13 @@ namespace Automotriz.Presentación
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 5, SmallFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 5, SmallFont);
                 //Botones Productos
-                ResponsiveButton(panelNuevoProductoBody, lblNuevoComprobante, 5, SmallFont);
-                ResponsiveButton(panelConsultarProductosBody, lblNuevoComprobante, 5, SmallFont);
-                ResponsiveButton(panelEliminarProductoBody, lblNuevoComprobante, 5, SmallFont);
+                ResponsiveButton(panelNuevoProductoBody, lblNuevoProducto, 5, SmallFont);
+                ResponsiveButton(panelConsultarProductosBody, lblConsultarProductos, 5, SmallFont);
+                ResponsiveButton(panelEliminarProductoBody, lblEliminarProducto, 5, SmallFont);
                 //Botones Empleados
-                ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoComprobante, 5, SmallFont);
-                ResponsiveButton(panelConsultarEmpleadosBody, lblNuevoComprobante, 5, SmallFont);
-                ResponsiveButton(panelEliminarEmpleadoBody, lblNuevoComprobante, 5, SmallFont);
+                ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoEmpleado, 5, SmallFont);
+                ResponsiveButton(panelConsultarEmpleadosBody, lblConsultarEmpleados, 5, SmallFont);
+                ResponsiveButton(panelEliminarEmpleadoBody, lblEliminarEmpleado, 5, SmallFont);
             }
         }
 
