@@ -176,5 +176,23 @@ namespace Automotriz.Presentación
             FrmConsultaEmpleado frmConsultaEmpleado = new FrmConsultaEmpleado();
             frmConsultaEmpleado.ShowDialog();
         }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProducto frmConsultaProductos = new FrmConsultaProducto();
+            frmConsultaProductos.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmConsultaEmpleado frmConsultaEmpleados = new FrmConsultaEmpleado();
+            frmConsultaEmpleados.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmInformacion frmInformacion = new FrmInformacion();
+            frmInformacion.ShowDialog();
+        }
     }
 }

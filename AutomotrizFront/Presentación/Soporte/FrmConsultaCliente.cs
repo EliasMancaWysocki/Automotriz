@@ -28,7 +28,10 @@ namespace Automotriz.Presentación.Soporte
 
         private void FrmConsultaCliente_Load(object sender, EventArgs e)
         {
-
+            btnConsultar.FlatStyle = FlatStyle.Flat;
+            btnConsultar.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
         }
 
         //Funciones

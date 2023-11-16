@@ -28,7 +28,10 @@ namespace Automotriz.Presentación.Soporte
 
         private void FrmConsultaCliente_Load(object sender, EventArgs e)
         {
-
+            btnConsultar.FlatStyle = FlatStyle.Flat;
+            btnConsultar.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
         }
 
         //Funciones
@@ -43,7 +46,6 @@ namespace Automotriz.Presentación.Soporte
         private void CentrarBotones()
         {
             int x = (Width - 15 - 195) / 2;
-            btnCancelar.Location = new Point(x, 280);
             btnConsultar.Location = new Point(x + 120, 280);
         }
 
