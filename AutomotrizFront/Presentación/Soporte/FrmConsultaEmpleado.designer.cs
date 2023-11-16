@@ -182,6 +182,8 @@ namespace Automotriz.Presentación.Soporte
             // 
             this.dgvVendedores.AllowUserToAddRows = false;
             this.dgvVendedores.AllowUserToDeleteRows = false;
+            this.dgvVendedores.AllowUserToResizeColumns = false;
+            this.dgvVendedores.AllowUserToResizeRows = false;
             this.dgvVendedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVendedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -190,6 +192,7 @@ namespace Automotriz.Presentación.Soporte
             this.dgvVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVendedores.Location = new System.Drawing.Point(11, 136);
             this.dgvVendedores.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvVendedores.MultiSelect = false;
             this.dgvVendedores.Name = "dgvVendedores";
             this.dgvVendedores.ReadOnly = true;
             this.dgvVendedores.RowHeadersWidth = 51;

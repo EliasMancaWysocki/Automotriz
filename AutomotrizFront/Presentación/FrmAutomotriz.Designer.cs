@@ -375,6 +375,7 @@ namespace Automotriz.Presentación
             // 
             this.panelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogo.BackgroundImage")));
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLogo.Location = new System.Drawing.Point(1443, 7);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -855,6 +856,7 @@ namespace Automotriz.Presentación
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.Location = new System.Drawing.Point(33, 31);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
