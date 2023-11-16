@@ -132,7 +132,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1904, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 36);
             this.menuStrip1.TabIndex = 0;
             // 
             // archivoToolStripMenuItem
@@ -267,7 +267,7 @@
             this.lblAutomotrix.BackColor = System.Drawing.Color.Transparent;
             this.lblAutomotrix.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutomotrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.lblAutomotrix.Location = new System.Drawing.Point(873, 11);
+            this.lblAutomotrix.Location = new System.Drawing.Point(606, 11);
             this.lblAutomotrix.Name = "lblAutomotrix";
             this.lblAutomotrix.Size = new System.Drawing.Size(221, 46);
             this.lblAutomotrix.TabIndex = 2;
@@ -281,7 +281,7 @@
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 36);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1904, 66);
+            this.panelTitulo.Size = new System.Drawing.Size(1370, 66);
             this.panelTitulo.TabIndex = 4;
             // 
             // panelCentral
@@ -292,7 +292,7 @@
             this.panelCentral.Location = new System.Drawing.Point(0, 102);
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Padding = new System.Windows.Forms.Padding(10);
-            this.panelCentral.Size = new System.Drawing.Size(1904, 939);
+            this.panelCentral.Size = new System.Drawing.Size(1370, 647);
             this.panelCentral.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -320,19 +320,105 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1884, 919);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1350, 627);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+<<<<<<< HEAD
+=======
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(1082, 422);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(262, 199);
+            this.panel14.TabIndex = 14;
+            // 
+            // panelEliminarEmpleado
+            // 
+<<<<<<< HEAD
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(813, 422);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(260, 199);
+            this.panel13.TabIndex = 13;
+=======
+            this.panelEliminarEmpleado.Controls.Add(this.panelEliminarEmpleadoBody);
+            this.panelEliminarEmpleado.Controls.Add(this.panelEliminarEmpleadoTitle);
+            this.panelEliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarEmpleado.Location = new System.Drawing.Point(1134, 616);
+            this.panelEliminarEmpleado.Name = "panelEliminarEmpleado";
+            this.panelEliminarEmpleado.Size = new System.Drawing.Size(367, 297);
+            this.panelEliminarEmpleado.TabIndex = 13;
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
+            // 
+            // panelEliminarProducto
+            // 
+<<<<<<< HEAD
+            this.panelEliminarEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarEmpleados.Location = new System.Drawing.Point(544, 422);
+            this.panelEliminarEmpleados.Name = "panelEliminarEmpleados";
+            this.panelEliminarEmpleados.Size = new System.Drawing.Size(260, 199);
+            this.panelEliminarEmpleados.TabIndex = 12;
+=======
+            this.panelEliminarProducto.Controls.Add(this.panelEliminarProductoBody);
+            this.panelEliminarProducto.Controls.Add(this.panelEliminarProductoTitle);
+            this.panelEliminarProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarProducto.Location = new System.Drawing.Point(758, 616);
+            this.panelEliminarProducto.Name = "panelEliminarProducto";
+            this.panelEliminarProducto.Size = new System.Drawing.Size(367, 297);
+            this.panelEliminarProducto.TabIndex = 12;
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
+            // 
+            // panelEliminarProductoTitle
+            // 
+<<<<<<< HEAD
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(275, 422);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(260, 199);
+            this.panel11.TabIndex = 11;
+=======
+            this.panelEliminarProductoTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.panelEliminarProductoTitle.Controls.Add(this.lblEliminarProducto);
+            this.panelEliminarProductoTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEliminarProductoTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelEliminarProductoTitle.Name = "panelEliminarProductoTitle";
+            this.panelEliminarProductoTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelEliminarProductoTitle.TabIndex = 0;
+            // 
+            // panel
+            // 
+            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(382, 616);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(367, 297);
+            this.panel.TabIndex = 11;
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
+            // 
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(1510, 6);
+            this.panel9.Location = new System.Drawing.Point(1082, 6);
             this.panel9.Name = "panel9";
+<<<<<<< HEAD
             this.panel9.Size = new System.Drawing.Size(368, 449);
+=======
+            this.panel9.Size = new System.Drawing.Size(262, 199);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panel9.TabIndex = 9;
             // 
             // panelConsultarProductos
             // 
+<<<<<<< HEAD
+            this.panelConsultarEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelConsultarEmpleados.Location = new System.Drawing.Point(544, 214);
+            this.panelConsultarEmpleados.Name = "panelConsultarEmpleados";
+            this.panelConsultarEmpleados.Size = new System.Drawing.Size(260, 199);
+            this.panelConsultarEmpleados.TabIndex = 7;
+=======
             this.panelConsultarProductos.Controls.Add(this.panelConsultarProductosBody);
             this.panelConsultarProductos.Controls.Add(this.panelConsultarProductosTitle);
             this.panelConsultarProductos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -387,15 +473,22 @@
             this.lblConsultarProductos.Size = new System.Drawing.Size(262, 31);
             this.lblConsultarProductos.TabIndex = 4;
             this.lblConsultarProductos.Text = "Consultar Productos";
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
             // 
             // panelConsultarClientes
             // 
             this.panelConsultarClientes.Controls.Add(this.panelConsultarClientesBody);
             this.panelConsultarClientes.Controls.Add(this.panelConsultarClientesTitle);
             this.panelConsultarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+<<<<<<< HEAD
             this.panelConsultarClientes.Location = new System.Drawing.Point(6, 464);
             this.panelConsultarClientes.Name = "panelConsultarClientes";
             this.panelConsultarClientes.Size = new System.Drawing.Size(367, 449);
+=======
+            this.panelConsultarClientes.Location = new System.Drawing.Point(6, 214);
+            this.panelConsultarClientes.Name = "panelConsultarClientes";
+            this.panelConsultarClientes.Size = new System.Drawing.Size(260, 199);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelConsultarClientes.TabIndex = 5;
             // 
             // panelConsultarClientesBody
@@ -405,7 +498,11 @@
             this.panelConsultarClientesBody.Location = new System.Drawing.Point(0, 60);
             this.panelConsultarClientesBody.Name = "panelConsultarClientesBody";
             this.panelConsultarClientesBody.Padding = new System.Windows.Forms.Padding(25);
+<<<<<<< HEAD
             this.panelConsultarClientesBody.Size = new System.Drawing.Size(367, 389);
+=======
+            this.panelConsultarClientesBody.Size = new System.Drawing.Size(260, 139);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelConsultarClientesBody.TabIndex = 1;
             // 
             // btnConsultarClientes
@@ -419,7 +516,11 @@
             this.btnConsultarClientes.ForeColor = System.Drawing.Color.Transparent;
             this.btnConsultarClientes.Location = new System.Drawing.Point(25, 25);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
+<<<<<<< HEAD
             this.btnConsultarClientes.Size = new System.Drawing.Size(317, 339);
+=======
+            this.btnConsultarClientes.Size = new System.Drawing.Size(210, 89);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.btnConsultarClientes.TabIndex = 0;
             this.btnConsultarClientes.UseVisualStyleBackColor = false;
             this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
@@ -431,7 +532,7 @@
             this.panelConsultarClientesTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConsultarClientesTitle.Location = new System.Drawing.Point(0, 0);
             this.panelConsultarClientesTitle.Name = "panelConsultarClientesTitle";
-            this.panelConsultarClientesTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelConsultarClientesTitle.Size = new System.Drawing.Size(260, 60);
             this.panelConsultarClientesTitle.TabIndex = 0;
             // 
             // lblConsultarClientes
@@ -440,7 +541,7 @@
             this.lblConsultarClientes.AutoSize = true;
             this.lblConsultarClientes.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultarClientes.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblConsultarClientes.Location = new System.Drawing.Point(81, 18);
+            this.lblConsultarClientes.Location = new System.Drawing.Point(28, 18);
             this.lblConsultarClientes.Name = "lblConsultarClientes";
             this.lblConsultarClientes.Size = new System.Drawing.Size(188, 24);
             this.lblConsultarClientes.TabIndex = 0;
@@ -451,9 +552,15 @@
             this.panelConsultarComprobantes.Controls.Add(this.panelConsultarComprobantesBody);
             this.panelConsultarComprobantes.Controls.Add(this.panelConsultarComprobanteTitle);
             this.panelConsultarComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
+<<<<<<< HEAD
             this.panelConsultarComprobantes.Location = new System.Drawing.Point(382, 464);
             this.panelConsultarComprobantes.Name = "panelConsultarComprobantes";
             this.panelConsultarComprobantes.Size = new System.Drawing.Size(367, 449);
+=======
+            this.panelConsultarComprobantes.Location = new System.Drawing.Point(275, 214);
+            this.panelConsultarComprobantes.Name = "panelConsultarComprobantes";
+            this.panelConsultarComprobantes.Size = new System.Drawing.Size(260, 199);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelConsultarComprobantes.TabIndex = 4;
             // 
             // panelConsultarComprobantesBody
@@ -463,7 +570,11 @@
             this.panelConsultarComprobantesBody.Location = new System.Drawing.Point(0, 60);
             this.panelConsultarComprobantesBody.Name = "panelConsultarComprobantesBody";
             this.panelConsultarComprobantesBody.Padding = new System.Windows.Forms.Padding(25);
+<<<<<<< HEAD
             this.panelConsultarComprobantesBody.Size = new System.Drawing.Size(367, 389);
+=======
+            this.panelConsultarComprobantesBody.Size = new System.Drawing.Size(260, 139);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelConsultarComprobantesBody.TabIndex = 1;
             // 
             // btnConsultarComprobantes
@@ -477,7 +588,11 @@
             this.btnConsultarComprobantes.ForeColor = System.Drawing.Color.Transparent;
             this.btnConsultarComprobantes.Location = new System.Drawing.Point(25, 25);
             this.btnConsultarComprobantes.Name = "btnConsultarComprobantes";
+<<<<<<< HEAD
             this.btnConsultarComprobantes.Size = new System.Drawing.Size(317, 339);
+=======
+            this.btnConsultarComprobantes.Size = new System.Drawing.Size(210, 89);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.btnConsultarComprobantes.TabIndex = 0;
             this.btnConsultarComprobantes.UseVisualStyleBackColor = false;
             this.btnConsultarComprobantes.Click += new System.EventHandler(this.btnConsultarComprobantes_Click);
@@ -489,7 +604,7 @@
             this.panelConsultarComprobanteTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConsultarComprobanteTitle.Location = new System.Drawing.Point(0, 0);
             this.panelConsultarComprobanteTitle.Name = "panelConsultarComprobanteTitle";
-            this.panelConsultarComprobanteTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelConsultarComprobanteTitle.Size = new System.Drawing.Size(260, 60);
             this.panelConsultarComprobanteTitle.TabIndex = 0;
             // 
             // lblConsultarComprobantes
@@ -498,7 +613,7 @@
             this.lblConsultarComprobantes.AutoSize = true;
             this.lblConsultarComprobantes.Font = new System.Drawing.Font("Calisto MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultarComprobantes.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblConsultarComprobantes.Location = new System.Drawing.Point(52, 18);
+            this.lblConsultarComprobantes.Location = new System.Drawing.Point(-1, 18);
             this.lblConsultarComprobantes.Name = "lblConsultarComprobantes";
             this.lblConsultarComprobantes.Size = new System.Drawing.Size(248, 24);
             this.lblConsultarComprobantes.TabIndex = 1;
@@ -506,6 +621,13 @@
             // 
             // panelNuevoProducto
             // 
+<<<<<<< HEAD
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(813, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(260, 199);
+            this.panel4.TabIndex = 3;
+=======
             this.panelNuevoProducto.Controls.Add(this.panelNuevoProductoBody);
             this.panelNuevoProducto.Controls.Add(this.panelNuevoProductoTitle);
             this.panelNuevoProducto.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -513,9 +635,17 @@
             this.panelNuevoProducto.Name = "panelNuevoProducto";
             this.panelNuevoProducto.Size = new System.Drawing.Size(367, 449);
             this.panelNuevoProducto.TabIndex = 2;
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
             // 
             // panelNuevoProductoBody
             // 
+<<<<<<< HEAD
+            this.panelNuevoEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNuevoEmpleado.Location = new System.Drawing.Point(544, 6);
+            this.panelNuevoEmpleado.Name = "panelNuevoEmpleado";
+            this.panelNuevoEmpleado.Size = new System.Drawing.Size(260, 199);
+            this.panelNuevoEmpleado.TabIndex = 2;
+=======
             this.panelNuevoProductoBody.Controls.Add(this.btnNuevoProducto);
             this.panelNuevoProductoBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNuevoProductoBody.Location = new System.Drawing.Point(0, 60);
@@ -561,6 +691,7 @@
             this.lblNuevoProducto.Size = new System.Drawing.Size(210, 31);
             this.lblNuevoProducto.TabIndex = 2;
             this.lblNuevoProducto.Text = "Nuevo Producto";
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
             // 
             // panelNuevoCliente
             // 
@@ -569,7 +700,11 @@
             this.panelNuevoCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNuevoCliente.Location = new System.Drawing.Point(6, 6);
             this.panelNuevoCliente.Name = "panelNuevoCliente";
+<<<<<<< HEAD
             this.panelNuevoCliente.Size = new System.Drawing.Size(367, 449);
+=======
+            this.panelNuevoCliente.Size = new System.Drawing.Size(260, 199);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelNuevoCliente.TabIndex = 0;
             // 
             // panelNuevoClienteBody
@@ -579,7 +714,11 @@
             this.panelNuevoClienteBody.Location = new System.Drawing.Point(0, 60);
             this.panelNuevoClienteBody.Name = "panelNuevoClienteBody";
             this.panelNuevoClienteBody.Padding = new System.Windows.Forms.Padding(30);
+<<<<<<< HEAD
             this.panelNuevoClienteBody.Size = new System.Drawing.Size(367, 389);
+=======
+            this.panelNuevoClienteBody.Size = new System.Drawing.Size(260, 139);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelNuevoClienteBody.TabIndex = 1;
             // 
             // btnNuevoCliente
@@ -593,7 +732,11 @@
             this.btnNuevoCliente.ForeColor = System.Drawing.Color.Transparent;
             this.btnNuevoCliente.Location = new System.Drawing.Point(30, 30);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
+<<<<<<< HEAD
             this.btnNuevoCliente.Size = new System.Drawing.Size(307, 329);
+=======
+            this.btnNuevoCliente.Size = new System.Drawing.Size(200, 79);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.btnNuevoCliente.TabIndex = 0;
             this.btnNuevoCliente.UseVisualStyleBackColor = false;
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
@@ -605,7 +748,7 @@
             this.panelNuevoClienteTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNuevoClienteTitle.Location = new System.Drawing.Point(0, 0);
             this.panelNuevoClienteTitle.Name = "panelNuevoClienteTitle";
-            this.panelNuevoClienteTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelNuevoClienteTitle.Size = new System.Drawing.Size(260, 60);
             this.panelNuevoClienteTitle.TabIndex = 0;
             // 
             // lblNuevoCliente
@@ -614,7 +757,7 @@
             this.lblNuevoCliente.AutoSize = true;
             this.lblNuevoCliente.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevoCliente.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNuevoCliente.Location = new System.Drawing.Point(79, 16);
+            this.lblNuevoCliente.Location = new System.Drawing.Point(26, 16);
             this.lblNuevoCliente.Name = "lblNuevoCliente";
             this.lblNuevoCliente.Size = new System.Drawing.Size(161, 31);
             this.lblNuevoCliente.TabIndex = 0;
@@ -625,9 +768,13 @@
             this.panelNuevoComprobante.Controls.Add(this.panelNuevoComprobanteBody);
             this.panelNuevoComprobante.Controls.Add(this.panelNuevoComprobanteTitle);
             this.panelNuevoComprobante.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNuevoComprobante.Location = new System.Drawing.Point(382, 6);
+            this.panelNuevoComprobante.Location = new System.Drawing.Point(275, 6);
             this.panelNuevoComprobante.Name = "panelNuevoComprobante";
+<<<<<<< HEAD
             this.panelNuevoComprobante.Size = new System.Drawing.Size(367, 449);
+=======
+            this.panelNuevoComprobante.Size = new System.Drawing.Size(260, 199);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelNuevoComprobante.TabIndex = 1;
             // 
             // panelNuevoComprobanteBody
@@ -637,7 +784,11 @@
             this.panelNuevoComprobanteBody.Location = new System.Drawing.Point(0, 60);
             this.panelNuevoComprobanteBody.Name = "panelNuevoComprobanteBody";
             this.panelNuevoComprobanteBody.Padding = new System.Windows.Forms.Padding(25);
+<<<<<<< HEAD
             this.panelNuevoComprobanteBody.Size = new System.Drawing.Size(367, 389);
+=======
+            this.panelNuevoComprobanteBody.Size = new System.Drawing.Size(260, 139);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.panelNuevoComprobanteBody.TabIndex = 1;
             // 
             // btnNuevoComprobante
@@ -651,7 +802,11 @@
             this.btnNuevoComprobante.ForeColor = System.Drawing.Color.Transparent;
             this.btnNuevoComprobante.Location = new System.Drawing.Point(25, 25);
             this.btnNuevoComprobante.Name = "btnNuevoComprobante";
+<<<<<<< HEAD
             this.btnNuevoComprobante.Size = new System.Drawing.Size(317, 339);
+=======
+            this.btnNuevoComprobante.Size = new System.Drawing.Size(210, 89);
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.btnNuevoComprobante.TabIndex = 0;
             this.btnNuevoComprobante.UseVisualStyleBackColor = false;
             this.btnNuevoComprobante.Click += new System.EventHandler(this.btnNuevoComprobante_Click);
@@ -663,7 +818,7 @@
             this.panelNuevoComprobanteTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNuevoComprobanteTitle.Location = new System.Drawing.Point(0, 0);
             this.panelNuevoComprobanteTitle.Name = "panelNuevoComprobanteTitle";
-            this.panelNuevoComprobanteTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelNuevoComprobanteTitle.Size = new System.Drawing.Size(260, 60);
             this.panelNuevoComprobanteTitle.TabIndex = 0;
             // 
             // lblNuevoComprobante
@@ -672,7 +827,7 @@
             this.lblNuevoComprobante.AutoSize = true;
             this.lblNuevoComprobante.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevoComprobante.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNuevoComprobante.Location = new System.Drawing.Point(50, 16);
+            this.lblNuevoComprobante.Location = new System.Drawing.Point(-3, 16);
             this.lblNuevoComprobante.Name = "lblNuevoComprobante";
             this.lblNuevoComprobante.Size = new System.Drawing.Size(267, 31);
             this.lblNuevoComprobante.TabIndex = 1;
@@ -680,6 +835,13 @@
             // 
             // panelConsultarEmpleados
             // 
+<<<<<<< HEAD
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(813, 214);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(260, 199);
+            this.panel7.TabIndex = 6;
+=======
             this.panelConsultarEmpleados.Controls.Add(this.panelConsultarEmpleadosBody);
             this.panelConsultarEmpleados.Controls.Add(this.panelConsultarEmpleadosTitle);
             this.panelConsultarEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -734,15 +896,41 @@
             this.lblConsultarEmpleados.Size = new System.Drawing.Size(272, 31);
             this.lblConsultarEmpleados.TabIndex = 5;
             this.lblConsultarEmpleados.Text = "Consultar Empleados";
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(1510, 464);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(368, 449);
             this.panel1.TabIndex = 8;
             // 
+=======
+            this.panel1.Location = new System.Drawing.Point(1082, 214);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(262, 199);
+            this.panel1.TabIndex = 8;
+            // 
+            // panelEliminarCliente
+            // 
+<<<<<<< HEAD
+            this.panelEliminarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarClientes.Location = new System.Drawing.Point(6, 422);
+            this.panelEliminarClientes.Name = "panelEliminarClientes";
+            this.panelEliminarClientes.Size = new System.Drawing.Size(260, 199);
+            this.panelEliminarClientes.TabIndex = 10;
+=======
+            this.panelEliminarCliente.Controls.Add(this.panelEliminarClienteBody);
+            this.panelEliminarCliente.Controls.Add(this.panelEliminarClienteTitle);
+            this.panelEliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarCliente.Location = new System.Drawing.Point(6, 616);
+            this.panelEliminarCliente.Name = "panelEliminarCliente";
+            this.panelEliminarCliente.Size = new System.Drawing.Size(367, 297);
+            this.panelEliminarCliente.TabIndex = 10;
+            // 
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             // panelNuevoEmpleado
             // 
             this.panelNuevoEmpleado.Controls.Add(this.panelNuevoEmpleadoBody);
@@ -800,6 +988,141 @@
             this.lblNuevoEmpleado.TabIndex = 3;
             this.lblNuevoEmpleado.Text = "Nuevo Empleado";
             // 
+<<<<<<< HEAD
+=======
+            // lblEliminarProducto
+            // 
+            this.lblEliminarProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEliminarProducto.AutoSize = true;
+            this.lblEliminarProducto.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarProducto.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEliminarProducto.Location = new System.Drawing.Point(44, 13);
+            this.lblEliminarProducto.Name = "lblEliminarProducto";
+            this.lblEliminarProducto.Size = new System.Drawing.Size(236, 31);
+            this.lblEliminarProducto.TabIndex = 5;
+            this.lblEliminarProducto.Text = "Eliminar Producto";
+            // 
+            // panelEliminarClienteTitle
+            // 
+            this.panelEliminarClienteTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.panelEliminarClienteTitle.Controls.Add(this.lblEliminarCliente);
+            this.panelEliminarClienteTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEliminarClienteTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelEliminarClienteTitle.Name = "panelEliminarClienteTitle";
+            this.panelEliminarClienteTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelEliminarClienteTitle.TabIndex = 0;
+            // 
+            // panelEliminarClienteBody
+            // 
+            this.panelEliminarClienteBody.Controls.Add(this.btnEliminarCliente);
+            this.panelEliminarClienteBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarClienteBody.Location = new System.Drawing.Point(0, 60);
+            this.panelEliminarClienteBody.Name = "panelEliminarClienteBody";
+            this.panelEliminarClienteBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelEliminarClienteBody.Size = new System.Drawing.Size(367, 237);
+            this.panelEliminarClienteBody.TabIndex = 1;
+            // 
+            // btnEliminarCliente
+            // 
+            this.btnEliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.btnEliminarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarCliente.BackgroundImage")));
+            this.btnEliminarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCliente.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEliminarCliente.Location = new System.Drawing.Point(25, 25);
+            this.btnEliminarCliente.Name = "btnEliminarCliente";
+            this.btnEliminarCliente.Size = new System.Drawing.Size(317, 187);
+            this.btnEliminarCliente.TabIndex = 0;
+            this.btnEliminarCliente.UseVisualStyleBackColor = false;
+            // 
+            // panelEliminarProductoBody
+            // 
+            this.panelEliminarProductoBody.Controls.Add(this.btnEliminarProducto);
+            this.panelEliminarProductoBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarProductoBody.Location = new System.Drawing.Point(0, 60);
+            this.panelEliminarProductoBody.Name = "panelEliminarProductoBody";
+            this.panelEliminarProductoBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelEliminarProductoBody.Size = new System.Drawing.Size(367, 237);
+            this.panelEliminarProductoBody.TabIndex = 1;
+            // 
+            // btnEliminarProducto
+            // 
+            this.btnEliminarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.btnEliminarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarProducto.BackgroundImage")));
+            this.btnEliminarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProducto.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEliminarProducto.Location = new System.Drawing.Point(25, 25);
+            this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.Size = new System.Drawing.Size(317, 187);
+            this.btnEliminarProducto.TabIndex = 1;
+            this.btnEliminarProducto.UseVisualStyleBackColor = false;
+            // 
+            // panelEliminarEmpleadoTitle
+            // 
+            this.panelEliminarEmpleadoTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.panelEliminarEmpleadoTitle.Controls.Add(this.lblEliminarEmpleado);
+            this.panelEliminarEmpleadoTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEliminarEmpleadoTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelEliminarEmpleadoTitle.Name = "panelEliminarEmpleadoTitle";
+            this.panelEliminarEmpleadoTitle.Size = new System.Drawing.Size(367, 60);
+            this.panelEliminarEmpleadoTitle.TabIndex = 0;
+            // 
+            // panelEliminarEmpleadoBody
+            // 
+            this.panelEliminarEmpleadoBody.Controls.Add(this.btnEliminarEmpleado);
+            this.panelEliminarEmpleadoBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEliminarEmpleadoBody.Location = new System.Drawing.Point(0, 60);
+            this.panelEliminarEmpleadoBody.Name = "panelEliminarEmpleadoBody";
+            this.panelEliminarEmpleadoBody.Padding = new System.Windows.Forms.Padding(25);
+            this.panelEliminarEmpleadoBody.Size = new System.Drawing.Size(367, 237);
+            this.panelEliminarEmpleadoBody.TabIndex = 1;
+            // 
+            // lblEliminarCliente
+            // 
+            this.lblEliminarCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEliminarCliente.AutoSize = true;
+            this.lblEliminarCliente.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarCliente.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEliminarCliente.Location = new System.Drawing.Point(33, 13);
+            this.lblEliminarCliente.Name = "lblEliminarCliente";
+            this.lblEliminarCliente.Size = new System.Drawing.Size(215, 31);
+            this.lblEliminarCliente.TabIndex = 6;
+            this.lblEliminarCliente.Text = "Eliminar Cliente";
+            // 
+            // lblEliminarEmpleado
+            // 
+            this.lblEliminarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEliminarEmpleado.AutoSize = true;
+            this.lblEliminarEmpleado.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminarEmpleado.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEliminarEmpleado.Location = new System.Drawing.Point(49, 13);
+            this.lblEliminarEmpleado.Name = "lblEliminarEmpleado";
+            this.lblEliminarEmpleado.Size = new System.Drawing.Size(246, 31);
+            this.lblEliminarEmpleado.TabIndex = 6;
+            this.lblEliminarEmpleado.Text = "Eliminar Empleado";
+            // 
+            // btnEliminarEmpleado
+            // 
+            this.btnEliminarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(112)))), ((int)(((byte)(88)))));
+            this.btnEliminarEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarEmpleado.BackgroundImage")));
+            this.btnEliminarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarEmpleado.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEliminarEmpleado.Location = new System.Drawing.Point(25, 25);
+            this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
+            this.btnEliminarEmpleado.Size = new System.Drawing.Size(317, 187);
+            this.btnEliminarEmpleado.TabIndex = 0;
+            this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
+>>>>>>> 6cf6d4526d50cbd8c8e27f64d84593b702336e43
+            // 
+>>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             // FrmAutomotriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -807,7 +1130,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.menuStrip1);
@@ -815,7 +1138,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(992, 760);
+            this.MinimumSize = new System.Drawing.Size(992, 726);
             this.Name = "FrmAutomotriz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú";
