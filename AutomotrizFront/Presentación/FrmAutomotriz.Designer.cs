@@ -63,7 +63,6 @@
             this.btnConsultarComprobantes = new System.Windows.Forms.Button();
             this.panelConsultarComprobanteTitle = new System.Windows.Forms.Panel();
             this.lblConsultarComprobantes = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panelNuevoEmpleado = new System.Windows.Forms.Panel();
             this.panelNuevoCliente = new System.Windows.Forms.Panel();
             this.panelNuevoClienteBody = new System.Windows.Forms.Panel();
@@ -78,22 +77,30 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelEliminarClientes = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panelCentral.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panelConsultarEmpleados.SuspendLayout();
             this.panelConsultarClientes.SuspendLayout();
             this.panelConsultarClientesBody.SuspendLayout();
             this.panelConsultarClientesTitle.SuspendLayout();
             this.panelConsultarComprobantes.SuspendLayout();
             this.panelConsultarComprobantesBody.SuspendLayout();
             this.panelConsultarComprobanteTitle.SuspendLayout();
+            this.panelNuevoEmpleado.SuspendLayout();
             this.panelNuevoCliente.SuspendLayout();
             this.panelNuevoClienteBody.SuspendLayout();
             this.panelNuevoClienteTitle.SuspendLayout();
             this.panelNuevoComprobante.SuspendLayout();
             this.panelNuevoComprobanteBody.SuspendLayout();
             this.panelNuevoComprobanteTitle.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -289,13 +296,13 @@
             this.tableLayoutPanel1.Controls.Add(this.panelConsultarEmpleados, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelConsultarClientes, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelConsultarComprobantes, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelNuevoEmpleado, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelNuevoCliente, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelNuevoComprobante, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel7, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelEliminarClientes, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -348,6 +355,8 @@
             // 
             // panelConsultarEmpleados
             // 
+            this.panelConsultarEmpleados.Controls.Add(this.button1);
+            this.panelConsultarEmpleados.Controls.Add(this.panel2);
             this.panelConsultarEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelConsultarEmpleados.Location = new System.Drawing.Point(758, 311);
             this.panelConsultarEmpleados.Name = "panelConsultarEmpleados";
@@ -469,16 +478,9 @@
             this.lblConsultarComprobantes.TabIndex = 1;
             this.lblConsultarComprobantes.Text = "Consultar Comprobantes";
             // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(1134, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(367, 296);
-            this.panel4.TabIndex = 3;
-            // 
             // panelNuevoEmpleado
             // 
+            this.panelNuevoEmpleado.Controls.Add(this.panel3);
             this.panelNuevoEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNuevoEmpleado.Location = new System.Drawing.Point(758, 6);
             this.panelNuevoEmpleado.Name = "panelNuevoEmpleado";
@@ -603,6 +605,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.panel6);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(1134, 311);
             this.panel7.Name = "panel7";
@@ -624,6 +627,49 @@
             this.panelEliminarClientes.Name = "panelEliminarClientes";
             this.panelEliminarClientes.Size = new System.Drawing.Size(367, 297);
             this.panelEliminarClientes.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(367, 60);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(367, 60);
+            this.panel6.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(1134, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(367, 60);
+            this.panel5.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(367, 60);
+            this.panel3.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Turquoise;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(0, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(367, 236);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmAutomotriz
             // 
@@ -653,6 +699,7 @@
             this.panelTitulo.PerformLayout();
             this.panelCentral.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panelConsultarEmpleados.ResumeLayout(false);
             this.panelConsultarClientes.ResumeLayout(false);
             this.panelConsultarClientesBody.ResumeLayout(false);
             this.panelConsultarClientesTitle.ResumeLayout(false);
@@ -661,6 +708,7 @@
             this.panelConsultarComprobantesBody.ResumeLayout(false);
             this.panelConsultarComprobanteTitle.ResumeLayout(false);
             this.panelConsultarComprobanteTitle.PerformLayout();
+            this.panelNuevoEmpleado.ResumeLayout(false);
             this.panelNuevoCliente.ResumeLayout(false);
             this.panelNuevoClienteBody.ResumeLayout(false);
             this.panelNuevoClienteTitle.ResumeLayout(false);
@@ -669,6 +717,7 @@
             this.panelNuevoComprobanteBody.ResumeLayout(false);
             this.panelNuevoComprobanteTitle.ResumeLayout(false);
             this.panelNuevoComprobanteTitle.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,7 +748,6 @@
         private System.Windows.Forms.Panel panelConsultarEmpleados;
         private System.Windows.Forms.Panel panelConsultarClientes;
         private System.Windows.Forms.Panel panelConsultarComprobantes;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panelNuevoEmpleado;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
@@ -725,5 +773,10 @@
         private System.Windows.Forms.Panel panelConsultarComprobantesBody;
         private System.Windows.Forms.Button btnConsultarComprobantes;
         private System.Windows.Forms.Label lblConsultarComprobantes;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
     }
 }
