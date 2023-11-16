@@ -123,6 +123,12 @@
     <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.Designer.cs">
       <DependentUpon>FrmGeneracionComprobantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentación\FrmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\FrmInicioSesion.Designer.cs">
+      <DependentUpon>FrmInicioSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet.Designer.cs" />
     <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.Designer.cs" />
     <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.Designer.cs" />
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\FrmAutomotriz.resx">
       <DependentUpon>FrmAutomotriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\FrmInicioSesion.resx">
+      <DependentUpon>FrmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Soporte\FormConsulta.resx">
       <DependentUpon>FormConsulta.cs</DependentUpon>

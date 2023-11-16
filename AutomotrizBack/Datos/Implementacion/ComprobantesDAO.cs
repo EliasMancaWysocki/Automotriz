@@ -253,6 +253,13 @@ namespace AutomotrizBack.Datos
 
             return aux;
         }
+        //public string InicioSesion(string usuario, string contraseña)
+        //{
+        //    List<Items> lst = new List<Items>();
+
+        //    DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_FORMASPAGO");
+        //    return lst
+        //}
 
     }
 }

@@ -254,3 +254,4 @@ C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Pres
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.Vendedores.VendedoresConsulta2.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta1.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta2.resources
+C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.FrmInicioSesion.resources
