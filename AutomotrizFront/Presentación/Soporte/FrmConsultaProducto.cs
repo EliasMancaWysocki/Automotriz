@@ -68,18 +68,41 @@ namespace Automotriz.Presentación.Soporte
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            dgvProductos2.DataSource = null;
+            dgvProductos2.Rows.Clear();
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            DataTable dataTable = new DataTable();
+            SqlConnection myConn = new SqlConnection("Data Source=34.176.166.122;Initial Catalog=Automotriz;User ID=sqlserver;Password=sqlserver");
+            myConn.Open();
+            SqlCommand myCmd = new SqlCommand("SP_PRODUCTOS_2", myConn);
+            myCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(myCmd);
+            da.Fill(dataTable);
+            dgvProductos2.DataSource = dataTable;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
             dgvProductos.DataSource = null;
             dgvProductos.Rows.Clear();
+
+            dgvProductos2.DataSource = null;
+            dgvProductos2.Rows.Clear();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dgvProductos.DataSource = null;
+            dgvProductos.Rows.Clear();
+
+            DataTable dataTable = new DataTable();
+            SqlConnection myConn = new SqlConnection("Data Source=34.176.166.122;Initial Catalog=Automotriz;User ID=sqlserver;Password=sqlserver");
+            myConn.Open();
+            SqlCommand myCmd = new SqlCommand("SP_PRODUCTOS_1", myConn);
+            myCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(myCmd);
+            da.Fill(dataTable);
+            dgvProductos.DataSource = dataTable;
         }
     }
 }

@@ -146,11 +146,11 @@
     <Compile Include="Presentación\Soporte\FrmActualizarCliente.Designer.cs">
       <DependentUpon>FrmActualizarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaVendedor.cs">
+    <Compile Include="Presentación\Soporte\FrmConsultaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaVendedor.designer.cs">
-      <DependentUpon>FrmConsultaVendedor.cs</DependentUpon>
+    <Compile Include="Presentación\Soporte\FrmConsultaEmpleado.designer.cs">
+      <DependentUpon>FrmConsultaEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Soporte\FrmConsultaProducto.cs">
       <SubType>Form</SubType>
@@ -249,8 +249,8 @@
     <EmbeddedResource Include="Presentación\Soporte\FrmActualizarCliente.resx">
       <DependentUpon>FrmActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmConsultaVendedor.resx">
-      <DependentUpon>FrmConsultaVendedor.cs</DependentUpon>
+    <EmbeddedResource Include="Presentación\Soporte\FrmConsultaEmpleado.resx">
+      <DependentUpon>FrmConsultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Soporte\FrmConsultaProducto.resx">
       <DependentUpon>FrmConsultaProducto.cs</DependentUpon>

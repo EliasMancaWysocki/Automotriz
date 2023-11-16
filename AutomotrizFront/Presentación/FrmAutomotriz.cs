@@ -164,5 +164,17 @@ namespace Automotriz.Presentación
             FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
             frmConsultaCliente.ShowDialog();
         }
+
+        private void btnConsultarProductos_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProducto frmConsultaProducto= new FrmConsultaProducto();
+            frmConsultaProducto.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmConsultaEmpleado frmConsultaEmpleado = new FrmConsultaEmpleado();
+            frmConsultaEmpleado.ShowDialog();
+        }
     }
 }
