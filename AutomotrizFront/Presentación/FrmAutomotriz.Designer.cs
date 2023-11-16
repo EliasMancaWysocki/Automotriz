@@ -116,11 +116,11 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
-            this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Calisto MT", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.archivoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("archivoToolStripMenuItem.Image")));
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(114, 32);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(119, 32);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -128,7 +128,7 @@
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(132, 32);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -140,11 +140,11 @@
             this.proveedoresToolStripMenuItem,
             this.empleadosToolStripMenuItem,
             this.proveedoresToolStripMenuItem1});
-            this.soporteToolStripMenuItem.Font = new System.Drawing.Font("Calisto MT", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soporteToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soporteToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.soporteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("soporteToolStripMenuItem.Image")));
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
-            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(113, 32);
+            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(116, 32);
             this.soporteToolStripMenuItem.Text = "Soporte";
             // 
             // clientesToolStripMenuItem
@@ -155,7 +155,7 @@
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // nuevoClienteToolStripMenuItem
@@ -163,7 +163,7 @@
             this.nuevoClienteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.nuevoClienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoClienteToolStripMenuItem.Image")));
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo";
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -172,7 +172,7 @@
             this.consultarClienteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.consultarClienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultarClienteToolStripMenuItem.Image")));
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
             this.consultarClienteToolStripMenuItem.Text = "Consultar";
             // 
             // comprobantesToolStripMenuItem
@@ -183,7 +183,7 @@
             this.comprobantesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.comprobantesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("comprobantesToolStripMenuItem.Image")));
             this.comprobantesToolStripMenuItem.Name = "comprobantesToolStripMenuItem";
-            this.comprobantesToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
+            this.comprobantesToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.comprobantesToolStripMenuItem.Text = "Comprobantes";
             // 
             // nuevoComprobanteToolStripMenuItem1
@@ -191,7 +191,7 @@
             this.nuevoComprobanteToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.nuevoComprobanteToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("nuevoComprobanteToolStripMenuItem1.Image")));
             this.nuevoComprobanteToolStripMenuItem1.Name = "nuevoComprobanteToolStripMenuItem1";
-            this.nuevoComprobanteToolStripMenuItem1.Size = new System.Drawing.Size(180, 32);
+            this.nuevoComprobanteToolStripMenuItem1.Size = new System.Drawing.Size(182, 32);
             this.nuevoComprobanteToolStripMenuItem1.Text = "Nuevo";
             this.nuevoComprobanteToolStripMenuItem1.Click += new System.EventHandler(this.nuevoToolStripMenuItem1_Click);
             // 
@@ -200,7 +200,7 @@
             this.consultarComprobanteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.consultarComprobanteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultarComprobanteToolStripMenuItem.Image")));
             this.consultarComprobanteToolStripMenuItem.Name = "consultarComprobanteToolStripMenuItem";
-            this.consultarComprobanteToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.consultarComprobanteToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
             this.consultarComprobanteToolStripMenuItem.Text = "Consultar";
             this.consultarComprobanteToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
@@ -209,7 +209,7 @@
             this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.proveedoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proveedoresToolStripMenuItem.Image")));
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.proveedoresToolStripMenuItem.Text = "Empleados";
             // 
             // empleadosToolStripMenuItem
@@ -217,7 +217,7 @@
             this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.empleadosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empleadosToolStripMenuItem.Image")));
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.empleadosToolStripMenuItem.Text = "Productos";
             // 
             // proveedoresToolStripMenuItem1
@@ -225,16 +225,16 @@
             this.proveedoresToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.proveedoresToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("proveedoresToolStripMenuItem1.Image")));
             this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
-            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(222, 32);
+            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(227, 32);
             this.proveedoresToolStripMenuItem1.Text = "Proveedores";
             // 
             // ayudaToolStripMenuItem
             // 
-            this.ayudaToolStripMenuItem.Font = new System.Drawing.Font("Calisto MT", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ayudaToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ayudaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.ayudaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ayudaToolStripMenuItem.Image")));
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(105, 32);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(102, 32);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // lblAutomotrix
@@ -388,6 +388,7 @@
             this.btnConsultarClientes.Size = new System.Drawing.Size(317, 186);
             this.btnConsultarClientes.TabIndex = 0;
             this.btnConsultarClientes.UseVisualStyleBackColor = false;
+            this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
             // 
             // panelConsultarClientesTitle
             // 

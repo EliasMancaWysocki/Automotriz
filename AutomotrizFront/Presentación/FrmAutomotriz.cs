@@ -112,6 +112,10 @@ namespace Automotriz.Presentación
             FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
             frmConsultaComprobantes.ShowDialog();
         }
+        private void btnConsultarClientes_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Deja de joder con el botoncito", "DEJA DE JODER", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
 
         //Eventos
         private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
