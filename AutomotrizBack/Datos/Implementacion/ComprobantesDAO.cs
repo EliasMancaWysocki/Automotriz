@@ -222,7 +222,7 @@ namespace AutomotrizBack.Datos
                 c.Altura = dr["altura"].ToString();
                 c.Barrio = Convert.ToInt32(dr["id_Barrio"].ToString());
                 c.Documento = dr["documento"].ToString();
-                c.TipoDoc = int.Parse(dr["id_tipo_documento"].ToString());
+                c.TipoDoc = Convert.ToInt32(dr["id_tipo_documento"].ToString());
                 c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"].ToString());
                 c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"].ToString());
 
