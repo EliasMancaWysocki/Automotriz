@@ -1,0 +1,9 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/AutomotrizFront/Presentación/Soporte/FrmActualizarCliente.Designer.cs
+/AutomotrizFront/.vs/Automotriz/v17/.suo
+/AutomotrizFront/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+/AutomotrizFront/Presentación/Soporte/FrmActualizarCliente.cs
+/AutomotrizFront/Presentación/Soporte/FrmActualizarCliente.resx

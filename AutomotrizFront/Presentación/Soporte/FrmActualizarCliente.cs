@@ -41,7 +41,7 @@ namespace AutomotrizFront.Presentación.Soporte
 
             gbboxCampos.Enabled = false;
             btnModificar.Enabled = false;
-            //btnBorrar.Visible = false;// hasta que sea programado
+            btnCancelar.Enabled = false;
 
             LimpiarCampos();
 
@@ -64,8 +64,8 @@ namespace AutomotrizFront.Presentación.Soporte
                 if(item.Id == nroCliente)
                 {   
                     lblIdCliente.Text = "Nro : "+nroCliente.ToString();
-                    txtNombre.Text = item.Nombre;
-                    txtApellido.Text = item.Apellido;
+                    txtApellido.Text = item.Nombre;
+                    txtNombre.Text = item.Apellido;
                     txtCalle.Text = item.Calle;
                     txtAltura.Text = item.Altura;
                     cboBarrios.SelectedIndex = item.Barrio - 1;
@@ -84,8 +84,8 @@ namespace AutomotrizFront.Presentación.Soporte
         {
             lblIdCliente.Text = string.Empty;
             cboTCliente.SelectedIndex = -1;
-            txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
+            txtNombre.Text = string.Empty;
             txtCalle.Text = string.Empty;
             txtAltura.Text = string.Empty;
             cboBarrios.SelectedIndex = -1;
@@ -101,13 +101,13 @@ namespace AutomotrizFront.Presentación.Soporte
                 MessageBox.Show("Seleccione un producto", "CONTROL DE CAMPO");
                 return;
             }
-            if (string.IsNullOrEmpty(txtNombre.Text))
+            if (string.IsNullOrEmpty(txtApellido.Text))
             {
                 MessageBox.Show("Ingrese un Nombre", "CONTROL DE CAMPO");
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtApellido.Text))
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("Ingrese un apellido", "CONTROL DE CAMPO");
                 return;
@@ -167,6 +167,7 @@ namespace AutomotrizFront.Presentación.Soporte
                 gbboxCampos.Enabled = true;
                 btnModificar.Enabled = true;
                 btnNuevo.Enabled = false;
+                btnCancelar.Enabled = true;
 
             }
 
@@ -191,13 +192,13 @@ namespace AutomotrizFront.Presentación.Soporte
             { 
 
                 nuevo.Id = IdAModificar;
-                nuevo.Nombre = txtNombre.Text;
-                nuevo.Apellido = txtApellido.Text;
+                nuevo.Nombre = txtApellido.Text;
+                nuevo.Apellido = txtNombre.Text;
                 nuevo.Calle = txtCalle.Text;
                 nuevo.Altura = txtAltura.Text;
                 nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
                 nuevo.Documento = txtDocumento.Text;
-                nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
+                nuevo.TipoDoc = Convert.ToInt32(cboTipoDoc.SelectedValue);
                 nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
                 nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
 
@@ -211,6 +212,7 @@ namespace AutomotrizFront.Presentación.Soporte
                     CargarListado();
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
+                    btnCancelar.Enabled = Enabled;
 
                 }
                 else
@@ -221,6 +223,21 @@ namespace AutomotrizFront.Presentación.Soporte
             }
 
         }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = false;
+            gbboxCampos.Enabled = false;
 
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = false;
+            gbboxCampos.Enabled = false;
+            btnCancelar.Enabled = false;
+        }
     }
 }
