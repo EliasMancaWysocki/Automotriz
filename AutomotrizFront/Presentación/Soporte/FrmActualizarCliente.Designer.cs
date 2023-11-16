@@ -81,8 +81,8 @@ namespace AutomotrizFront.Presentación.Soporte
             this.label2 = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.lblCalle = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblIdCliente = new System.Windows.Forms.Label();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.automotrizDataSet = new AutomotrizFront.AutomotrizDataSet();
@@ -357,8 +357,8 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbboxCampos.Controls.Add(this.label2);
             this.gbboxCampos.Controls.Add(this.txtCalle);
             this.gbboxCampos.Controls.Add(this.lblCalle);
-            this.gbboxCampos.Controls.Add(this.txtNombre);
             this.gbboxCampos.Controls.Add(this.txtApellido);
+            this.gbboxCampos.Controls.Add(this.txtNombre);
             this.gbboxCampos.Controls.Add(this.lblIdCliente);
             this.gbboxCampos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbboxCampos.Location = new System.Drawing.Point(15, 258);
@@ -509,21 +509,21 @@ namespace AutomotrizFront.Presentación.Soporte
             this.lblCalle.TabIndex = 31;
             this.lblCalle.Text = "Calle";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(136, 22);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(132, 26);
-            this.txtNombre.TabIndex = 30;
-            // 
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(344, 23);
+            this.txtApellido.Location = new System.Drawing.Point(136, 22);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(132, 26);
-            this.txtApellido.TabIndex = 29;
+            this.txtApellido.TabIndex = 30;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(344, 23);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(132, 26);
+            this.txtNombre.TabIndex = 29;
             // 
             // lblIdCliente
             // 
@@ -616,8 +616,8 @@ namespace AutomotrizFront.Presentación.Soporte
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.Label lblCalle;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblIdCliente;
         private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.Label lblDocumento;

@@ -64,8 +64,8 @@ namespace AutomotrizFront.Presentación.Soporte
                 if(item.Id == nroCliente)
                 {   
                     lblIdCliente.Text = "Nro : "+nroCliente.ToString();
-                    txtApellido.Text = item.Nombre;
-                    txtNombre.Text = item.Apellido;
+                    txtNombre.Text = item.Nombre;
+                    txtApellido.Text = item.Apellido;
                     txtCalle.Text = item.Calle;
                     txtAltura.Text = item.Altura;
                     cboBarrios.SelectedIndex = item.Barrio - 1;
@@ -84,8 +84,8 @@ namespace AutomotrizFront.Presentación.Soporte
         {
             lblIdCliente.Text = string.Empty;
             cboTCliente.SelectedIndex = -1;
-            txtApellido.Text = string.Empty;
             txtNombre.Text = string.Empty;
+            txtApellido.Text = string.Empty;
             txtCalle.Text = string.Empty;
             txtAltura.Text = string.Empty;
             cboBarrios.SelectedIndex = -1;
@@ -101,13 +101,13 @@ namespace AutomotrizFront.Presentación.Soporte
                 MessageBox.Show("Seleccione un producto", "CONTROL DE CAMPO");
                 return;
             }
-            if (string.IsNullOrEmpty(txtApellido.Text))
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("Ingrese un Nombre", "CONTROL DE CAMPO");
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtNombre.Text))
+            if (string.IsNullOrEmpty(txtApellido.Text))
             {
                 MessageBox.Show("Ingrese un apellido", "CONTROL DE CAMPO");
                 return;
@@ -192,8 +192,8 @@ namespace AutomotrizFront.Presentación.Soporte
             { 
 
                 nuevo.Id = IdAModificar;
-                nuevo.Nombre = txtApellido.Text;
-                nuevo.Apellido = txtNombre.Text;
+                nuevo.Nombre = txtNombre.Text;
+                nuevo.Apellido = txtApellido.Text;
                 nuevo.Calle = txtCalle.Text;
                 nuevo.Altura = txtAltura.Text;
                 nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
