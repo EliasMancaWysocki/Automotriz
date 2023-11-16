@@ -512,7 +512,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(136, 22);
+            this.txtApellido.Location = new System.Drawing.Point(344, 22);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(132, 26);
             this.txtApellido.TabIndex = 30;
@@ -520,7 +520,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(344, 23);
+            this.txtNombre.Location = new System.Drawing.Point(136, 22);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 26);
             this.txtNombre.TabIndex = 29;
