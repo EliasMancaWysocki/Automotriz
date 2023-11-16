@@ -46,15 +46,11 @@ namespace AutomotrizFront.Presentación.Soporte
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActualizarCliente));
             this.gbClientes = new System.Windows.Forms.GroupBox();
             this.dgvListacl = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
             this.mostrarClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.automotrizDataSet2 = new AutomotrizFront.AutomotrizDataSet2();
-=======
             this.NroCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
->>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             this.gbBotones = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -171,7 +167,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.dgvListacl.TabIndex = 0;
             this.dgvListacl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListacl_CellContentClick);
             // 
-<<<<<<< HEAD
             // mostrarClienteBindingSource
             // 
             this.mostrarClienteBindingSource.DataMember = "Mostrar_Cliente";
@@ -181,7 +176,6 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             this.automotrizDataSet2.DataSetName = "AutomotrizDataSet2";
             this.automotrizDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-=======
             // NroCliente
             // 
             this.NroCliente.DataPropertyName = "Nro Cliente";
@@ -194,12 +188,10 @@ namespace AutomotrizFront.Presentación.Soporte
             this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Seleccionar.HeaderText = "Ver";
             this.Seleccionar.Name = "Seleccionar";
->>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
             // 
             // gbBotones
             // 
             this.gbBotones.BackColor = System.Drawing.Color.Transparent;
-            this.gbBotones.Controls.Add(this.btnCancelar);
             this.gbBotones.Controls.Add(this.btnModificar);
             this.gbBotones.Controls.Add(this.btnSalir);
             this.gbBotones.Controls.Add(this.btnNuevo);
@@ -208,17 +200,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbBotones.Size = new System.Drawing.Size(882, 68);
             this.gbBotones.TabIndex = 1;
             this.gbBotones.TabStop = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(262, 19);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 30);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -765,7 +746,6 @@ namespace AutomotrizFront.Presentación.Soporte
         private AutomotrizDataSet2 automotrizDataSet2;
         private System.Windows.Forms.BindingSource mostrarClienteBindingSource;
         private AutomotrizDataSet2TableAdapters.Mostrar_ClienteTableAdapter mostrar_ClienteTableAdapter;
-<<<<<<< HEAD
         private System.Windows.Forms.Button btnBorrar;
         private DataGridViewTextBoxColumn NroCliente;
         private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -778,19 +758,5 @@ namespace AutomotrizFront.Presentación.Soporte
         private DataGridViewTextBoxColumn tipoClienteDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn condicionIVADataGridViewTextBoxColumn;
         private DataGridViewButtonColumn Seleccionar;
-=======
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn barrioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDocumentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn condicionIVADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
-        private System.Windows.Forms.Button btnCancelar;
->>>>>>> a2105441fd01123731d77e4cdf004de48c2121d2
     }
 }
