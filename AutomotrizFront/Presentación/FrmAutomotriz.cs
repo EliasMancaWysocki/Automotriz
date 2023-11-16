@@ -26,6 +26,7 @@ namespace Automotriz.Presentación
             CentrarTitulo(panelTitulo, lblAutomotrix);
             CentrarTitulo(panelNuevoClienteTitle, lblNuevoCliente);
             CentrarTitulo(panelConsultarClientesTitle, lblConsultarClientes);
+            EndResponsive();
         }
 
         //Funciones

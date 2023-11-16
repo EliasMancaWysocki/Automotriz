@@ -534,11 +534,11 @@
             // 
             this.lblNuevoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNuevoCliente.AutoSize = true;
-            this.lblNuevoCliente.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoCliente.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevoCliente.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNuevoCliente.Location = new System.Drawing.Point(79, 16);
             this.lblNuevoCliente.Name = "lblNuevoCliente";
-            this.lblNuevoCliente.Size = new System.Drawing.Size(189, 31);
+            this.lblNuevoCliente.Size = new System.Drawing.Size(161, 31);
             this.lblNuevoCliente.TabIndex = 0;
             this.lblNuevoCliente.Text = "Nuevo Cliente";
             // 
