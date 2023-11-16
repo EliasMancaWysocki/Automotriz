@@ -242,11 +242,11 @@
             this.lblAutomotrix.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAutomotrix.AutoSize = true;
             this.lblAutomotrix.BackColor = System.Drawing.Color.Transparent;
-            this.lblAutomotrix.Font = new System.Drawing.Font("Calisto MT", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutomotrix.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutomotrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.lblAutomotrix.Location = new System.Drawing.Point(873, 11);
             this.lblAutomotrix.Name = "lblAutomotrix";
-            this.lblAutomotrix.Size = new System.Drawing.Size(221, 47);
+            this.lblAutomotrix.Size = new System.Drawing.Size(221, 46);
             this.lblAutomotrix.TabIndex = 2;
             this.lblAutomotrix.Text = "AutoMotriX";
             this.lblAutomotrix.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

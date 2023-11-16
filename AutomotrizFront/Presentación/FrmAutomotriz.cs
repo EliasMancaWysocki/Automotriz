@@ -19,7 +19,6 @@ namespace Automotriz.Presentación
         public FrmAutomotriz()
         {
             InitializeComponent();
-
         }
 
         private void FrmAutomotriz_Load(object sender, EventArgs e)
@@ -44,9 +43,9 @@ namespace Automotriz.Presentación
         }
         private void EndResponsive()
         {
-            Font SmallFont = new Font("Calisto MT", 12, FontStyle.Bold);
-            Font MediumFont = new Font("Calisto MT", 16, FontStyle.Bold);
-            Font LargeFont = new Font("Calisto MT", 20, FontStyle.Bold);
+            Font SmallFont = new Font("Times New Roman", 12, FontStyle.Bold);
+            Font MediumFont = new Font("Times New Roman", 16, FontStyle.Bold);
+            Font LargeFont = new Font("Times New Roman", 20, FontStyle.Bold);
 
             if (Width > 1200)
             {
