@@ -20,6 +20,11 @@ namespace Automotriz.Presentación.Soporte
         IServicioDAO Servicio;
         Items item;
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
         public FrmConsultaCliente()
         {
             InitializeComponent();
@@ -46,14 +51,14 @@ namespace Automotriz.Presentación.Soporte
         private void CentrarBotones()
         {
             int x = (Width - 15 - 195) / 2;
-            btnCancelar.Location = new Point(x, 280);
+            btnVolver.Location = new Point(x, 280);
             btnConsultar.Location = new Point(x + 120, 280);
         }
 
         //Botones
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea cancelar la carga del cliente ?", "Cancelar  ", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea regresar a la pantalla anterior?", "VOLVER", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 this.Dispose();
             }

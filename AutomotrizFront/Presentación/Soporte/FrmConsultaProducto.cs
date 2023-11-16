@@ -20,6 +20,12 @@ namespace Automotriz.Presentación.Soporte
         IServicioDAO Servicio;
         Items item;
 
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
         public FrmConsultaProducto()
         {
             InitializeComponent();
@@ -52,10 +58,7 @@ namespace Automotriz.Presentación.Soporte
         //Botones
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea cancelar la carga del cliente ?", "Cancelar  ", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                this.Dispose();
-            }
+
         }
 
         public void fillTable1()
@@ -105,6 +108,14 @@ namespace Automotriz.Presentación.Soporte
             SqlDataAdapter da = new SqlDataAdapter(myCmd);
             da.Fill(dataTable);
             dgvProductos.DataSource = dataTable;
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea regresar a la pantalla anterior?", "VOLVER", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
         }
     }
 }

@@ -43,6 +43,7 @@ namespace Automotriz.Presentación.Soporte
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvProductos2 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,7 +76,7 @@ namespace Automotriz.Presentación.Soporte
             this.btnConsultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultar.BackgroundImage")));
             this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConsultar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(946, 469);
+            this.btnConsultar.Location = new System.Drawing.Point(964, 456);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(80, 80);
@@ -91,7 +92,7 @@ namespace Automotriz.Presentación.Soporte
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1043, 84);
+            this.panel1.Size = new System.Drawing.Size(1061, 84);
             this.panel1.TabIndex = 23;
             // 
             // lblAutomotrix
@@ -101,7 +102,7 @@ namespace Automotriz.Presentación.Soporte
             this.lblAutomotrix.BackColor = System.Drawing.Color.Transparent;
             this.lblAutomotrix.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutomotrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.lblAutomotrix.Location = new System.Drawing.Point(308, 11);
+            this.lblAutomotrix.Location = new System.Drawing.Point(317, 11);
             this.lblAutomotrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAutomotrix.Name = "lblAutomotrix";
             this.lblAutomotrix.Size = new System.Drawing.Size(445, 57);
@@ -119,12 +120,12 @@ namespace Automotriz.Presentación.Soporte
             this.dgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(75, 20);
+            this.dgvProductos.Location = new System.Drawing.Point(30, 33);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
-            this.dgvProductos.Size = new System.Drawing.Size(865, 445);
+            this.dgvProductos.Size = new System.Drawing.Size(996, 423);
             this.dgvProductos.TabIndex = 24;
             // 
             // panel2
@@ -135,7 +136,7 @@ namespace Automotriz.Presentación.Soporte
             this.panel2.Location = new System.Drawing.Point(0, 84);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1043, 604);
+            this.panel2.Size = new System.Drawing.Size(1061, 592);
             this.panel2.TabIndex = 24;
             // 
             // tabControl1
@@ -144,11 +145,11 @@ namespace Automotriz.Presentación.Soporte
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.tabControl1.Location = new System.Drawing.Point(0, 3);
+            this.tabControl1.Location = new System.Drawing.Point(0, 4);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1043, 601);
+            this.tabControl1.Size = new System.Drawing.Size(1061, 588);
             this.tabControl1.TabIndex = 22;
             this.tabControl1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -161,7 +162,7 @@ namespace Automotriz.Presentación.Soporte
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1035, 565);
+            this.tabPage1.Size = new System.Drawing.Size(1053, 552);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Productos en stock";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -174,7 +175,7 @@ namespace Automotriz.Presentación.Soporte
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(946, 477);
+            this.button1.Location = new System.Drawing.Point(946, 464);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 80);
@@ -191,7 +192,7 @@ namespace Automotriz.Presentación.Soporte
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1035, 565);
+            this.tabPage2.Size = new System.Drawing.Size(1053, 552);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Top 10 más vendidos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -206,12 +207,12 @@ namespace Automotriz.Presentación.Soporte
             this.dgvProductos2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvProductos2.BackgroundColor = System.Drawing.Color.White;
             this.dgvProductos2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos2.Location = new System.Drawing.Point(75, 26);
+            this.dgvProductos2.Location = new System.Drawing.Point(31, 32);
             this.dgvProductos2.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos2.Name = "dgvProductos2";
             this.dgvProductos2.ReadOnly = true;
             this.dgvProductos2.RowHeadersWidth = 51;
-            this.dgvProductos2.Size = new System.Drawing.Size(865, 429);
+            this.dgvProductos2.Size = new System.Drawing.Size(998, 417);
             this.dgvProductos2.TabIndex = 25;
             // 
             // button2
@@ -223,6 +224,19 @@ namespace Automotriz.Presentación.Soporte
             this.button2.Text = "button1";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVolver.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(13, 678);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(120, 37);
+            this.btnVolver.TabIndex = 25;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // FrmConsultaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,12 +244,15 @@ namespace Automotriz.Presentación.Soporte
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1043, 681);
+            this.ClientSize = new System.Drawing.Size(1061, 728);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNombre);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -271,5 +288,6 @@ namespace Automotriz.Presentación.Soporte
         private System.Windows.Forms.DataGridView dgvProductos2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
