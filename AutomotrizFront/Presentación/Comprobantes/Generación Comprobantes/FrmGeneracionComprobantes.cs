@@ -59,7 +59,7 @@ namespace Automotriz.Presentación
         //Botones
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Desea cancelar la generación del comprobante?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if(MessageBox.Show("¿Desea cancelar la generación del comprobante?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Close();
             }

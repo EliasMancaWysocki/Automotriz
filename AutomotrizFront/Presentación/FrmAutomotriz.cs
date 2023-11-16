@@ -54,18 +54,17 @@ namespace Automotriz.Presentación
                 //Botones Clientes
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 25, LargeFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 25, LargeFont);
-                //ResponsiveButton(panelEliminarClienteBody, lblEliminarCliente, 25, LargeFont);
                 //Botones Comprobantes
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 25, LargeFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 25, LargeFont);
                 //Botones Productos
                 ResponsiveButton(panelNuevoProductoBody, lblNuevoProducto, 25, LargeFont);
                 ResponsiveButton(panelConsultarProductosBody, lblConsultarProductos, 25, LargeFont);
-                //ResponsiveButton(panelEliminarProductoBody, lblEliminarProducto, 25, LargeFont);
                 //Botones Empleados
                 ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoEmpleado, 25, LargeFont);
                 ResponsiveButton(panelConsultarEmpleadosBody, lblConsultarEmpleados, 25, LargeFont);
-                //ResponsiveButton(panelEliminarEmpleadoBody, lblEliminarEmpleado, 25, LargeFont);
+                //Boton Cerrar Sesion
+                ResponsiveButton(panelCerrarSesionBody, lblCerrarSesion, 25, LargeFont);
 
             }
             else if (Width <= 1200)
@@ -73,36 +72,34 @@ namespace Automotriz.Presentación
                 //Botones Clientes
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 15, MediumFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 15, MediumFont);
-                //ResponsiveButton(panelEliminarClienteBody, lblEliminarCliente, 15, MediumFont);
                 //Botones Comprobantes
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 15, MediumFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 15, MediumFont);
                 //Botones Productos
                 ResponsiveButton(panelNuevoProductoBody, lblNuevoProducto, 15, MediumFont);
                 ResponsiveButton(panelConsultarProductosBody, lblConsultarProductos, 15, MediumFont);
-                //ResponsiveButton(panelEliminarProductoBody, lblEliminarProducto, 15, MediumFont);
                 //Botones Empleados
                 ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoEmpleado, 15, MediumFont);
                 ResponsiveButton(panelConsultarEmpleadosBody, lblConsultarEmpleados, 15, MediumFont);
-                //ResponsiveButton(panelEliminarEmpleadoBody, lblEliminarEmpleado, 15, MediumFont);
+                //Boton Cerrar Sesion
+                ResponsiveButton(panelCerrarSesionBody, lblCerrarSesion, 15, MediumFont);
             }
             else if (Width <= 992)
             {
                 //Botones Clientes
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 5, SmallFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 5, SmallFont);
-                //ResponsiveButton(panelEliminarClienteBody, lblEliminarCliente, 5, SmallFont);
                 //Botones Productos
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 5, SmallFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 5, SmallFont);
                 //Botones Productos
                 ResponsiveButton(panelNuevoProductoBody, lblNuevoProducto, 5, SmallFont);
                 ResponsiveButton(panelConsultarProductosBody, lblConsultarProductos, 5, SmallFont);
-                //ResponsiveButton(panelEliminarProductoBody, lblEliminarProducto, 5, SmallFont);
                 //Botones Empleados
                 ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoEmpleado, 5, SmallFont);
                 ResponsiveButton(panelConsultarEmpleadosBody, lblConsultarEmpleados, 5, SmallFont);
-                //ResponsiveButton(panelEliminarEmpleadoBody, lblEliminarEmpleado, 5, SmallFont);
+                //Boton Cerrar Sesion
+                ResponsiveButton(panelCerrarSesionBody, lblCerrarSesion, 5, SmallFont);
             }
         }
 
@@ -110,7 +107,7 @@ namespace Automotriz.Presentación
         //Botones Menu Strip
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 Close();
             }
@@ -152,43 +149,45 @@ namespace Automotriz.Presentación
             FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
             frmConsultaCliente.ShowDialog();
         }
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "CERRAR SESIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
 
         //Eventos
         private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
         {
             EndResponsive();
         }
-
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
             frmConsultaCliente.ShowDialog();
         }
-
         private void btnConsultarProductos_Click(object sender, EventArgs e)
         {
             FrmConsultaProducto frmConsultaProducto= new FrmConsultaProducto();
             frmConsultaProducto.ShowDialog();
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             FrmConsultaEmpleado frmConsultaEmpleado = new FrmConsultaEmpleado();
             frmConsultaEmpleado.ShowDialog();
         }
-
         private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FrmConsultaProducto frmConsultaProductos = new FrmConsultaProducto();
             frmConsultaProductos.ShowDialog();
         }
-
         private void consultarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmConsultaEmpleado frmConsultaEmpleados = new FrmConsultaEmpleado();
             frmConsultaEmpleados.ShowDialog();
         }
-
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FrmInformacion frmInformacion = new FrmInformacion();

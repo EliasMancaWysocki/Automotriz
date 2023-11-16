@@ -112,7 +112,7 @@ namespace Automotriz.Presentación.Soporte
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea regresar a la pantalla anterior?", "VOLVER", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea regresar a la pantalla anterior?", "VOLVER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 this.Dispose();
             }

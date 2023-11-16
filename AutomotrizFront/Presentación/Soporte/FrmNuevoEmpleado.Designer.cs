@@ -68,7 +68,7 @@ namespace Automotriz.Presentación.Soporte
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(178, 87);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 26);
             this.txtNombre.TabIndex = 1;
@@ -100,7 +100,7 @@ namespace Automotriz.Presentación.Soporte
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(410, 87);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(180, 26);
             this.txtApellido.TabIndex = 4;
@@ -121,7 +121,7 @@ namespace Automotriz.Presentación.Soporte
             // txtCalle
             // 
             this.txtCalle.Location = new System.Drawing.Point(178, 117);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(148, 26);
             this.txtCalle.TabIndex = 6;
@@ -129,7 +129,7 @@ namespace Automotriz.Presentación.Soporte
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(410, 117);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 26);
             this.textBox2.TabIndex = 9;
@@ -151,7 +151,7 @@ namespace Automotriz.Presentación.Soporte
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(178, 148);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(148, 26);
             this.dateTimePicker1.TabIndex = 10;
@@ -173,7 +173,7 @@ namespace Automotriz.Presentación.Soporte
             // 
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(178, 177);
-            this.cboBarrio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboBarrio.Margin = new System.Windows.Forms.Padding(4);
             this.cboBarrio.Name = "cboBarrio";
             this.cboBarrio.Size = new System.Drawing.Size(180, 27);
             this.cboBarrio.TabIndex = 12;
@@ -205,7 +205,7 @@ namespace Automotriz.Presentación.Soporte
             // txtDocumento
             // 
             this.txtDocumento.Location = new System.Drawing.Point(178, 207);
-            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(148, 26);
             this.txtDocumento.TabIndex = 15;
@@ -215,7 +215,7 @@ namespace Automotriz.Presentación.Soporte
             // 
             this.cboTipoDoc.FormattingEnabled = true;
             this.cboTipoDoc.Location = new System.Drawing.Point(410, 207);
-            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(180, 27);
             this.cboTipoDoc.TabIndex = 16;
@@ -224,7 +224,7 @@ namespace Automotriz.Presentación.Soporte
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(178, 237);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(412, 27);
             this.comboBox2.TabIndex = 17;
@@ -258,18 +258,19 @@ namespace Automotriz.Presentación.Soporte
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(126, 296);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(135, 44);
             this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGrabar
             // 
             this.btnGrabar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Location = new System.Drawing.Point(410, 296);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(135, 44);
             this.btnGrabar.TabIndex = 21;
@@ -307,7 +308,7 @@ namespace Automotriz.Presentación.Soporte
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(630, 390);
             this.MinimumSize = new System.Drawing.Size(630, 390);
             this.Name = "FrmNuevoEmpleado";
