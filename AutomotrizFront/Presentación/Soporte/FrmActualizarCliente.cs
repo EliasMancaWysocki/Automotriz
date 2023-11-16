@@ -222,5 +222,13 @@ namespace AutomotrizFront.Presentación.Soporte
 
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = false;
+            gbboxCampos.Enabled = false;
+
+        }
     }
 }
