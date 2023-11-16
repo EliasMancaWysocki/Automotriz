@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using Automotriz.Presentación.Soporte;
 using AutomotrizFront.Presentación.Soporte;
 using Automotriz.Presentación.Consultas.Consultar_Comprobantes;
-
+using AutomotrizFront.Presentación.Soporte.Vendedores;
+using Automotriz.Presentación.Soporte.Vendedores;
 
 namespace Automotriz.Presentación
 {
@@ -148,13 +149,50 @@ namespace Automotriz.Presentación
         }
         private void btnConsultarClientes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Deja de joder con el botoncito", "DEJA DE JODER", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
+            frmConsultaCliente.ShowDialog();
         }
 
         //Eventos
         private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
         {
             EndResponsive();
+        }
+
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
+            frmConsultaCliente.ShowDialog();
+        }
+
+        private void btnConsultarProductos_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProducto frmConsultaProducto= new FrmConsultaProducto();
+            frmConsultaProducto.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmConsultaEmpleado frmConsultaEmpleado = new FrmConsultaEmpleado();
+            frmConsultaEmpleado.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProducto frmConsultaProductos = new FrmConsultaProducto();
+            frmConsultaProductos.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmConsultaEmpleado frmConsultaEmpleados = new FrmConsultaEmpleado();
+            frmConsultaEmpleados.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmInformacion frmInformacion = new FrmInformacion();
+            frmInformacion.ShowDialog();
         }
     }
 }
