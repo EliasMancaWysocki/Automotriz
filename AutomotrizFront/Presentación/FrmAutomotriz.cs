@@ -50,24 +50,58 @@ namespace Automotriz.Presentación
 
             if (Width > 1200)
             {
+                //Botones Clientes
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 25, LargeFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 25, LargeFont);
+                ResponsiveButton(panelEliminarClienteBody, lblEliminarCliente, 25, LargeFont);
+                //Botones Comprobantes
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 25, LargeFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 25, LargeFont);
+                //Botones Productos
+                ResponsiveButton(panelNuevoProductoBody, lblNuevoProducto, 25, LargeFont);
+                ResponsiveButton(panelConsultarProductosBody, lblConsultarProductos, 25, LargeFont);
+                ResponsiveButton(panelEliminarProductoBody, lblEliminarProducto, 25, LargeFont);
+                //Botones Empleados
+                ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoEmpleado, 25, LargeFont);
+                ResponsiveButton(panelConsultarEmpleadosBody, lblConsultarEmpleados, 25, LargeFont);
+                ResponsiveButton(panelEliminarEmpleadoBody, lblEliminarEmpleado, 25, LargeFont);
+
             }
-            else if(Width <= 1200)
+            else if (Width <= 1200)
             {
+                //Botones Clientes
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 15, MediumFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 15, MediumFont);
+                ResponsiveButton(panelEliminarClienteBody, lblConsultarClientes, 15, MediumFont);
+                //Botones Comprobantes
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 15, MediumFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 15, MediumFont);
+                //Botones Productos
+                ResponsiveButton(panelNuevoProductoBody, lblNuevoProducto, 15, MediumFont);
+                ResponsiveButton(panelConsultarProductosBody, lblConsultarProductos, 15, MediumFont);
+                ResponsiveButton(panelEliminarProductoBody, lblEliminarProducto, 15, MediumFont);
+                //Botones Empleados
+                ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoEmpleado, 15, MediumFont);
+                ResponsiveButton(panelConsultarEmpleadosBody, lblConsultarEmpleados, 15, MediumFont);
+                ResponsiveButton(panelEliminarEmpleadoBody, lblEliminarEmpleado, 15, MediumFont);
             }
-            else if(Width <= 992)
+            else if (Width <= 992)
             {
+                //Botones Clientes
                 ResponsiveButton(panelNuevoClienteBody, lblNuevoCliente, 5, SmallFont);
                 ResponsiveButton(panelConsultarClientesBody, lblConsultarClientes, 5, SmallFont);
+                ResponsiveButton(panelEliminarClienteBody, lblEliminarCliente, 5, SmallFont);
+                //Botones Productos
                 ResponsiveButton(panelNuevoComprobanteBody, lblNuevoComprobante, 5, SmallFont);
                 ResponsiveButton(panelConsultarComprobantesBody, lblConsultarComprobantes, 5, SmallFont);
+                //Botones Productos
+                ResponsiveButton(panelNuevoProductoBody, lblNuevoComprobante, 5, SmallFont);
+                ResponsiveButton(panelConsultarProductosBody, lblNuevoComprobante, 5, SmallFont);
+                ResponsiveButton(panelEliminarProductoBody, lblNuevoComprobante, 5, SmallFont);
+                //Botones Empleados
+                ResponsiveButton(panelNuevoEmpleadoBody, lblNuevoComprobante, 5, SmallFont);
+                ResponsiveButton(panelConsultarEmpleadosBody, lblNuevoComprobante, 5, SmallFont);
+                ResponsiveButton(panelEliminarEmpleadoBody, lblNuevoComprobante, 5, SmallFont);
             }
         }
 
