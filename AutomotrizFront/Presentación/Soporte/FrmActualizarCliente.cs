@@ -41,7 +41,7 @@ namespace AutomotrizFront.Presentación.Soporte
 
             gbboxCampos.Enabled = false;
             btnModificar.Enabled = false;
-            //btnBorrar.Visible = false;// hasta que sea programado
+            btnCancelar.Enabled = false;
 
             LimpiarCampos();
 
@@ -167,6 +167,7 @@ namespace AutomotrizFront.Presentación.Soporte
                 gbboxCampos.Enabled = true;
                 btnModificar.Enabled = true;
                 btnNuevo.Enabled = false;
+                btnCancelar.Enabled = true;
 
             }
 
@@ -197,7 +198,7 @@ namespace AutomotrizFront.Presentación.Soporte
                 nuevo.Altura = txtAltura.Text;
                 nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
                 nuevo.Documento = txtDocumento.Text;
-                nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
+                nuevo.TipoDoc = Convert.ToInt32(cboTipoDoc.SelectedValue);
                 nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
                 nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
 
@@ -211,6 +212,7 @@ namespace AutomotrizFront.Presentación.Soporte
                     CargarListado();
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
+                    btnCancelar.Enabled = Enabled;
 
                 }
                 else
@@ -229,6 +231,15 @@ namespace AutomotrizFront.Presentación.Soporte
             btnModificar.Enabled = false;
             gbboxCampos.Enabled = false;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = false;
+            gbboxCampos.Enabled = false;
+            btnCancelar.Enabled = false;
         }
     }
 }

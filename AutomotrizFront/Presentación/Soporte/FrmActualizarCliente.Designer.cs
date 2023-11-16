@@ -46,11 +46,10 @@ namespace AutomotrizFront.Presentación.Soporte
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActualizarCliente));
             this.gbClientes = new System.Windows.Forms.GroupBox();
             this.dgvListacl = new System.Windows.Forms.DataGridView();
-            this.mostrarClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.automotrizDataSet2 = new AutomotrizFront.AutomotrizDataSet2();
             this.NroCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -92,17 +91,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter1 = new AutomotrizFront.AutomotrizDataSet1TableAdapters.ClientesTableAdapter();
             this.mostrar_ClienteTableAdapter = new AutomotrizFront.AutomotrizDataSet2TableAdapters.Mostrar_ClienteTableAdapter();
-            this.NroCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.barrioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.condicionIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListacl)).BeginInit();
             this.gbBotones.SuspendLayout();
@@ -120,7 +108,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbClientes.Controls.Add(this.dgvListacl);
             this.gbClientes.Location = new System.Drawing.Point(12, 12);
             this.gbClientes.Name = "gbClientes";
-            this.gbClientes.Size = new System.Drawing.Size(885, 240);
+            this.gbClientes.Size = new System.Drawing.Size(958, 240);
             this.gbClientes.TabIndex = 0;
             this.gbClientes.TabStop = false;
             this.gbClientes.Text = "LISTA CLIENTES";
@@ -163,24 +151,16 @@ namespace AutomotrizFront.Presentación.Soporte
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvListacl.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvListacl.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListacl.Size = new System.Drawing.Size(876, 215);
+            this.dgvListacl.Size = new System.Drawing.Size(946, 215);
             this.dgvListacl.TabIndex = 0;
             this.dgvListacl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListacl_CellContentClick);
             // 
-            // mostrarClienteBindingSource
-            // 
-            this.mostrarClienteBindingSource.DataMember = "Mostrar_Cliente";
-            this.mostrarClienteBindingSource.DataSource = this.automotrizDataSet2;
-            // 
-            // automotrizDataSet2
-            // 
-            this.automotrizDataSet2.DataSetName = "AutomotrizDataSet2";
-            this.automotrizDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // NroCliente
             // 
             this.NroCliente.DataPropertyName = "Nro Cliente";
             this.NroCliente.HeaderText = "NroCliente";
             this.NroCliente.Name = "NroCliente";
+            this.NroCliente.ReadOnly = true;
             this.NroCliente.Visible = false;
             // 
             // Seleccionar
@@ -188,10 +168,14 @@ namespace AutomotrizFront.Presentación.Soporte
             this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Seleccionar.HeaderText = "Ver";
             this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Text = "Ver";
+            this.Seleccionar.UseColumnTextForButtonValue = true;
             // 
             // gbBotones
             // 
             this.gbBotones.BackColor = System.Drawing.Color.Transparent;
+            this.gbBotones.Controls.Add(this.btnCancelar);
             this.gbBotones.Controls.Add(this.btnModificar);
             this.gbBotones.Controls.Add(this.btnSalir);
             this.gbBotones.Controls.Add(this.btnNuevo);
@@ -200,6 +184,17 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbBotones.Size = new System.Drawing.Size(882, 68);
             this.gbBotones.TabIndex = 1;
             this.gbBotones.TabStop = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(248, 19);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 30);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnModificar
             // 
@@ -259,7 +254,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.gbboxCampos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbboxCampos.Location = new System.Drawing.Point(15, 258);
             this.gbboxCampos.Name = "gbboxCampos";
-            this.gbboxCampos.Size = new System.Drawing.Size(882, 160);
+            this.gbboxCampos.Size = new System.Drawing.Size(955, 160);
             this.gbboxCampos.TabIndex = 2;
             this.gbboxCampos.TabStop = false;
             this.gbboxCampos.Text = "Datos del Cliente";
@@ -438,146 +433,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.nombreDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 69;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.apellidoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.Width = 69;
-            // 
-            // calleDataGridViewTextBoxColumn
-            // 
-            this.calleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.calleDataGridViewTextBoxColumn.DataPropertyName = "Calle";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.calleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.calleDataGridViewTextBoxColumn.HeaderText = "Calle";
-            this.calleDataGridViewTextBoxColumn.Name = "calleDataGridViewTextBoxColumn";
-            this.calleDataGridViewTextBoxColumn.Width = 55;
-            // 
-            // alturaDataGridViewTextBoxColumn
-            // 
-            this.alturaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.alturaDataGridViewTextBoxColumn.DataPropertyName = "Altura";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.alturaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.alturaDataGridViewTextBoxColumn.HeaderText = "Altura";
-            this.alturaDataGridViewTextBoxColumn.Name = "alturaDataGridViewTextBoxColumn";
-            this.alturaDataGridViewTextBoxColumn.Width = 59;
-            // 
-            // barrioDataGridViewTextBoxColumn
-            // 
-            this.barrioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.barrioDataGridViewTextBoxColumn.DataPropertyName = "Barrio";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.barrioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.barrioDataGridViewTextBoxColumn.HeaderText = "Barrio";
-            this.barrioDataGridViewTextBoxColumn.Name = "barrioDataGridViewTextBoxColumn";
-            this.barrioDataGridViewTextBoxColumn.Width = 59;
-            // 
-            // documentoDataGridViewTextBoxColumn
-            // 
-            this.documentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.documentoDataGridViewTextBoxColumn.DataPropertyName = "Documento";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.documentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
-            this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
-            this.documentoDataGridViewTextBoxColumn.Width = 87;
-            // 
-            // tipoDocumentoDataGridViewTextBoxColumn
-            // 
-            this.tipoDocumentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tipoDocumentoDataGridViewTextBoxColumn.DataPropertyName = "Tipo Documento";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tipoDocumentoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.tipoDocumentoDataGridViewTextBoxColumn.HeaderText = "Tipo Documento";
-            this.tipoDocumentoDataGridViewTextBoxColumn.Name = "tipoDocumentoDataGridViewTextBoxColumn";
-            this.tipoDocumentoDataGridViewTextBoxColumn.Width = 102;
-            // 
-            // tipoClienteDataGridViewTextBoxColumn
-            // 
-            this.tipoClienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tipoClienteDataGridViewTextBoxColumn.DataPropertyName = "Tipo Cliente";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tipoClienteDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.tipoClienteDataGridViewTextBoxColumn.HeaderText = "Tipo Cliente";
-            this.tipoClienteDataGridViewTextBoxColumn.Name = "tipoClienteDataGridViewTextBoxColumn";
-            this.tipoClienteDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // condicionIVADataGridViewTextBoxColumn
-            // 
-            this.condicionIVADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.condicionIVADataGridViewTextBoxColumn.DataPropertyName = "Condicion IVA";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.condicionIVADataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.condicionIVADataGridViewTextBoxColumn.HeaderText = "Condicion IVA";
-            this.condicionIVADataGridViewTextBoxColumn.Name = "condicionIVADataGridViewTextBoxColumn";
-            this.condicionIVADataGridViewTextBoxColumn.Width = 91;
-            // 
-            // mostrarClienteBindingSource
-            // 
-            this.mostrarClienteBindingSource.DataMember = "Mostrar_Cliente";
-            this.mostrarClienteBindingSource.DataSource = this.automotrizDataSet2;
-            // 
-            // automotrizDataSet2
-            // 
-            this.automotrizDataSet2.DataSetName = "AutomotrizDataSet2";
-            this.automotrizDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.automotrizDataSet;
-            // 
-            // automotrizDataSet
-            // 
-            this.automotrizDataSet.DataSetName = "AutomotrizDataSet";
-            this.automotrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // automotrizDataSet1
-            // 
-            this.automotrizDataSet1.DataSetName = "AutomotrizDataSet1";
-            this.automotrizDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource1
-            // 
-            this.clientesBindingSource1.DataMember = "Clientes";
-            this.clientesBindingSource1.DataSource = this.automotrizDataSet1;
-            // 
-            // clientesTableAdapter1
-            // 
-            this.clientesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // mostrar_ClienteTableAdapter
-            // 
-            this.mostrar_ClienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // NroCliente
-            // 
-            this.NroCliente.DataPropertyName = "Nro Cliente";
-            this.NroCliente.HeaderText = "NroCliente";
-            this.NroCliente.Name = "NroCliente";
-            this.NroCliente.ReadOnly = true;
-            this.NroCliente.Visible = false;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.nombreDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             this.nombreDataGridViewTextBoxColumn.Width = 69;
             // 
@@ -669,14 +524,47 @@ namespace AutomotrizFront.Presentación.Soporte
             this.condicionIVADataGridViewTextBoxColumn.ReadOnly = true;
             this.condicionIVADataGridViewTextBoxColumn.Width = 91;
             // 
-            // Seleccionar
+            // mostrarClienteBindingSource
             // 
-            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Seleccionar.HeaderText = "Ver";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Text = "Ver";
-            this.Seleccionar.UseColumnTextForButtonValue = true;
+            this.mostrarClienteBindingSource.DataMember = "Mostrar_Cliente";
+            this.mostrarClienteBindingSource.DataSource = this.automotrizDataSet2;
+            // 
+            // automotrizDataSet2
+            // 
+            this.automotrizDataSet2.DataSetName = "AutomotrizDataSet2";
+            this.automotrizDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "Clientes";
+            this.clientesBindingSource.DataSource = this.automotrizDataSet;
+            // 
+            // automotrizDataSet
+            // 
+            this.automotrizDataSet.DataSetName = "AutomotrizDataSet";
+            this.automotrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // automotrizDataSet1
+            // 
+            this.automotrizDataSet1.DataSetName = "AutomotrizDataSet1";
+            this.automotrizDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "Clientes";
+            this.clientesBindingSource1.DataSource = this.automotrizDataSet1;
+            // 
+            // clientesTableAdapter1
+            // 
+            this.clientesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // mostrar_ClienteTableAdapter
+            // 
+            this.mostrar_ClienteTableAdapter.ClearBeforeFill = true;
             // 
             // FrmActualizarCliente
             // 
@@ -684,7 +572,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(919, 537);
+            this.ClientSize = new System.Drawing.Size(1007, 537);
             this.Controls.Add(this.gbboxCampos);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.gbClientes);
@@ -758,5 +646,6 @@ namespace AutomotrizFront.Presentación.Soporte
         private DataGridViewTextBoxColumn tipoClienteDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn condicionIVADataGridViewTextBoxColumn;
         private DataGridViewButtonColumn Seleccionar;
+        private Button btnCancelar;
     }
 }
