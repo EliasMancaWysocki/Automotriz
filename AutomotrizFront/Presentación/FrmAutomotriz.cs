@@ -114,7 +114,7 @@ namespace Automotriz.Presentación
         }
         private void btnConsultarClientes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Deja de joder con el botoncito", "DEJA DE JODER", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Deja de joder con el botoncito test", "DEJA DE JODEasdasdR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //Eventos
