@@ -21,7 +21,7 @@ namespace Automotriz.Presentación
         IServicioDAO Servicio;
         Comprobante comprobante;
         Items item;
-        Cliente cliente;
+        Cliente cliente = new Cliente();
         Dictionary<System.Windows.Forms.CheckBox, Items> chkFormasPagos;
 
         public FrmDatosReceptor(Items item, Comprobante comprobante)
@@ -32,6 +32,7 @@ namespace Automotriz.Presentación
             this.item = item;
             lblTitulo.Text = item.Nombre;
             chkFormasPagos = new Dictionary<System.Windows.Forms.CheckBox, Items>();
+            cliente = Servicio.ExtraerCliente("27-21234567-9");
         }
 
         private void FrmDatosRecepcion_Load(object sender, EventArgs e)
@@ -87,6 +88,12 @@ namespace Automotriz.Presentación
                 y += 30;
             }
         }
+        private bool VerificarCheckBox()
+        {
+            IEnumerable<System.Windows.Forms.CheckBox> checkBoxes = groupBoxCondicionVenta.Controls.OfType<System.Windows.Forms.CheckBox>();
+
+            return checkBoxes.All(checkBox => !checkBox.Checked);
+        }
 
         //Botones
         private void btnVolver_Click(object sender, EventArgs e)
@@ -102,6 +109,20 @@ namespace Automotriz.Presentación
             {
                 MessageBox.Show("Número de Documento inválido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDocumento.Focus();
+                groupBoxAdvertenciaDoc.Visible = true;
+                return;
+            }
+
+            if(cboCondicionIVA.SelectedIndex + 1 != cliente.CondicionIVA)
+            {
+                MessageBox.Show("La condición frente al IVA no coincide con el cliente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboCondicionIVA.Focus();
+                return;
+            }
+            if (cboTipoDoc.SelectedIndex + 1 != cliente.TipoDoc)
+            {
+                MessageBox.Show("El tipo de documento no coincide con el cliente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cboTipoDoc.Focus();
                 return;
             }
 
@@ -130,76 +151,31 @@ namespace Automotriz.Presentación
                 camposObligatorios += "\n*Domicilio Comercial del Receptor";
                 permiso = false;
             }
-            foreach (System.Windows.Forms.CheckBox chk in groupBoxCondicionVenta.Controls.OfType<System.Windows.Forms.CheckBox>())
+
+            if(VerificarCheckBox())
             {
-                bool ningunoMarcado = true;
-
-                if(chk.Checked)
-                {
-                    ningunoMarcado = false;
-
-                    //Esta puta mierda no anda. Arreglar
-                }
-
-                if(ningunoMarcado)
-                {
-                    MessageBox.Show("Debe ingresar al menos una condición de venta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                MessageBox.Show("Debe ingresar al menos una condición de venta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            //if(chkEfectivo.Checked == false && 
-            //    chkCheque.Checked == false &&
-            //    chkCredito.Checked == false &&
-            //    chkDebito.Checked == false &&
-            //    chkCuentaCorriente.Checked ==  false &&
-            //    chkTransferencia.Checked ==  false)
-            //{
-            //    MessageBox.Show("Debe ingresar al menos una condición de venta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
 
-            if(!permiso)
+            if (!permiso)
             {
                 MessageBox.Show(camposObligatorios, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             } else
             {
-                //if(chkEfectivo.Checked == true)
-                //{
-                //    Items formaPago = new Items(1, "Efectivo");
-                //    comprobante.AgregarFormasPago(formaPago);
-                //}
-                //if (chkEfectivo.Checked == true)
-                //{
-                //    Items formaPago = new Items(2, "Cheque");
-                //    comprobante.AgregarFormasPago(formaPago);
-                //}
-                //if (chkEfectivo.Checked == true)
-                //{
-                //    Items formaPago = new Items(3, "Crédito");
-                //    comprobante.AgregarFormasPago(formaPago);
-                //}
-                //if (chkEfectivo.Checked == true)
-                //{
-                //    Items formaPago = new Items(4, "Débito");
-                //    comprobante.AgregarFormasPago(formaPago);
-                //}
-                //if (chkEfectivo.Checked == true)
-                //{
-                //    Items formaPago = new Items(5, "Cuenta Corriente");
-                //    comprobante.AgregarFormasPago(formaPago);
-                //}
-                //if (chkEfectivo.Checked == true)
-                //{
-                //    Items formaPago = new Items(6, "Transferencia");
-                //    comprobante.AgregarFormasPago(formaPago);
-                //}
-                comprobante.IdCliente = cliente.Id;
+                List<bool> valoresCheckBoxes = new List<bool>();
 
-                //FrmDatosOperacion frmDatosOperacion = new FrmDatosOperacion(item, comprobante);
-                //frmDatosOperacion.ShowDialog();
+                foreach (Control control in groupBoxCondicionVenta.Controls)
+                {
+                    if (control is System.Windows.Forms.CheckBox checkBox)
+                    {
+                        valoresCheckBoxes.Add(checkBox.Checked);
+                    }
+                }
 
-                MessageBox.Show(cliente.Apellido);
+                FrmDatosOperacion frmDatosOperacion = new FrmDatosOperacion(item, comprobante);
+                frmDatosOperacion.ShowDialog();
             }
         }
 
@@ -209,32 +185,19 @@ namespace Automotriz.Presentación
         {
             try
             {
-                cliente = Servicio.ExtraerCliente(txtDocumento.Text.Trim());
+                cliente = Servicio.ExtraerCliente(txtDocumento.Text);
                 groupBoxAdvertenciaDoc.Visible = false;
                 txtRazonSocial.Text = cliente.Nombre + " " + cliente.Apellido;
                 txtDomicilio.Text = cliente.Calle + " " + cliente.Altura;
-                MessageBox.Show(cliente.Apellido);
-
             } 
-            catch (Exception)
+            catch
             {
-                //groupBoxAdvertenciaDoc.Text = "Número de documento inválido";
-                //groupBoxAdvertenciaDoc.Visible = true;
-                //txtRazonSocial.Text = string.Empty;
-                //txtDomicilio.Text = string.Empty;
+                groupBoxAdvertenciaDoc.Text = "Número de documento inválido";
+                groupBoxAdvertenciaDoc.Visible = true;
+                txtRazonSocial.Text = string.Empty;
+                txtDomicilio.Text = string.Empty;
                 return;
             }
-
-            //if (cliente is null)
-            //{
-            //    return;
-            //}
-            //else
-            //{
-            //    groupBoxAdvertenciaDoc.Visible = false;
-            //    txtRazonSocial.Text = cliente.Nombre + " " + cliente.Apellido;
-            //    txtDomicilio.Text = cliente.Calle + " " + cliente.Altura;
-            //}
         }
         private void cboCondicionIVA_SelectedIndexChanged(object sender, EventArgs e)
         {

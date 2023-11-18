@@ -113,10 +113,10 @@ namespace AutomotrizBack.Datos
                 c.Calle = dr["calle"].ToString();
                 c.Altura = dr["altura"].ToString();
                 c.Barrio = Convert.ToInt32(dr["id_barrio"]);
-                c.Documento = dr["documento"].ToString();
-                c.TipoDoc = Convert.ToInt32(dr["tipo_documento"]);
-                c.TipoCliente = Convert.ToInt32(dr["tipo_cliente"]);
-                c.CondicionIVA = Convert.ToInt32(dr["condicion_IVA"]);
+                c.Documento = dr["id_barrio"].ToString();
+                c.TipoDoc = Convert.ToInt32(dr["id_tipo_documento"]);
+                c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"]);
+                c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"]);
             }
 
             return c;
