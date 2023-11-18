@@ -193,5 +193,16 @@ namespace Automotriz.Presentación
             FrmInformacion frmInformacion = new FrmInformacion();
             frmInformacion.ShowDialog();
         }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panelLogo_Click(object sender, EventArgs e)
+        {
+            FrmInformacion frmInformacion = new FrmInformacion();
+            frmInformacion.ShowDialog();
+        }
     }
 }
