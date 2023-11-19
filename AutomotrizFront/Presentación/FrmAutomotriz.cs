@@ -119,10 +119,45 @@ namespace Automotriz.Presentación
         }
         private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
-            frmGeneracionComprobantes.ShowDialog();
+            FrmDatosEmisor frmDatosEmisor = new FrmDatosEmisor();
+            frmDatosEmisor.ShowDialog();
         }
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
+            frmConsultaComprobantes.ShowDialog();
+        }
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
+            frmConsultaCliente.ShowDialog();
+        }
+        private void btnConsultarProductos_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProducto frmConsultaProducto = new FrmConsultaProducto();
+            frmConsultaProducto.ShowDialog();
+        }
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProducto frmConsultaProductos = new FrmConsultaProducto();
+            frmConsultaProductos.ShowDialog();
+        }
+        private void informacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmInformacion frmInformacion = new FrmInformacion();
+            frmInformacion.ShowDialog();
+        }
+        private void nuevoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            FrmDatosEmisor frmDatosEmisor = new FrmDatosEmisor();
+            frmDatosEmisor.ShowDialog();
+        }
+        private void nuevoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmDatosEmisor frmDatosEmisor = new FrmDatosEmisor();
+            frmDatosEmisor.ShowDialog();
+        }
+        private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             FrmConsultaComprobantes frmConsultaComprobantes = new FrmConsultaComprobantes();
             frmConsultaComprobantes.ShowDialog();
@@ -136,8 +171,8 @@ namespace Automotriz.Presentación
         }
         private void btnNuevoComprobante_Click(object sender, EventArgs e)
         {
-            FrmGeneracionComprobantes frmGeneracionComprobantes = new FrmGeneracionComprobantes();
-            frmGeneracionComprobantes.ShowDialog();
+            FrmDatosEmisor frmDatosEmisor = new FrmDatosEmisor();
+            frmDatosEmisor.ShowDialog();
         }
         private void btnConsultarComprobantes_Click(object sender, EventArgs e)
         {
@@ -149,6 +184,11 @@ namespace Automotriz.Presentación
             FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
             frmConsultaCliente.ShowDialog();
         }
+        private void btnConsultarEmpleados_Click(object sender, EventArgs e)
+        {
+            FrmConsultaEmpleado frmConsultaEmpleado = new FrmConsultaEmpleado();
+            frmConsultaEmpleado.ShowDialog();
+        }
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea salir?", "CERRAR SESIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -156,53 +196,17 @@ namespace Automotriz.Presentación
                 Close();
             }
         }
-
+        private void panelLogo_Click(object sender, EventArgs e)
+        {
+            FrmInformacion frmInformacion = new FrmInformacion();
+            frmInformacion.ShowDialog();
+        }
 
         //Eventos
         private void FrmAutomotriz_ResizeEnd(object sender, EventArgs e)
         {
             EndResponsive();
         }
-        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmConsultaCliente frmConsultaCliente = new FrmConsultaCliente();
-            frmConsultaCliente.ShowDialog();
-        }
-        private void btnConsultarProductos_Click(object sender, EventArgs e)
-        {
-            FrmConsultaProducto frmConsultaProducto= new FrmConsultaProducto();
-            frmConsultaProducto.ShowDialog();
-        }
-        private void button4_Click(object sender, EventArgs e)
-        {
-            FrmConsultaEmpleado frmConsultaEmpleado = new FrmConsultaEmpleado();
-            frmConsultaEmpleado.ShowDialog();
-        }
-        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FrmConsultaProducto frmConsultaProductos = new FrmConsultaProducto();
-            frmConsultaProductos.ShowDialog();
-        }
-        private void consultarToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            FrmConsultaEmpleado frmConsultaEmpleados = new FrmConsultaEmpleado();
-            frmConsultaEmpleados.ShowDialog();
-        }
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FrmInformacion frmInformacion = new FrmInformacion();
-            frmInformacion.ShowDialog();
-        }
 
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void panelLogo_Click(object sender, EventArgs e)
-        {
-            FrmInformacion frmInformacion = new FrmInformacion();
-            frmInformacion.ShowDialog();
-        }
     }
 }

@@ -19,19 +19,17 @@ namespace Automotriz.Presentación
         IServicioDAO Servicio;
         Items item;
 
-        public FrmDatosEmisor(Items item)
+        public FrmDatosEmisor()
         {
             InitializeComponent();
             Servicio = new ServicioDAO();
-            this.item = item;
-            lblComprobante.Text = item.Nombre;
-            CentrarTitulo();
             CentrarBotones();
             dtpFecha.Value = DateTime.Now;
         }
 
         private void FrmComprobante_Load(object sender, EventArgs e)
         {
+            CargarCombo(cboComprobantes, Servicio.ObtenerComprobantes());
             CargarCombo(cboConceptos, Servicio.ObtenerConceptos());
             CargarCombo(cboAct1, Servicio.ObtenerActividades());
             CargarCombo(cboAct2, Servicio.ObtenerActividades());
@@ -46,17 +44,12 @@ namespace Automotriz.Presentación
         }
 
         //Funciones
-        private void CargarCombo(System.Windows.Forms.ComboBox cbo, List<Items> lst)
+        private void CargarCombo(ComboBox cbo, List<Items> lst)
         {
             cbo.DataSource = lst;
             cbo.ValueMember = "Id";
             cbo.DisplayMember = "Nombre";
             cbo.SelectedIndex = -1;
-        }
-        private void CentrarTitulo()
-        {
-            int x = (Width - 15 - lblComprobante.Width) / 2;
-            lblComprobante.Location = new Point(x, 25);
         }
         private void CentrarBotones()
         {
@@ -192,6 +185,8 @@ namespace Automotriz.Presentación
                 return;
             }
 
+
+
             Comprobante comprobante = new Comprobante();
             comprobante.Fecha = dtpFecha.Value;
 
@@ -216,16 +211,6 @@ namespace Automotriz.Presentación
                 lblHasta.Visible = false;
                 dtpHasta.Visible = false;
             }
-        }
-
-        private void lblComprobante_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -117,109 +117,103 @@
     <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosReceptor.Designer.cs">
       <DependentUpon>FrmDatosReceptor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.Designer.cs">
-      <DependentUpon>FrmGeneracionComprobantes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentación\FrmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\FrmInicioSesion.Designer.cs">
       <DependentUpon>FrmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet.Designer.cs" />
-    <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.Designer.cs" />
-    <Compile Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.Designer.cs" />
+    <Compile Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet.Designer.cs" />
+    <Compile Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet1.Designer.cs" />
+    <Compile Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet2.Designer.cs" />
     <Compile Include="Presentación\FrmAutomotriz.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\FrmAutomotriz.Designer.cs">
       <DependentUpon>FrmAutomotriz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FormConsulta.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FormConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FormConsulta.Designer.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FormConsulta.Designer.cs">
       <DependentUpon>FormConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmActualizarCliente.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FrmActualizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmActualizarCliente.Designer.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FrmActualizarCliente.Designer.cs">
       <DependentUpon>FrmActualizarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmInformacion.cs">
+    <Compile Include="Presentación\FrmInformacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmInformacion.designer.cs">
+    <Compile Include="Presentación\FrmInformacion.designer.cs">
       <DependentUpon>FrmInformacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaEmpleado.cs">
+    <Compile Include="Presentación\Soporte\Empleados\FrmConsultaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaEmpleado.designer.cs">
+    <Compile Include="Presentación\Soporte\Empleados\FrmConsultaEmpleado.designer.cs">
       <DependentUpon>FrmConsultaEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaProducto.cs">
+    <Compile Include="Presentación\Soporte\Empleados\FrmConsultaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaProducto.designer.cs">
+    <Compile Include="Presentación\Soporte\Empleados\FrmConsultaProducto.designer.cs">
       <DependentUpon>FrmConsultaProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaCliente.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FrmConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmConsultaCliente.designer.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FrmConsultaCliente.designer.cs">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmNuevoCliente.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FrmNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmNuevoCliente.designer.cs">
+    <Compile Include="Presentación\Soporte\Clientes\FrmNuevoCliente.designer.cs">
       <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmNuevoEmpleado.cs">
+    <Compile Include="Presentación\Soporte\Empleados\FrmNuevoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\FrmNuevoEmpleado.Designer.cs">
+    <Compile Include="Presentación\Soporte\Empleados\FrmNuevoEmpleado.Designer.cs">
       <DependentUpon>FrmNuevoEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPClientes\ClientesConsulta1.cs">
+    <Compile Include="Presentación\Soporte\Clientes\ConsultasClientes\ClientesConsulta1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPClientes\ClientesConsulta1.designer.cs">
+    <Compile Include="Presentación\Soporte\Clientes\ConsultasClientes\ClientesConsulta1.designer.cs">
       <DependentUpon>ClientesConsulta1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPClientes\ClientesConsulta2.cs">
+    <Compile Include="Presentación\Soporte\Clientes\ConsultasClientes\ClientesConsulta2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPClientes\ClientesConsulta2.designer.cs">
+    <Compile Include="Presentación\Soporte\Clientes\ConsultasClientes\ClientesConsulta2.designer.cs">
       <DependentUpon>ClientesConsulta2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta1.cs">
+    <Compile Include="Presentación\Soporte\Empleados\ConsultasEmpleados\VendedoresConsulta1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta1.designer.cs">
+    <Compile Include="Presentación\Soporte\Empleados\ConsultasEmpleados\VendedoresConsulta1.designer.cs">
       <DependentUpon>VendedoresConsulta1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta2.cs">
+    <Compile Include="Presentación\Soporte\Empleados\ConsultasEmpleados\VendedoresConsulta2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta2.designer.cs">
+    <Compile Include="Presentación\Soporte\Empleados\ConsultasEmpleados\VendedoresConsulta2.designer.cs">
       <DependentUpon>VendedoresConsulta2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPProductos\ProductosStockConsulta1.cs">
+    <Compile Include="Presentación\Soporte\Productos\ConsultasProductos\ProductosStockConsulta1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPProductos\ProductosStockConsulta1.designer.cs">
+    <Compile Include="Presentación\Soporte\Productos\ConsultasProductos\ProductosStockConsulta1.designer.cs">
       <DependentUpon>ProductosStockConsulta1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPProductos\ProductosStockConsulta2.cs">
+    <Compile Include="Presentación\Soporte\Productos\ConsultasProductos\ProductosStockConsulta2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Soporte\SPProductos\ProductosStockConsulta2.designer.cs">
+    <Compile Include="Presentación\Soporte\Productos\ConsultasProductos\ProductosStockConsulta2.designer.cs">
       <DependentUpon>ProductosStockConsulta2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -249,55 +243,52 @@
     <EmbeddedResource Include="Presentación\Comprobantes\Generación Comprobantes\FrmDatosReceptor.resx">
       <DependentUpon>FrmDatosReceptor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Comprobantes\Generación Comprobantes\FrmGeneracionComprobantes.resx">
-      <DependentUpon>FrmGeneracionComprobantes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\FrmAutomotriz.resx">
       <DependentUpon>FrmAutomotriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\FrmInicioSesion.resx">
       <DependentUpon>FrmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FormConsulta.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Clientes\FormConsulta.resx">
       <DependentUpon>FormConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmActualizarCliente.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Clientes\FrmActualizarCliente.resx">
       <DependentUpon>FrmActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmInformacion.resx">
+    <EmbeddedResource Include="Presentación\FrmInformacion.resx">
       <DependentUpon>FrmInformacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmConsultaEmpleado.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Empleados\FrmConsultaEmpleado.resx">
       <DependentUpon>FrmConsultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmConsultaProducto.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Empleados\FrmConsultaProducto.resx">
       <DependentUpon>FrmConsultaProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmConsultaCliente.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Clientes\FrmConsultaCliente.resx">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmNuevoCliente.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Clientes\FrmNuevoCliente.resx">
       <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\FrmNuevoEmpleado.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Empleados\FrmNuevoEmpleado.resx">
       <DependentUpon>FrmNuevoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\SPClientes\ClientesConsulta1.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Clientes\ConsultasClientes\ClientesConsulta1.resx">
       <DependentUpon>ClientesConsulta1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\SPClientes\ClientesConsulta2.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Clientes\ConsultasClientes\ClientesConsulta2.resx">
       <DependentUpon>ClientesConsulta2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta1.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Empleados\ConsultasEmpleados\VendedoresConsulta1.resx">
       <DependentUpon>VendedoresConsulta1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\SPEmpleados\VendedoresConsulta2.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Empleados\ConsultasEmpleados\VendedoresConsulta2.resx">
       <DependentUpon>VendedoresConsulta2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\SPProductos\ProductosStockConsulta1.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Productos\ConsultasProductos\ProductosStockConsulta1.resx">
       <DependentUpon>ProductosStockConsulta1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Soporte\SPProductos\ProductosStockConsulta2.resx">
+    <EmbeddedResource Include="Presentación\Soporte\Productos\ConsultasProductos\ProductosStockConsulta2.resx">
       <DependentUpon>ProductosStockConsulta2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -317,25 +308,25 @@
     <None Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xss">
       <DependentUpon>DSComprobante.xsd</DependentUpon>
     </None>
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet.xsc">
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet.xsc">
       <DependentUpon>AutomotrizDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet.xsd" />
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet.xss">
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet.xsd" />
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet.xss">
       <DependentUpon>AutomotrizDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.xsc">
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet1.xsc">
       <DependentUpon>AutomotrizDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.xsd" />
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet1.xss">
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet1.xsd" />
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet1.xss">
       <DependentUpon>AutomotrizDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.xsc">
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet2.xsc">
       <DependentUpon>AutomotrizDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.xsd" />
-    <None Include="Presentación\Soporte\DataSet\AutomotrizDataSet2.xss">
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet2.xsd" />
+    <None Include="Presentación\Soporte\Clientes\DataSet\AutomotrizDataSet2.xss">
       <DependentUpon>AutomotrizDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />

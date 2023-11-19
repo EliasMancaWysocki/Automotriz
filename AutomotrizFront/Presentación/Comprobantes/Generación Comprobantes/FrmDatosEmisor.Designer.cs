@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosEmisor));
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblComprobante = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblConceptos = new System.Windows.Forms.Label();
             this.cboConceptos = new System.Windows.Forms.ComboBox();
@@ -55,6 +54,8 @@
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
+            this.cboComprobantes = new System.Windows.Forms.ComboBox();
+            this.lblTipoComprobate = new System.Windows.Forms.Label();
             this.groupBoxActividades.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,24 +64,11 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(12, 77);
+            this.lblFecha.Location = new System.Drawing.Point(12, 75);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(163, 19);
             this.lblFecha.TabIndex = 0;
             this.lblFecha.Text = "Fecha del comprobante";
-            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
-            // 
-            // lblComprobante
-            // 
-            this.lblComprobante.AutoSize = true;
-            this.lblComprobante.BackColor = System.Drawing.Color.Transparent;
-            this.lblComprobante.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComprobante.Location = new System.Drawing.Point(204, 9);
-            this.lblComprobante.Name = "lblComprobante";
-            this.lblComprobante.Size = new System.Drawing.Size(63, 24);
-            this.lblComprobante.TabIndex = 1;
-            this.lblComprobante.Text = "label1";
-            this.lblComprobante.Click += new System.EventHandler(this.lblComprobante_Click);
             // 
             // dtpFecha
             // 
@@ -350,6 +338,26 @@
             this.lblHasta.TabIndex = 15;
             this.lblHasta.Text = "Hasta";
             // 
+            // cboComprobantes
+            // 
+            this.cboComprobantes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboComprobantes.FormattingEnabled = true;
+            this.cboComprobantes.Location = new System.Drawing.Point(185, 31);
+            this.cboComprobantes.Name = "cboComprobantes";
+            this.cboComprobantes.Size = new System.Drawing.Size(140, 21);
+            this.cboComprobantes.TabIndex = 16;
+            // 
+            // lblTipoComprobate
+            // 
+            this.lblTipoComprobate.AutoSize = true;
+            this.lblTipoComprobate.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipoComprobate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoComprobate.Location = new System.Drawing.Point(22, 30);
+            this.lblTipoComprobate.Name = "lblTipoComprobate";
+            this.lblTipoComprobate.Size = new System.Drawing.Size(153, 19);
+            this.lblTipoComprobate.TabIndex = 17;
+            this.lblTipoComprobate.Text = "Tipo de Comprobante";
+            // 
             // FrmDatosEmisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +365,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(539, 411);
+            this.Controls.Add(this.cboComprobantes);
+            this.Controls.Add(this.lblTipoComprobate);
             this.Controls.Add(this.lblHasta);
             this.Controls.Add(this.lblDesde);
             this.Controls.Add(this.dtpHasta);
@@ -367,7 +377,6 @@
             this.Controls.Add(this.cboConceptos);
             this.Controls.Add(this.lblConceptos);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.lblComprobante);
             this.Controls.Add(this.lblFecha);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -387,7 +396,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblComprobante;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblConceptos;
         private System.Windows.Forms.ComboBox cboConceptos;
@@ -412,5 +420,7 @@
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Label lblDesde;
         private System.Windows.Forms.Label lblHasta;
+        private System.Windows.Forms.ComboBox cboComprobantes;
+        private System.Windows.Forms.Label lblTipoComprobate;
     }
 }

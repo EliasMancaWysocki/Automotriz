@@ -63,7 +63,6 @@ C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Pres
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.FrmDatosEmisor.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.FrmDatosOperacion.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.FrmDatosReceptor.resources
-C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.FrmGeneracionComprobantes.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmActualizarCliente.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.Soporte.FrmNuevoCliente.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.Soporte.FrmNuevoEmpleado.resources
