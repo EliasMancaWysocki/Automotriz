@@ -24,7 +24,6 @@ namespace AutomotrizBack.Datos
         List<Cliente> ListaCliente();
         int ModificarCliente(Cliente cliente);
         int BajaCliente(int nroCl);
-
         Cliente ExtraerClienteID(int id);
         List<Cliente> ExtraerClienteNombre(List<Parametro> lstparam);
         List<Items> ObtenerProductos();

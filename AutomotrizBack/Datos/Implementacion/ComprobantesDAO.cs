@@ -164,8 +164,6 @@ namespace AutomotrizBack.Datos
             }
             return lst;
         }
-
-
         public Cliente ExtraerCliente(string doc)
         {
             List<Parametro> lst = new List<Parametro>()
@@ -286,7 +284,6 @@ namespace AutomotrizBack.Datos
 
             return aux;
         }
-
         public int BajaCliente(int nroCl)
         {
             int aux = 0;
@@ -300,7 +297,6 @@ namespace AutomotrizBack.Datos
 
             return aux;
         }
-
         public Cliente ExtraerClienteID(int id)
         {
             List<Parametro> lst = new List<Parametro>()
@@ -356,8 +352,6 @@ namespace AutomotrizBack.Datos
 
            return lst;
         }
-
-
 
         //public string InicioSesion(string usuario, string contraseña)
         //{

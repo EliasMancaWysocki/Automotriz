@@ -26,7 +26,6 @@ namespace AutomotrizFront.Servicio
         int ModificarCliente(Cliente cliente);
         List<Items> ObtenerProductos();
         List<Items> ObtenerUnidadesMedidas();
-
         int BajaCliente(int nroCl);
         Cliente ExtraerClienteID(int id);
     }
