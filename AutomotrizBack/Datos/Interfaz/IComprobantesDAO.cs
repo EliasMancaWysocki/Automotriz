@@ -23,5 +23,9 @@ namespace AutomotrizBack.Datos
         List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros);
         List<Cliente> ListaCliente();
         int ModificarCliente(Cliente cliente);
+        int BajaCliente(int nroCl);
+
+        Cliente ExtraerClienteID(int id);
+        List<Cliente> ExtraerClienteNombre(List<Parametro> lstparam);
     }
 }

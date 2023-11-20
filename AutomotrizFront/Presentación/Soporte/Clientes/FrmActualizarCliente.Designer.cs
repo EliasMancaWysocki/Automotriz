@@ -60,6 +60,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.mostrarClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.automotrizDataSet2 = new AutomotrizFront.AutomotrizDataSet2();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -284,20 +285,32 @@ namespace AutomotrizFront.Presentación.Soporte
             // gbBotones
             // 
             this.gbBotones.BackColor = System.Drawing.Color.Transparent;
+            this.gbBotones.Controls.Add(this.btnEliminar);
             this.gbBotones.Controls.Add(this.btnCancelar);
             this.gbBotones.Controls.Add(this.btnModificar);
             this.gbBotones.Controls.Add(this.btnSalir);
             this.gbBotones.Controls.Add(this.btnNuevo);
             this.gbBotones.Location = new System.Drawing.Point(15, 447);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Size = new System.Drawing.Size(882, 68);
+            this.gbBotones.Size = new System.Drawing.Size(955, 68);
             this.gbBotones.TabIndex = 1;
             this.gbBotones.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(432, 19);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(90, 30);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(248, 19);
+            this.btnCancelar.Location = new System.Drawing.Point(220, 19);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 30);
             this.btnCancelar.TabIndex = 3;
@@ -308,7 +321,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(506, 19);
+            this.btnModificar.Location = new System.Drawing.Point(627, 19);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(90, 30);
             this.btnModificar.TabIndex = 2;
@@ -319,7 +332,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(791, 19);
+            this.btnSalir.Location = new System.Drawing.Point(832, 19);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(90, 30);
             this.btnSalir.TabIndex = 1;
@@ -330,7 +343,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(7, 20);
+            this.btnNuevo.Location = new System.Drawing.Point(27, 19);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(90, 30);
             this.btnNuevo.TabIndex = 0;
@@ -634,7 +647,6 @@ namespace AutomotrizFront.Presentación.Soporte
         private AutomotrizDataSet2 automotrizDataSet2;
         private System.Windows.Forms.BindingSource mostrarClienteBindingSource;
         private AutomotrizDataSet2TableAdapters.Mostrar_ClienteTableAdapter mostrar_ClienteTableAdapter;
-        private System.Windows.Forms.Button btnBorrar;
         private DataGridViewTextBoxColumn NroCliente;
         private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
@@ -647,5 +659,6 @@ namespace AutomotrizFront.Presentación.Soporte
         private DataGridViewTextBoxColumn condicionIVADataGridViewTextBoxColumn;
         private DataGridViewButtonColumn Seleccionar;
         private Button btnCancelar;
+        private Button btnEliminar;
     }
 }

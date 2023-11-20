@@ -27,7 +27,7 @@ namespace AutomotrizFront.Presentación.Soporte
             InitializeComponent();
             Servicio = new ServicioDAO();
             lClientes = new List<Cliente>();
-            
+
         }
 
         private void FrmActualizarCliente_Load(object sender, EventArgs e)
@@ -42,6 +42,7 @@ namespace AutomotrizFront.Presentación.Soporte
             gbboxCampos.Enabled = false;
             btnModificar.Enabled = false;
             btnCancelar.Enabled = false;
+            btnEliminar.Enabled = false;
 
             LimpiarCampos();
 
@@ -61,9 +62,9 @@ namespace AutomotrizFront.Presentación.Soporte
 
             foreach (Cliente item in lClientes)
             {
-                if(item.Id == nroCliente)
-                {   
-                    lblIdCliente.Text = "Nro : "+nroCliente.ToString();
+                if (item.Id == nroCliente)
+                {
+                    lblIdCliente.Text = "Nro : " + nroCliente.ToString();
                     txtNombre.Text = item.Nombre;
                     txtApellido.Text = item.Apellido;
                     txtCalle.Text = item.Calle;
@@ -94,57 +95,61 @@ namespace AutomotrizFront.Presentación.Soporte
             cboCIva.SelectedIndex = -1;
 
         }
-        private void ValidarCampos()
+        private bool ValidarCampos()
         {
+            bool aux = true;
+
             if (cboTCliente.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccione un producto", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("Ingrese un Nombre", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
             if (string.IsNullOrEmpty(txtApellido.Text))
             {
                 MessageBox.Show("Ingrese un apellido", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtCalle.Text))
             {
                 MessageBox.Show("Ingrese la calle ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtAltura.Text))
             {
                 MessageBox.Show("Ingrese la Altura ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
             if (cboBarrios.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccione un barrio ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtDocumento.Text))
             {
                 MessageBox.Show("Ingrese el Nro documento  ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
             if (cboTipoDoc.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccion el tipo de documento  ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (cboCIva.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccion la condicion de iva  ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
+
+            return aux;
         }
         private void CargarCombo(ComboBox Cbo, List<Items> lst)
         {
@@ -168,13 +173,17 @@ namespace AutomotrizFront.Presentación.Soporte
                 btnModificar.Enabled = true;
                 btnNuevo.Enabled = false;
                 btnCancelar.Enabled = true;
+                btnSalir.Enabled = false;
+                btnEliminar.Enabled = true;
 
             }
 
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            if (MessageBox.Show("¿Desea Salir ?", "Confirmacion  ", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            { this.Dispose(); }
+
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -186,51 +195,44 @@ namespace AutomotrizFront.Presentación.Soporte
             Cliente nuevo = new Cliente();
 
 
-            ValidarCampos();
-
-            if (MessageBox.Show("Esta seguro que desea actualizar los campos del cliente","CONFIRMACION",MessageBoxButtons.YesNo, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            { 
-
-                nuevo.Id = IdAModificar;
-                nuevo.Nombre = txtNombre.Text;
-                nuevo.Apellido = txtApellido.Text;
-                nuevo.Calle = txtCalle.Text;
-                nuevo.Altura = txtAltura.Text;
-                nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
-                nuevo.Documento = txtDocumento.Text;
-                nuevo.TipoDoc = Convert.ToInt32(cboTipoDoc.SelectedValue);
-                nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
-                nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
-
-                int control = Servicio.ModificarCliente(nuevo);
-                if (control == 1)
+            if (ValidarCampos())
+            {
+                if (MessageBox.Show("Esta seguro que desea actualizar los campos del cliente", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Se registró modificacion con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    LimpiarCampos();
 
-                    gbboxCampos.Enabled = false;
-                    CargarListado();
-                    btnNuevo.Enabled = true;
-                    btnModificar.Enabled = false;
-                    btnCancelar.Enabled = Enabled;
+                    nuevo.Id = IdAModificar;
+                    nuevo.Nombre = txtNombre.Text;
+                    nuevo.Apellido = txtApellido.Text;
+                    nuevo.Calle = txtCalle.Text;
+                    nuevo.Altura = txtAltura.Text;
+                    nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
+                    nuevo.Documento = txtDocumento.Text;
+                    nuevo.TipoDoc = Convert.ToInt32(cboTipoDoc.SelectedValue);
+                    nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
+                    nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
 
-                }
-                else
-                {
-                    MessageBox.Show("NO se pudo actualizar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    int control = Servicio.ModificarCliente(nuevo);
+                    if (control == 1)
+                    {
+                        MessageBox.Show("Se registró modificacion con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        LimpiarCampos();
 
+                        gbboxCampos.Enabled = false;
+                        CargarListado();
+                        btnNuevo.Enabled = true;
+                        btnModificar.Enabled = false;
+                        btnCancelar.Enabled = Enabled;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo actualizar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
                 }
             }
-
         }
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-            btnNuevo.Enabled = true;
-            btnModificar.Enabled = false;
-            gbboxCampos.Enabled = false;
 
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
@@ -238,6 +240,38 @@ namespace AutomotrizFront.Presentación.Soporte
             btnModificar.Enabled = false;
             gbboxCampos.Enabled = false;
             btnCancelar.Enabled = false;
+            btnSalir.Enabled = true;
+            btnEliminar.Enabled = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea dar de baja el cliente ?", "Confirmacion  ", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+
+                if (ValidarCampos())
+                {
+
+                    if (Servicio.BajaCliente(IdAModificar) == 1)
+                    {
+                        MessageBox.Show("Se Dio de baja con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        LimpiarCampos();
+                        this.Dispose();
+
+                        LimpiarCampos();
+                        btnNuevo.Enabled = true;
+                        btnModificar.Enabled = false;
+                        gbboxCampos.Enabled = false;
+                        btnCancelar.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO se pudo dar de baja el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+                }
+            }
+
         }
     }
 }

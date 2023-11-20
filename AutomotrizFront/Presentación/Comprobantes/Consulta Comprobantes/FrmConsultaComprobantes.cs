@@ -131,5 +131,7 @@ namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
         {
             cboTipoDoc.SelectedIndex = -1;
         }
+
+        
     }
 }

@@ -74,5 +74,20 @@ namespace Automotriz.Servicio.Implementación
         {
             return DAO.ModificarCliente(cliente);
         }
+        public int BajaCliente(int nroCl)
+        {
+            return DAO.BajaCliente(nroCl);
+        }
+        
+
+        public Cliente ExtraerClienteID(int id)
+        {
+            return DAO.ExtraerClienteID(id);
+        }
+
+        public List<Cliente> Consulta_ClNyP(List<Parametro> lstparam)
+        {
+            return DAO.Consulta_ClNyP(lstparam);
+        }
     }
 }

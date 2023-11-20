@@ -17,7 +17,7 @@ namespace Automotriz.Presentación.Soporte
     public partial class FrmNuevoCliente : Form
     {
         IServicioDAO Servicio;
-        Items item;
+        //Items item;
 
         public FrmNuevoCliente()
         {
@@ -27,10 +27,10 @@ namespace Automotriz.Presentación.Soporte
 
         private void FrmNuevoCliente_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboTCliente, Servicio.ObtenerTipoCliente()) ;
+            CargarCombo(cboTCliente, Servicio.ObtenerTipoCliente());
             CargarCombo(cboTipoDoc, Servicio.ObtenerTipoDoc());
             CargarCombo(cboCIva, Servicio.ObtenerCondicionIVA());
-            CargarCombo(cboBarrios, Servicio.ObtenerBarrios() );
+            CargarCombo(cboBarrios, Servicio.ObtenerBarrios());
 
             lblidcliente.Text = lblidcliente.Text + " :  " + Servicio.ProximoIdCliente();
 
@@ -45,7 +45,7 @@ namespace Automotriz.Presentación.Soporte
             Cbo.ValueMember = "Id";
             Cbo.DisplayMember = "Nombre";
             Cbo.DropDownStyle = ComboBoxStyle.DropDownList;
-            
+
         }
         private void CentrarBotones()
         {
@@ -66,57 +66,61 @@ namespace Automotriz.Presentación.Soporte
             cboCIva.SelectedIndex = -1;
 
         }
-        private void ValidarCampos()
+        private bool ValidarCampos()
         {
+            bool aux = true;
+
             if (cboTCliente.SelectedIndex == -1)
             {
-                MessageBox.Show("Seleccione un producto", "CONTROL DE CAMPO");
-                return;
+                MessageBox.Show("Seleccione un Tipo de cliente", "CONTROL DE CAMPO");
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("Ingrese un Nombre", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
             if (string.IsNullOrEmpty(txtApellido.Text))
             {
                 MessageBox.Show("Ingrese un apellido", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtCalle.Text))
             {
                 MessageBox.Show("Ingrese la calle ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtAltura.Text))
             {
                 MessageBox.Show("Ingrese la Altura ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
             if (cboBarrios.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccione un barrio ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (string.IsNullOrEmpty(txtDocumento.Text))
             {
                 MessageBox.Show("Ingrese el Nro documento  ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
             if (cboTipoDoc.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccion el tipo de documento  ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
             if (cboCIva.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccion la condicion de iva  ", "CONTROL DE CAMPO");
-                return;
+                aux = false;
             }
 
+
+            return aux;
         }
 
         //Botones
@@ -131,29 +135,30 @@ namespace Automotriz.Presentación.Soporte
         {
             Cliente nuevo = new Cliente();
 
-            ValidarCampos();
-
-            nuevo.Nombre = txtNombre.Text;
-            nuevo.Apellido = txtApellido.Text;
-            nuevo.Calle = txtCalle.Text;
-            nuevo.Altura = txtAltura.Text;
-            nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue) ;
-            nuevo.Documento = txtDocumento.Text;
-            nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
-            nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
-            nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
-
-            if (Servicio.ConfirmarCliente(nuevo)==1)
+            if (ValidarCampos() == true)
             {
-                MessageBox.Show("Se registró con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                LimpiarCampos();
-                this.Dispose();
+                nuevo.Nombre = txtNombre.Text;
+                nuevo.Apellido = txtApellido.Text;
+                nuevo.Calle = txtCalle.Text;
+                nuevo.Altura = txtAltura.Text;
+                nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
+                nuevo.Documento = txtDocumento.Text;
+                nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
+                nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
+                nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
 
-            }
-            else
-            {
-                MessageBox.Show("NO se pudo registrar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            
+                if (Servicio.ConfirmarCliente(nuevo) == 1)
+                {
+                    MessageBox.Show("Se registró con éxito el Cliente...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    LimpiarCampos();
+                    this.Dispose();
+
+                }
+                else
+                {
+                    MessageBox.Show("NO se pudo registrar el Cliente...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
             }
         }
 

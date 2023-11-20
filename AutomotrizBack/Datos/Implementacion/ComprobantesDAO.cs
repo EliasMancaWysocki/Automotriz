@@ -253,6 +253,79 @@ namespace AutomotrizBack.Datos
 
             return aux;
         }
+
+        public int BajaCliente(int nroCl)
+        {
+            int aux = 0;
+
+            List<Parametro> lstParametros = new List<Parametro>(){
+                new Parametro("@id_cliente", nroCl)
+              
+            };
+
+            aux = DBHelper.ObtenerInstancia().ActualizarBD("SP_BAJA_CLIENTE", lstParametros);
+
+            return aux;
+        }
+
+        public Cliente ExtraerClienteID(int id)
+        {
+            List<Parametro> lst = new List<Parametro>()
+            {
+                new Parametro("@id_cli", id)
+            };
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_FILTROS_CLIENTES_ID", lst);
+
+            Cliente c = new Cliente();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                c.Id = Convert.ToInt32(dr["id_cliente"]);
+                c.Nombre = dr["nombre"].ToString();
+                c.Apellido = dr["apellido"].ToString();
+                c.Calle = dr["calle"].ToString();
+                c.Altura = dr["altura"].ToString();
+                c.Barrio = Convert.ToInt32(dr["id_barrio"]);
+                c.Documento = dr["documento"].ToString();
+                c.TipoDoc = Convert.ToInt32(dr["id_tipo_documento"]);
+                c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"]);
+                c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"]);
+            }
+
+            return c;
+        }
+        //revisar el de abajo
+        public List<Cliente> ExtraerClienteNombre(List<Parametro> lstparam)
+        {
+            DataTable dt ;
+            List<Cliente> lst = new List<Cliente>();
+          
+
+            dt = DBHelper.ObtenerInstancia().Consultar("SP_FILTROS_CLIENTES_Nombre", lstparam);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Cliente c = new Cliente();
+                c.Id = Convert.ToInt32(dr["id_cliente"]);
+                c.Nombre = dr["nombre"].ToString();
+                c.Apellido = dr["apellido"].ToString();
+                c.Calle = dr["calle"].ToString();
+                c.Altura = dr["altura"].ToString();
+                c.Barrio = Convert.ToInt32(dr["id_Barrio"].ToString());
+                c.Documento = dr["documento"].ToString();
+                c.TipoDoc = Convert.ToInt32(dr["id_tipo_documento"].ToString());
+                c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"].ToString());
+                c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"].ToString());
+
+                lst.Add(c);
+
+            }
+
+           return lst;
+        }
+
+
+
         //public string InicioSesion(string usuario, string contraseña)
         //{
         //    List<Items> lst = new List<Items>();

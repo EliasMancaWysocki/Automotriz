@@ -32,8 +32,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.tbCondicion = new System.Windows.Forms.TabControl();
             this.pagCliente = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtNroCliente = new System.Windows.Forms.TextBox();
-            this.lblidcliente = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -97,8 +95,6 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtNroCliente);
-            this.groupBox2.Controls.Add(this.lblidcliente);
             this.groupBox2.Controls.Add(this.txtNombre);
             this.groupBox2.Controls.Add(this.lblApellido);
             this.groupBox2.Controls.Add(this.txtApellido);
@@ -108,24 +104,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.groupBox2.Size = new System.Drawing.Size(343, 163);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            // 
-            // txtNroCliente
-            // 
-            this.txtNroCliente.Location = new System.Drawing.Point(144, 33);
-            this.txtNroCliente.Name = "txtNroCliente";
-            this.txtNroCliente.Size = new System.Drawing.Size(132, 20);
-            this.txtNroCliente.TabIndex = 52;
-            // 
-            // lblidcliente
-            // 
-            this.lblidcliente.AutoSize = true;
-            this.lblidcliente.BackColor = System.Drawing.Color.Transparent;
-            this.lblidcliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidcliente.Location = new System.Drawing.Point(39, 33);
-            this.lblidcliente.Name = "lblidcliente";
-            this.lblidcliente.Size = new System.Drawing.Size(87, 19);
-            this.lblidcliente.TabIndex = 51;
-            this.lblidcliente.Text = "Nro Cliente";
             // 
             // txtNombre
             // 
@@ -397,7 +375,7 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 351);
+            this.ClientSize = new System.Drawing.Size(608, 362);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.tbCondicion);
@@ -427,8 +405,6 @@ namespace AutomotrizFront.Presentación.Soporte
         private System.Windows.Forms.TabControl tbCondicion;
         private System.Windows.Forms.TabPage pagCliente;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtNroCliente;
-        private System.Windows.Forms.Label lblidcliente;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtApellido;

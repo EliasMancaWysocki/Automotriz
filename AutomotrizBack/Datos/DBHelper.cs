@@ -12,9 +12,14 @@ namespace AutomotrizBack.Datos
     {
         private static DBHelper Instance;
         private SqlConnection Cnn;
+        
+
         private DBHelper()
         {
             Cnn = new SqlConnection(Properties.Resources.Server);
+            
+
+
         }
         public static DBHelper ObtenerInstancia()
         {
@@ -74,7 +79,7 @@ namespace AutomotrizBack.Datos
         }
         public int ActualizarBD(string nombreSP, List<Parametro> lstParametros)
         {
-            int resultado = 0;
+            int resultado = 1;
 
             Cnn.Open();
             SqlCommand comando = new SqlCommand();

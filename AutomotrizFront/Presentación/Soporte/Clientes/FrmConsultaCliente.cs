@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,10 +34,10 @@ namespace Automotriz.Presentación.Soporte
 
         private void FrmConsultaCliente_Load(object sender, EventArgs e)
         {
-            btnConsultar.FlatStyle = FlatStyle.Flat;
-            btnConsultar.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
+            btnCCliente.FlatStyle = FlatStyle.Flat;
+            btnCCliente.FlatAppearance.BorderSize = 0;
+            btnCDocumento.FlatStyle = FlatStyle.Flat;
+            btnCDocumento.FlatAppearance.BorderSize = 0;
         }
 
         //Funciones
@@ -46,13 +47,13 @@ namespace Automotriz.Presentación.Soporte
             Cbo.ValueMember = "Id";
             Cbo.DisplayMember = "Nombre";
             Cbo.DropDownStyle = ComboBoxStyle.DropDownList;
-            
+
         }
         private void CentrarBotones()
         {
             int x = (Width - 15 - 195) / 2;
             btnVolver.Location = new Point(x, 280);
-            btnConsultar.Location = new Point(x + 120, 280);
+            btnCCliente.Location = new Point(x + 120, 280);
         }
 
         //Botones
@@ -67,7 +68,7 @@ namespace Automotriz.Presentación.Soporte
         public void fillTable1()
         {
             var desde = dtpFechaDesde.Value.ToString("yyyy-MM-dd");
-            var hasta = dtpFechaHasta.Value.ToString("yyyy-MM-dd");
+            var hasta = dtpFHasta.Value.ToString("yyyy-MM-dd");
 
             dgvClientes.DataSource = null;
             dgvClientes.Rows.Clear();
@@ -114,8 +115,8 @@ namespace Automotriz.Presentación.Soporte
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var desde = nudDesde.Value;
-            var hasta = nudHasta.Value;
+            var desde = dtpFechaDesde.Value;
+            var hasta = dtpFHasta.Value;
 
             dgvClientes.DataSource = null;
             dgvClientes.Rows.Clear();
@@ -137,5 +138,214 @@ namespace Automotriz.Presentación.Soporte
             dgvClientes.DataSource = null;
             dgvClientes.Rows.Clear();
         }
+
+        private bool ValidarCampos()
+        {
+            bool aux = true;
+
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Ingrese un Nombre", "CONTROL DE CAMPO");
+                aux = false;
+            }
+
+            if (string.IsNullOrEmpty(txtApellido.Text))
+            {
+                MessageBox.Show("Ingrese un apellido", "CONTROL DE CAMPO");
+                aux = false;
+            }
+           
+
+            if (string.IsNullOrEmpty(txtDocumento.Text))
+            {
+                MessageBox.Show("Ingrese el Nro documento  ", "CONTROL DE CAMPO");
+                aux = false;
+            }
+
+            if (cboTipoDoc.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccion el tipo de documento  ", "CONTROL DE CAMPO");
+                aux = false;
+            }
+          
+
+            return aux;
+        }
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+
+            dgvClientes.DataSource = null;
+            dgvClientes.Rows.Clear();
+            List<Parametro> lstparam = new List<Parametro>();
+            List<Cliente> lstcliente = new List<Cliente>();
+
+            if( ValidarCampos())
+            {
+
+                lstparam.Add(new Parametro("@nombre", txtNombre.Text));
+                lstparam.Add(new Parametro("@apellido", txtApellido.Text ));
+
+                lstcliente= Servicio.Consulta_ClNyP(lstparam);
+
+            }
+
+
+            dgvClientes.DataSource = lstcliente;
+
+
+
+        }
+
+        private void btnCCliente_Click(object sender, EventArgs e)
+        {
+
+
+
+            if (!string.IsNullOrEmpty(txtNroCliente.Text))
+            {
+                int id = Convert.ToInt32(txtNroCliente.Text);
+                if(id!=0)
+                {
+                    Cliente c = Servicio.ExtraerClienteID(id);
+
+                    dgvClientes.Rows.Add(new object[]
+                    {
+
+                    c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura, 
+                        ObtenerBarrio(c.Barrio), c.Documento, 
+                        ObtenerTipoDocumento(c.TipoDoc),
+                        ObtenerTipoCliente(c.TipoCliente),
+                        ObtenerCondicionIva(c.CondicionIVA)
+                    }
+                    ) ;
+
+                }
+                else
+                {
+                    MessageBox.Show("ingrese un nro de id disinto de 0 ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("ingrese un nro de id");
+            }
+        }
+
+        private string ObtenerTipoCliente(int nro)
+        {
+            string aux = "";
+
+            List<Items> TipoCl = Servicio.ObtenerTipoCliente();
+
+            foreach (Items item in TipoCl)
+            {
+                if (item.Id.Equals(nro))
+                {
+                    aux = item.Nombre;
+                }
+            }
+
+            return aux;
+        }
+
+        private string ObtenerTipoDocumento(int nro)
+        {
+            string aux = "";
+
+            List<Items> TipoDoc = Servicio.ObtenerTipoDoc();
+
+            foreach (Items item in TipoDoc)
+            {
+                if (item.Id.Equals(nro))
+                {
+                    aux = item.Nombre;
+                }
+            }
+
+            return aux;
+        }
+
+        private string  ObtenerCondicionIva(int nro)
+        {
+            string aux="";
+
+            List<Items> CondIva = Servicio.ObtenerCondicionIVA();
+
+            foreach (Items item in CondIva)
+            {
+                if (item.Id.Equals(nro))
+                {
+                    aux = item.Nombre;
+                }
+
+
+            }
+
+            return aux;
+
+        }
+
+        private string ObtenerBarrio(int nro)
+        {
+            string barr="";
+            List<Items> barrios= Servicio.ObtenerBarrios() ;
+
+            foreach (Items item in barrios)
+            {
+                if(item.Id.Equals(nro))
+                {
+                    barr = item.Nombre;
+                }
+
+
+            }
+
+            return barr;
+        }
+
+        private void btnCNombre_Click(object sender, EventArgs e)
+        {
+
+
+
+            if (!string.IsNullOrEmpty(txtNombre.Text)
+            {
+
+
+                string nom = txtNombre.Text;
+                if (!string.IsNullOrEmpty(txtApellido.Text))
+                {
+                    Cliente c = Servicio.ExtraerClienteID(id);
+
+                    dgvClientes.Rows.Add(new object[]
+                    {
+
+                    c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
+                        ObtenerBarrio(c.Barrio), c.Documento,
+                        ObtenerTipoDocumento(c.TipoDoc),
+                        ObtenerTipoCliente(c.TipoCliente),
+                        ObtenerCondicionIva(c.CondicionIVA)
+                    }
+                    );
+
+                }
+                else
+                {
+                    MessageBox.Show("ingrese un nro de id disinto de 0 ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("ingrese un nro de id");
+            }
+        }
+
+
+
+
+
+
+
     }
+}
 }

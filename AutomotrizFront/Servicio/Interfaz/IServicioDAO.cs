@@ -25,6 +25,9 @@ namespace Automotriz.Servicio
         List<Cliente> ListaCliente();
         int ModificarCliente(Cliente cliente);
 
+        int BajaCliente(int nroCl);
+        Cliente ExtraerClienteID(int id);
+        List<Cliente> Consulta_ClNyP(List<Parametro> lstparam);
 
 
     }
