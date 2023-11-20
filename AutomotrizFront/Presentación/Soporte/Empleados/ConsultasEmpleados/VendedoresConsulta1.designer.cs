@@ -96,6 +96,7 @@
             this.Controls.Add(this.lblConsultaVendedores);
             this.Name = "VendedoresConsulta1";
             this.Text = "VendedoresConsulta1";
+            this.Load += new System.EventHandler(this.VendedoresConsulta1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             this.ResumeLayout(false);

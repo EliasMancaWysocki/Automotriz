@@ -1,7 +1,7 @@
 ﻿using AutomotrizBack.Datos;
 using AutomotrizBack.Entidades;
-using Automotriz.Servicio;
-using Automotriz.Servicio.Implementación;
+using AutomotrizFront.Servicio;
+using AutomotrizFront.Servicio.Implementación;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Automotriz.Presentación
+namespace AutomotrizFront.Presentación
 {
     public partial class FrmDatosEmisor : Form
     {
@@ -25,6 +25,7 @@ namespace Automotriz.Presentación
             Servicio = new ServicioDAO();
             CentrarBotones();
             dtpFecha.Value = DateTime.Now;
+            item = new Items();
         }
 
         private void FrmComprobante_Load(object sender, EventArgs e)
@@ -185,7 +186,8 @@ namespace Automotriz.Presentación
                 return;
             }
 
-
+            item.Nombre = cboComprobantes.Text;
+            item.Id = cboComprobantes.SelectedIndex + 1;
 
             Comprobante comprobante = new Comprobante();
             comprobante.Fecha = dtpFecha.Value;

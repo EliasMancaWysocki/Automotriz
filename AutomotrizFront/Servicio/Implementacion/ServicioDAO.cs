@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Automotriz.Servicio.Implementación
+namespace AutomotrizFront.Servicio.Implementación
 {
     internal class ServicioDAO : IServicioDAO
     {
@@ -65,7 +65,10 @@ namespace Automotriz.Servicio.Implementación
         {
             return DAO.FiltrarComprobantes(parametros);
         }
-
+        public List<Items> ObtenerProductos()
+        {
+            return DAO.ObtenerProductos();
+        }
         public List<Cliente> ListaCliente()
         {
             return DAO.ListaCliente();
@@ -74,20 +77,9 @@ namespace Automotriz.Servicio.Implementación
         {
             return DAO.ModificarCliente(cliente);
         }
-        public int BajaCliente(int nroCl)
+        public List<Items> ObtenerUnidadesMedidas()
         {
-            return DAO.BajaCliente(nroCl);
-        }
-        
-
-        public Cliente ExtraerClienteID(int id)
-        {
-            return DAO.ExtraerClienteID(id);
-        }
-
-        public List<Cliente> Consulta_ClNyP(List<Parametro> lstparam)
-        {
-            return DAO.Consulta_ClNyP(lstparam);
+            return DAO.ObtenerUnidadesMedidas();
         }
     }
 }

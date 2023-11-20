@@ -382,6 +382,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.Controls.Add(this.lblTitulo);
             this.Name = "FormConsulta";
             this.Text = "FormConsulta";
+            this.Load += new System.EventHandler(this.FormConsulta_Load);
             this.tbCondicion.ResumeLayout(false);
             this.pagCliente.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

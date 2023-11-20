@@ -1,5 +1,5 @@
 ﻿
-namespace Automotriz.Presentación.Soporte
+namespace AutomotrizFront.Presentación.Soporte
 {
     partial class FrmNuevoCliente
     {

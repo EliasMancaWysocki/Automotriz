@@ -1,6 +1,6 @@
 ﻿using AutomotrizBack.Datos;
 using AutomotrizBack.Entidades;
-using Automotriz.Servicio;
+using AutomotrizFront.Servicio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Automotriz.Servicio.Implementación;
+using AutomotrizFront.Servicio.Implementación;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
-namespace Automotriz.Presentación
+namespace AutomotrizFront.Presentación
 {
     public partial class FrmDatosReceptor : Form
     {
@@ -32,7 +32,6 @@ namespace Automotriz.Presentación
             this.item = item;
             lblTitulo.Text = item.Nombre;
             chkFormasPagos = new Dictionary<System.Windows.Forms.CheckBox, Items>();
-            cliente = Servicio.ExtraerCliente("27-21234567-9");
         }
 
         private void FrmDatosRecepcion_Load(object sender, EventArgs e)
@@ -105,7 +104,7 @@ namespace Automotriz.Presentación
             string camposObligatorios = "Los siguientes campos son obligatorios:\n";
             bool permiso = true;
 
-            if (!Regex.IsMatch(txtDocumento.Text, @"^\d+$"))
+            if (!Regex.IsMatch(txtDocumento.Text, @"^[0-9\-]+$"))
             {
                 MessageBox.Show("Número de Documento inválido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDocumento.Focus();

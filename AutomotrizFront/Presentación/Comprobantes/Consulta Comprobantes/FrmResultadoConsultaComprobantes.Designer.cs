@@ -1,4 +1,4 @@
-﻿namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
+﻿namespace AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes
 {
     partial class FrmResultadoConsultaComprobantes
     {

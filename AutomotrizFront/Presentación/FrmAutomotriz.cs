@@ -7,13 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Automotriz.Presentación.Soporte;
 using AutomotrizFront.Presentación.Soporte;
-using Automotriz.Presentación.Consultas.Consultar_Comprobantes;
+using AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes;
 using AutomotrizFront.Presentación.Soporte.Vendedores;
-using Automotriz.Presentación.Soporte.Vendedores;
 
-namespace Automotriz.Presentación
+namespace AutomotrizFront.Presentación
 {
     public partial class FrmAutomotriz : Form
     {
@@ -207,6 +205,5 @@ namespace Automotriz.Presentación
         {
             EndResponsive();
         }
-
     }
 }

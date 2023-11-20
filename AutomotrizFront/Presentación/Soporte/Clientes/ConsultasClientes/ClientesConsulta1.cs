@@ -1,6 +1,6 @@
-﻿using Automotriz.Presentación.Consultas.Consultar_Comprobantes;
-using Automotriz.Servicio;
-using Automotriz.Servicio.Implementación;
+﻿using AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes;
+using AutomotrizFront.Servicio;
+using AutomotrizFront.Servicio.Implementación;
 using AutomotrizBack.Datos;
 using AutomotrizBack.Entidades;
 using System;
@@ -71,6 +71,11 @@ namespace AutomotrizFront.Presentación.Soporte.Clientes
             SqlDataAdapter da = new SqlDataAdapter(myCmd);
             da.Fill(dataTable);
             dgvClientes.DataSource = dataTable;
+        }
+
+        private void ClientesConsulta1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

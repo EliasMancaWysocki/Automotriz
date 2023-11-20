@@ -27,5 +27,7 @@ namespace AutomotrizBack.Datos
 
         Cliente ExtraerClienteID(int id);
         List<Cliente> ExtraerClienteNombre(List<Parametro> lstparam);
+        List<Items> ObtenerProductos();
+        List<Items> ObtenerUnidadesMedidas();
     }
 }

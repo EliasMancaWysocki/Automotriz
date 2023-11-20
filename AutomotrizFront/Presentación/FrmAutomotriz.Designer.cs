@@ -1,4 +1,4 @@
-namespace Automotriz.Presentación
+namespace AutomotrizFront.Presentación
 {
     partial class FrmAutomotriz
     {
@@ -198,7 +198,7 @@ namespace Automotriz.Presentación
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // nuevoClienteToolStripMenuItem
@@ -206,8 +206,8 @@ namespace Automotriz.Presentación
             this.nuevoClienteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.nuevoClienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoClienteToolStripMenuItem.Image")));
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(186, 32);
-            this.nuevoClienteToolStripMenuItem.Text = "Lista";
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
+            this.nuevoClienteToolStripMenuItem.Text = "Nuevo";
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // consultarClienteToolStripMenuItem
@@ -215,7 +215,7 @@ namespace Automotriz.Presentación
             this.consultarClienteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.consultarClienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultarClienteToolStripMenuItem.Image")));
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(186, 32);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
             this.consultarClienteToolStripMenuItem.Text = "Consultar";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
@@ -227,7 +227,7 @@ namespace Automotriz.Presentación
             this.comprobantesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.comprobantesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("comprobantesToolStripMenuItem.Image")));
             this.comprobantesToolStripMenuItem.Name = "comprobantesToolStripMenuItem";
-            this.comprobantesToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.comprobantesToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.comprobantesToolStripMenuItem.Text = "Comprobantes";
             // 
             // nuevoToolStripMenuItem1
@@ -256,7 +256,7 @@ namespace Automotriz.Presentación
             this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.proveedoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proveedoresToolStripMenuItem.Image")));
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.proveedoresToolStripMenuItem.Text = "Empleados";
             // 
             // nuevoToolStripMenuItem2
@@ -283,7 +283,7 @@ namespace Automotriz.Presentación
             this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.empleadosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empleadosToolStripMenuItem.Image")));
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(231, 32);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
             this.empleadosToolStripMenuItem.Text = "Productos";
             // 
             // nuevoToolStripMenuItem3
@@ -308,7 +308,7 @@ namespace Automotriz.Presentación
             this.proveedoresToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.proveedoresToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("proveedoresToolStripMenuItem1.Image")));
             this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
-            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(231, 32);
+            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(227, 32);
             this.proveedoresToolStripMenuItem1.Text = "Proveedores";
             // 
             // ayudaToolStripMenuItem

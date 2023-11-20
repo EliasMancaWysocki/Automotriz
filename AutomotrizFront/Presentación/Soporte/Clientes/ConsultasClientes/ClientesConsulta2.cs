@@ -42,5 +42,10 @@ namespace AutomotrizFront.Presentación.Soporte.Clientes
             da.Fill(dataTable);
             dgvClientes.DataSource = dataTable;
         }
+
+        private void ClientesConsulta2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

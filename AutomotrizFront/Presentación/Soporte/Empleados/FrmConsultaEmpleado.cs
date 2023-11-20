@@ -1,7 +1,7 @@
 ﻿using System;
 using AutomotrizBack.Datos;
 using AutomotrizBack.Entidades;
-using Automotriz.Servicio;
+using AutomotrizFront.Servicio;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +10,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Automotriz.Servicio.Implementación;
+using AutomotrizFront.Servicio.Implementación;
 using System.Data.SqlClient;
 
-namespace Automotriz.Presentación.Soporte
+namespace AutomotrizFront.Presentación.Soporte
 {
     public partial class FrmConsultaEmpleado : Form
     {
@@ -132,6 +132,11 @@ namespace Automotriz.Presentación.Soporte
             {
                 this.Dispose();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

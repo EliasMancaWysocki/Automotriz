@@ -116,6 +116,7 @@
             this.Controls.Add(this.lblConsultaClientes);
             this.Name = "ClientesConsulta2";
             this.Text = "ClientesConsulta2";
+            this.Load += new System.EventHandler(this.ClientesConsulta2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).EndInit();
