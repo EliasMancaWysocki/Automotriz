@@ -185,7 +185,7 @@ namespace AutomotrizFront.Presentación.Soporte
                 lstparam.Add(new Parametro("@nombre", txtNombre.Text));
                 lstparam.Add(new Parametro("@apellido", txtApellido.Text ));
 
-                lstcliente= Servicio.Consulta_ClNyP(lstparam);
+                //lstcliente= Servicio.Consulta_ClNyP(lstparam);
 
             }
 
@@ -308,36 +308,36 @@ namespace AutomotrizFront.Presentación.Soporte
 
 
 
-            if (!string.IsNullOrEmpty(txtNombre.Text)
-            {
+            //if (!string.IsNullOrEmpty(txtNombre.Text))
+            //{
 
 
-                string nom = txtNombre.Text;
-                if (!string.IsNullOrEmpty(txtApellido.Text))
-                {
-                    Cliente c = Servicio.ExtraerClienteID(id);
+            //    string nom = txtNombre.Text;
+            //    if (!string.IsNullOrEmpty(txtApellido.Text))
+            //    {
+            //        Cliente c = Servicio.ExtraerClienteID(id);
 
-                    dgvClientes.Rows.Add(new object[]
-                    {
+            //        dgvClientes.Rows.Add(new object[]
+            //        {
 
-                    c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
-                        ObtenerBarrio(c.Barrio), c.Documento,
-                        ObtenerTipoDocumento(c.TipoDoc),
-                        ObtenerTipoCliente(c.TipoCliente),
-                        ObtenerCondicionIva(c.CondicionIVA)
-                    }
-                    );
+            //        c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
+            //            ObtenerBarrio(c.Barrio), c.Documento,
+            //            ObtenerTipoDocumento(c.TipoDoc),
+            //            ObtenerTipoCliente(c.TipoCliente),
+            //            ObtenerCondicionIva(c.CondicionIVA)
+            //        }
+            //        );
 
-                }
-                else
-                {
-                    MessageBox.Show("ingrese un nro de id disinto de 0 ");
-                }
-            }
-            else
-            {
-                MessageBox.Show("ingrese un nro de id");
-            }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("ingrese un nro de id disinto de 0 ");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("ingrese un nro de id");
+            //}
         }
 
 
@@ -348,4 +348,4 @@ namespace AutomotrizFront.Presentación.Soporte
 
     }
 }
-}
+

@@ -81,5 +81,15 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.ObtenerUnidadesMedidas();
         }
+
+        public int BajaCliente(int nroCl)
+        {
+            return DAO.BajaCliente(nroCl);
+        }
+
+        public Cliente ExtraerClienteID(int id)
+        {
+            return DAO.ExtraerClienteID(id);
+        }
     }
 }

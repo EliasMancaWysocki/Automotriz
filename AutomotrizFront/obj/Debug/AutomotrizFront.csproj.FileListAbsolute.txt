@@ -255,3 +255,22 @@ C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmConsultaCliente.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmNuevoCliente.resources
 C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmNuevoEmpleado.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes.FrmConsultaComprobantes.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes.FrmResultadoConsultaComprobantes.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.FrmDatosEmisor.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.FrmDatosOperacion.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.FrmDatosReceptor.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.FrmAutomotriz.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.FrmInicioSesion.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmInformacion.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmConsultaEmpleado.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmConsultaProducto.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmConsultaCliente.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmNuevoCliente.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.FrmNuevoEmpleado.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.Clientes.ClientesConsulta1.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.Clientes.ClientesConsulta2.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\Automotriz.Presentación.Soporte.Vendedores.VendedoresConsulta1.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.Vendedores.VendedoresConsulta2.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta1.resources
+C:\Users\CATA\Desktop\tp elias\14-11\Automotriz\AutomotrizFront\obj\Debug\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta2.resources

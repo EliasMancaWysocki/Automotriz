@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using AutomotrizFront.Servicio;
 using AutomotrizFront.Servicio.Implementación;
 using AutomotrizBack.Datos;
-using Automotriz.Presentación.Soporte;
-using Automotriz.Presentación;
+using AutomotrizFront.Presentación.Soporte;
+using AutomotrizFront.Presentación;
 using AutomotrizBack.Entidades;
 
 namespace AutomotrizFront.Presentación.Soporte
