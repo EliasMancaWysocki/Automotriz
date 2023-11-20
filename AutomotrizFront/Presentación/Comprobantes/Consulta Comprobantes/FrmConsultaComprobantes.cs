@@ -1,6 +1,5 @@
-﻿
-using Automotriz.Servicio;
-using Automotriz.Servicio.Implementación;
+﻿using AutomotrizFront.Servicio;
+using AutomotrizFront.Servicio.Implementación;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +10,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Automotriz.Presentación.Consultas.Consultar_Comprobantes;
+using AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes;
 using AutomotrizBack.Datos;
 using AutomotrizBack.Entidades;
 
-namespace Automotriz.Presentación.Consultas.Consultar_Comprobantes
+namespace AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes
 {
     public partial class FrmConsultaComprobantes : Form
     {

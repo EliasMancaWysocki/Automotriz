@@ -1,4 +1,4 @@
-﻿namespace Automotriz.Presentación
+﻿namespace AutomotrizFront.Presentación
 {
     partial class FrmDatosEmisor
     {
@@ -341,6 +341,7 @@
             // cboComprobantes
             // 
             this.cboComprobantes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboComprobantes.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboComprobantes.FormattingEnabled = true;
             this.cboComprobantes.Location = new System.Drawing.Point(185, 31);
             this.cboComprobantes.Name = "cboComprobantes";

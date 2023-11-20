@@ -12,6 +12,7 @@ namespace AutomotrizBack.Entidades
         public string Nombre { get; set; }
         public object Extra { get; set; }
 
+        public Items() { }
         public Items(int id, string nombre) 
         {
             this.Id = id;

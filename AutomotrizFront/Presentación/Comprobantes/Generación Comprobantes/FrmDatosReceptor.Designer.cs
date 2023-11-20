@@ -1,4 +1,4 @@
-﻿namespace Automotriz.Presentación
+﻿namespace AutomotrizFront.Presentación
 {
     partial class FrmDatosReceptor
     {

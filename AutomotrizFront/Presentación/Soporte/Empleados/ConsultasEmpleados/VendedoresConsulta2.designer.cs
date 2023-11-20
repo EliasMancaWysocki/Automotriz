@@ -62,7 +62,7 @@
             this.lblConsultaVendedores.AutoSize = true;
             this.lblConsultaVendedores.Location = new System.Drawing.Point(12, 18);
             this.lblConsultaVendedores.Name = "lblConsultaVendedores";
-            this.lblConsultaVendedores.Size = new System.Drawing.Size(128, 15);
+            this.lblConsultaVendedores.Size = new System.Drawing.Size(112, 13);
             this.lblConsultaVendedores.TabIndex = 8;
             this.lblConsultaVendedores.Text = "Consultas vendedores";
             // 
@@ -76,6 +76,7 @@
             this.Controls.Add(this.lblConsultaVendedores);
             this.Name = "VendedoresConsulta2";
             this.Text = "VendedoresConsulta2";
+            this.Load += new System.EventHandler(this.VendedoresConsulta2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -36,5 +36,10 @@ namespace AutomotrizFront.Presentación.Soporte.ProductosStock
             da.Fill(dataTable);
             dgvProductos.DataSource = dataTable;
         }
+
+        private void ProductosStockConsulta2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

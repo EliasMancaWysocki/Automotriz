@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomotrizBack.Entidades
 {
-    class Producto
+    public class Producto
     {
         public int Codigo { get; set; }
         public string Descripcion { get; set; }

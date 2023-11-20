@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Automotriz.Servicio
+namespace AutomotrizFront.Servicio
 {
     internal interface IServicioDAO
     {
@@ -24,8 +24,7 @@ namespace Automotriz.Servicio
         List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros);
         List<Cliente> ListaCliente();
         int ModificarCliente(Cliente cliente);
-
-
-
+        List<Items> ObtenerProductos();
+        List<Items> ObtenerUnidadesMedidas();
     }
 }

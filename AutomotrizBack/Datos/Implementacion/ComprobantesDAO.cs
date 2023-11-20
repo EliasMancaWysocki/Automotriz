@@ -7,6 +7,7 @@ namespace AutomotrizBack.Datos
 {
     public class ComprobantesDAO : IComprobantesDAO
     {
+        //Obtener
         public List<Items> ObtenerComprobantes()
         {
             List<Items> comprobantes = new List<Items>()
@@ -95,6 +96,76 @@ namespace AutomotrizBack.Datos
 
             return lst;
         }
+        public List<Items> ObtenerBarrios()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_BARRIOS");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_barrio"]);
+                string nom = dr["nombre_barrio"].ToString();
+                int loc = Convert.ToInt32(dr["id_localidad"].ToString());
+
+                Items item = new Items(id, nom, loc);
+                lst.Add(item);
+            }
+            return lst;
+
+
+        }
+        public List<Items> ObtenerTipoCliente()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOSCLIENTES");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_tipo_cliente"]);
+                string nom = dr["descripcion"].ToString();
+
+
+                Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+        }
+        public List<Items> ObtenerProductos()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_PORDUCTOS");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["cod_producto"]);
+                string nom = dr["descripcion"].ToString();
+
+                Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+        }
+        public List<Items> ObtenerUnidadesMedidas() 
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_UnMEDIDA");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_un_med"]);
+                string nom = dr["descripcion"].ToString();
+
+                Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+        }
+
+
         public Cliente ExtraerCliente(string doc)
         {
             List<Parametro> lst = new List<Parametro>()
@@ -146,44 +217,6 @@ namespace AutomotrizBack.Datos
             aux = DBHelper.ObtenerInstancia().ActualizarBD("SP_INSERTAR_CLIENTE", lstParametros);
 
             return aux;
-        }
-        public List<Items> ObtenerBarrios()
-        {
-            List<Items> lst = new List<Items>();
-
-            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_BARRIOS");
-
-            foreach (DataRow dr in dt.Rows)
-            {
-                int id = Convert.ToInt32(dr["id_barrio"]);
-                string nom = dr["nombre_barrio"].ToString();
-                int loc = Convert.ToInt32(dr["id_localidad"].ToString());
-
-                Items item = new Items(id, nom, loc);
-                lst.Add(item);
-            }
-            return lst;
-
-         
-        }
-        public List<Items> ObtenerTipoCliente()
-        {
-            List<Items> lst = new List<Items>();
-
-            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOSCLIENTES");
-
-            foreach (DataRow dr in dt.Rows)
-            {
-                int id = Convert.ToInt32(dr["id_tipo_cliente"]);
-                string nom = dr["descripcion"].ToString();
-                
-
-                Items item = new Items(id, nom);
-                lst.Add(item);
-            }
-            return lst;
-
-
         }
         public List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros)
         {

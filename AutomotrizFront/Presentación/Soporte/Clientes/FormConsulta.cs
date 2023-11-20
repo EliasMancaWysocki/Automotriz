@@ -16,5 +16,10 @@ namespace AutomotrizFront.Presentación.Soporte
         {
             InitializeComponent();
         }
+
+        private void FormConsulta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

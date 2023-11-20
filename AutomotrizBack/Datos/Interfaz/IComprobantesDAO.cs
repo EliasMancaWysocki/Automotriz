@@ -23,5 +23,7 @@ namespace AutomotrizBack.Datos
         List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros);
         List<Cliente> ListaCliente();
         int ModificarCliente(Cliente cliente);
+        List<Items> ObtenerProductos();
+        List<Items> ObtenerUnidadesMedidas();
     }
 }

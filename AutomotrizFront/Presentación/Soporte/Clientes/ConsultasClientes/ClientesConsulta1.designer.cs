@@ -106,6 +106,7 @@
             this.Controls.Add(this.dtpFechaDesde);
             this.Name = "ClientesConsulta1";
             this.Text = "ClientesConsulta1";
+            this.Load += new System.EventHandler(this.ClientesConsulta1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
