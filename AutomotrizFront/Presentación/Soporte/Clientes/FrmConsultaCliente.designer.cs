@@ -31,6 +31,7 @@ namespace AutomotrizFront.Presentación.Soporte
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaCliente));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
@@ -522,10 +523,11 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AllowUserToResizeColumns = false;
+            this.dgvClientes.AllowUserToResizeRows = false;
             this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -540,9 +542,24 @@ namespace AutomotrizFront.Presentación.Soporte
             this.Tipo_Cliente,
             this.Condicion_IVA});
             this.dgvClientes.Location = new System.Drawing.Point(12, 258);
+            this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.RowHeadersWidth = 51;
+            this.dgvClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvClientes.ShowCellErrors = false;
+            this.dgvClientes.ShowCellToolTips = false;
+            this.dgvClientes.ShowEditingIcon = false;
+            this.dgvClientes.ShowRowErrors = false;
             this.dgvClientes.Size = new System.Drawing.Size(773, 277);
             this.dgvClientes.TabIndex = 24;
             // 
@@ -617,69 +634,88 @@ namespace AutomotrizFront.Presentación.Soporte
             // 
             // Nro_Cliente
             // 
+            this.Nro_Cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Nro_Cliente.FillWeight = 76.14212F;
             this.Nro_Cliente.HeaderText = "Nro Cliente";
             this.Nro_Cliente.Name = "Nro_Cliente";
             this.Nro_Cliente.ReadOnly = true;
+            this.Nro_Cliente.Width = 84;
             // 
             // Nombre
             // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Nombre.FillWeight = 102.6508F;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
             // 
             // Apellido
             // 
+            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Apellido.FillWeight = 102.6508F;
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 69;
             // 
             // Calle
             // 
+            this.Calle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Calle.FillWeight = 102.6508F;
             this.Calle.HeaderText = "Calle";
             this.Calle.Name = "Calle";
             this.Calle.ReadOnly = true;
+            this.Calle.Width = 55;
             // 
             // Altura
             // 
+            this.Altura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Altura.FillWeight = 102.6508F;
             this.Altura.HeaderText = "Altura";
             this.Altura.Name = "Altura";
             this.Altura.ReadOnly = true;
+            this.Altura.Width = 59;
             // 
             // Barrio
             // 
+            this.Barrio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Barrio.FillWeight = 102.6508F;
             this.Barrio.HeaderText = "Barrio";
             this.Barrio.Name = "Barrio";
             this.Barrio.ReadOnly = true;
+            this.Barrio.Width = 59;
             // 
             // Documento
             // 
+            this.Documento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Documento.FillWeight = 102.6508F;
             this.Documento.HeaderText = "Documento";
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
+            this.Documento.Width = 87;
             // 
             // Tipo_Documento
             // 
+            this.Tipo_Documento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Tipo_Documento.FillWeight = 102.6508F;
             this.Tipo_Documento.HeaderText = "Tipo Documento";
             this.Tipo_Documento.Name = "Tipo_Documento";
             this.Tipo_Documento.ReadOnly = true;
+            this.Tipo_Documento.Width = 102;
             // 
             // Tipo_Cliente
             // 
+            this.Tipo_Cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Tipo_Cliente.FillWeight = 102.6508F;
             this.Tipo_Cliente.HeaderText = "Tipo Cliente";
             this.Tipo_Cliente.Name = "Tipo_Cliente";
             this.Tipo_Cliente.ReadOnly = true;
+            this.Tipo_Cliente.Width = 81;
             // 
             // Condicion_IVA
             // 
+            this.Condicion_IVA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Condicion_IVA.FillWeight = 102.6508F;
             this.Condicion_IVA.HeaderText = "Condicion IVA";
             this.Condicion_IVA.Name = "Condicion_IVA";
