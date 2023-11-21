@@ -143,7 +143,7 @@ namespace AutomotrizFront.Presentación.Soporte
                 nuevo.Altura = txtAltura.Text;
                 nuevo.Barrio = Convert.ToInt32(cboBarrios.SelectedValue);
                 nuevo.Documento = txtDocumento.Text;
-                nuevo.TipoDoc = Convert.ToInt32(cboTCliente.SelectedValue);
+                nuevo.TipoDoc = Convert.ToInt32(cboTipoDoc.SelectedValue);
                 nuevo.CondicionIVA = Convert.ToInt32(cboCIva.SelectedValue);
                 nuevo.TipoCliente = Convert.ToInt32(cboTCliente.SelectedValue);
 

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizAPI\\AutomotrizAPI.csproj": {}
+    "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizAPI\\AutomotrizAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizAPI\\AutomotrizAPI.csproj": {
+    "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizAPI\\AutomotrizAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizAPI\\AutomotrizAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizAPI\\AutomotrizAPI.csproj",
         "projectName": "AutomotrizAPI",
-        "projectPath": "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizAPI\\AutomotrizAPI.csproj",
-        "packagesPath": "C:\\Users\\Elias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizAPI\\obj\\",
+        "projectPath": "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizAPI\\AutomotrizAPI.csproj",
+        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizBack\\AutomotrizBack.csproj": {
-                "projectPath": "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizBack\\AutomotrizBack.csproj"
+              "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizBack\\AutomotrizBack.csproj": {
+                "projectPath": "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizBack\\AutomotrizBack.csproj"
               }
             }
           }
@@ -72,15 +68,15 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizBack\\AutomotrizBack.csproj": {
+    "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizBack\\AutomotrizBack.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizBack\\AutomotrizBack.csproj",
+        "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizBack\\AutomotrizBack.csproj",
         "projectName": "AutomotrizBack",
-        "projectPath": "C:\\Users\\Elias\\source\\repos\\Automotriz\\AutomotrizBack\\AutomotrizBack.csproj",
+        "projectPath": "C:\\Users\\Gabriel\\Desktop\\Nueva carpeta\\AutomotrizBack\\AutomotrizBack.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

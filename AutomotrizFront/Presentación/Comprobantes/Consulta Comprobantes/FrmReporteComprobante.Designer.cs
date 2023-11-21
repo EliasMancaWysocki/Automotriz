@@ -74,7 +74,7 @@
             this.rvComprobante.Location = new System.Drawing.Point(0, 0);
             this.rvComprobante.Name = "rvComprobante";
             this.rvComprobante.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
-            this.rvComprobante.ServerReport.BearerToken = null;
+            //this.rvComprobante.ServerReport.BearerToken = null
             this.rvComprobante.Size = new System.Drawing.Size(781, 467);
             this.rvComprobante.TabIndex = 0;
             // 

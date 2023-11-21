@@ -614,20 +614,25 @@ namespace AutomotrizBack.Datos
                 cmd.Parameters.Add(pOut);
                 cmd.ExecuteNonQuery();
                 int numFactura = (int)pOut.Value;
+
+                Console.WriteLine(numFactura);
+
                 SqlCommand cmdDetalle;
                 foreach (DetalleComprobante item in comprobante.DetallesComprobante)
                 {
+                    Console.WriteLine(item.IdBonif + " " + item.IdAutoplan);
+                     
                     cmdDetalle = new SqlCommand("SP_INSERTAR_DETALLES_FACTURA", cnn, t);
                     cmdDetalle.CommandType = CommandType.StoredProcedure;
                     cmdDetalle.Parameters.AddWithValue("@num_factura", numFactura);
                     cmdDetalle.Parameters.AddWithValue("@cantidad", item.Cantidad);
-                    cmdDetalle.Parameters.AddWithValue("@precio", (SqlMoney)item.Precio);
+                    cmdDetalle.Parameters.Add("@precio", SqlDbType.Money).Value = item.Precio;
                     cmdDetalle.Parameters.AddWithValue("@observaciones", "");
                     cmdDetalle.Parameters.AddWithValue("@id_descuento", item.IdBonif);
                     cmdDetalle.Parameters.AddWithValue("@id_autoplan", item.IdAutoplan);
                     cmdDetalle.Parameters.AddWithValue("@cod_producto", item.CodProducto);
                     cmdDetalle.ExecuteNonQuery();
-
+                   
                 }
                 SqlCommand cmdFormaPago;
                 foreach (Items item in comprobante.FormasPago)
@@ -641,8 +646,9 @@ namespace AutomotrizBack.Datos
                 t.Commit();
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 if (t != null)
                     t.Rollback();
                 ok = false;

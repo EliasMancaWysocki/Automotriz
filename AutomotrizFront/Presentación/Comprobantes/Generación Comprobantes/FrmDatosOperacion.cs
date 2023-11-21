@@ -21,6 +21,7 @@ namespace AutomotrizFront.Presentación
         IServicioDAO Servicio;
         Comprobante Comprobante;
         Items Item;
+        
         static double subtotal;
         static double otrosImportes ;
         static double total;
@@ -113,6 +114,7 @@ namespace AutomotrizFront.Presentación
 
             Items descuento = (Items)cboDescuentos.SelectedItem;
             Items autoplan = (Items)cboAutoplan.SelectedItem;
+
 
             DetalleComprobante detalleComprobante = new DetalleComprobante();
             detalleComprobante.CodProducto = producto.Codigo;
@@ -285,5 +287,9 @@ namespace AutomotrizFront.Presentación
             }
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
