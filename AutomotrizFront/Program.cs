@@ -20,8 +20,8 @@ namespace AutomotrizFront
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmAutomotriz());
-            Application.Run(new FrmConsultaCliente());
+            Application.Run(new FrmAutomotriz());
+            //Application.Run(new FrmConsultaCliente());
             //Application.Run(new FrmInicioSesion());
 
         }

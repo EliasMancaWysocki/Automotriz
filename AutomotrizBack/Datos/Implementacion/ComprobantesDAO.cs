@@ -10,15 +10,18 @@ namespace AutomotrizBack.Datos
         //Obtener
         public List<Items> ObtenerComprobantes()
         {
-            List<Items> comprobantes = new List<Items>()
+            List<Items> comprobantes = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOS_COMPROBANTES");
+
+            foreach (DataRow dr in dt.Rows)
             {
-                new Items(1, "Factura A"),
-                new Items(2, "Factura B"),
-                new Items(3, "Nota de Débito A"),
-                new Items(4, "Nota de Débito B"),
-                new Items(5, "Nota de Crédito A"),
-                new Items(6, "Nota de Crédito B"),
-            };
+                int id = Convert.ToInt32(dr["id_tipo_factura"]);
+                string nom = dr["descripcion"].ToString();
+
+                Items item = new Items(id, nom);
+                comprobantes.Add(item);
+            }
 
             return comprobantes;
         }
@@ -132,11 +135,16 @@ namespace AutomotrizBack.Datos
             }
             return lst;
         }
-        public List<Items> ObtenerProductos()
+        public List<Items> ObtenerProductos(int tipoProd)
         {
+            List<Parametro> parametros = new List<Parametro>()
+            {
+                new Parametro("@id_tipo_producto", tipoProd)
+            };
+
             List<Items> lst = new List<Items>();
 
-            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_PORDUCTOS");
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_PRODUCTOS_X_TIPO", parametros);
 
             foreach (DataRow dr in dt.Rows)
             {
@@ -163,6 +171,78 @@ namespace AutomotrizBack.Datos
                 lst.Add(item);
             }
             return lst;
+        }
+        public List<Items> ObtenerDescuentos()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_DESCUENTOS");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_descuento"]);
+                string nom = dr["monto"].ToString();
+
+                Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+        }
+        public List<Items> ObtenerAutoplanes()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_AUTOPLANES");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_autoplan"]);
+                string nom = dr["autoplan"].ToString();
+                double interes = Convert.ToDouble(dr["interes"]);
+
+                Items item = new Items(id, nom, interes);
+                lst.Add(item);
+            }
+            return lst;
+        }
+        public List<Items> ObtenerTiposProductos()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOS_PRODUCTOS");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_tipo"]);
+                string nom = dr["descripcion"].ToString();
+
+                Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+        }
+
+        public Producto ExtraerProducto(int codigo)
+        {
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_PRODUCTOS");
+
+            Producto p = new Producto();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (Convert.ToInt32(dr["cod_producto"]) == codigo)
+                {
+                    p.Codigo = Convert.ToInt32(dr["cod_producto"]);
+                    p.Descripcion = dr["descripcion"].ToString();
+                    p.Precio = Convert.ToInt32(dr["precio"]);
+                    p.IdTipoProd = Convert.ToInt32(dr["id_tipo_prod"]);
+                    p.IdMarca = Convert.ToInt32(dr["id_marca"]);
+                    p.IdUMedida = Convert.ToInt32(dr["id_unidad_medida"]);
+                    p.IdPresentacion = Convert.ToInt32(dr["id_presentacion"]);
+                }
+            }
+
+            return p;
         }
         public Cliente ExtraerCliente(string doc)
         {

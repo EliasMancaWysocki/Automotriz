@@ -67,6 +67,7 @@
     <Compile Include="Datos\Parametro.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Comprobante.cs" />
+    <Compile Include="Entidades\DetalleComprobante.cs" />
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Items.cs" />
     <Compile Include="Entidades\Producto.cs" />
@@ -103,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

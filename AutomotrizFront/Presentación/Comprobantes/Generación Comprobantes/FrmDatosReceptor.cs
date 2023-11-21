@@ -19,7 +19,7 @@ namespace AutomotrizFront.Presentación
     public partial class FrmDatosReceptor : Form
     {
         IServicioDAO Servicio;
-        Comprobante comprobante;
+        Comprobante Comprobante;
         Items item;
         Cliente cliente = new Cliente();
         Dictionary<System.Windows.Forms.CheckBox, Items> chkFormasPagos;
@@ -28,7 +28,7 @@ namespace AutomotrizFront.Presentación
         {
             InitializeComponent();
             Servicio = new ServicioDAO();
-            this.comprobante = comprobante;
+            this.Comprobante = comprobante;
             this.item = item;
             lblTitulo.Text = item.Nombre;
             chkFormasPagos = new Dictionary<System.Windows.Forms.CheckBox, Items>();
@@ -75,7 +75,6 @@ namespace AutomotrizFront.Presentación
             int y = 0;
             foreach (Items item in lst)
             {
-                
                 System.Windows.Forms.CheckBox checkBox = new System.Windows.Forms.CheckBox()
                 {
                     Name = "chk" + item.Nombre.ToString().Trim(),
@@ -163,17 +162,37 @@ namespace AutomotrizFront.Presentación
                 return;
             } else
             {
-                List<bool> valoresCheckBoxes = new List<bool>();
-
                 foreach (Control control in groupBoxCondicionVenta.Controls)
                 {
                     if (control is System.Windows.Forms.CheckBox checkBox)
                     {
-                        valoresCheckBoxes.Add(checkBox.Checked);
+                        if(checkBox.Checked)
+                        {
+                            if(chkFormasPagos.ContainsKey(checkBox))
+                            {
+                                Items i = chkFormasPagos[checkBox];
+                                if(!Comprobante.FormasPago.Contains(i))
+                                {
+                                    Comprobante.AgregarFormasPago(i);
+                                }
+                            }
+                        } else
+                        {
+                            if(chkFormasPagos.ContainsKey(checkBox))
+                            {
+                                Items i = chkFormasPagos[checkBox];
+                                if (Comprobante.FormasPago.Contains(i))
+                                {
+                                    Comprobante.EliminarFormaPago(i);
+                                }
+                            }
+                        }
                     }
                 }
 
-                FrmDatosOperacion frmDatosOperacion = new FrmDatosOperacion(item, comprobante);
+                Comprobante.Cliente = Servicio.ExtraerCliente(txtDocumento.Text);
+
+                FrmDatosOperacion frmDatosOperacion = new FrmDatosOperacion(item, Comprobante);
                 frmDatosOperacion.ShowDialog();
             }
         }

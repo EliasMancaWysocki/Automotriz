@@ -191,6 +191,15 @@ namespace AutomotrizFront.Presentación
 
             Comprobante comprobante = new Comprobante();
             comprobante.Fecha = dtpFecha.Value;
+            int tipoFact = 0;
+            foreach(Items i in Servicio.ObtenerComprobantes())
+            {
+                if (cboComprobantes.Text == i.Nombre)
+                {
+                    tipoFact = i.Id;
+                }
+            }
+            comprobante.IdTipoFactura = tipoFact;
 
             FrmDatosReceptor frmDatosRecepcion = new FrmDatosReceptor(item, comprobante);
             frmDatosRecepcion.ShowDialog();

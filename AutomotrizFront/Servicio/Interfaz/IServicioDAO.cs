@@ -24,9 +24,13 @@ namespace AutomotrizFront.Servicio
         List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros);
         List<Cliente> ListaCliente();
         int ModificarCliente(Cliente cliente);
-        List<Items> ObtenerProductos();
+        List<Items> ObtenerProductos(int tipoProd);
         List<Items> ObtenerUnidadesMedidas();
         int BajaCliente(int nroCl);
         Cliente ExtraerClienteID(int id);
+        Producto ExtraerProducto(int codigo);
+        List<Items> ObtenerDescuentos();
+        List<Items> ObtenerAutoplanes();
+        List<Items> ObtenerTiposProductos();
     }
 }

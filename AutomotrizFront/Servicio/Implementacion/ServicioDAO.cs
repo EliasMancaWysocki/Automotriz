@@ -65,9 +65,9 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.FiltrarComprobantes(parametros);
         }
-        public List<Items> ObtenerProductos()
+        public List<Items> ObtenerProductos(int tipoProd)
         {
-            return DAO.ObtenerProductos();
+            return DAO.ObtenerProductos(tipoProd);
         }
         public List<Cliente> ListaCliente()
         {
@@ -81,15 +81,29 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.ObtenerUnidadesMedidas();
         }
-
         public int BajaCliente(int nroCl)
         {
             return DAO.BajaCliente(nroCl);
         }
-
         public Cliente ExtraerClienteID(int id)
         {
             return DAO.ExtraerClienteID(id);
+        }
+        public Producto ExtraerProducto(int codigo)
+        {
+            return DAO.ExtraerProducto(codigo);
+        }
+        public List<Items> ObtenerDescuentos()
+        {
+            return DAO.ObtenerDescuentos();
+        }
+        public List<Items> ObtenerAutoplanes()
+        {
+            return DAO.ObtenerAutoplanes();
+        }
+        public List<Items> ObtenerTiposProductos()
+        {
+            return DAO.ObtenerTiposProductos();
         }
     }
 }
