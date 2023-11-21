@@ -31,7 +31,7 @@ namespace AutomotrizFront.Presentación.Soporte
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaCliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
@@ -52,14 +52,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.cboTipoDoc = new System.Windows.Forms.ComboBox();
             this.btnCDocumento = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnCPorGasto = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnCCompro = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -80,6 +72,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.cbnLimpiar = new System.Windows.Forms.Button();
             this.Nro_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,13 +83,11 @@ namespace AutomotrizFront.Presentación.Soporte
             this.Tipo_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Condicion_IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -135,7 +126,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
@@ -323,106 +313,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.btnCDocumento.Size = new System.Drawing.Size(60, 65);
             this.btnCDocumento.TabIndex = 26;
             this.btnCDocumento.UseVisualStyleBackColor = false;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.btnCPorGasto);
-            this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.numericUpDown1);
-            this.tabPage4.Controls.Add(this.numericUpDown2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(788, 140);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Por gasto total";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // btnCPorGasto
-            // 
-            this.btnCPorGasto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCPorGasto.BackColor = System.Drawing.Color.White;
-            this.btnCPorGasto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCPorGasto.BackgroundImage")));
-            this.btnCPorGasto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCPorGasto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCPorGasto.Location = new System.Drawing.Point(632, 35);
-            this.btnCPorGasto.Name = "btnCPorGasto";
-            this.btnCPorGasto.Size = new System.Drawing.Size(60, 65);
-            this.btnCPorGasto.TabIndex = 30;
-            this.btnCPorGasto.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(109, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 19);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Monto máximo:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 19);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Monto mínimo:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(211, 93);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(17, 19);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "$";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(211, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 19);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "$";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Location = new System.Drawing.Point(232, 86);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1569325056,
-            23283064,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 24;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Increment = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Location = new System.Drawing.Point(232, 28);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            1569325056,
-            23283064,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown2.TabIndex = 23;
+            this.btnCDocumento.Click += new System.EventHandler(this.btnCDocumento_Click);
             // 
             // tabPage5
             // 
@@ -439,6 +330,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Compraron o no compraron";
             this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // btnCCompro
             // 
@@ -452,6 +344,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.btnCCompro.Size = new System.Drawing.Size(60, 65);
             this.btnCCompro.TabIndex = 27;
             this.btnCCompro.UseVisualStyleBackColor = false;
+            this.btnCCompro.Click += new System.EventHandler(this.btnCCompro_Click);
             // 
             // label10
             // 
@@ -540,19 +433,20 @@ namespace AutomotrizFront.Presentación.Soporte
             this.Documento,
             this.Tipo_Documento,
             this.Tipo_Cliente,
-            this.Condicion_IVA});
+            this.Condicion_IVA,
+            this.Precio_Total});
             this.dgvClientes.Location = new System.Drawing.Point(12, 258);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -631,6 +525,18 @@ namespace AutomotrizFront.Presentación.Soporte
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(306, 20);
             this.dtpHasta.TabIndex = 22;
+            // 
+            // cbnLimpiar
+            // 
+            this.cbnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbnLimpiar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbnLimpiar.Location = new System.Drawing.Point(303, 548);
+            this.cbnLimpiar.Name = "cbnLimpiar";
+            this.cbnLimpiar.Size = new System.Drawing.Size(161, 30);
+            this.cbnLimpiar.TabIndex = 25;
+            this.cbnLimpiar.Text = "Limpiar Busqueda";
+            this.cbnLimpiar.UseVisualStyleBackColor = true;
+            this.cbnLimpiar.Click += new System.EventHandler(this.cbnLimpiar_Click);
             // 
             // Nro_Cliente
             // 
@@ -721,6 +627,13 @@ namespace AutomotrizFront.Presentación.Soporte
             this.Condicion_IVA.Name = "Condicion_IVA";
             this.Condicion_IVA.ReadOnly = true;
             // 
+            // Precio_Total
+            // 
+            this.Precio_Total.HeaderText = "Precio Total";
+            this.Precio_Total.Name = "Precio_Total";
+            this.Precio_Total.ReadOnly = true;
+            this.Precio_Total.Visible = false;
+            // 
             // FrmConsultaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -729,6 +642,7 @@ namespace AutomotrizFront.Presentación.Soporte
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(796, 590);
+            this.Controls.Add(this.cbnLimpiar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.panel1);
@@ -752,10 +666,6 @@ namespace AutomotrizFront.Presentación.Soporte
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -779,22 +689,14 @@ namespace AutomotrizFront.Presentación.Soporte
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblAutomotrix;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button btnCCliente;
         private System.Windows.Forms.Button btnCDocumento;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox chkCompro;
         private System.Windows.Forms.DateTimePicker dtpFHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
-        private System.Windows.Forms.Button btnCPorGasto;
         private System.Windows.Forms.Button btnCCompro;
         private System.Windows.Forms.BindingSource spfiltraridBindingSource;
         private System.Windows.Forms.TextBox txtNombre;
@@ -816,6 +718,7 @@ namespace AutomotrizFront.Presentación.Soporte
         private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Button btnCNombre;
+        private System.Windows.Forms.Button cbnLimpiar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nro_Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
@@ -826,5 +729,6 @@ namespace AutomotrizFront.Presentación.Soporte
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Condicion_IVA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_Total;
     }
 }

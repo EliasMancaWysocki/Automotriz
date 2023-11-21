@@ -18,7 +18,6 @@ namespace AutomotrizBack.Datos
         Cliente ExtraerCliente(string doc);
         List<Items> ObtenerTipoCliente();
         List<Items> ObtenerBarrios();
-        List<Items> ObtenerDescuentos();
         int ProximoIdCliente();
         int ConfirmarCliente(Cliente cliente);
         List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros);
@@ -26,11 +25,15 @@ namespace AutomotrizBack.Datos
         int ModificarCliente(Cliente cliente);
         int BajaCliente(int nroCl);
         Cliente ExtraerClienteID(int id);
-        List<Cliente> ExtraerClienteNombre(List<Parametro> lstparam);
-        List<Items> ObtenerProductos(int tipoProd);
+        
+        List<Items> ObtenerProductos();
         List<Items> ObtenerUnidadesMedidas();
-        Producto ExtraerProducto(int codigo);
-        List<Items> ObtenerAutoplanes();
-        List<Items> ObtenerTiposProductos();
+        List<Cliente> ExtraerClienteNombre(string nom, string apell);
+        Cliente ExtraerClienteDocumento(int tipdoc, string doc);
+        List<Cliente> ExtraerClienteNoCompro(string desde, string hasta);
+        List<Cliente> ExtraerClienteCompro(string desde, string hasta);
+
+
+
     }
 }

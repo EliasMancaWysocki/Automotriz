@@ -25,7 +25,7 @@ namespace AutomotrizBack.Datos
 
             return comprobantes;
         }
-        public List<Items> ObtenerConceptos() 
+        public List<Items> ObtenerConceptos()
         {
             List<Items> comprobantes = new List<Items>()
             {
@@ -54,7 +54,7 @@ namespace AutomotrizBack.Datos
 
             DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_CONDICIONIVA ");
 
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 int id = Convert.ToInt32(dr["id_condicionIVA"]);
                 string nom = dr["descripcion"].ToString();
@@ -66,11 +66,11 @@ namespace AutomotrizBack.Datos
         }
         public List<Items> ObtenerTipoDoc()
         {
-            List <Items> lst = new List<Items>();
+            List<Items> lst = new List<Items>();
 
             DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_TIPOSDOC");
 
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 int id = Convert.ToInt32(dr["id_tipo_documento"]);
                 string nom = dr["descripcion"].ToString();
@@ -156,7 +156,7 @@ namespace AutomotrizBack.Datos
             }
             return lst;
         }
-        public List<Items> ObtenerUnidadesMedidas() 
+        public List<Items> ObtenerUnidadesMedidas()
         {
             List<Items> lst = new List<Items>();
 
@@ -272,7 +272,7 @@ namespace AutomotrizBack.Datos
         }
         public int ProximoIdCliente()
         {
-            int proximo = DBHelper.ObtenerInstancia().ConsultarEscalar ("SP_PROXIMO_ID_CLIENTE", "@next");
+            int proximo = DBHelper.ObtenerInstancia().ConsultarEscalar("SP_PROXIMO_ID_CLIENTE", "@next");
 
             return proximo;
         }
@@ -298,7 +298,7 @@ namespace AutomotrizBack.Datos
         }
         public List<ResultadoComprobante> FiltrarComprobantes(List<Parametro> parametros)
         {
-            List<ResultadoComprobante> lst = new List<ResultadoComprobante> ();
+            List<ResultadoComprobante> lst = new List<ResultadoComprobante>();
 
             DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_FILTRAR_COMPROBANTE", parametros);
 
@@ -318,7 +318,7 @@ namespace AutomotrizBack.Datos
         }
         public List<Cliente> ListaCliente()
         {
-           
+
             DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_CLIENTES");
 
             List<Cliente> lst = new List<Cliente>();
@@ -370,7 +370,7 @@ namespace AutomotrizBack.Datos
 
             List<Parametro> lstParametros = new List<Parametro>(){
                 new Parametro("@id_cliente", nroCl)
-              
+
             };
 
             aux = DBHelper.ObtenerInstancia().ActualizarBD("SP_BAJA_CLIENTE", lstParametros);
@@ -403,12 +403,17 @@ namespace AutomotrizBack.Datos
 
             return c;
         }
-        //revisar el de abajo
-        public List<Cliente> ExtraerClienteNombre(List<Parametro> lstparam)
+       
+        public List<Cliente> ExtraerClienteNombre(string nom, string apell)
         {
-            DataTable dt ;
-            List<Cliente> lst = new List<Cliente>();
-          
+            DataTable dt;
+            List<Cliente> lstc = new List<Cliente>();
+
+            List<Parametro> lstparam = new List<Parametro>()
+            {
+                new Parametro("@nombre", nom),
+                new Parametro("@apellido", apell)
+            };
 
             dt = DBHelper.ObtenerInstancia().Consultar("SP_FILTROS_CLIENTES_Nombre", lstparam);
 
@@ -426,12 +431,128 @@ namespace AutomotrizBack.Datos
                 c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"].ToString());
                 c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"].ToString());
 
-                lst.Add(c);
+                lstc.Add(c);
 
             }
 
-           return lst;
+            return lstc;
         }
+
+        public Cliente ExtraerClienteDocumento(int tipdoc, string doc)
+        {
+            DataTable dt;
+
+            Cliente c = new Cliente();
+            List<Parametro> lstparam = new List<Parametro>()
+            {
+                new Parametro("@tipo_doc", tipdoc),
+                new Parametro("@documento", doc)
+            };
+
+            dt = DBHelper.ObtenerInstancia().Consultar("SP_FILTROS_CLIENTES_Documento", lstparam);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+
+                c.Id = Convert.ToInt32(dr["id_cliente"]);
+                c.Nombre = dr["nombre"].ToString();
+                c.Apellido = dr["apellido"].ToString();
+                c.Calle = dr["calle"].ToString();
+                c.Altura = dr["altura"].ToString();
+                c.Barrio = Convert.ToInt32(dr["id_Barrio"].ToString());
+                c.Documento = dr["documento"].ToString();
+                c.TipoDoc = Convert.ToInt32(dr["id_tipo_documento"].ToString());
+                c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"].ToString());
+                c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"].ToString());
+
+
+
+            }
+
+            return c;
+        }
+
+
+        //por fecha que no compro
+        public List<Cliente> ExtraerClienteNoCompro(string desde, string hasta)
+        {
+            DataTable dt;
+
+            List<Cliente> lstc = new List<Cliente>();
+            List<Parametro> lstparam = new List<Parametro>()
+            {
+                new Parametro("@fechaDesde", desde),
+                new Parametro("@fechaHasta", hasta)
+            };
+
+            dt = DBHelper.ObtenerInstancia().Consultar("SP_CLIENTES_NOCOMPROPORFECHA", lstparam);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Cliente c = new Cliente();
+
+                c.Id = Convert.ToInt32(dr["id_cliente"]);
+                c.Nombre = dr["nombre"].ToString();
+                c.Apellido = dr["apellido"].ToString();
+                c.Calle = dr["calle"].ToString();
+                c.Altura = dr["altura"].ToString();
+                c.Barrio = Convert.ToInt32(dr["id_Barrio"].ToString());
+                c.Documento = dr["documento"].ToString();
+                c.TipoDoc = Convert.ToInt32(dr["id_tipo_documento"].ToString());
+                c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"].ToString());
+                c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"].ToString());
+
+                lstc.Add(c);
+            }
+
+
+
+            return lstc;
+
+        }
+
+        //por fecha que compro
+        public List<Cliente> ExtraerClienteCompro(string desde, string hasta)
+        {
+            DataTable dt;
+
+            List<Cliente> lstc = new List<Cliente>();
+            List<Parametro> lstparam = new List<Parametro>()
+            {
+                new Parametro("@fechaDesde", desde),
+                new Parametro("@fechaHasta", hasta)
+            };
+
+            dt = DBHelper.ObtenerInstancia().Consultar("SP_CLIENTES_COMPROPORFECHA", lstparam);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Cliente c = new Cliente();
+
+                c.Id = Convert.ToInt32(dr["id_cliente"]);
+                c.Nombre = dr["nombre"].ToString();
+                c.Apellido = dr["apellido"].ToString();
+                c.Calle = dr["calle"].ToString();
+                c.Altura = dr["altura"].ToString();
+                c.Barrio = Convert.ToInt32(dr["id_Barrio"].ToString());
+                c.Documento = dr["documento"].ToString();
+                c.TipoDoc = Convert.ToInt32(dr["id_tipo_documento"].ToString());
+                c.TipoCliente = Convert.ToInt32(dr["id_tipo_de_cliente"].ToString());
+                c.CondicionIVA = Convert.ToInt32(dr["id_condicionIVA"].ToString());
+
+                lstc.Add(c);
+            }
+
+
+
+            return lstc;
+
+        }
+
+
+
+
+        
 
         //public string InicioSesion(string usuario, string contraseña)
         //{
@@ -440,7 +561,6 @@ namespace AutomotrizBack.Datos
         //    DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_FORMASPAGO");
         //    return lst
         //}
-
     }
 }
 

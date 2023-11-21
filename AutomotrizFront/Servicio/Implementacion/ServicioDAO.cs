@@ -65,9 +65,9 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.FiltrarComprobantes(parametros);
         }
-        public List<Items> ObtenerProductos(int tipoProd)
+        public List<Items> ObtenerProductos()
         {
-            return DAO.ObtenerProductos(tipoProd);
+            return DAO.ObtenerProductos();
         }
         public List<Cliente> ListaCliente()
         {
@@ -81,29 +81,35 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.ObtenerUnidadesMedidas();
         }
+
         public int BajaCliente(int nroCl)
         {
             return DAO.BajaCliente(nroCl);
         }
+
         public Cliente ExtraerClienteID(int id)
         {
             return DAO.ExtraerClienteID(id);
         }
-        public Producto ExtraerProducto(int codigo)
+        public List<Cliente> ExtraerClienteNombre(string nom, string apell)
         {
-            return DAO.ExtraerProducto(codigo);
+            return DAO.ExtraerClienteNombre(nom,apell);
         }
-        public List<Items> ObtenerDescuentos()
+
+        public Cliente ExtraerClienteDocumento(int tipdoc, string doc)
         {
-            return DAO.ObtenerDescuentos();
+            return DAO.ExtraerClienteDocumento(tipdoc, doc);
         }
-        public List<Items> ObtenerAutoplanes()
+
+        public List<Cliente> ExtraerClienteNoCompro(string desde, string hasta)
         {
-            return DAO.ObtenerAutoplanes();
+            return DAO.ExtraerClienteNoCompro(desde, hasta);
         }
-        public List<Items> ObtenerTiposProductos()
+
+        public List<Cliente> ExtraerClienteCompro(string desde, string hasta)
         {
-            return DAO.ObtenerTiposProductos();
+            return DAO.ExtraerClienteNoCompro(desde, hasta);
         }
+
     }
 }
