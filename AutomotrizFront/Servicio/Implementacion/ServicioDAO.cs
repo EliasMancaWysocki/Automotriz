@@ -91,5 +91,25 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.ExtraerClienteID(id);
         }
+        public List<Cliente> ExtraerClienteNombre(string nom, string apell)
+        {
+            return DAO.ExtraerClienteNombre(nom,apell);
+        }
+
+        public Cliente ExtraerClienteDocumento(int tipdoc, string doc)
+        {
+            return DAO.ExtraerClienteDocumento(tipdoc, doc);
+        }
+
+        public List<Cliente> ExtraerClienteNoCompro(string desde, string hasta)
+        {
+            return DAO.ExtraerClienteNoCompro(desde, hasta);
+        }
+
+        public List<Cliente> ExtraerClienteCompro(string desde, string hasta)
+        {
+            return DAO.ExtraerClienteNoCompro(desde, hasta);
+        }
+
     }
 }

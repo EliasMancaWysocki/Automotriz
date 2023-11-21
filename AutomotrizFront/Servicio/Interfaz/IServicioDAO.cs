@@ -28,5 +28,13 @@ namespace AutomotrizFront.Servicio
         List<Items> ObtenerUnidadesMedidas();
         int BajaCliente(int nroCl);
         Cliente ExtraerClienteID(int id);
+        List<Cliente> ExtraerClienteNombre(string nom, string apell);
+        Cliente ExtraerClienteDocumento(int tipdoc, string doc);
+        List<Cliente> ExtraerClienteCompro(string desde, string hasta);
+        List<Cliente> ExtraerClienteNoCompro(string desde, string hasta);
+
+
+
+
     }
 }

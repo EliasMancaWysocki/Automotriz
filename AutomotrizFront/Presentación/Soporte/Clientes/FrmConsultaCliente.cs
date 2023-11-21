@@ -1,18 +1,13 @@
-﻿using System;
-using AutomotrizBack.Datos;
+﻿using AutomotrizBack.Datos;
 using AutomotrizBack.Entidades;
 using AutomotrizFront.Servicio;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text.RegularExpressions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using AutomotrizFront.Servicio.Implementación;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace AutomotrizFront.Presentación.Soporte
 {
@@ -38,6 +33,7 @@ namespace AutomotrizFront.Presentación.Soporte
             btnCCliente.FlatAppearance.BorderSize = 0;
             btnCDocumento.FlatStyle = FlatStyle.Flat;
             btnCDocumento.FlatAppearance.BorderSize = 0;
+            CargarCombo(cboTipoDoc, Servicio.ObtenerTipoDoc());
         }
 
         //Funciones
@@ -105,33 +101,7 @@ namespace AutomotrizFront.Presentación.Soporte
             dgvClientes.DataSource = dataTable;
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            if (chkCompro.Checked)
-                this.fillTable1();
-            else
-                this.fillTable2();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var desde = dtpFechaDesde.Value;
-            var hasta = dtpFHasta.Value;
-
-            dgvClientes.DataSource = null;
-            dgvClientes.Rows.Clear();
-
-            DataTable dataTable = new DataTable();
-            SqlConnection myConn = new SqlConnection("Data Source=34.176.166.122;Initial Catalog=Automotriz;User ID=sqlserver;Password=sqlserver");
-            myConn.Open();
-            SqlCommand myCmd = new SqlCommand("SP_CLIENTES_3", myConn);
-            myCmd.CommandType = CommandType.StoredProcedure;
-            myCmd.Parameters.AddWithValue("@valorDesde", desde);
-            myCmd.Parameters.AddWithValue("@valorHasta", hasta);
-            SqlDataAdapter da = new SqlDataAdapter(myCmd);
-            da.Fill(dataTable);
-            dgvClientes.DataSource = dataTable;
-        }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -139,63 +109,7 @@ namespace AutomotrizFront.Presentación.Soporte
             dgvClientes.Rows.Clear();
         }
 
-        private bool ValidarCampos()
-        {
-            bool aux = true;
-
-            if (string.IsNullOrEmpty(txtNombre.Text))
-            {
-                MessageBox.Show("Ingrese un Nombre", "CONTROL DE CAMPO");
-                aux = false;
-            }
-
-            if (string.IsNullOrEmpty(txtApellido.Text))
-            {
-                MessageBox.Show("Ingrese un apellido", "CONTROL DE CAMPO");
-                aux = false;
-            }
-           
-
-            if (string.IsNullOrEmpty(txtDocumento.Text))
-            {
-                MessageBox.Show("Ingrese el Nro documento  ", "CONTROL DE CAMPO");
-                aux = false;
-            }
-
-            if (cboTipoDoc.SelectedIndex == -1)
-            {
-                MessageBox.Show("Seleccion el tipo de documento  ", "CONTROL DE CAMPO");
-                aux = false;
-            }
-          
-
-            return aux;
-        }
-        private void btnConsulta_Click(object sender, EventArgs e)
-        {
-
-            dgvClientes.DataSource = null;
-            dgvClientes.Rows.Clear();
-            List<Parametro> lstparam = new List<Parametro>();
-            List<Cliente> lstcliente = new List<Cliente>();
-
-            if( ValidarCampos())
-            {
-
-                lstparam.Add(new Parametro("@nombre", txtNombre.Text));
-                lstparam.Add(new Parametro("@apellido", txtApellido.Text ));
-
-                //lstcliente= Servicio.Consulta_ClNyP(lstparam);
-
-            }
-
-
-            dgvClientes.DataSource = lstcliente;
-
-
-
-        }
-
+        //pestaña por nro cliente
         private void btnCCliente_Click(object sender, EventArgs e)
         {
 
@@ -204,20 +118,20 @@ namespace AutomotrizFront.Presentación.Soporte
             if (!string.IsNullOrEmpty(txtNroCliente.Text))
             {
                 int id = Convert.ToInt32(txtNroCliente.Text);
-                if(id!=0)
+                if (id != 0)
                 {
                     Cliente c = Servicio.ExtraerClienteID(id);
 
                     dgvClientes.Rows.Add(new object[]
                     {
 
-                    c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura, 
-                        ObtenerBarrio(c.Barrio), c.Documento, 
+                    c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
+                        ObtenerBarrio(c.Barrio), c.Documento,
                         ObtenerTipoDocumento(c.TipoDoc),
                         ObtenerTipoCliente(c.TipoCliente),
                         ObtenerCondicionIva(c.CondicionIVA)
                     }
-                    ) ;
+                    );
 
                 }
                 else
@@ -231,6 +145,7 @@ namespace AutomotrizFront.Presentación.Soporte
             }
         }
 
+        //carga de combos a grillas
         private string ObtenerTipoCliente(int nro)
         {
             string aux = "";
@@ -265,9 +180,9 @@ namespace AutomotrizFront.Presentación.Soporte
             return aux;
         }
 
-        private string  ObtenerCondicionIva(int nro)
+        private string ObtenerCondicionIva(int nro)
         {
-            string aux="";
+            string aux = "";
 
             List<Items> CondIva = Servicio.ObtenerCondicionIVA();
 
@@ -287,12 +202,12 @@ namespace AutomotrizFront.Presentación.Soporte
 
         private string ObtenerBarrio(int nro)
         {
-            string barr="";
-            List<Items> barrios= Servicio.ObtenerBarrios() ;
+            string barr = "";
+            List<Items> barrios = Servicio.ObtenerBarrios();
 
             foreach (Items item in barrios)
             {
-                if(item.Id.Equals(nro))
+                if (item.Id.Equals(nro))
                 {
                     barr = item.Nombre;
                 }
@@ -303,49 +218,191 @@ namespace AutomotrizFront.Presentación.Soporte
             return barr;
         }
 
+        //pestaña por nombre
         private void btnCNombre_Click(object sender, EventArgs e)
         {
 
+            if (!string.IsNullOrEmpty(txtNombre.Text))
+            {
 
+                string nom = txtNroCliente.Text;
 
-            //if (!string.IsNullOrEmpty(txtNombre.Text))
-            //{
+                if (!string.IsNullOrEmpty(txtApellido.Text))
+                {
+                    string apell = txtApellido.Text;
 
+                    List<Cliente> lstc = Servicio.ExtraerClienteNombre(nom, apell);
 
-            //    string nom = txtNombre.Text;
-            //    if (!string.IsNullOrEmpty(txtApellido.Text))
-            //    {
-            //        Cliente c = Servicio.ExtraerClienteID(id);
-
-            //        dgvClientes.Rows.Add(new object[]
-            //        {
-
-            //        c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
-            //            ObtenerBarrio(c.Barrio), c.Documento,
-            //            ObtenerTipoDocumento(c.TipoDoc),
-            //            ObtenerTipoCliente(c.TipoCliente),
-            //            ObtenerCondicionIva(c.CondicionIVA)
-            //        }
-            //        );
-
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("ingrese un nro de id disinto de 0 ");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("ingrese un nro de id");
-            //}
+                    if (lstc.Count == 0)
+                    {
+                        MessageBox.Show("Los datos cargados no generaron resultados ");
+                    }
+                    else
+                    {
+                        foreach (var c in lstc)
+                        {
+                            dgvClientes.Rows.Add(new object[]
+                            {
+                                c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
+                                ObtenerBarrio(c.Barrio), c.Documento,
+                                ObtenerTipoDocumento(c.TipoDoc),
+                                ObtenerTipoCliente(c.TipoCliente),
+                                ObtenerCondicionIva(c.CondicionIVA)
+                            });
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ingrese un apellido ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("ingrese un nombre");
+            }
         }
 
 
 
+        //pestaña por documento
+        private void btnCDocumento_Click(object sender, EventArgs e)
+        {
+
+            if (cboTipoDoc.SelectedIndex != -1)
+            {
+
+                int tipdoc = Convert.ToInt32(cboTipoDoc.SelectedValue);
+
+                if (!string.IsNullOrEmpty(txtDocumento.Text))
+                {
+                    string doc = txtDocumento.Text;
+
+                    Cliente c = Servicio.ExtraerClienteDocumento(tipdoc, doc);
+
+                    if (c.Id == 0)
+                    {
+                        MessageBox.Show("Los datos cargados no generaron resultados ");
+                    }
+                    else
+                    {
+                        dgvClientes.Rows.Add(new object[]
+                        {
+                            c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
+                            ObtenerBarrio(c.Barrio), c.Documento,
+                            ObtenerTipoDocumento(c.TipoDoc),
+                            ObtenerTipoCliente(c.TipoCliente),
+                            ObtenerCondicionIva(c.CondicionIVA)
+                        });
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("ingrese un nro de documento ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un tipo de nro de documento");
+            }
 
 
 
+        }
 
+        //boton limpiar
+        private void cbnLimpiar_Click(object sender, EventArgs e)
+        {
+            dgvClientes.DataSource = null;
+            dgvClientes.Rows.Clear();
+            txtApellido.Text = string.Empty;
+            txtNroCliente.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtDocumento.Text = string.Empty;
+            cboTipoDoc.SelectedIndex = -1;
+            dgvClientes.Columns["Precio_Total"].Visible = false;
+            chCompro.Checked = false;
+
+        }
+
+      
+        
+        //pestaña por fecha
+        private void btnCCompro_Click(object sender, EventArgs e)
+        {
+            if (chkCompro.Checked)
+            {
+
+                string desde = dtpFechaDesde.Value.ToString("yyyyMMdd");
+                string hasta = dtpFechaHasta.Value.ToString(("yyyyMMdd"));
+
+                List<Cliente> lstc = Servicio.ExtraerClienteCompro(desde, hasta);
+
+                if (lstc.Count == 0)
+                {
+                    MessageBox.Show("Los datos cargados no generaron resultados ");
+                }
+                else
+                {
+
+                    foreach (Cliente c in lstc)
+                    {
+
+                        dgvClientes.Rows.Add(new object[]
+                                                {
+                            c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
+                            ObtenerBarrio(c.Barrio), c.Documento,
+                            ObtenerTipoDocumento(c.TipoDoc),
+                            ObtenerTipoCliente(c.TipoCliente),
+                            ObtenerCondicionIva(c.CondicionIVA)
+                                               });
+
+                    }
+
+                }
+
+            }
+
+            else//clientes que no pagaron
+            {
+
+                string desde = dtpFechaDesde.Value.ToString("yyyyMMdd");
+                string hasta = dtpFechaHasta.Value.ToString(("yyyyMMdd"));
+
+                List<Cliente> lstc = Servicio.ExtraerClienteNoCompro(desde, hasta);
+
+                if (lstc.Count == 0)
+                {
+                    MessageBox.Show("Los datos cargados no generaron resultados ");
+                }
+                else
+                {
+
+                    foreach (Cliente c in lstc)
+                    {
+
+                        dgvClientes.Rows.Add(new object[]
+                                                {
+                            c.Id, c.Nombre, c.Apellido, c.Calle,c.Altura,
+                            ObtenerBarrio(c.Barrio), c.Documento,
+                            ObtenerTipoDocumento(c.TipoDoc),
+                            ObtenerTipoCliente(c.TipoCliente),
+                            ObtenerCondicionIva(c.CondicionIVA)
+                                               });
+                        
+                    }
+
+                }
+
+            }
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+            dtpFechaDesde.Value = DateTime.Now.AddDays(-7);
+            dtpFechaHasta.Value = DateTime.Now;
+        }
     }
 }
 

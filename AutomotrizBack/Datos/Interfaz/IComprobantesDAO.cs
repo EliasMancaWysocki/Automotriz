@@ -25,8 +25,15 @@ namespace AutomotrizBack.Datos
         int ModificarCliente(Cliente cliente);
         int BajaCliente(int nroCl);
         Cliente ExtraerClienteID(int id);
-        List<Cliente> ExtraerClienteNombre(List<Parametro> lstparam);
+        
         List<Items> ObtenerProductos();
         List<Items> ObtenerUnidadesMedidas();
+        List<Cliente> ExtraerClienteNombre(string nom, string apell);
+        Cliente ExtraerClienteDocumento(int tipdoc, string doc);
+        List<Cliente> ExtraerClienteNoCompro(string desde, string hasta);
+        List<Cliente> ExtraerClienteCompro(string desde, string hasta);
+
+
+
     }
 }
