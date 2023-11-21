@@ -37,8 +37,11 @@ namespace AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes
             rvComprobante.LocalReport.ReportPath = "RptComprobante.rdlc";
             DataTable detallesComprobante = sP_REPORTE_COMPROBANTETableAdapter.GetData(nroComprobante);
             DataTable datosFactura = sP_DATOS_FACTURATableAdapter.GetData(nroComprobante);
+            DataTable tipoFactura = sP_TIPO_COMPROBANTETableAdapter.GetData(nroComprobante);
             rvComprobante.LocalReport.DataSources.Add(new ReportDataSource("DetallesComprobante", detallesComprobante));
             rvComprobante.LocalReport.DataSources.Add(new ReportDataSource("DatosFactura", datosFactura));
+            rvComprobante.LocalReport.DataSources.Add(new ReportDataSource("TipoComprobante", tipoFactura));
+
             rvComprobante.RefreshReport();
         }
     }

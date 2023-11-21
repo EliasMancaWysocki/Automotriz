@@ -24,16 +24,20 @@ namespace AutomotrizBack.Datos
         List<Cliente> ListaCliente();
         int ModificarCliente(Cliente cliente);
         int BajaCliente(int nroCl);
-        Cliente ExtraerClienteID(int id);
-        
-        List<Items> ObtenerProductos();
+        List<Items> ObtenerInicioSesion();
+        List<Items> ObtenerProductos(int codigo);
         List<Items> ObtenerUnidadesMedidas();
         List<Cliente> ExtraerClienteNombre(string nom, string apell);
         Cliente ExtraerClienteDocumento(int tipdoc, string doc);
         List<Cliente> ExtraerClienteNoCompro(string desde, string hasta);
         List<Cliente> ExtraerClienteCompro(string desde, string hasta);
-
-
-
+        List<Items> ObtenerDescuentos();
+        List<Items> ObtenerTiposProductos();
+        List<Items> ObtenerAutoplanes();
+        Producto ExtraerProducto(int codigo);
+        bool InsertarFactura(Comprobante comprobante);
+        List<Items> ObtenerProductos();
+        int NumFacturaActual();
+        Cliente ExtraerClienteID(int id);
     }
 }

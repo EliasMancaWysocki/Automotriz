@@ -1,5 +1,6 @@
 ﻿using AutomotrizBack.Datos;
 using AutomotrizBack.Entidades;
+using AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes;
 using AutomotrizFront.Servicio;
 using AutomotrizFront.Servicio.Implementación;
 using System;
@@ -135,9 +136,14 @@ namespace AutomotrizFront.Presentación
         }
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            foreach(Items i in Comprobante.FormasPago)
+            if (Servicio.InsertarFactura(Comprobante))
             {
-                MessageBox.Show(i.Nombre + " " + i.Extra);
+                int nroFact = Servicio.NumFacturaActual();
+                FrmReporteComprobante frmReporteComprobante = new FrmReporteComprobante(nroFact);
+                frmReporteComprobante.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Error al crear factura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error );
             }
         }
 

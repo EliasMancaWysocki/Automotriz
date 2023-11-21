@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.Security.Policy;
 
 namespace AutomotrizBack.Datos
 {
@@ -217,6 +220,40 @@ namespace AutomotrizBack.Datos
                 string nom = dr["descripcion"].ToString();
 
                 Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+        }
+        public List<Items> ObtenerProductos()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_PRODUCTOS_X_TIPO");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["cod_producto"]);
+                string nom = dr["descripcion"].ToString();
+
+                Items item = new Items(id, nom);
+                lst.Add(item);
+            }
+            return lst;
+        }
+        public List<Items> ObtenerInicioSesion()
+        {
+            List<Items> lst = new List<Items>();
+
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_INICIOSESION");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int id = Convert.ToInt32(dr["id_inicioSesion"]);
+                string nom = dr["usuario"].ToString();
+                string pass = dr["contrasena"].ToString();
+                Comprobante.LegajoEmpleado = Convert.ToInt32(dr["legajo_empleado"]);
+
+                Items item = new Items(id, nom, pass);
                 lst.Add(item);
             }
             return lst;
@@ -550,8 +587,87 @@ namespace AutomotrizBack.Datos
         }
 
 
+        public bool InsertarFactura(Comprobante comprobante)
+        {
+            bool ok = true;
+            SqlTransaction t = null;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cnn = DBHelper.ObtenerInstancia().ObtenerConexion();
+            try
+            {
+                cnn.Open();
+                t = cnn.BeginTransaction();
+                cmd.Connection = cnn;
+                cmd.Transaction = t;
+                cmd.CommandText = "SP_INSERTAR_FACTURA";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@fecha", comprobante.Fecha.ToString("d"));
+                cmd.Parameters.AddWithValue("@legajo_empleado", 19);
+                cmd.Parameters.AddWithValue("@id_cliente", comprobante.Cliente.Id);
+                cmd.Parameters.AddWithValue("@id_tipo_factura", comprobante.IdTipoFactura);
 
+                //parámetro de salida:
+                SqlParameter pOut = new SqlParameter();
+                pOut.ParameterName = "@num_factura";
+                pOut.DbType = DbType.Int32;
+                pOut.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pOut);
+                cmd.ExecuteNonQuery();
+                Console.WriteLine(pOut);
+                int numFactura = (int)pOut.Value;
+                Console.WriteLine(numFactura);
+                SqlCommand cmdDetalle;
+                foreach (DetalleComprobante item in comprobante.DetallesComprobante)
+                {
+                    cmdDetalle = new SqlCommand("SP_INSERTAR_DETALLES_FACTURA", cnn, t);
+                    cmdDetalle.CommandType = CommandType.StoredProcedure;
+                    cmdDetalle.Parameters.AddWithValue("@num_factura", numFactura);
+                    cmdDetalle.Parameters.AddWithValue("@cantidad", item.Cantidad);
+                    cmdDetalle.Parameters.AddWithValue("@precio", (SqlMoney)item.Precio);
+                    cmdDetalle.Parameters.AddWithValue("@observaciones", "");
+                    cmdDetalle.Parameters.AddWithValue("@id_descuento", item.IdBonif);
+                    cmdDetalle.Parameters.AddWithValue("@id_autoplan", item.IdAutoplan);
+                    cmdDetalle.Parameters.AddWithValue("@cod_producto", item.CodProducto);
+                    cmdDetalle.ExecuteNonQuery();
 
+                }
+                SqlCommand cmdFormaPago;
+                foreach (Items item in comprobante.FormasPago)
+                {
+                    cmdFormaPago = new SqlCommand("SP_INSERTAR_FORMAS_PAGO", cnn, t);
+                    cmdFormaPago.CommandType = CommandType.StoredProcedure;
+                    cmdFormaPago.Parameters.AddWithValue("@num_factura", numFactura);
+                    cmdFormaPago.Parameters.AddWithValue("@id_formaPago", item.Id);
+                    cmdFormaPago.ExecuteNonQuery();
+                }
+                t.Commit();
+            }
+
+            catch (Exception)
+            {
+                if (t != null)
+                    t.Rollback();
+                ok = false;
+            }
+            finally
+            {
+                if (cnn != null && cnn.State == ConnectionState.Open)
+                    cnn.Close();
+            }
+
+            return ok;
+        }
+        public int NumFacturaActual()
+        {
+            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_ACTUAL_NUM_FACTURA");
+            int identity = 0;
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                identity = Convert.ToInt32(dr["IdentityActual"]);
+            }
+            return identity;
+        }
         
 
         //public string InicioSesion(string usuario, string contraseña)

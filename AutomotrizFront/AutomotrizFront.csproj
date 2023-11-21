@@ -75,6 +75,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomotrizDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutomotrizDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\Comprobantes\Consulta Comprobantes\FrmConsultaComprobantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +306,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="AutomotrizDataSet3.xsc">
+      <DependentUpon>AutomotrizDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AutomotrizDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AutomotrizDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AutomotrizDataSet3.xss">
+      <DependentUpon>AutomotrizDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xsc">
       <DependentUpon>DSComprobante.xsd</DependentUpon>
     </None>
@@ -330,6 +346,82 @@
       <DependentUpon>AutomotrizDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Automotriz.Presentación.Soporte.Vendedores.VendedoresConsulta1.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.ComprobantesDAO.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.DBHelper.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.IComprobantesDAO.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Datos.Parametro.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Cliente.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Comprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.DetalleComprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Items.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.Producto.datasource" />
+    <None Include="Properties\DataSources\AutomotrizBack.Entidades.ResultadoComprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet.ClientesDataTable.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet.ClientesRow.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet.ClientesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet.ClientesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet1.ClientesDataTable.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet1.ClientesRow.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet1.ClientesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet1.ClientesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet1.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet2.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet2.Mostrar_ClienteDataTable.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet2.Mostrar_ClienteRow.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet2.Mostrar_ClienteRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AutomotrizDataSet2.Mostrar_ClienteRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSet1TableAdapters.ClientesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSet2TableAdapters.Mostrar_ClienteTableAdapter.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSet2TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSet2TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSetTableAdapters.ClientesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.AutomotrizDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.FrmReporteComprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_DATOS_FACTURADataTable.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_DATOS_FACTURARow.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_DATOS_FACTURARowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_DATOS_FACTURARowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTEDataTable.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERow.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante+SP_REPORTE_COMPROBANTERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobante.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.SP_DATOS_FACTURATableAdapter.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.SP_REPORTE_COMPROBANTETableAdapter.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Comprobantes.Consulta_Comprobantes.Reporte.DSComprobanteTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes.FrmConsultaComprobantes.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes.FrmResultadoConsultaComprobantes.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.FrmAutomotriz.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.FrmDatosEmisor.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.FrmDatosOperacion.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.FrmDatosReceptor.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.FrmInicioSesion.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.Clientes.ClientesConsulta1.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.Clientes.ClientesConsulta2.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FormConsulta.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FrmActualizarCliente.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FrmConsultaCliente.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FrmConsultaEmpleado.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FrmConsultaProducto.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FrmInformacion.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FrmNuevoCliente.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.FrmNuevoEmpleado.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta1.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.ProductosStock.ProductosStockConsulta2.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Presentación.Soporte.Vendedores.VendedoresConsulta2.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Servicio.Implementación.ServicioDAO.datasource" />
+    <None Include="Properties\DataSources\AutomotrizFront.Servicio.IServicioDAO.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\RoundButton.datasource" />
+    <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

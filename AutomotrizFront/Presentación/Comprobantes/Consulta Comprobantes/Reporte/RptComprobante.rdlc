@@ -741,7 +741,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!tipo_factura.Value, "DatosFactura")</Value>
+                  <Value>=First(Fields!descripcion.Value, "TipoComprobante")</Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <FontWeight>SemiBold</FontWeight>
@@ -2152,62 +2152,6 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DatosFactura">
-      <Query>
-        <DataSourceName>DSComprobante</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="num_factura">
-          <DataField>num_factura</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="fecha">
-          <DataField>fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="cliente">
-          <DataField>cliente</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="documento">
-          <DataField>documento</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tipoDoc">
-          <DataField>tipoDoc</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="domicilio">
-          <DataField>domicilio</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="condicionIVA">
-          <DataField>condicionIVA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="forma_pago">
-          <DataField>forma_pago</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="tipo_factura">
-          <DataField>tipo_factura</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="recargo">
-          <DataField>recargo</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DSComprobante</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xsd</rd:SchemaPath>
-        <rd:TableName>SP_DATOS_FACTURA</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>SP_DATOS_FACTURATableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
     <DataSet Name="DetallesComprobante">
       <Query>
         <DataSourceName>DSComprobante</DataSourceName>
@@ -2266,6 +2210,78 @@
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>SP_REPORTE_COMPROBANTETableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DatosFactura">
+      <Query>
+        <DataSourceName>DSComprobante</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="num_factura">
+          <DataField>num_factura</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="fecha">
+          <DataField>fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cliente">
+          <DataField>cliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="documento">
+          <DataField>documento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tipoDoc">
+          <DataField>tipoDoc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="domicilio">
+          <DataField>domicilio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="condicionIVA">
+          <DataField>condicionIVA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="forma_pago">
+          <DataField>forma_pago</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="recargo">
+          <DataField>recargo</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DSComprobante</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xsd</rd:SchemaPath>
+        <rd:TableName>SP_DATOS_FACTURA</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>SP_DATOS_FACTURATableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="TipoComprobante">
+      <Query>
+        <DataSourceName>DSComprobante</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DSComprobante</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Elias\source\repos\Automotriz\AutomotrizFront\Presentación\Comprobantes\Consulta Comprobantes\Reporte\DSComprobante.xsd</rd:SchemaPath>
+        <rd:TableName>SP_TIPO_COMPROBANTE</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>SP_TIPO_COMPROBANTETableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

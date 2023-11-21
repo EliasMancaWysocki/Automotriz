@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AutomotrizBack.Entidades;
+using AutomotrizFront.Servicio;
+using AutomotrizFront.Servicio.Implementación;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,11 @@ namespace AutomotrizFront.Presentación
 {
     public partial class FrmInicioSesion : Form
     {
+        IServicioDAO Servicio;
         public FrmInicioSesion()
         {
             InitializeComponent();
+            Servicio = new ServicioDAO();
         }
 
         private void FrmInicioSesion_Load(object sender, EventArgs e)
@@ -47,7 +52,27 @@ namespace AutomotrizFront.Presentación
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-
+            bool permiso = false;
+            foreach (Items i in Servicio.ObtenerInicioSesion())
+            {
+                if(i.Nombre == txtUser.Text)
+                {
+                    if(i.Extra.ToString() == txtPass.Text)
+                    {
+                        permiso = true;
+                    }
+                }
+            }
+            if(permiso)
+            {
+                FrmAutomotriz frmAutomotriz = new FrmAutomotriz();
+                frmAutomotriz.ShowDialog();
+                Dispose();
+            } else
+            {
+                MessageBox.Show("Usuario y/o contraseña incorrecta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+            }
         }
     }
 }

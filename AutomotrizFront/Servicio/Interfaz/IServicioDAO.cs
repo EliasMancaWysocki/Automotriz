@@ -32,9 +32,13 @@ namespace AutomotrizFront.Servicio
         Cliente ExtraerClienteDocumento(int tipdoc, string doc);
         List<Cliente> ExtraerClienteCompro(string desde, string hasta);
         List<Cliente> ExtraerClienteNoCompro(string desde, string hasta);
-
-
-
-
+        List<Items> ObtenerTiposProductos();
+        List<Items> ObtenerAutoplanes();
+        List<Items> ObtenerDescuentos();
+        Producto ExtraerProducto(int codigo);
+        List<Items> ObtenerProductos(int tipoProd);
+        bool InsertarFactura(Comprobante comprobante);
+        int NumFacturaActual();
+        List<Items> ObtenerInicioSesion();
     }
 }

@@ -81,12 +81,10 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.ObtenerUnidadesMedidas();
         }
-
         public int BajaCliente(int nroCl)
         {
             return DAO.BajaCliente(nroCl);
         }
-
         public Cliente ExtraerClienteID(int id)
         {
             return DAO.ExtraerClienteID(id);
@@ -95,21 +93,49 @@ namespace AutomotrizFront.Servicio.Implementación
         {
             return DAO.ExtraerClienteNombre(nom,apell);
         }
-
         public Cliente ExtraerClienteDocumento(int tipdoc, string doc)
         {
             return DAO.ExtraerClienteDocumento(tipdoc, doc);
         }
-
         public List<Cliente> ExtraerClienteNoCompro(string desde, string hasta)
         {
             return DAO.ExtraerClienteNoCompro(desde, hasta);
         }
-
         public List<Cliente> ExtraerClienteCompro(string desde, string hasta)
         {
             return DAO.ExtraerClienteNoCompro(desde, hasta);
         }
-
+        public List<Items> ObtenerTiposProductos()
+        {
+            return DAO.ObtenerTiposProductos();
+        }
+        public List<Items> ObtenerAutoplanes()
+        {
+            return DAO.ObtenerAutoplanes();
+        }
+        public List<Items> ObtenerDescuentos()
+        {
+            return DAO.ObtenerDescuentos();
+        }
+        public Producto ExtraerProducto(int codigo)
+        {
+            return DAO.ExtraerProducto(codigo);
+        }
+        public List<Items> ObtenerProductos(int tipoProd)
+        {
+            return DAO.ObtenerProductos(tipoProd);
+        }
+        public bool InsertarFactura(Comprobante comprobante)
+        {
+            return DAO.InsertarFactura(comprobante);
+        }
+        public int NumFacturaActual()
+        {
+            return DAO.NumFacturaActual();
+        }
+        public List<Items> ObtenerInicioSesion()
+        {
+            return DAO.ObtenerInicioSesion();
+        }
     }
 }
