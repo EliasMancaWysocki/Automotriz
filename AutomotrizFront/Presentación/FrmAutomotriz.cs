@@ -107,7 +107,7 @@ namespace AutomotrizFront.Presentación
         {
             if (MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                Close();
+                Application.Exit();
             }
         }
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace AutomotrizFront.Presentación
         {
             if (MessageBox.Show("¿Desea salir?", "CERRAR SESIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                Close();
+                Application.Exit();
             }
         }
         private void panelLogo_Click(object sender, EventArgs e)

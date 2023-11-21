@@ -194,6 +194,7 @@ namespace AutomotrizFront.Presentación
 
                 FrmDatosOperacion frmDatosOperacion = new FrmDatosOperacion(item, Comprobante);
                 frmDatosOperacion.ShowDialog();
+                this.Close();
             }
         }
 

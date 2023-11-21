@@ -64,7 +64,6 @@
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.cboAutoplan = new System.Windows.Forms.ComboBox();
             this.lblAutoplan = new System.Windows.Forms.Label();
             this.lblSubtotal2 = new System.Windows.Forms.Label();
@@ -77,6 +76,8 @@
             this.lblTotalImp = new System.Windows.Forms.Label();
             this.lblOtrosImp = new System.Windows.Forms.Label();
             this.lblSubtotalImp = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.layoutCodigo.SuspendLayout();
             this.layoutProducto.SuspendLayout();
@@ -105,6 +106,7 @@
             this.cboUnidadMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUnidadMedida.Enabled = false;
             this.cboUnidadMedida.FormattingEnabled = true;
+            this.cboUnidadMedida.ItemHeight = 13;
             this.cboUnidadMedida.Location = new System.Drawing.Point(330, 80);
             this.cboUnidadMedida.Name = "cboUnidadMedida";
             this.cboUnidadMedida.Size = new System.Drawing.Size(121, 21);
@@ -115,7 +117,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(457, 80);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(90, 20);
-            this.txtPrecio.TabIndex = 5;
+            this.txtPrecio.TabIndex = 6;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // txtImporteBonif
@@ -125,7 +127,7 @@
             this.txtImporteBonif.Location = new System.Drawing.Point(609, 80);
             this.txtImporteBonif.Name = "txtImporteBonif";
             this.txtImporteBonif.Size = new System.Drawing.Size(90, 20);
-            this.txtImporteBonif.TabIndex = 7;
+            this.txtImporteBonif.TabIndex = 8;
             // 
             // txtSubtotal
             // 
@@ -133,14 +135,14 @@
             this.txtSubtotal.Location = new System.Drawing.Point(705, 80);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(90, 20);
-            this.txtSubtotal.TabIndex = 8;
+            this.txtSubtotal.TabIndex = 9;
             // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(801, 78);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 9;
+            this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -149,6 +151,7 @@
             // 
             this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducto.FormattingEnabled = true;
+            this.cboProducto.ItemHeight = 13;
             this.cboProducto.Location = new System.Drawing.Point(68, 80);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(200, 21);
@@ -419,7 +422,7 @@
             this.txtCodigo.MaxLength = 9;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(50, 20);
-            this.txtCodigo.TabIndex = 22;
+            this.txtCodigo.TabIndex = 2;
             // 
             // txtCantidad
             // 
@@ -427,18 +430,8 @@
             this.txtCantidad.MaxLength = 9;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(50, 20);
-            this.txtCantidad.TabIndex = 23;
+            this.txtCantidad.TabIndex = 4;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(447, 484);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 24;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // cboAutoplan
             // 
@@ -447,7 +440,7 @@
             this.cboAutoplan.Location = new System.Drawing.Point(113, 363);
             this.cboAutoplan.Name = "cboAutoplan";
             this.cboAutoplan.Size = new System.Drawing.Size(121, 21);
-            this.cboAutoplan.TabIndex = 25;
+            this.cboAutoplan.TabIndex = 12;
             this.cboAutoplan.Visible = false;
             // 
             // lblAutoplan
@@ -489,6 +482,7 @@
             this.cboDescuentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDescuentos.Enabled = false;
             this.cboDescuentos.FormattingEnabled = true;
+            this.cboDescuentos.ItemHeight = 13;
             this.cboDescuentos.Location = new System.Drawing.Point(553, 80);
             this.cboDescuentos.Name = "cboDescuentos";
             this.cboDescuentos.Size = new System.Drawing.Size(50, 21);
@@ -522,7 +516,7 @@
             this.cboTipoProd.Location = new System.Drawing.Point(104, 29);
             this.cboTipoProd.Name = "cboTipoProd";
             this.cboTipoProd.Size = new System.Drawing.Size(164, 21);
-            this.cboTipoProd.TabIndex = 36;
+            this.cboTipoProd.TabIndex = 1;
             this.cboTipoProd.SelectionChangeCommitted += new System.EventHandler(this.cboTipoProd_SelectionChangeCommitted);
             // 
             // panel1
@@ -577,6 +571,30 @@
             this.lblSubtotalImp.Text = "100.000.000.000,00";
             this.lblSubtotalImp.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Location = new System.Drawing.Point(463, 477);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(90, 30);
+            this.btnImprimir.TabIndex = 13;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(331, 477);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(90, 30);
+            this.btnVolver.TabIndex = 14;
+            this.btnVolver.TabStop = false;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            // 
             // FrmDatosOperacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,6 +602,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(894, 533);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cboTipoProd);
             this.Controls.Add(this.lblTipProd);
@@ -593,7 +613,6 @@
             this.Controls.Add(this.lblSubtotal2);
             this.Controls.Add(this.lblAutoplan);
             this.Controls.Add(this.cboAutoplan);
-            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.layoutCodigo);
@@ -670,7 +689,6 @@
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
@@ -692,5 +710,7 @@
         private System.Windows.Forms.Label lblTotalImp;
         private System.Windows.Forms.Label lblOtrosImp;
         private System.Windows.Forms.Label lblSubtotalImp;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

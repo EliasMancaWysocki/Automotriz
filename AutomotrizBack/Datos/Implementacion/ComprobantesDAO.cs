@@ -601,8 +601,8 @@ namespace AutomotrizBack.Datos
                 cmd.Transaction = t;
                 cmd.CommandText = "SP_INSERTAR_FACTURA";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@fecha", comprobante.Fecha.ToString("d"));
-                cmd.Parameters.AddWithValue("@legajo_empleado", 19);
+                cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = comprobante.Fecha.ToString("d");
+                cmd.Parameters.AddWithValue("@legajo_empleado", Comprobante.LegajoEmpleado);
                 cmd.Parameters.AddWithValue("@id_cliente", comprobante.Cliente.Id);
                 cmd.Parameters.AddWithValue("@id_tipo_factura", comprobante.IdTipoFactura);
 
@@ -613,9 +613,7 @@ namespace AutomotrizBack.Datos
                 pOut.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(pOut);
                 cmd.ExecuteNonQuery();
-                Console.WriteLine(pOut);
                 int numFactura = (int)pOut.Value;
-                Console.WriteLine(numFactura);
                 SqlCommand cmdDetalle;
                 foreach (DetalleComprobante item in comprobante.DetallesComprobante)
                 {
@@ -659,24 +657,11 @@ namespace AutomotrizBack.Datos
         }
         public int NumFacturaActual()
         {
-            DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_ACTUAL_NUM_FACTURA");
-            int identity = 0;
-
-            foreach (DataRow dr in dt.Rows)
-            {
-                identity = Convert.ToInt32(dr["IdentityActual"]);
-            }
-            return identity;
+            int nroFact = DBHelper.ObtenerInstancia().ConsultarEscalar("SP_ACTUAL_NUM_FACTURA", "@numFact");
+            
+            return nroFact;
         }
-        
-
-        //public string InicioSesion(string usuario, string contraseña)
-        //{
-        //    List<Items> lst = new List<Items>();
-
-        //    DataTable dt = DBHelper.ObtenerInstancia().Consultar("SP_CONSULTAR_FORMASPAGO");
-        //    return lst
-        //}
+       
     }
 }
 

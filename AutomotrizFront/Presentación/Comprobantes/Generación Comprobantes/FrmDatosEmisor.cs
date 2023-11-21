@@ -203,7 +203,7 @@ namespace AutomotrizFront.Presentación
 
             FrmDatosReceptor frmDatosRecepcion = new FrmDatosReceptor(item, comprobante);
             frmDatosRecepcion.ShowDialog();
-
+            this.Close();
         }
 
         //ComboBox SelectedIndexChanged

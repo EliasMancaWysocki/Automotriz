@@ -65,9 +65,11 @@ namespace AutomotrizFront.Presentación
             }
             if(permiso)
             {
+                this.Visible = false;
                 FrmAutomotriz frmAutomotriz = new FrmAutomotriz();
                 frmAutomotriz.ShowDialog();
-                Dispose();
+                
+                
             } else
             {
                 MessageBox.Show("Usuario y/o contraseña incorrecta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);

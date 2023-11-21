@@ -36,7 +36,7 @@ namespace AutomotrizBack.Entidades
                 }
             }
             
-            return subtotal -=  bonif;
+            return subtotal - bonif;
 
         }
         public double CalcularOtrosImportes()

@@ -8,7 +8,7 @@ namespace AutomotrizBack.Entidades
     {
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
-        static public int LegajoEmpleado { get; set; }
+        static public int LegajoEmpleado = 0;
         public Cliente Cliente { get; set; }
         public int IdOrdenPedido { get; set; }
         public int IdTipoFactura {  get; set; }

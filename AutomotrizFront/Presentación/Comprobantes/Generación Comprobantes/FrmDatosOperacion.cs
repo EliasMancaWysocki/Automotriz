@@ -46,6 +46,8 @@ namespace AutomotrizFront.Presentación
             CargarCombo(cboUnidadMedida, Servicio.ObtenerUnidadesMedidas());
             CargarCombo(cboDescuentos, Servicio.ObtenerDescuentos());
             CargarCombo(cboAutoplan, Servicio.ObtenerAutoplanes());
+
+            CentrarBotones();
         }
 
         //Funciones
@@ -55,6 +57,12 @@ namespace AutomotrizFront.Presentación
             cbo.ValueMember = "Id";
             cbo.DisplayMember = "Nombre";
             cbo.SelectedIndex = -1;
+        }
+        private void CentrarBotones()
+        {
+            int x = (Width - 15 - 195) / 2;
+            btnVolver.Location = new Point(x, 480);
+            btnImprimir.Location = new Point(x + 120, 480);
         }
 
         //Botones
@@ -90,7 +98,7 @@ namespace AutomotrizFront.Presentación
                 MessageBox.Show("Debe seleccionar el autoplan", "CONTROL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cboAutoplan.Focus();
                 return;
-            }
+            } 
 
             foreach (DataGridViewRow row in dgvDetalles.Rows)
             {
@@ -112,6 +120,11 @@ namespace AutomotrizFront.Presentación
             detalleComprobante.Precio = Convert.ToDouble(txtPrecio.Text);
             detalleComprobante.IdBonif = descuento.Id;
             detalleComprobante.IdAutoplan = autoplan.Id;
+
+            if (!cboAutoplan.Visible)
+            {
+                detalleComprobante.IdAutoplan = 1;
+            }
 
             Comprobante.AgregarDetalleComprobante(detalleComprobante);
             dgvDetalles.Rows.Add(new object[]
@@ -141,6 +154,7 @@ namespace AutomotrizFront.Presentación
                 int nroFact = Servicio.NumFacturaActual();
                 FrmReporteComprobante frmReporteComprobante = new FrmReporteComprobante(nroFact);
                 frmReporteComprobante.ShowDialog();
+                Close();
             } else
             {
                 MessageBox.Show("Error al crear factura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error );
@@ -270,5 +284,6 @@ namespace AutomotrizFront.Presentación
                 cboAutoplan.SelectedIndex = 0;
             }
         }
+
     }
 }
