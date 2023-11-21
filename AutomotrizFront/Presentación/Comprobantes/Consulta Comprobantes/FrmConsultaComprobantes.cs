@@ -131,6 +131,9 @@ namespace AutomotrizFront.Presentación.Consultas.Consultar_Comprobantes
             cboTipoDoc.SelectedIndex = -1;
         }
 
-        
+        private void txtEmpleado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

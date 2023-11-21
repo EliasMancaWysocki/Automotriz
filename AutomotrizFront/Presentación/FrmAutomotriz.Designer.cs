@@ -171,7 +171,7 @@ namespace AutomotrizFront.Presentación
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(132, 32);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -478,7 +478,7 @@ namespace AutomotrizFront.Presentación
             this.btnConsultarProductos.Location = new System.Drawing.Point(25, 25);
             this.btnConsultarProductos.Name = "btnConsultarProductos";
             this.btnConsultarProductos.Size = new System.Drawing.Size(210, 193);
-            this.btnConsultarProductos.TabIndex = 2;
+            this.btnConsultarProductos.TabIndex = 7;
             this.btnConsultarProductos.UseVisualStyleBackColor = false;
             this.btnConsultarProductos.Click += new System.EventHandler(this.btnConsultarProductos_Click);
             // 
@@ -536,7 +536,7 @@ namespace AutomotrizFront.Presentación
             this.btnConsultarClientes.Location = new System.Drawing.Point(25, 25);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
             this.btnConsultarClientes.Size = new System.Drawing.Size(210, 193);
-            this.btnConsultarClientes.TabIndex = 0;
+            this.btnConsultarClientes.TabIndex = 5;
             this.btnConsultarClientes.UseVisualStyleBackColor = false;
             this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
             // 
@@ -594,7 +594,7 @@ namespace AutomotrizFront.Presentación
             this.btnConsultarComprobantes.Location = new System.Drawing.Point(25, 25);
             this.btnConsultarComprobantes.Name = "btnConsultarComprobantes";
             this.btnConsultarComprobantes.Size = new System.Drawing.Size(210, 193);
-            this.btnConsultarComprobantes.TabIndex = 0;
+            this.btnConsultarComprobantes.TabIndex = 6;
             this.btnConsultarComprobantes.UseVisualStyleBackColor = false;
             this.btnConsultarComprobantes.Click += new System.EventHandler(this.btnConsultarComprobantes_Click);
             // 
@@ -652,7 +652,7 @@ namespace AutomotrizFront.Presentación
             this.btnNuevoProducto.Location = new System.Drawing.Point(25, 25);
             this.btnNuevoProducto.Name = "btnNuevoProducto";
             this.btnNuevoProducto.Size = new System.Drawing.Size(210, 193);
-            this.btnNuevoProducto.TabIndex = 0;
+            this.btnNuevoProducto.TabIndex = 3;
             this.btnNuevoProducto.UseVisualStyleBackColor = false;
             // 
             // panelNuevoProductoTitle
@@ -710,7 +710,7 @@ namespace AutomotrizFront.Presentación
             this.btnNuevoCliente.Location = new System.Drawing.Point(30, 30);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(200, 183);
-            this.btnNuevoCliente.TabIndex = 0;
+            this.btnNuevoCliente.TabIndex = 1;
             this.btnNuevoCliente.UseVisualStyleBackColor = false;
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
@@ -768,7 +768,7 @@ namespace AutomotrizFront.Presentación
             this.btnNuevoComprobante.Location = new System.Drawing.Point(25, 25);
             this.btnNuevoComprobante.Name = "btnNuevoComprobante";
             this.btnNuevoComprobante.Size = new System.Drawing.Size(210, 193);
-            this.btnNuevoComprobante.TabIndex = 0;
+            this.btnNuevoComprobante.TabIndex = 2;
             this.btnNuevoComprobante.UseVisualStyleBackColor = false;
             this.btnNuevoComprobante.Click += new System.EventHandler(this.btnNuevoComprobante_Click);
             // 
@@ -826,7 +826,7 @@ namespace AutomotrizFront.Presentación
             this.btnConsultarEmpleados.Location = new System.Drawing.Point(25, 25);
             this.btnConsultarEmpleados.Name = "btnConsultarEmpleados";
             this.btnConsultarEmpleados.Size = new System.Drawing.Size(210, 193);
-            this.btnConsultarEmpleados.TabIndex = 3;
+            this.btnConsultarEmpleados.TabIndex = 8;
             this.btnConsultarEmpleados.UseVisualStyleBackColor = false;
             this.btnConsultarEmpleados.Click += new System.EventHandler(this.btnConsultarEmpleados_Click);
             // 
@@ -884,7 +884,7 @@ namespace AutomotrizFront.Presentación
             this.btnCerrarSesion.Location = new System.Drawing.Point(25, 25);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(212, 193);
-            this.btnCerrarSesion.TabIndex = 0;
+            this.btnCerrarSesion.TabIndex = 9;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
@@ -942,7 +942,7 @@ namespace AutomotrizFront.Presentación
             this.btnNuevoEmpleado.Location = new System.Drawing.Point(25, 25);
             this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
             this.btnNuevoEmpleado.Size = new System.Drawing.Size(210, 193);
-            this.btnNuevoEmpleado.TabIndex = 1;
+            this.btnNuevoEmpleado.TabIndex = 4;
             this.btnNuevoEmpleado.UseVisualStyleBackColor = false;
             // 
             // panelNuevoEmpleadoTitle

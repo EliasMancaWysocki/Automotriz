@@ -120,7 +120,7 @@
             this.cboCondicionIVA.Location = new System.Drawing.Point(254, 71);
             this.cboCondicionIVA.Name = "cboCondicionIVA";
             this.cboCondicionIVA.Size = new System.Drawing.Size(246, 21);
-            this.cboCondicionIVA.TabIndex = 6;
+            this.cboCondicionIVA.TabIndex = 1;
             this.cboCondicionIVA.SelectedIndexChanged += new System.EventHandler(this.cboCondicionIVA_SelectedIndexChanged);
             // 
             // cboTipoDoc
@@ -130,14 +130,14 @@
             this.cboTipoDoc.Location = new System.Drawing.Point(254, 101);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(120, 21);
-            this.cboTipoDoc.TabIndex = 7;
+            this.cboTipoDoc.TabIndex = 2;
             // 
             // txtDocumento
             // 
             this.txtDocumento.Location = new System.Drawing.Point(380, 101);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(120, 20);
-            this.txtDocumento.TabIndex = 8;
+            this.txtDocumento.TabIndex = 3;
             this.txtDocumento.TextChanged += new System.EventHandler(this.txtDocumento_TextChanged);
             // 
             // txtRazonSocial
@@ -147,7 +147,7 @@
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.ReadOnly = true;
             this.txtRazonSocial.Size = new System.Drawing.Size(246, 20);
-            this.txtRazonSocial.TabIndex = 9;
+            this.txtRazonSocial.TabIndex = 4;
             // 
             // txtDomicilio
             // 
@@ -156,14 +156,14 @@
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.ReadOnly = true;
             this.txtDomicilio.Size = new System.Drawing.Size(246, 20);
-            this.txtDomicilio.TabIndex = 10;
+            this.txtDomicilio.TabIndex = 5;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(254, 191);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(246, 20);
-            this.txtEmail.TabIndex = 11;
+            this.txtEmail.TabIndex = 6;
             // 
             // groupBoxCondicionVenta
             // 
@@ -171,7 +171,7 @@
             this.groupBoxCondicionVenta.Location = new System.Drawing.Point(85, 230);
             this.groupBoxCondicionVenta.Name = "groupBoxCondicionVenta";
             this.groupBoxCondicionVenta.Size = new System.Drawing.Size(415, 230);
-            this.groupBoxCondicionVenta.TabIndex = 12;
+            this.groupBoxCondicionVenta.TabIndex = 7;
             this.groupBoxCondicionVenta.TabStop = false;
             this.groupBoxCondicionVenta.Text = "Condición de Venta";
             // 
@@ -181,7 +181,7 @@
             this.btnSiguiente.Location = new System.Drawing.Point(245, 490);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(90, 30);
-            this.btnSiguiente.TabIndex = 13;
+            this.btnSiguiente.TabIndex = 8;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
@@ -192,7 +192,7 @@
             this.btnVolver.Location = new System.Drawing.Point(149, 490);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(90, 30);
-            this.btnVolver.TabIndex = 14;
+            this.btnVolver.TabIndex = 9;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

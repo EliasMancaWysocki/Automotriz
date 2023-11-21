@@ -76,7 +76,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(185, 76);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(101, 20);
-            this.dtpFecha.TabIndex = 1;
+            this.dtpFecha.TabIndex = 2;
             this.dtpFecha.Value = new System.DateTime(2023, 10, 18, 16, 49, 10, 0);
             // 
             // lblConceptos
@@ -97,7 +97,7 @@
             this.cboConceptos.Location = new System.Drawing.Point(185, 116);
             this.cboConceptos.Name = "cboConceptos";
             this.cboConceptos.Size = new System.Drawing.Size(121, 21);
-            this.cboConceptos.TabIndex = 2;
+            this.cboConceptos.TabIndex = 3;
             this.cboConceptos.SelectedIndexChanged += new System.EventHandler(this.cboConceptos_SelectedIndexChanged);
             // 
             // groupBoxActividades
@@ -132,7 +132,7 @@
             this.btnActMenos.Margin = new System.Windows.Forms.Padding(0);
             this.btnActMenos.Name = "btnActMenos";
             this.btnActMenos.Size = new System.Drawing.Size(23, 23);
-            this.btnActMenos.TabIndex = 9;
+            this.btnActMenos.TabIndex = 8;
             this.btnActMenos.Text = "-";
             this.btnActMenos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnActMenos.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@
             this.btnActMas.Margin = new System.Windows.Forms.Padding(0);
             this.btnActMas.Name = "btnActMas";
             this.btnActMas.Size = new System.Drawing.Size(23, 23);
-            this.btnActMas.TabIndex = 8;
+            this.btnActMas.TabIndex = 7;
             this.btnActMas.Text = "+";
             this.btnActMas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnActMas.UseVisualStyleBackColor = true;
@@ -155,6 +155,7 @@
             // 
             this.cboAct5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAct5.FormattingEnabled = true;
+            this.cboAct5.ItemHeight = 13;
             this.cboAct5.Location = new System.Drawing.Point(45, 153);
             this.cboAct5.Name = "cboAct5";
             this.cboAct5.Size = new System.Drawing.Size(355, 21);
@@ -176,6 +177,7 @@
             // 
             this.cboAct4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAct4.FormattingEnabled = true;
+            this.cboAct4.ItemHeight = 13;
             this.cboAct4.Location = new System.Drawing.Point(45, 126);
             this.cboAct4.Name = "cboAct4";
             this.cboAct4.Size = new System.Drawing.Size(355, 21);
@@ -197,6 +199,7 @@
             // 
             this.cboAct3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAct3.FormattingEnabled = true;
+            this.cboAct3.ItemHeight = 13;
             this.cboAct3.Location = new System.Drawing.Point(45, 99);
             this.cboAct3.Name = "cboAct3";
             this.cboAct3.Size = new System.Drawing.Size(355, 21);
@@ -218,6 +221,7 @@
             // 
             this.cboAct2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAct2.FormattingEnabled = true;
+            this.cboAct2.ItemHeight = 13;
             this.cboAct2.Location = new System.Drawing.Point(45, 72);
             this.cboAct2.Name = "cboAct2";
             this.cboAct2.Size = new System.Drawing.Size(355, 21);
@@ -239,6 +243,7 @@
             // 
             this.cboAct1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAct1.FormattingEnabled = true;
+            this.cboAct1.ItemHeight = 13;
             this.cboAct1.Location = new System.Drawing.Point(45, 45);
             this.cboAct1.Name = "cboAct1";
             this.cboAct1.Size = new System.Drawing.Size(355, 21);
@@ -291,7 +296,7 @@
             this.btnSiguiente.Location = new System.Drawing.Point(258, 360);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(100, 34);
-            this.btnSiguiente.TabIndex = 11;
+            this.btnSiguiente.TabIndex = 9;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
@@ -303,7 +308,7 @@
             this.dtpDesde.Location = new System.Drawing.Point(315, 117);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(101, 26);
-            this.dtpDesde.TabIndex = 12;
+            this.dtpDesde.TabIndex = 4;
             this.dtpDesde.Value = new System.DateTime(2023, 10, 18, 16, 49, 10, 0);
             // 
             // dtpHasta
@@ -313,7 +318,7 @@
             this.dtpHasta.Location = new System.Drawing.Point(422, 117);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(101, 26);
-            this.dtpHasta.TabIndex = 13;
+            this.dtpHasta.TabIndex = 5;
             this.dtpHasta.Value = new System.DateTime(2023, 10, 18, 16, 49, 10, 0);
             // 
             // lblDesde
@@ -346,7 +351,7 @@
             this.cboComprobantes.Location = new System.Drawing.Point(185, 31);
             this.cboComprobantes.Name = "cboComprobantes";
             this.cboComprobantes.Size = new System.Drawing.Size(140, 21);
-            this.cboComprobantes.TabIndex = 16;
+            this.cboComprobantes.TabIndex = 1;
             // 
             // lblTipoComprobate
             // 

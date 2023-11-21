@@ -77,7 +77,7 @@
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(148, 26);
-            this.dtpDesde.TabIndex = 2;
+            this.dtpDesde.TabIndex = 1;
             this.dtpDesde.Value = new System.DateTime(2023, 10, 27, 16, 7, 6, 0);
             // 
             // groupBoxFechaEmision
@@ -103,7 +103,7 @@
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(148, 26);
-            this.dtpHasta.TabIndex = 4;
+            this.dtpHasta.TabIndex = 2;
             this.dtpHasta.Value = new System.DateTime(2023, 10, 27, 16, 7, 6, 0);
             // 
             // lblHasta
@@ -137,7 +137,7 @@
             this.txtNumComprobante.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtNumComprobante.Name = "txtNumComprobante";
             this.txtNumComprobante.Size = new System.Drawing.Size(178, 26);
-            this.txtNumComprobante.TabIndex = 8;
+            this.txtNumComprobante.TabIndex = 3;
             // 
             // lblNumComprobante
             // 
@@ -191,7 +191,7 @@
             this.btnReiniciarTipoDoc.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnReiniciarTipoDoc.Name = "btnReiniciarTipoDoc";
             this.btnReiniciarTipoDoc.Size = new System.Drawing.Size(25, 25);
-            this.btnReiniciarTipoDoc.TabIndex = 14;
+            this.btnReiniciarTipoDoc.TabIndex = 6;
             this.btnReiniciarTipoDoc.Text = "X";
             this.btnReiniciarTipoDoc.UseVisualStyleBackColor = true;
             this.btnReiniciarTipoDoc.Click += new System.EventHandler(this.btnReiniciarTipoDoc_Click);
@@ -202,8 +202,7 @@
             this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(314, 26);
-            this.txtRazonSocial.TabIndex = 10;
-           
+            this.txtRazonSocial.TabIndex = 4;
             // 
             // lblRazonSocial
             // 
@@ -222,7 +221,7 @@
             this.txtNumDoc.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(178, 26);
-            this.txtNumDoc.TabIndex = 8;
+            this.txtNumDoc.TabIndex = 7;
             // 
             // cboTipoDoc
             // 
@@ -232,7 +231,7 @@
             this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(314, 27);
-            this.cboTipoDoc.TabIndex = 7;
+            this.cboTipoDoc.TabIndex = 5;
             // 
             // lblNumDoc
             // 
@@ -278,7 +277,8 @@
             this.txtEmpleado.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.Size = new System.Drawing.Size(314, 26);
-            this.txtEmpleado.TabIndex = 10;
+            this.txtEmpleado.TabIndex = 8;
+            this.txtEmpleado.TextChanged += new System.EventHandler(this.txtEmpleado_TextChanged);
             // 
             // lblNomEmpleado
             // 
@@ -297,7 +297,7 @@
             this.txtLegajoEmpleado.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtLegajoEmpleado.Name = "txtLegajoEmpleado";
             this.txtLegajoEmpleado.Size = new System.Drawing.Size(178, 26);
-            this.txtLegajoEmpleado.TabIndex = 8;
+            this.txtLegajoEmpleado.TabIndex = 9;
             // 
             // lblLegajo
             // 
@@ -316,7 +316,7 @@
             this.btnVolver.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(90, 30);
-            this.btnVolver.TabIndex = 12;
+            this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -327,7 +327,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(90, 30);
-            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
